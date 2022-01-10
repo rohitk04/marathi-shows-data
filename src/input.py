@@ -1,12 +1,12 @@
 import json
 
 def load_data(choice):
-    shows = json.load(open('shows.json'))
+    shows = json.load(open('data/json/shows.json'))
 
     if choice == "TV":
-        trp = json.load(open('tv_trp.json'))
+        trp = json.load(open('data/json/tv_trp.json'))
     elif choice == "Online":
-        trp = json.load(open('online_trp.json'))
+        trp = json.load(open('data/json/online_trp.json'))
     else:
         raise Exception("Wrong Choice")
 
@@ -14,4 +14,4 @@ def load_data(choice):
     return shows, trp, week
 
 def load_shows():
-    return json.load(open('shows.json'))
+    return json.load(open('data/json/shows.json'))

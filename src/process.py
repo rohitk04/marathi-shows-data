@@ -4,7 +4,7 @@ from output import print_data, store
 choice = 'Online'
 
 shows,trp,week = load_data(choice)
-store('shows2.json', shows)
+store('data/json/shows2.json', shows)
 
 trp_keys = trp[week].keys()
 
@@ -29,5 +29,5 @@ for show in shows:
         show_data = shows[show][choice + ' TRP']
         show_data[week] = data
 
-print_data(shows)
-store('shows.json', shows)
+# print_data(shows)
+store('data/json/shows.json', shows)
