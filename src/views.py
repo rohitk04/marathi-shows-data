@@ -26,6 +26,9 @@ if (select == 'TV TRP'):
     # Part 1 - TV TRP - Week - TRP
     week_function(trp, week, ch)
 
+    # Part 2 - TV TRP - Week - Rank
+    rank_function(rank, week, ch)
+    
     channels = list(info['Channel'].unique())
     channel = st.sidebar.selectbox('Choose channel', channels, key=3)
 
