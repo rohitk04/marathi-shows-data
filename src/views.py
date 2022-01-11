@@ -34,6 +34,8 @@ elif (select == 'Shows - Online TRP'):
     trp = pd.read_csv('data\csv\online_trp_trp.csv').set_index('Show').sort_index()
     rank = pd.read_csv('data\csv\online_trp_rank.csv').set_index('Show').sort_index()
 
+    week = week_function(trp,rank)
+    
     st.markdown('#### TRP')
     st.dataframe(trp.style.format("{:.2f}"))
     
