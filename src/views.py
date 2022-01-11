@@ -20,22 +20,28 @@ elif (select == 'Shows - TV TRP'):
     rank = pd.read_csv('data\csv\\tv_trp_rank.csv').set_index('Show').sort_index()
 
     weeks = trp.columns.unique()
-    week = st.sidebar.selectbox('Choose week', weeks, key=2, index=len(weeks)-1)
-    ch = st.sidebar.checkbox('Show Data')
+    week = st.sidebar.selectbox('Choose week', weeks, index=len(weeks)-1, key=2)
+    ch = st.sidebar.checkbox('Show Data', key=3)
 
     st.markdown('### ' + week)
 
-    # Part 1 - TV TRP - Week - TRP
     trp_function(trp, week, ch)
-
-    # Part 2 - TV TRP - Week - Rank
     rank_function(rank, week, ch)
     
     channels = list(info['Channel'].unique())
-    channel = st.sidebar.selectbox('Choose channel', channels, key=3)
+    channel = st.sidebar.selectbox('Choose channel', channels, key=4)
+    ch = st.sidebar.checkbox('Show Data', key=5)
+
+    st.markdown('### ' + channel)
+
+    df = trp[trp.index.isin(list(info[info['Channel'] == channel].index))]
+    trp_function(df, week, ch, channel)
+
+    df = rank[rank.index.isin(list(info[info['Channel'] == channel].index))]
+    rank_function(df, week, ch, channel)
 
     timeslots = list(info['Time'].unique())
-    timeslot = st.sidebar.selectbox('Choose timeslot', timeslots, key=4)
+    timeslot = st.sidebar.selectbox('Choose timeslot', timeslots, key=6)
 
     st.markdown('#### TRP')
     st.dataframe(trp.style.format("{:.2f}"))

@@ -1,9 +1,10 @@
 import streamlit as st
 import plotly.graph_objects as go
 
-# Part 1 - Week - TRP
-def trp_function(trp, week, ch):    
-    st.markdown('#### TRP')
+def trp_function(trp, week, ch, channel = ''):    
+    if (channel != ''):
+        channel = ' - ' + channel
+    
     df = trp[week].sort_values(ascending=False)
 
     dic=dict(
@@ -34,7 +35,7 @@ def trp_function(trp, week, ch):
             l=1,
             r=1,
             b=4,
-            t=20,
+            t=25,
             pad=0
         ),
         xaxis=dict(
@@ -45,15 +46,18 @@ def trp_function(trp, week, ch):
             dic, 
             showgrid=False,
             title='TRP'
-        )
+        ),
+        title=week + channel + ' - TRP'
     )
     st.plotly_chart(fig)
 
     if ch:
         st.dataframe(df.to_frame().style.format({week:"{:.2f}"}), width=800, height=450)
 
-def rank_function(rank, week, ch):
-    st.markdown('#### Rank')
+def rank_function(rank, week, ch, channel=''):
+    if (channel != ''):
+        channel = ' - ' + channel
+
     df = rank[week].sort_values(ascending=True)
 
     dic=dict(
@@ -88,18 +92,19 @@ def rank_function(rank, week, ch):
             l=0,
             r=0,
             b=4,
-            t=20,
+            t=25,
             pad=0
         ),
         xaxis = dict(
             dic,
             title='Show'
-            ),
+        ),
         yaxis = dict(
             dic,
             showticklabels=False, 
             ticklen=2
-            )
+        ),
+        title=week + channel + ' - Rank'
     )
     st.plotly_chart(fig)
 
