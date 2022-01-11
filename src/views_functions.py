@@ -110,3 +110,15 @@ def rank_function(rank, week, ch, channel=''):
 
     if ch:
         st.dataframe(df, width=800, height=450)
+
+def week_function(trp, rank):
+    weeks = trp.columns.unique()
+    week = st.sidebar.selectbox('Choose week', weeks, index=len(weeks)-1, key=2)
+    ch = st.sidebar.checkbox('Show Data', key=3)
+
+    st.markdown('### ' + week)
+
+    trp_function(trp, week, ch)
+    rank_function(rank, week, ch)
+
+    return week
