@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 import plotly.graph_objects as go
 
 def trp_function(trp, week, ch, middle = ''):    
@@ -148,3 +149,24 @@ def timeslot_function(week, info, trp, rank):
 
     df = rank[rank.index.isin(list(info[info['Time'] == timeslot].index))]
     rank_function(df, week, ch, timeslot)
+
+def display_data(info):
+    st.title("BARC Data (Raw Data)")
+
+    st.subheader('Information')
+    st.dataframe(info)
+    st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
+
+    st.subheader('TV TRP')
+    st.markdown('#### TRP')
+    st.dataframe(pd.read_csv('data\csv\\tv_trp_trp.csv').set_index('Show').sort_index().style.format("{:.2f}"))    
+    st.markdown('#### Rank')
+    st.dataframe(pd.read_csv('data\csv\\tv_trp_rank.csv').set_index('Show').sort_index())
+    st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
+
+    st.subheader('Online TRP')
+    st.markdown('#### TRP')
+    st.dataframe(pd.read_csv('data\csv\\tv_trp_trp.csv').set_index('Show').sort_index().style.format("{:.2f}"))    
+    st.markdown('#### Rank')
+    st.dataframe(pd.read_csv('data\csv\\tv_trp_rank.csv').set_index('Show').sort_index())
+    st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
