@@ -122,3 +122,16 @@ def week_function(trp, rank):
     rank_function(rank, week, ch)
 
     return week
+
+def channel_function(week, info, trp, rank):
+    channels = list(info['Channel'].unique())
+    channel = st.sidebar.selectbox('Choose channel', channels, key=4)
+    ch = st.sidebar.checkbox('Show Data', key=5)
+
+    st.markdown('### ' + channel)
+
+    df = trp[trp.index.isin(list(info[info['Channel'] == channel].index))]
+    trp_function(df, week, ch, channel)
+
+    df = rank[rank.index.isin(list(info[info['Channel'] == channel].index))]
+    rank_function(df, week, ch, channel)
