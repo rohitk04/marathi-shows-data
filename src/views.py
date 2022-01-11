@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 
-from views_functions import week_function
+from views_functions import week_function, rank_function
 
 st.title("BARC Data")
 st.sidebar.title("BARC Data")
@@ -17,9 +17,15 @@ if (select == 'TV TRP'):
     trp = pd.read_csv('data\csv\\tv_trp_trp.csv').set_index('Show').sort_index()
     rank = pd.read_csv('data\csv\\tv_trp_rank.csv').set_index('Show').sort_index()
 
-    #Part 1 - Week - TRP
-    week_function(trp)
-    
+    weeks = trp.columns.unique()
+    week = st.sidebar.selectbox('Choose week', weeks, key=2, index=len(weeks)-1)
+    ch = st.sidebar.checkbox('Show Data')
+
+    st.markdown('### ' + week)
+
+    # Part 1 - TV TRP - Week - TRP
+    week_function(trp, week, ch)
+
     channels = list(info['Channel'].unique())
     channel = st.sidebar.selectbox('Choose channel', channels, key=3)
 
