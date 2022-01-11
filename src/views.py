@@ -21,9 +21,18 @@ elif (select == 'Shows - TV TRP'):
 
     week = week_function(trp,rank)  
     channel_function(week, info, trp, rank)
-    
+
     timeslots = list(info['Time'].unique())
     timeslot = st.sidebar.selectbox('Choose timeslot', timeslots, key=6)
+    ch = st.sidebar.checkbox('Show Data', key=7)
+
+    st.markdown('### Timeslot: ' + timeslot)
+
+    df = trp[trp.index.isin(list(info[info['Time'] == timeslot].index))]
+    trp_function(df, week, ch, timeslot)
+
+    df = rank[rank.index.isin(list(info[info['Time'] == timeslot].index))]
+    rank_function(df, week, ch, timeslot)
 
     st.markdown('#### TRP')
     st.dataframe(trp.style.format("{:.2f}"))

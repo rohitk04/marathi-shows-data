@@ -1,9 +1,9 @@
 import streamlit as st
 import plotly.graph_objects as go
 
-def trp_function(trp, week, ch, channel = ''):    
-    if (channel != ''):
-        channel = ' - ' + channel
+def trp_function(trp, week, ch, middle = ''):    
+    if (middle != ''):
+        middle = ' - ' + middle
     
     df = trp[week].sort_values(ascending=False)
 
@@ -47,16 +47,16 @@ def trp_function(trp, week, ch, channel = ''):
             showgrid=False,
             title='TRP'
         ),
-        title=week + channel + ' - TRP'
+        title=week + middle + ' - TRP'
     )
     st.plotly_chart(fig)
 
     if ch:
         st.dataframe(df.to_frame().style.format({week:"{:.2f}"}), width=800, height=450)
 
-def rank_function(rank, week, ch, channel=''):
-    if (channel != ''):
-        channel = ' - ' + channel
+def rank_function(rank, week, ch, middle=''):
+    if (middle != ''):
+        middle = ' - ' + middle
 
     df = rank[week].sort_values(ascending=True)
 
@@ -104,7 +104,7 @@ def rank_function(rank, week, ch, channel=''):
             showticklabels=False, 
             ticklen=2
         ),
-        title=week + channel + ' - Rank'
+        title=week + middle + ' - Rank'
     )
     st.plotly_chart(fig)
 
@@ -128,7 +128,7 @@ def channel_function(week, info, trp, rank):
     channel = st.sidebar.selectbox('Choose channel', channels, key=4)
     ch = st.sidebar.checkbox('Show Data', key=5)
 
-    st.markdown('### ' + channel)
+    st.markdown('### Channel: ' + channel)
 
     df = trp[trp.index.isin(list(info[info['Channel'] == channel].index))]
     trp_function(df, week, ch, channel)
