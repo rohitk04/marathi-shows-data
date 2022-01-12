@@ -2,6 +2,8 @@ from input import load_data
 from output import print_data, store_into_json
 
 def process(choice, old_path, new_path, msg):
+    print ("Processing begins...")
+
     data,trp,week = load_data(choice)
     store_into_json(old_path, data)
 
@@ -18,7 +20,7 @@ def process(choice, old_path, new_path, msg):
     if exit:
         print ('Following ' + msg + ' are not present in ' + msg + '.json file: ')
         for ele in not_present:
-            print (ele)
+            print ('- ' + ele)
         raise RuntimeError("Add "+ msg + " in " + msg + ".json file")
 
     for ele in data:
@@ -33,22 +35,6 @@ def process(choice, old_path, new_path, msg):
 
     # print_data(data)
     store_into_json(new_path, data)
-    print ("Stored successfully")
-
-if __name__ == "__main__":
-    print ("Select: ")
-    print ("1. TV Shows - TV TRP")
-    print ("2. TV Shows - Online TRP")
-    print ("3. Channels")
+    print ("Stored successfully into json")
+    print ("Processing ends...")
     print ()
-
-    ch = int(input("Enter choice: "))
-    
-    if (ch==1):
-        process("TV", 'data/json/shows/shows2.json', 'data/json/shows/shows.json', 'shows')
-    elif (ch==2):
-        process("Online", 'data/json/shows/shows2.json', 'data/json/shows/shows.json', 'shows')
-    elif (ch==3):
-        process("Channel", 'data/json/channels/channels2.json', 'data/json/channels/channels.json', 'channels')
-    else:
-        print ('Invalid Choice')
