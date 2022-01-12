@@ -183,3 +183,71 @@ def display_data(info):
     st.markdown('#### Rank')
     st.dataframe(read_csv('data/csv/shows/online/online_trp_rank.csv', 'Show'))
     st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
+
+def plot_figure(data, choices, ch, y_axis_title, reversed, style=False):
+    modified_data = data.loc[data.index.isin(choices)].T
+
+    dic=dict(
+            showgrid=False,
+            ticks="outside",
+            tickwidth=2,
+            tickcolor='crimson',
+            ticklen=10,
+            showline=True, 
+            linewidth=2, 
+            linecolor='black',
+            mirror=True
+            )
+
+    fig = go.Figure()
+    for col in modified_data.columns:
+        fig.add_trace(
+            go.Scatter(
+                x=modified_data.index, 
+                y=modified_data[col], 
+                mode='lines+markers',
+                name=col
+            )
+        )
+    fig.update_layout(
+        autosize=False,
+        width=750,
+        height=400,
+        margin=dict(
+            l=0,
+            r=0,
+            b=4,
+            t=25,
+            pad=0
+        ),
+        xaxis = dict(
+            dic,
+            title = "Week"
+        ),
+        yaxis = dict(
+            dic,
+            title = y_axis_title,
+            autorange=reversed
+        ),
+        title = y_axis_title,
+        legend=dict(
+            orientation="h",
+            xanchor="center",
+            x=0.5,
+            y=-0.2
+        ),
+        legend_title_text='Channel'
+    )   
+    st.plotly_chart(fig)
+
+    if ch:
+        if style:
+            st.dataframe(modified_data.style.format("{:.2f}"))
+        else:
+            st.dataframe(modified_data)
+
+def comparison_function(trp, rank, choices):
+    ch = st.sidebar.checkbox('Show Data', key=12)
+
+    plot_figure(trp, choices, ch, 'GRP', True, True)
+    plot_figure(rank, choices, ch, 'Rank', 'reversed')
