@@ -122,7 +122,7 @@ def week_function(trp, rank, k1, k2, grp=False):
     week = st.sidebar.selectbox('Choose week', weeks, index=len(weeks)-1, key=k1)
     ch = st.sidebar.checkbox('Show Data', key=k2)
     
-    st.markdown('### ' + week)
+    st.markdown('### Week-wise Performance')
 
     trp_function(trp, week, ch, grp)
     rank_function(rank, week, ch)
