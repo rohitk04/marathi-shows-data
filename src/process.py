@@ -45,10 +45,10 @@ if __name__ == "__main__":
     ch = int(input("Enter choice: "))
     
     if (ch==1):
-        process("TV", 'data/json/shows2.json', 'data/json/shows.json', 'shows')
+        process("TV", 'data/json/shows/shows2.json', 'data/json/shows/shows.json', 'shows')
     elif (ch==2):
-        process("Online", 'data/json/shows2.json', 'data/json/shows.json', 'shows')
+        process("Online", 'data/json/shows/shows2.json', 'data/json/shows/shows.json', 'shows')
     elif (ch==3):
-        process("Channel", 'data/json/channels2.json', 'data/json/channels.json', 'channels')
+        process("Channel", 'data/json/channels/channels2.json', 'data/json/channels/channels.json', 'channels')
     else:
         print ('Invalid Choice')

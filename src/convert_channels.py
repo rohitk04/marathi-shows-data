@@ -18,7 +18,7 @@ for channel in channels:
         dict1[channel][week] = grp[week]['GRP']
         dict2[channel][week] = grp[week]['Rank']
 
-store_into_csv(dict1, 'Channel', 'data/csv/channels_grp.csv')
-store_into_csv(dict2, 'Channel', 'data/csv/channels_rank.csv')
+store_into_csv(dict1, 'Channel', 'data/csv/channels/channels_grp.csv')
+store_into_csv(dict2, 'Channel', 'data/csv/channels/channels_rank.csv')
 
 print ('Stored successfully')

@@ -31,10 +31,10 @@ for show in shows:
         dict4[show][week] = online_trp[week]['TRP']
         dict5[show][week] = online_trp[week]['Rank']
 
-store_into_csv(dict1, 'Show', 'data/csv/info.csv')
-store_into_csv(dict2, 'Show', 'data/csv/tv_trp_trp.csv')
-store_into_csv(dict3, 'Show', 'data/csv/tv_trp_rank.csv')
-store_into_csv(dict4, 'Show', 'data/csv/online_trp_trp.csv')
-store_into_csv(dict5, 'Show', 'data/csv/online_trp_rank.csv')
+store_into_csv(dict1, 'Show', 'data/csv/shows/info.csv')
+store_into_csv(dict2, 'Show', 'data/csv/shows/tv/tv_trp_trp.csv')
+store_into_csv(dict3, 'Show', 'data/csv/shows/tv/tv_trp_rank.csv')
+store_into_csv(dict4, 'Show', 'data/csv/shows/online/online_trp_trp.csv')
+store_into_csv(dict5, 'Show', 'data/csv/shows/online/online_trp_rank.csv')
 
 print ('Stored successfully')
