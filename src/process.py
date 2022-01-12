@@ -16,7 +16,7 @@ def process(choice, old_path, new_path, msg):
             exit = True
 
     if exit:
-        print ('Following ' + msg + 'are not present in ' + msg + '.json file: ')
+        print ('Following ' + msg + ' are not present in ' + msg + '.json file: ')
         for ele in not_present:
             print (ele)
         raise ("Add "+ msg + " in " + msg + ".json file")
@@ -31,6 +31,24 @@ def process(choice, old_path, new_path, msg):
                 ele_data = data[ele]
             ele_data[week] = trp_data
 
-    print_data(data)
-    #store(new_path, data)
+    # print_data(data)
+    store(new_path, data)
+    print ("Stored successfully")
 
+if __name__ == "__main__":
+    print ("Select: ")
+    print ("1. TV Shows - TV TRP")
+    print ("2. TV Shows - Online TRP")
+    print ("3. Channels")
+    print ()
+
+    ch = int(input("Enter choice: "))
+    
+    if (ch==1):
+        process("TV", 'data/json/shows2.json', 'data/json/shows.json', 'shows')
+    elif (ch==2):
+        process("Online", 'data/json/shows2.json', 'data/json/shows.json', 'shows')
+    elif (ch==3):
+        process("Channel", 'data/json/channels2.json', 'data/json/channels.json', 'channels')
+    else:
+        print ('Invalid Choice')
