@@ -29,7 +29,7 @@ elif (select == 'Channel'):
         choices = st.sidebar.multiselect('Compare channels',channels, default=channels[0], key=10)
 
         if (len(choices)!=0):
-            comparison_function(trp, rank, choices)
+            comparison_function(trp, rank, choices, 'Show Data', 11, True)
         else:
             st.markdown("##### Please select channels")
 
@@ -61,5 +61,23 @@ elif (select == 'Leaders'):
 elif (select == 'Compare Shows'):
     st.title('Compare Shows')
 
+    st.markdown('### Comparison')
+
+    tv_trp = read_csv('data/csv/shows/tv/tv_trp_trp.csv', 'Show')
+    tv_rank = read_csv('data/csv/shows/tv/tv_trp_rank.csv', 'Show')
+    online_trp = read_csv('data/csv/shows/online/online_trp_trp.csv', 'Show')
+    online_rank = read_csv('data/csv/shows/online/online_trp_rank.csv', 'Show')
+
+    shows = list(info.index.unique())
+    choices = st.sidebar.multiselect('Compare shows',shows, default=shows[0], key=22)
+
+    if (len(choices)!=0):
+        st.markdown('### TV TRP')
+        comparison_function(tv_trp, tv_rank, choices, "Show TV Show - TV TRP & Rank Data",23)
+
+        st.markdown('### Online TRP')
+        comparison_function(online_trp, online_rank, choices, "Show TV Show - Online TRP & Rank Data",24)
+    else:
+        st.markdown("##### Please select shows")
 else:
     st.title('Others')

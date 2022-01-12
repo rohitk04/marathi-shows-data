@@ -102,10 +102,14 @@ def plot_figure(data, choices, ch, y_axis_title, reversed, style=False):
         else:
             st.dataframe(modified_data)
 
-def comparison_function(trp, rank, choices):
-    ch = st.sidebar.checkbox('Show Data', key=11)
+def comparison_function(trp, rank, choices, checkbox_msg, k1, grp=False):
+    ch = st.sidebar.checkbox(checkbox_msg, key=k1)
 
-    plot_figure(trp, choices, ch, 'GRP', True, True)
+    ttl = 'TRP'
+    if grp:
+        ttl = ttl.replace('T','G')
+
+    plot_figure(trp, choices, ch, ttl, True, True)
     plot_figure(rank, choices, ch, 'Rank', 'reversed')
 
 def trp_function(trp, week, ch, grp, middle = ''):    
