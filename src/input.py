@@ -23,8 +23,8 @@ def load_shows():
 def load_channels():
     return json.load(open('data/json/channels.json'))
 
-def read_csv(path, style=False):
-    df = pd.read_csv(path).set_index('Show').sort_index()
+def read_csv(path, col_name, style=False):
+    df = pd.read_csv(path).set_index(col_name).sort_index()
     if style:
         df= df.style.format("{:.2f}")
     return df

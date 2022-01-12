@@ -155,20 +155,28 @@ def timeslot_function(week, info, trp, rank):
 def display_data(info):
     st.title("BARC Data (Raw Data)")
 
-    st.subheader('Information')
+    st.subheader('Show Information')
     st.dataframe(info)
     st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
 
+    st.subheader('Channels')
+    st.markdown('#### GRP')
+    st.dataframe(read_csv('data\csv\channels_grp.csv', 'Channel', True))
+    st.markdown('#### Rank')
+    st.dataframe(read_csv('data\csv\channels_rank.csv', 'Channel'))
+    st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)   
+    
+    st.subheader('TV Shows')
     st.subheader('TV TRP')
     st.markdown('#### TRP')
-    st.dataframe(read_csv('data\csv\\tv_trp_trp.csv', True))
+    st.dataframe(read_csv('data\csv\\tv_trp_trp.csv', 'Show',True))
     st.markdown('#### Rank')
-    st.dataframe(read_csv('data\csv\\tv_trp_rank.csv'))
+    st.dataframe(read_csv('data\csv\\tv_trp_rank.csv', 'Show'))
     st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
 
     st.subheader('Online TRP')
     st.markdown('#### TRP')
-    st.dataframe(read_csv('data\csv\\tv_trp_trp.csv',True))    
+    st.dataframe(read_csv('data\csv\\tv_trp_trp.csv','Show', True))    
     st.markdown('#### Rank')
-    st.dataframe(read_csv('data\csv\\tv_trp_rank.csv'))
+    st.dataframe(read_csv('data\csv\\tv_trp_rank.csv', 'Show'))
     st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)

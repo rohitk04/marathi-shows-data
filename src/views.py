@@ -5,7 +5,7 @@ from input import read_csv
 
 from views_functions import channel_function, display_data, timeslot_function, week_function
 
-info = read_csv('data\csv\info.csv')
+info = read_csv('data\csv\info.csv', 'Show')
 
 select = st.sidebar.selectbox('Choose', ['BARC Data (Raw Data)', 'Channel', 'Shows - TV TRP', 'Shows - Online TRP', 'Leaders', 'Compare Shows'], key=1)
 
@@ -18,8 +18,8 @@ elif (select == 'Channel'):
 elif (select == 'Shows - TV TRP'):
     st.title('Shows - TV TRP')
 
-    trp = read_csv('data\csv\\tv_trp_trp.csv')
-    rank =read_csv('data\csv\\tv_trp_rank.csv')
+    trp = read_csv('data\csv\\tv_trp_trp.csv', 'Show')
+    rank =read_csv('data\csv\\tv_trp_rank.csv', 'Show')
 
     week = week_function(trp,rank)  
     channel_function(week, info, trp, rank)
@@ -28,8 +28,8 @@ elif (select == 'Shows - TV TRP'):
 elif (select == 'Shows - Online TRP'):
     st.title('Shows - Online TRP')
 
-    trp = read_csv('data\csv\online_trp_trp.csv')
-    rank = read_csv('data\csv\online_trp_rank.csv')
+    trp = read_csv('data\csv\online_trp_trp.csv', 'Show')
+    rank = read_csv('data\csv\online_trp_rank.csv', 'Show')
 
     week = week_function(trp,rank)
 
