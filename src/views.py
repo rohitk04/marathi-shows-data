@@ -19,14 +19,14 @@ elif (select == 'Channel'):
     trp = read_csv('data/csv/channels/channels_grp.csv', 'Channel')
     rank = read_csv('data/csv/channels/channels_rank.csv', 'Channel')
 
-    if (st.sidebar.checkbox("Show Weekwise Performance",value=True,key=12)):
-        week = week_function(trp, rank, 2,3, True)
+    if (st.sidebar.checkbox("Show Weekwise Performance",value=True,key=6)):
+        week = week_function(trp, rank, 7,8, True)
     
-    if (st.sidebar.checkbox("Show comparison of channels",key=13)):
+    if (st.sidebar.checkbox("Show comparison of channels",key=9)):
         st.markdown('### Comparison')
 
         channels = list(trp.index.unique())
-        choices = st.sidebar.multiselect('Compare channels',channels,key=11, default=channels[0])
+        choices = st.sidebar.multiselect('Compare channels',channels, default=channels[0], key=10)
 
         if (len(choices)!=0):
             comparison_function(trp, rank, choices)
@@ -39,7 +39,7 @@ elif (select == 'Shows - TV TRP'):
     trp = read_csv('data/csv/shows/tv/tv_trp_trp.csv', 'Show')
     rank = read_csv('data/csv/shows/tv/tv_trp_rank.csv', 'Show')
 
-    week = week_function(trp,rank, 4, 5)      
+    week = week_function(trp,rank, 12, 13)      
     channel_function(week, info, trp, rank)
     timeslot_function(week, info, trp, rank) 
 
@@ -49,7 +49,7 @@ elif (select == 'Shows - Online TRP'):
     trp = read_csv('data/csv/shows/online/online_trp_trp.csv', 'Show')
     rank = read_csv('data/csv/shows/online/online_trp_rank.csv', 'Show')
 
-    week = week_function(trp,rank,10,11)
+    week = week_function(trp,rank,18,19)
 
 elif (select == 'Leaders'):
     st.title('Leaders')

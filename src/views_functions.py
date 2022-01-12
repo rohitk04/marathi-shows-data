@@ -3,6 +3,111 @@ import plotly.graph_objects as go
 
 from input import read_csv
 
+def display_data(info):
+    st.title("BARC Data (Raw Data)")
+
+    ch1 = st.sidebar.checkbox("Display Show Information", value=True, key=2)
+    ch2 = st.sidebar.checkbox("Display Channel - GRP & Rank Data", key=3)
+    ch3 = st.sidebar.checkbox("Display TV Show - TV TRP & Rank Data", key=4)
+    ch4 = st.sidebar.checkbox("Display TV Show - Online TRP & Rank Data", key=5)
+
+    if ch1:
+        st.subheader('Show Information')
+        st.dataframe(info)
+        st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
+
+    if ch2:
+        st.subheader('Channels')
+        st.markdown('#### GRP')
+        st.dataframe(read_csv('data/csv/channels/channels_grp.csv', 'Channel', True))
+        st.markdown('#### Rank')
+        st.dataframe(read_csv('data/csv/channels/channels_rank.csv', 'Channel'))
+        st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)   
+    
+    if ch3:
+        st.subheader('TV Shows - TV TRP')
+        st.markdown('#### TRP')
+        st.dataframe(read_csv('data/csv/shows/tv/tv_trp_trp.csv', 'Show',True))
+        st.markdown('#### Rank')
+        st.dataframe(read_csv('data/csv/shows/tv/tv_trp_rank.csv', 'Show'))
+        st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
+
+    if ch4:
+        st.subheader('TV Shows - Online TRP')
+        st.markdown('#### TRP')
+        st.dataframe(read_csv('data/csv/shows/online/online_trp_trp.csv','Show', True))    
+        st.markdown('#### Rank')
+        st.dataframe(read_csv('data/csv/shows/online/online_trp_rank.csv', 'Show'))
+        st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
+
+def plot_figure(data, choices, ch, y_axis_title, reversed, style=False):
+    modified_data = data.loc[data.index.isin(choices)].T
+
+    dic=dict(
+            showgrid=False,
+            ticks="outside",
+            tickwidth=2,
+            tickcolor='crimson',
+            ticklen=10,
+            showline=True, 
+            linewidth=2, 
+            linecolor='black',
+            mirror=True
+            )
+
+    fig = go.Figure()
+    for col in modified_data.columns:
+        fig.add_trace(
+            go.Scatter(
+                x=modified_data.index, 
+                y=modified_data[col], 
+                mode='lines+markers',
+                name=col
+            )
+        )
+    fig.update_layout(
+        autosize=False,
+        width=750,
+        height=400,
+        margin=dict(
+            l=0,
+            r=0,
+            b=4,
+            t=25,
+            pad=0
+        ),
+        xaxis = dict(
+            dic,
+            title = "Week"
+        ),
+        yaxis = dict(
+            dic,
+            title = y_axis_title,
+            autorange=reversed
+        ),
+        title = y_axis_title,
+        legend=dict(
+            orientation="h",
+            xanchor="center",
+            x=0.5,
+            y=-0.2
+        ),
+        legend_title_text='Channel'
+    )   
+    st.plotly_chart(fig)
+
+    if ch:
+        if style:
+            st.dataframe(modified_data.style.format("{:.2f}"))
+        else:
+            st.dataframe(modified_data)
+
+def comparison_function(trp, rank, choices):
+    ch = st.sidebar.checkbox('Show Data', key=11)
+
+    plot_figure(trp, choices, ch, 'GRP', True, True)
+    plot_figure(rank, choices, ch, 'Rank', 'reversed')
+
 def trp_function(trp, week, ch, grp, middle = ''):    
     if (middle != ''):
         middle = ' - ' + middle
@@ -131,8 +236,8 @@ def week_function(trp, rank, k1, k2, grp=False):
 
 def channel_function(week, info, trp, rank):
     channels = list(info['Channel'].unique())
-    channel = st.sidebar.selectbox('Choose channel', channels, key=6)
-    ch = st.sidebar.checkbox('Show Data', key=7)
+    channel = st.sidebar.selectbox('Choose channel', channels, key=14)
+    ch = st.sidebar.checkbox('Show Data', key=15)
 
     st.markdown('### Channel: ' + channel)
 
@@ -144,8 +249,8 @@ def channel_function(week, info, trp, rank):
 
 def timeslot_function(week, info, trp, rank):
     timeslots = list(info['Time'].unique())
-    timeslot = st.sidebar.selectbox('Choose timeslot', timeslots, key=8)
-    ch = st.sidebar.checkbox('Show Data', key=9)
+    timeslot = st.sidebar.selectbox('Choose timeslot', timeslots, key=16)
+    ch = st.sidebar.checkbox('Show Data', key=17)
 
     st.markdown('### Timeslot: ' + timeslot)
 
@@ -155,99 +260,3 @@ def timeslot_function(week, info, trp, rank):
     df = rank[rank.index.isin(list(info[info['Time'] == timeslot].index))]
     rank_function(df, week, ch, timeslot)
 
-def display_data(info):
-    st.title("BARC Data (Raw Data)")
-
-    st.subheader('Show Information')
-    st.dataframe(info)
-    st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
-
-    st.subheader('Channels')
-    st.markdown('#### GRP')
-    st.dataframe(read_csv('data/csv/channels/channels_grp.csv', 'Channel', True))
-    st.markdown('#### Rank')
-    st.dataframe(read_csv('data/csv/channels/channels_rank.csv', 'Channel'))
-    st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)   
-    
-    st.subheader('TV Shows')
-    st.subheader('TV TRP')
-    st.markdown('#### TRP')
-    st.dataframe(read_csv('data/csv/shows/tv/tv_trp_trp.csv', 'Show',True))
-    st.markdown('#### Rank')
-    st.dataframe(read_csv('data/csv/shows/tv/tv_trp_rank.csv', 'Show'))
-    st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
-
-    st.subheader('Online TRP')
-    st.markdown('#### TRP')
-    st.dataframe(read_csv('data/csv/shows/online/online_trp_trp.csv','Show', True))    
-    st.markdown('#### Rank')
-    st.dataframe(read_csv('data/csv/shows/online/online_trp_rank.csv', 'Show'))
-    st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
-
-def plot_figure(data, choices, ch, y_axis_title, reversed, style=False):
-    modified_data = data.loc[data.index.isin(choices)].T
-
-    dic=dict(
-            showgrid=False,
-            ticks="outside",
-            tickwidth=2,
-            tickcolor='crimson',
-            ticklen=10,
-            showline=True, 
-            linewidth=2, 
-            linecolor='black',
-            mirror=True
-            )
-
-    fig = go.Figure()
-    for col in modified_data.columns:
-        fig.add_trace(
-            go.Scatter(
-                x=modified_data.index, 
-                y=modified_data[col], 
-                mode='lines+markers',
-                name=col
-            )
-        )
-    fig.update_layout(
-        autosize=False,
-        width=750,
-        height=400,
-        margin=dict(
-            l=0,
-            r=0,
-            b=4,
-            t=25,
-            pad=0
-        ),
-        xaxis = dict(
-            dic,
-            title = "Week"
-        ),
-        yaxis = dict(
-            dic,
-            title = y_axis_title,
-            autorange=reversed
-        ),
-        title = y_axis_title,
-        legend=dict(
-            orientation="h",
-            xanchor="center",
-            x=0.5,
-            y=-0.2
-        ),
-        legend_title_text='Channel'
-    )   
-    st.plotly_chart(fig)
-
-    if ch:
-        if style:
-            st.dataframe(modified_data.style.format("{:.2f}"))
-        else:
-            st.dataframe(modified_data)
-
-def comparison_function(trp, rank, choices):
-    ch = st.sidebar.checkbox('Show Data', key=12)
-
-    plot_figure(trp, choices, ch, 'GRP', True, True)
-    plot_figure(rank, choices, ch, 'Rank', 'reversed')
