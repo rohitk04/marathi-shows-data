@@ -114,22 +114,16 @@ def rank_function(rank, week, ch, middle=''):
     if ch:
         st.dataframe(df, width=800, height=450)
 
-def week_function(trp, rank):
-    weeks = trp.columns.unique()
-    week = st.sidebar.selectbox('Choose week', weeks, index=len(weeks)-1, key=2)
-    ch = st.sidebar.checkbox('Show Data', key=3)
-
+def week_function(trp, rank, week, ch):
     st.markdown('### ' + week)
 
     trp_function(trp, week, ch)
     rank_function(rank, week, ch)
 
-    return week
-
 def channel_function(week, info, trp, rank):
     channels = list(info['Channel'].unique())
-    channel = st.sidebar.selectbox('Choose channel', channels, key=4)
-    ch = st.sidebar.checkbox('Show Data', key=5)
+    channel = st.sidebar.selectbox('Choose channel', channels, key=6)
+    ch = st.sidebar.checkbox('Show Data', key=7)
 
     st.markdown('### Channel: ' + channel)
 
@@ -141,8 +135,8 @@ def channel_function(week, info, trp, rank):
 
 def timeslot_function(week, info, trp, rank):
     timeslots = list(info['Time'].unique())
-    timeslot = st.sidebar.selectbox('Choose timeslot', timeslots, key=6)
-    ch = st.sidebar.checkbox('Show Data', key=7)
+    timeslot = st.sidebar.selectbox('Choose timeslot', timeslots, key=8)
+    ch = st.sidebar.checkbox('Show Data', key=9)
 
     st.markdown('### Timeslot: ' + timeslot)
 

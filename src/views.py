@@ -15,13 +15,24 @@ if (select == 'BARC Data (Raw Data)'):
 elif (select == 'Channel'):
     st.title('Channel')
 
+    trp = read_csv('data/csv/channels/channels_grp.csv', 'Channel')
+    rank = read_csv('data/csv/channels/channels_rank.csv', 'Channel')
+
+    weeks = trp.columns.unique()
+    week = st.sidebar.selectbox('Choose week', weeks, index=len(weeks)-1, key=2)
+    ch = st.sidebar.checkbox('Show Data', key=3)
+    week = week_function(trp,rank,week,ch)
 elif (select == 'Shows - TV TRP'):
     st.title('Shows - TV TRP')
 
     trp = read_csv('data/csv/shows/tv/tv_trp_trp.csv', 'Show')
-    rank =read_csv('data/csv/shows/tv/tv_trp_rank.csv', 'Show')
+    rank = read_csv('data/csv/shows/tv/tv_trp_rank.csv', 'Show')
 
-    week = week_function(trp,rank)  
+    weeks = trp.columns.unique()
+    week = st.sidebar.selectbox('Choose week', weeks, index=len(weeks)-1, key=4)
+    ch = st.sidebar.checkbox('Show Data', key=5)
+    week_function(trp,rank, week, ch)  
+    
     channel_function(week, info, trp, rank)
     timeslot_function(week, info, trp, rank) 
 
@@ -31,7 +42,10 @@ elif (select == 'Shows - Online TRP'):
     trp = read_csv('data/csv/shows/online/online_trp_trp.csv', 'Show')
     rank = read_csv('data/csv/shows/online/online_trp_rank.csv', 'Show')
 
-    week = week_function(trp,rank)
+    weeks = trp.columns.unique()
+    week = st.sidebar.selectbox('Choose week', weeks, index=len(weeks)-1, key=10)
+    ch = st.sidebar.checkbox('Show Data', key=11)
+    week = week_function(trp,rank,week,ch)
 
 elif (select == 'Leaders'):
     st.title('Leaders')
