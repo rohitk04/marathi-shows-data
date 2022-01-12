@@ -4,7 +4,7 @@ import pandas as pd
 import plotly.graph_objects as go
 from input import read_csv
 
-from views_functions import channel_function, comparison_function, display_data, timeslot_function, week_function
+from views_functions import channel_function, comparison_function, display_data, performance_comparison, timeslot_function, week_function
 
 info = read_csv('data/csv/shows/info.csv', 'Show')
 
@@ -59,25 +59,35 @@ elif (select == 'Leaders'):
     st.subheader('Timeslot Leader')
 
 elif (select == 'Compare Shows'):
-    st.title('Compare Shows')
-
-    st.markdown('### Comparison')
-
     tv_trp = read_csv('data/csv/shows/tv/tv_trp_trp.csv', 'Show')
     tv_rank = read_csv('data/csv/shows/tv/tv_trp_rank.csv', 'Show')
     online_trp = read_csv('data/csv/shows/online/online_trp_trp.csv', 'Show')
     online_rank = read_csv('data/csv/shows/online/online_trp_rank.csv', 'Show')
 
-    shows = list(info.index.unique())
-    choices = st.sidebar.multiselect('Compare shows',shows, default=shows[0], key=22)
+    if (st.sidebar.checkbox("Show Weekwise Performance Comparison",value=True, key=22)):
+        st.markdown('### Weekwise Performance Comparison')
 
-    if (len(choices)!=0):
-        st.markdown('### TV TRP')
-        comparison_function(tv_trp, tv_rank, choices, "Show TV Show - TV TRP & Rank Data",23)
+        shows = list(info.index.unique())
+        choices = st.sidebar.multiselect('Compare shows',shows, default=shows[0], key=23)
 
-        st.markdown('### Online TRP')
-        comparison_function(online_trp, online_rank, choices, "Show TV Show - Online TRP & Rank Data",24)
-    else:
-        st.markdown("##### Please select shows")
+        if (len(choices)!=0):
+            st.markdown('### TV TRP')
+            comparison_function(tv_trp, tv_rank, choices, "Show TV Show - TV TRP & Rank Data",24)
+            st.markdown("""<hr style="border:dashed 2px #333" /> """, unsafe_allow_html=True)
+
+            st.markdown('### Online TRP')
+            comparison_function(online_trp, online_rank, choices, "Show TV Show - Online TRP & Rank Data",25)
+        else:
+            st.markdown("##### Please select shows")
+        
+        st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
+
+    if (st.sidebar.checkbox("Show Channelwise Performance Comparison", key=26)):
+        # st.markdown('### Channelwise Performance Comparison')
+        performance_comparison(info, tv_trp, tv_rank, online_trp, online_rank, 'Channel', 'channel', 27,28,29)
+    
+    if (st.sidebar.checkbox("Show Timeslotwise Performance Comparison", key=30)):
+        # st.markdown('### Timeslotwise Performance Comparison')
+        performance_comparison(info, tv_trp, tv_rank, online_trp, online_rank, 'Time', 'timeslot', 31,32,33)
 else:
     st.title('Others')

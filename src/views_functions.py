@@ -264,3 +264,21 @@ def timeslot_function(week, info, trp, rank):
     df = rank[rank.index.isin(list(info[info['Time'] == timeslot].index))]
     rank_function(df, week, ch, timeslot)
 
+def performance_comparison(info, tv_trp, tv_rank, online_trp, online_rank, column, text, k1, k2, k3):
+    st.markdown('### '+ text.capitalize() + 'wise Performance Comparison')
+
+    choices = list(info[column].unique())
+    selection = st.sidebar.selectbox('Choose ' + text, choices, key=k1)
+
+    st.markdown('### ' + selection)
+
+    shows = list(info.loc[info[column]==selection].index)
+    
+    st.markdown('### TV TRP')
+    comparison_function(tv_trp, tv_rank, shows, "Show TV Show - TV TRP & Rank Data",k2)
+    st.markdown("""<hr style="border:dashed 2px #333" /> """, unsafe_allow_html=True)
+
+    st.markdown('### Online TRP')
+    comparison_function(online_trp, online_rank, shows, "Show TV Show - Online TRP & Rank Data",k3)
+
+    st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
