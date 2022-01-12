@@ -19,7 +19,7 @@ def process(choice, old_path, new_path, msg):
         print ('Following ' + msg + ' are not present in ' + msg + '.json file: ')
         for ele in not_present:
             print (ele)
-        raise ("Add "+ msg + " in " + msg + ".json file")
+        raise RuntimeError("Add "+ msg + " in " + msg + ".json file")
 
     for ele in data:
         trp_data = trp[week].get(ele)

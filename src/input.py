@@ -11,7 +11,7 @@ def load_data(choice):
         data = json.load(open('data/json/channels.json'))
         trp = json.load(open('data/json/channel_trp.json'))
     else:
-        raise Exception("Wrong Choice")
+        raise RuntimeError("Wrong Choice")
 
     week = list(trp.keys())[0]
     return data, trp, week
