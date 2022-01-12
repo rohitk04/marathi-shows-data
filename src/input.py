@@ -9,7 +9,7 @@ def load_data(choice):
         trp = json.load(open('data/json/online_trp.json'))
     elif choice == 'Channel':
         data = json.load(open('data/json/channels.json'))
-        trp = json.load(open('data/json/channel_trp.json'))
+        trp = json.load(open('data/json/channels_grp.json'))
     else:
         raise RuntimeError("Wrong Choice")
 
@@ -18,3 +18,6 @@ def load_data(choice):
 
 def load_shows():
     return json.load(open('data/json/shows.json'))
+
+def load_channels():
+    return json.load(open('data/json/channels.json'))

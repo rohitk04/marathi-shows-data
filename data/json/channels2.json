@@ -1,7 +1,52 @@
 {
-    "Star Pravah": {},
-    "Zee Marathi": {},
-    "Colors Marathi": {},
-    "Sony SAB": {},
-    "Star Plus": {}
+    "Star Pravah": {
+        "Week 1": {
+            "GRP": "4102.0",
+            "Rank": "1"
+        },
+        "Week 2": {
+            "GRP": "4232.28",
+            "Rank": "1"
+        }
+    },
+    "Zee Marathi": {
+        "Week 1": {
+            "GRP": "3402.0",
+            "Rank": "2"
+        },
+        "Week 2": {
+            "GRP": "2302.20",
+            "Rank": "3"
+        }
+    },
+    "Colors Marathi": {
+        "Week 1": {
+            "GRP": "2303.24",
+            "Rank": "3"
+        },
+        "Week 2": {
+            "GRP": "3043.65",
+            "Rank": "3"
+        }
+    },
+    "Sony SAB": {
+        "Week 1": {
+            "GRP": "1203.2",
+            "Rank": "4"
+        },
+        "Week 2": {
+            "GRP": "963.57",
+            "Rank": "5"
+        }
+    },
+    "Star Plus": {
+        "Week 1": {
+            "GRP": "1000.4",
+            "Rank": "5"
+        },
+        "Week 2": {
+            "GRP": "2374.29",
+            "Rank": "4"
+        }
+    }
 }

@@ -35,3 +35,5 @@ df2 = pd.DataFrame.from_dict(dict2,orient="index").sort_index().rename_axis(inde
 df3 = pd.DataFrame.from_dict(dict3,orient="index").sort_index().rename_axis(index='Show').to_csv('data/csv/tv_trp_rank.csv')
 df4 = pd.DataFrame.from_dict(dict4,orient="index").sort_index().rename_axis(index='Show').to_csv('data/csv/online_trp_trp.csv')
 df5 = pd.DataFrame.from_dict(dict5,orient="index").sort_index().rename_axis(index='Show').to_csv('data/csv/online_trp_rank.csv')
+
+print ('Stored successfully')
