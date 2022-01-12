@@ -236,8 +236,8 @@ def week_function(trp, rank, k1, k2, grp=False):
 
 def channel_function(week, info, trp, rank):
     channels = list(info['Channel'].unique())
-    channel = st.sidebar.selectbox('Choose channel', channels, key=14)
-    ch = st.sidebar.checkbox('Show Data', key=15)
+    channel = st.sidebar.selectbox('Choose channel', channels, key=15)
+    ch = st.sidebar.checkbox('Show Data', key=16)
 
     st.markdown('### Channel: ' + channel)
 
@@ -249,8 +249,8 @@ def channel_function(week, info, trp, rank):
 
 def timeslot_function(week, info, trp, rank):
     timeslots = list(info['Time'].unique())
-    timeslot = st.sidebar.selectbox('Choose timeslot', timeslots, key=16)
-    ch = st.sidebar.checkbox('Show Data', key=17)
+    timeslot = st.sidebar.selectbox('Choose timeslot', timeslots, key=18)
+    ch = st.sidebar.checkbox('Show Data', key=19)
 
     st.markdown('### Timeslot: ' + timeslot)
 

@@ -39,9 +39,11 @@ elif (select == 'Shows - TV TRP'):
     trp = read_csv('data/csv/shows/tv/tv_trp_trp.csv', 'Show')
     rank = read_csv('data/csv/shows/tv/tv_trp_rank.csv', 'Show')
 
-    week = week_function(trp,rank, 12, 13)      
-    channel_function(week, info, trp, rank)
-    timeslot_function(week, info, trp, rank) 
+    week = week_function(trp,rank, 12, 13)
+    if (st.sidebar.checkbox("Show Channelwise Performance",key=14)):      
+        channel_function(week, info, trp, rank)
+    if (st.sidebar.checkbox("Show Timeslotwise Performance",key=17)):
+        timeslot_function(week, info, trp, rank) 
 
 elif (select == 'Shows - Online TRP'):
     st.title('Shows - Online TRP')
@@ -49,7 +51,7 @@ elif (select == 'Shows - Online TRP'):
     trp = read_csv('data/csv/shows/online/online_trp_trp.csv', 'Show')
     rank = read_csv('data/csv/shows/online/online_trp_rank.csv', 'Show')
 
-    week = week_function(trp,rank,18,19)
+    week = week_function(trp,rank,20,21)
 
 elif (select == 'Leaders'):
     st.title('Leaders')
