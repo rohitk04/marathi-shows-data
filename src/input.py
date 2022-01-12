@@ -1,4 +1,5 @@
 import json
+import pandas as pd
 
 def load_data(choice):
     if choice == "TV":
@@ -21,3 +22,9 @@ def load_shows():
 
 def load_channels():
     return json.load(open('data/json/channels.json'))
+
+def read_csv(path, style=False):
+    df = pd.read_csv(path).set_index('Show').sort_index()
+    if style:
+        df= df.style.format("{:.2f}")
+    return df

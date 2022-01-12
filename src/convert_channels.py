@@ -2,6 +2,7 @@ import json
 import pandas as pd
 
 from input import load_channels
+from output import store_into_csv
 
 channels = load_channels()
 
@@ -17,7 +18,7 @@ for channel in channels:
         dict1[channel][week] = grp[week]['GRP']
         dict2[channel][week] = grp[week]['Rank']
 
-df1 = pd.DataFrame.from_dict(dict1,orient="index").sort_index().rename_axis(index='Show').to_csv('data/csv/channels_grp.csv')
-df2 = pd.DataFrame.from_dict(dict2,orient="index").sort_index().rename_axis(index='Show').to_csv('data/csv/channels_rank.csv')
+store_into_csv(dict1, 'Channel', 'data/csv/channels_grp.csv')
+store_into_csv(dict2, 'Channel', 'data/csv/channels_rank.csv')
 
 print ('Stored successfully')

@@ -1,9 +1,9 @@
 from input import load_data
-from output import print_data, store
+from output import print_data, store_into_json
 
 def process(choice, old_path, new_path, msg):
     data,trp,week = load_data(choice)
-    store(old_path, data)
+    store_into_json(old_path, data)
 
     trp_keys = trp[week].keys()
 
@@ -32,7 +32,7 @@ def process(choice, old_path, new_path, msg):
             ele_data[week] = trp_data
 
     # print_data(data)
-    store(new_path, data)
+    store_into_json(new_path, data)
     print ("Stored successfully")
 
 if __name__ == "__main__":
