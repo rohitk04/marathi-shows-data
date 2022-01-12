@@ -1,13 +1,16 @@
 import streamlit as st
-import pandas as pd
 import plotly.graph_objects as go
 
 from input import read_csv
 
-def trp_function(trp, week, ch, middle = ''):    
+def trp_function(trp, week, ch, grp, middle = ''):    
     if (middle != ''):
         middle = ' - ' + middle
-    
+
+    ttl = 'TRP'
+    if grp:
+        ttl = ttl.replace('T','G')
+
     df = trp[week].sort_values(ascending=False)
 
     dic=dict(
@@ -48,9 +51,9 @@ def trp_function(trp, week, ch, middle = ''):
         yaxis=dict(
             dic, 
             showgrid=False,
-            title='TRP'
+            title=ttl
         ),
-        title=week + middle + ' - TRP'
+        title=week + middle + ' - ' + ttl
     )
     st.plotly_chart(fig)
 
@@ -114,11 +117,17 @@ def rank_function(rank, week, ch, middle=''):
     if ch:
         st.dataframe(df, width=800, height=450)
 
-def week_function(trp, rank, week, ch):
+def week_function(trp, rank, k1, k2, grp=False):
+    weeks = trp.columns.unique()
+    week = st.sidebar.selectbox('Choose week', weeks, index=len(weeks)-1, key=k1)
+    ch = st.sidebar.checkbox('Show Data', key=k2)
+    
     st.markdown('### ' + week)
 
-    trp_function(trp, week, ch)
+    trp_function(trp, week, ch, grp)
     rank_function(rank, week, ch)
+    
+    return week
 
 def channel_function(week, info, trp, rank):
     channels = list(info['Channel'].unique())
@@ -128,7 +137,7 @@ def channel_function(week, info, trp, rank):
     st.markdown('### Channel: ' + channel)
 
     df = trp[trp.index.isin(list(info[info['Channel'] == channel].index))]
-    trp_function(df, week, ch, channel)
+    trp_function(df, week, ch, False, channel)
 
     df = rank[rank.index.isin(list(info[info['Channel'] == channel].index))]
     rank_function(df, week, ch, channel)
@@ -141,7 +150,7 @@ def timeslot_function(week, info, trp, rank):
     st.markdown('### Timeslot: ' + timeslot)
 
     df = trp[trp.index.isin(list(info[info['Time'] == timeslot].index))]
-    trp_function(df, week, ch, timeslot)
+    trp_function(df, week, ch, False, timeslot)
 
     df = rank[rank.index.isin(list(info[info['Time'] == timeslot].index))]
     rank_function(df, week, ch, timeslot)
