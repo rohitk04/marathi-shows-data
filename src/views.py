@@ -83,11 +83,9 @@ elif (select == 'Compare Shows'):
         st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
 
     if (st.sidebar.checkbox("Show Channelwise Performance Comparison", key=26)):
-        # st.markdown('### Channelwise Performance Comparison')
         performance_comparison(info, tv_trp, tv_rank, online_trp, online_rank, 'Channel', 'channel', 27,28,29)
     
     if (st.sidebar.checkbox("Show Timeslotwise Performance Comparison", key=30)):
-        # st.markdown('### Timeslotwise Performance Comparison')
         performance_comparison(info, tv_trp, tv_rank, online_trp, online_rank, 'Time', 'timeslot', 31,32,33)
 else:
     st.title('Others')

@@ -19,7 +19,7 @@ def display_data(info):
     if ch2:
         st.subheader('Channels')
         st.markdown('#### GRP')
-        st.dataframe(read_csv('data/csv/channels/channels_grp.csv', 'Channel', True))
+        st.dataframe(read_csv('data/csv/channels/channels_grp.csv', 'Channel').style.format("{:.2f}"))
         st.markdown('#### Rank')
         st.dataframe(read_csv('data/csv/channels/channels_rank.csv', 'Channel'))
         st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)   
@@ -27,7 +27,7 @@ def display_data(info):
     if ch3:
         st.subheader('TV Shows - TV TRP')
         st.markdown('#### TRP')
-        st.dataframe(read_csv('data/csv/shows/tv/tv_trp_trp.csv', 'Show',True))
+        st.dataframe(read_csv('data/csv/shows/tv/tv_trp_trp.csv', 'Show').style.format("{:.2f}"))
         st.markdown('#### Rank')
         st.dataframe(read_csv('data/csv/shows/tv/tv_trp_rank.csv', 'Show'))
         st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
@@ -35,7 +35,7 @@ def display_data(info):
     if ch4:
         st.subheader('TV Shows - Online TRP')
         st.markdown('#### TRP')
-        st.dataframe(read_csv('data/csv/shows/online/online_trp_trp.csv','Show', True))    
+        st.dataframe(read_csv('data/csv/shows/online/online_trp_trp.csv','Show').style.format("{:.2f}"))    
         st.markdown('#### Rank')
         st.dataframe(read_csv('data/csv/shows/online/online_trp_rank.csv', 'Show'))
         st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
