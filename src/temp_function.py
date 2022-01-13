@@ -2,7 +2,64 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 
-def calculate_max(column, week, df, k1, k2=None):
+from views_functions import trp_function
+
+def calculate_channel_count(df, k1):
+    occurences = df['Channel'].value_counts().rename('Count')
+
+    dic=dict(
+            showgrid=False,
+            ticks="outside",
+            tickwidth=2,
+            tickcolor='crimson',
+            ticklen=10,
+            showline=True, 
+            linewidth=2, 
+            linecolor='black',
+            mirror=True
+        )
+
+    fig = go.Figure()
+    fig.add_trace(
+        go.Bar(
+            x = occurences.index,
+            y = occurences,
+            marker_color= '#b20001',
+            text = occurences,
+            textposition='auto',
+            insidetextfont = dict(
+                size=20,
+                family='Arial'),
+            insidetextanchor='middle'
+        )
+    )
+    fig.update_layout(
+        autosize=False,
+        width=750,
+        height=400,
+        margin=dict(
+            l=0,
+            r=0,
+            b=4,
+            t=25,
+            pad=0
+        ),
+        xaxis = dict(
+            dic,
+            title='Channel'
+        ),
+        yaxis = dict(
+            dic,
+            showticklabels=False, 
+            ticklen=2
+        ),
+        title='Channel Count')
+    st.plotly_chart(fig)
+
+    if (st.sidebar.checkbox('Show Channel Count Data', key=k1)):
+        st.dataframe(occurences)
+
+def find_leaders(column, week, df, k1, k2=None):
     if column == 'Time':
         title = 'Timeslot'
     else:
@@ -71,59 +128,21 @@ def calculate_max(column, week, df, k1, k2=None):
     st.plotly_chart(fig)
 
     if (st.sidebar.checkbox('Show Data', key=k1)):
-        st.dataframe(df2.set_index('Show'))
+        st.dataframe(df2.set_index('Show').style.format({'TRP':"{:.2f}"}), width=800, height=450)
 
     if column!='Channel':
-        occurences = df2['Channel'].value_counts().rename('Count')
+        calculate_channel_count(df2, k2)
 
-        dic=dict(
-                showgrid=False,
-                ticks="outside",
-                tickwidth=2,
-                tickcolor='crimson',
-                ticklen=10,
-                showline=True, 
-                linewidth=2, 
-                linecolor='black',
-                mirror=True
-            )
+def find_top_shows(week, df):
+    num = int(st.sidebar.number_input('Choose Top _',min_value=2, max_value=len(df), value=5, key=36))
 
-        fig = go.Figure()
-        fig.add_trace(
-            go.Bar(
-                x = occurences.index,
-                y = occurences,
-                marker_color= '#b20001',
-                text = occurences,
-                textposition='auto',
-                insidetextfont = dict(
-                    size=20,
-                    family='Arial'),
-                insidetextanchor='middle'
-            )
-        )
-        fig.update_layout(
-            autosize=False,
-            width=750,
-            height=400,
-            margin=dict(
-                l=0,
-                r=0,
-                b=4,
-                t=25,
-                pad=0
-            ),
-            xaxis = dict(
-                dic,
-                title='Channel'
-            ),
-            yaxis = dict(
-                dic,
-                showticklabels=False, 
-                ticklen=2
-            ),
-            title='Channel Count')
-        st.plotly_chart(fig)
+    middle = 'Top '+ str(num)+' shows'
+    st.subheader(middle)
+    
+    column_list = ['Channel',week+'_trp',week+'_rank']
+    df2 = df[column_list].rename(columns={week+'_trp':'TRP', week+'_rank':'Rank'},inplace=False).sort_values(by='TRP',ascending=False)
+    df3 = df2.reset_index().head(num).set_index('Show')
 
-        if (st.sidebar.checkbox('Show Channel Count Data', key=k2)):
-            st.dataframe(occurences)
+    ch = st.sidebar.checkbox('Show Data', key=37)
+    trp_function(df3, week, ch, False, middle, True)
+    calculate_channel_count(df3, 38)

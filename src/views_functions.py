@@ -112,7 +112,7 @@ def comparison_function(trp, rank, choices, checkbox_msg, k1, grp=False):
     plot_figure(trp, choices, ch, ttl, True, True)
     plot_figure(rank, choices, ch, 'Rank', 'reversed')
 
-def trp_function(trp, week, ch, grp, middle = ''):    
+def trp_function(trp, week, ch, grp, middle = '', leader = False):    
     if (middle != ''):
         middle = ' - ' + middle
 
@@ -120,7 +120,12 @@ def trp_function(trp, week, ch, grp, middle = ''):
     if grp:
         ttl = ttl.replace('T','G')
 
-    df = trp[week].sort_values(ascending=False)
+    if leader:
+        df = trp
+        y = trp['TRP']
+    else:
+        df = trp[week].sort_values(ascending=False)
+        y = df
 
     dic=dict(
         ticks="outside",
@@ -131,16 +136,14 @@ def trp_function(trp, week, ch, grp, middle = ''):
         linewidth=2, 
         linecolor='black',
         mirror=True,
-        gridwidth=2, 
-        gridcolor='Crimson'
+        showgrid=False
         )    
     
     fig = go.Figure()
     fig.add_trace(go.Scatter(
         x=df.index, 
-        y=df, 
+        y=y, 
         mode='lines+markers',
-        fill='tozeroy',
         marker_color='#b20001'))
     fig.update_layout(
         autosize=False,
@@ -155,11 +158,14 @@ def trp_function(trp, week, ch, grp, middle = ''):
         ),
         xaxis=dict(
             dic,
-            title='Show'
+            title='Show',
+            showspikes=True,
+            spikethickness=2,
+            spikecolor='crimson',
+            spikedash='dash'
         ),
         yaxis=dict(
-            dic, 
-            showgrid=False,
+            dic,
             title=ttl
         ),
         title=week + middle + ' - ' + ttl
@@ -167,7 +173,10 @@ def trp_function(trp, week, ch, grp, middle = ''):
     st.plotly_chart(fig)
 
     if ch:
-        st.dataframe(df.to_frame().style.format({week:"{:.2f}"}), width=800, height=450)
+        if leader:
+            st.dataframe(df.style.format({'TRP':"{:.2f}"}), width=800, height=450)
+        else:
+            st.dataframe(df.to_frame().style.format({week:"{:.2f}"}), width=800, height=450)
 
 def rank_function(rank, week, ch, middle=''):
     if (middle != ''):
