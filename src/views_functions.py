@@ -52,7 +52,10 @@ def plot_figure(data, choices, ch, y_axis_title, reversed, style=False):
             showline=True, 
             linewidth=2, 
             linecolor='black',
-            mirror=True
+            mirror=True,
+            showspikes=True,
+            spikethickness=2,
+            spikedash='dash'
             )
 
     fig = go.Figure()
@@ -136,7 +139,11 @@ def trp_function(trp, week, ch, grp, middle = '', leader = False):
         linewidth=2, 
         linecolor='black',
         mirror=True,
-        showgrid=False
+        showgrid=False,
+        showspikes=True,
+        spikethickness=2,
+        spikecolor='crimson',
+        spikedash='dash'
         )    
     
     fig = go.Figure()
@@ -158,11 +165,7 @@ def trp_function(trp, week, ch, grp, middle = '', leader = False):
         ),
         xaxis=dict(
             dic,
-            title='Show',
-            showspikes=True,
-            spikethickness=2,
-            spikecolor='crimson',
-            spikedash='dash'
+            title='Show'
         ),
         yaxis=dict(
             dic,
