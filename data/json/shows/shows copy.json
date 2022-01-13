@@ -44,39 +44,129 @@
         "Time": "19:30",
         "Type": "Fiction",
         "Platform": "Hotstar",
-        "TV TRP": {},
-        "Online TRP": {}
+        "TV TRP": {
+            "Week 1": {
+                "TRP": "6.2",
+                "Rank": "4"
+            },
+            "Week 2": {
+                "TRP": "7.0",
+                "Rank": "1"
+            }
+        },
+        "Online TRP": {
+            "Week 1": {
+                "TRP": "41.2",
+                "Rank": "1"
+            },
+            "Week 2": {
+                "TRP": "31.2",
+                "Rank": "5"
+            }
+        }
     },
     "Devmanus": {
         "Channel": "Zee Marathi",
         "Time": "22:30",
         "Type": "Fiction",
         "Platform": "Zee5",
-        "TV TRP": {},
-        "Online TRP": {}
+        "TV TRP": {
+            "Week 1": {
+                "TRP": "3.9",
+                "Rank": "8"
+            },
+            "Week 2": {
+                "TRP": "5.9",
+                "Rank": "2"
+            }
+        },
+        "Online TRP": {
+            "Week 1": {
+                "TRP": "39.8",
+                "Rank": "2"
+            },
+            "Week 2": {
+                "TRP": "34.8",
+                "Rank": "4"
+            }
+        }
     },
     "Phulala Sugandh Maticha": {
         "Channel": "Star Pravah",
         "Time": "20:30",
         "Type": "Fiction",
         "Platform": "Hotstar",
-        "TV TRP": {},
-        "Online TRP": {}
+        "TV TRP": {
+            "Week 1": {
+                "TRP": "5.8",
+                "Rank": "5"
+            },
+            "Week 2": {
+                "TRP": "5.6",
+                "Rank": "3"
+            }
+        },
+        "Online TRP": {
+            "Week 1": {
+                "TRP": "36.4",
+                "Rank": "3"
+            },
+            "Week 2": {
+                "TRP": "36.4",
+                "Rank": "3"
+            }
+        }
     },
     "Rang Maza Vegla": {
         "Channel": "Star Pravah",
         "Time": "20:00",
         "Type": "Fiction",
         "Platform": "Hotstar",
-        "TV TRP": {},
-        "Online TRP": {}
+        "TV TRP": {
+            "Week 1": {
+                "TRP": "6.5",
+                "Rank": "3"
+            },
+            "Week 2": {
+                "TRP": "5.0",
+                "Rank": "4"
+            }
+        },
+        "Online TRP": {
+            "Week 1": {
+                "TRP": "36.2",
+                "Rank": "4"
+            },
+            "Week 2": {
+                "TRP": "40.2",
+                "Rank": "2"
+            }
+        }
     },
     "Sukh Mhanje Nakki Kay Asta": {
         "Channel": "Star Pravah",
         "Time": "21:30",
         "Type": "Fiction",
         "Platform": "Hotstar",
-        "TV TRP": {},
-        "Online TRP": {}
+        "TV TRP": {
+            "Week 1": {
+                "TRP": "7.0",
+                "Rank": "1"
+            },
+            "Week 2": {
+                "TRP": "4.1",
+                "Rank": "5"
+            }
+        },
+        "Online TRP": {
+            "Week 1": {
+                "TRP": "33.4",
+                "Rank": "5"
+            },
+            "Week 2": {
+                "TRP": "43.4",
+                "Rank": "1"
+            }
+        }
     }
 }
