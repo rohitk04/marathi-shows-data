@@ -1,8 +1,9 @@
 from input import load_data
-from output import print_data, store_into_json
+from output import store_into_json
+from add_shows import add_shows
 
 def process(choice, old_path, new_path, msg):
-    print ("Processing begins...")
+    print ("\nProcessing begins...\n")
 
     data,trp,week = load_data(choice)
     store_into_json(old_path, data)
@@ -19,9 +20,11 @@ def process(choice, old_path, new_path, msg):
 
     if exit:
         print ('Following ' + msg + ' are not present in ' + msg + '.json file: ')
-        for ele in not_present:
-            print ('- ' + ele)
-        raise RuntimeError("Add "+ msg + " in " + msg + ".json file")
+        for index,ele in enumerate(not_present):
+            print (str(index+1)+'. ' + ele)
+        print ()
+        add_shows(not_present)
+        raise RuntimeError("Add "+ msg + " in " + msg + ".json file. \nPlease try again.")
 
     for ele in data:
         trp_data = trp[week].get(ele)
@@ -33,8 +36,7 @@ def process(choice, old_path, new_path, msg):
                 ele_data = data[ele]
             ele_data[week] = trp_data
 
-    # print_data(data)
     store_into_json(new_path, data)
-    print ("Stored successfully into json")
-    print ("Processing ends...")
+    print ("\nStored successfully into json\n")
+    print ("\nProcessing ends...\n")
     print ()

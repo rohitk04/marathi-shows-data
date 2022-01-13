@@ -1,1 +1,102 @@
-{}
+{
+    "Aai Kuthe Kay Karte": {
+        "Channel": "Star Pravah",
+        "Time": [
+            "19:30"
+        ],
+        "Type": "Fiction",
+        "Platform": "Hotstar",
+        "TV TRP": {},
+        "Online TRP": {}
+    },
+    "Sukh Mhanje Nakki Kay Asta": {
+        "Channel": "Star Pravah",
+        "Time": [
+            "21:30"
+        ],
+        "Type": "Fiction",
+        "Platform": "Hotstar",
+        "TV TRP": {},
+        "Online TRP": {}
+    },
+    "Thipkyanchi Rangoli": {
+        "Channel": "Star Pravah",
+        "Time": [
+            "22:00"
+        ],
+        "Type": "Fiction",
+        "Platform": "Hotstar",
+        "TV TRP": {},
+        "Online TRP": {}
+    },
+    "Rang Majha Vegla": {
+        "Channel": "Star Pravah",
+        "Time": [
+            "20:00"
+        ],
+        "Type": "Fiction",
+        "Platform": "Hotstar",
+        "TV TRP": {},
+        "Online TRP": {}
+    },
+    "Majhi Tujhi Reshimgath": {
+        "Channel": "Zee Marathi",
+        "Time": [
+            "20:30"
+        ],
+        "Type": "Fiction",
+        "Platform": "Zee5",
+        "TV TRP": {},
+        "Online TRP": {}
+    },
+    "Swabhimaan": {
+        "Channel": "Star Pravah",
+        "Time": [
+            "18:30"
+        ],
+        "Type": "Fiction",
+        "Platform": "Hotstar",
+        "TV TRP": {},
+        "Online TRP": {}
+    },
+    "Devmanus 2": {
+        "Channel": "Zee Marathi",
+        "Time": [
+            "22:30"
+        ],
+        "Type": "Fiction",
+        "Platform": "Zee5",
+        "TV TRP": {},
+        "Online TRP": {}
+    },
+    "Man Udu Udu Jhala": {
+        "Channel": "Zee Marathi",
+        "Time": [
+            "19:30"
+        ],
+        "Type": "Fiction",
+        "Platform": "Zee5",
+        "TV TRP": {},
+        "Online TRP": {}
+    },
+    "Phulala Sugandh Maticha": {
+        "Channel": "Star Pravah",
+        "Time": [
+            "20:30"
+        ],
+        "Type": "Fiction",
+        "Platform": "Hotstar",
+        "TV TRP": {},
+        "Online TRP": {}
+    },
+    "Yeu Kashi Tashi Me Nandayla": {
+        "Channel": "Zee Marathi",
+        "Time": [
+            "20:00"
+        ],
+        "Type": "Fiction",
+        "Platform": "Zee5",
+        "TV TRP": {},
+        "Online TRP": {}
+    }
+}

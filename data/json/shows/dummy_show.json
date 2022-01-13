@@ -1,9 +1,9 @@
 {
-    "Tujhya Ishqacha Naadkhula": {
-        "Channel": "Star Pravah",
-        "Time": "23:00",
-        "Type": "Fiction",
-        "Platform": "Hotstar",
+    "Show_Name": {
+        "Channel": "Channel",
+        "Time": "Time",
+        "Type": "Type",
+        "Platform": "Platform",
         "TV TRP": {},
         "Online TRP": {}
     }

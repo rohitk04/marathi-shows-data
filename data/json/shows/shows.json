@@ -1,3 +1,152 @@
 {
-    
+    "Aai Kuthe Kay Karte": {
+        "Channel": "Star Pravah",
+        "Time": [
+            "19:30"
+        ],
+        "Type": "Fiction",
+        "Platform": "Hotstar",
+        "TV TRP": {},
+        "Online TRP": {
+            "Week 1": {
+                "TRP": 41.6,
+                "Rank": 1.0
+            }
+        }
+    },
+    "Sukh Mhanje Nakki Kay Asta": {
+        "Channel": "Star Pravah",
+        "Time": [
+            "21:30"
+        ],
+        "Type": "Fiction",
+        "Platform": "Hotstar",
+        "TV TRP": {},
+        "Online TRP": {
+            "Week 1": {
+                "TRP": 40.3,
+                "Rank": 2.0
+            }
+        }
+    },
+    "Thipkyanchi Rangoli": {
+        "Channel": "Star Pravah",
+        "Time": [
+            "22:00"
+        ],
+        "Type": "Fiction",
+        "Platform": "Hotstar",
+        "TV TRP": {},
+        "Online TRP": {
+            "Week 1": {
+                "TRP": 38.4,
+                "Rank": 3.0
+            }
+        }
+    },
+    "Rang Majha Vegla": {
+        "Channel": "Star Pravah",
+        "Time": [
+            "20:00"
+        ],
+        "Type": "Fiction",
+        "Platform": "Hotstar",
+        "TV TRP": {},
+        "Online TRP": {
+            "Week 1": {
+                "TRP": 36.8,
+                "Rank": 4.0
+            }
+        }
+    },
+    "Majhi Tujhi Reshimgath": {
+        "Channel": "Zee Marathi",
+        "Time": [
+            "20:30"
+        ],
+        "Type": "Fiction",
+        "Platform": "Zee5",
+        "TV TRP": {},
+        "Online TRP": {
+            "Week 1": {
+                "TRP": 35.9,
+                "Rank": 5.0
+            }
+        }
+    },
+    "Swabhimaan": {
+        "Channel": "Star Pravah",
+        "Time": [
+            "18:30"
+        ],
+        "Type": "Fiction",
+        "Platform": "Hotstar",
+        "TV TRP": {},
+        "Online TRP": {
+            "Week 1": {
+                "TRP": 34.3,
+                "Rank": 6.0
+            }
+        }
+    },
+    "Devmanus 2": {
+        "Channel": "Zee Marathi",
+        "Time": [
+            "22:30"
+        ],
+        "Type": "Fiction",
+        "Platform": "Zee5",
+        "TV TRP": {},
+        "Online TRP": {
+            "Week 1": {
+                "TRP": 32.5,
+                "Rank": 7.0
+            }
+        }
+    },
+    "Man Udu Udu Jhala": {
+        "Channel": "Zee Marathi",
+        "Time": [
+            "19:30"
+        ],
+        "Type": "Fiction",
+        "Platform": "Zee5",
+        "TV TRP": {},
+        "Online TRP": {
+            "Week 1": {
+                "TRP": 31.6,
+                "Rank": 8.0
+            }
+        }
+    },
+    "Phulala Sugandh Maticha": {
+        "Channel": "Star Pravah",
+        "Time": [
+            "20:30"
+        ],
+        "Type": "Fiction",
+        "Platform": "Hotstar",
+        "TV TRP": {},
+        "Online TRP": {
+            "Week 1": {
+                "TRP": 30.0,
+                "Rank": 9.0
+            }
+        }
+    },
+    "Yeu Kashi Tashi Me Nandayla": {
+        "Channel": "Zee Marathi",
+        "Time": [
+            "20:00"
+        ],
+        "Type": "Fiction",
+        "Platform": "Zee5",
+        "TV TRP": {},
+        "Online TRP": {
+            "Week 1": {
+                "TRP": 29.2,
+                "Rank": 10.0
+            }
+        }
+    }
 }

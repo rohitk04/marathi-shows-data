@@ -2,7 +2,7 @@ from input import load_channels, load_shows
 from output import store_into_csv
 
 def convert(choice):
-    print ("Conversion begins...")
+    print ("\nConversion begins...\n")
     if (choice=='Channel'):
         channels = load_channels()
 
@@ -63,6 +63,6 @@ def convert(choice):
         else:
             raise RuntimeError('Invalid Choice')
     
-    print ("Stored successfully into csv")
-    print ("Conversion ends...")
+    print ("\nStored successfully into csv\n")
+    print ("\nConversion ends...\n")
     print ()
