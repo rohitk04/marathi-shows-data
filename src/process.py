@@ -1,3 +1,4 @@
+from add_channels import add_channels
 from input import load_data
 from output import store_into_json
 from add_shows import add_shows
@@ -23,8 +24,11 @@ def process(choice, old_path, new_path, msg):
         for index,ele in enumerate(not_present):
             print (str(index+1)+'. ' + ele)
         print ()
-        add_shows(not_present)
-        raise RuntimeError("Add "+ msg + " in " + msg + ".json file. \nPlease try again.")
+        if (choice!='Channel'):
+            add_shows(not_present)
+        else:
+            add_channels(not_present)
+        raise RuntimeError(msg.capitalize() + " added in " + msg + ".json file. \nPlease try again.")
 
     for ele in data:
         trp_data = trp[week].get(ele)
@@ -40,3 +44,4 @@ def process(choice, old_path, new_path, msg):
     print ("\nStored successfully into json\n")
     print ("\nProcessing ends...\n")
     print ()
+    print ('-'.center(40,'-'))
