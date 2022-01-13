@@ -15,7 +15,7 @@ for line in lines:
     words = line.split(" ")
     df = df.append({'Hashtag':words[1],'Show':codes.get(words[1]),'TRP':float(words[3])}, ignore_index=True)
 
-df['Rank'] = df['TRP'].rank(0,ascending=False,method='dense',na_option='keep')
+df['Rank'] = df['TRP'].rank(0,ascending=False,method='dense',na_option='keep').astype(int)
 df = df.sort_values(by='Rank')
     
 print (df)

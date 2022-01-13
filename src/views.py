@@ -1,7 +1,6 @@
 from numpy import mod
 import streamlit as st
 import pandas as pd
-import plotly.graph_objects as go
 from input import read_csv
 
 from views_functions import channel_function, comparison_function, display_data, find_leaders, find_top_shows, performance_comparison, timeslot_function, week_function
