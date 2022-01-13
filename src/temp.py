@@ -24,12 +24,3 @@ if (st.sidebar.checkbox('Show Timeslot Leaders', key=41)):
 
 if (st.sidebar.checkbox('Show Type Leaders', key=44)):
     find_leaders('Type', week, df4, 45, 46)
-
-# st.subheader('Show Information')
-# st.dataframe(df1)
-
-# st.subheader('TV Shows - TV TRP')
-# st.markdown('#### TRP')
-# st.dataframe(df2.style.format("{:.2f}"))
-# st.markdown('#### Rank')
-# st.dataframe(df3)

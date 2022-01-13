@@ -57,7 +57,7 @@ def calculate_channel_count(df, k1):
     st.plotly_chart(fig)
 
     if (st.sidebar.checkbox('Show Channel Count Data', key=k1)):
-        st.dataframe(occurences)
+        st.dataframe(occurences, width=800, height=450)
 
 def find_leaders(column, week, df, k1, k2=None):
     if column == 'Time':

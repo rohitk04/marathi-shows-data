@@ -4,7 +4,7 @@ import pandas as pd
 import plotly.graph_objects as go
 from input import read_csv
 
-from views_functions import channel_function, comparison_function, display_data, performance_comparison, timeslot_function, week_function
+from views_functions import channel_function, comparison_function, display_data, find_leaders, find_top_shows, performance_comparison, timeslot_function, week_function
 
 info = read_csv('data/csv/shows/info.csv', 'Show')
 
@@ -55,8 +55,26 @@ elif (select == 'Shows - Online TRP'):
 
 elif (select == 'Leaders'):
     st.title('Leaders')
-    st.subheader('Channel Leader')
-    st.subheader('Timeslot Leader')
+    
+    info = read_csv('data/csv/shows/info.csv', 'Show')
+    trp = read_csv('data/csv/shows/tv/tv_trp_trp.csv', 'Show')
+    rank = read_csv('data/csv/shows/tv/tv_trp_rank.csv', 'Show')
+    merged = pd.merge(pd.merge(info, trp, how="inner",left_index=True, right_index=True), rank, how="inner",left_index=True, right_index=True, suffixes=['_trp','_rank'])
+
+    weeks = list(trp.columns.unique())
+    week = st.sidebar.selectbox('Choose week', weeks, index=len(weeks)-1, key=34)
+
+    if (st.sidebar.checkbox('Show Top Shows', value=True, key=35)):
+        find_top_shows(week, merged)
+
+    if (st.sidebar.checkbox('Show Channel Leaders', key=39)):
+        find_leaders('Channel',week, merged, 40)
+
+    if (st.sidebar.checkbox('Show Timeslot Leaders', key=41)):
+        find_leaders('Time',week, merged, 42, 43)
+
+    if (st.sidebar.checkbox('Show Type Leaders', key=44)):
+        find_leaders('Type', week, merged, 45, 46)
 
 elif (select == 'Compare Shows'):
     tv_trp = read_csv('data/csv/shows/tv/tv_trp_trp.csv', 'Show')

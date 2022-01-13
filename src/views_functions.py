@@ -13,31 +13,31 @@ def display_data(info):
 
     if ch1:
         st.subheader('Show Information')
-        st.dataframe(info)
+        st.dataframe(info, width=800, height=450)
         st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
 
     if ch2:
         st.subheader('Channels')
         st.markdown('#### GRP')
-        st.dataframe(read_csv('data/csv/channels/channels_grp.csv', 'Channel').style.format("{:.2f}"))
+        st.dataframe(read_csv('data/csv/channels/channels_grp.csv', 'Channel').style.format("{:.2f}"), width=800, height=450)
         st.markdown('#### Rank')
-        st.dataframe(read_csv('data/csv/channels/channels_rank.csv', 'Channel'))
+        st.dataframe(read_csv('data/csv/channels/channels_rank.csv', 'Channel'), width=800, height=450)
         st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)   
     
     if ch3:
         st.subheader('TV Shows - TV TRP')
         st.markdown('#### TRP')
-        st.dataframe(read_csv('data/csv/shows/tv/tv_trp_trp.csv', 'Show').style.format("{:.2f}"))
+        st.dataframe(read_csv('data/csv/shows/tv/tv_trp_trp.csv', 'Show').style.format("{:.2f}"), width=800, height=450)
         st.markdown('#### Rank')
-        st.dataframe(read_csv('data/csv/shows/tv/tv_trp_rank.csv', 'Show'))
+        st.dataframe(read_csv('data/csv/shows/tv/tv_trp_rank.csv', 'Show'), width=800, height=450)
         st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
 
     if ch4:
         st.subheader('TV Shows - Online TRP')
         st.markdown('#### TRP')
-        st.dataframe(read_csv('data/csv/shows/online/online_trp_trp.csv','Show').style.format("{:.2f}"))    
+        st.dataframe(read_csv('data/csv/shows/online/online_trp_trp.csv','Show').style.format("{:.2f}"), width=800, height=450)    
         st.markdown('#### Rank')
-        st.dataframe(read_csv('data/csv/shows/online/online_trp_rank.csv', 'Show'))
+        st.dataframe(read_csv('data/csv/shows/online/online_trp_rank.csv', 'Show'), width=800, height=450)
         st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
 
 def plot_figure(data, choices, ch, y_axis_title, reversed, style=False):
@@ -98,9 +98,9 @@ def plot_figure(data, choices, ch, y_axis_title, reversed, style=False):
 
     if ch:
         if style:
-            st.dataframe(modified_data.style.format("{:.2f}"))
+            st.dataframe(modified_data.style.format("{:.2f}"), width=800, height=450)
         else:
-            st.dataframe(modified_data)
+            st.dataframe(modified_data, width=800, height=450)
 
 def comparison_function(trp, rank, choices, checkbox_msg, k1, grp=False):
     ch = st.sidebar.checkbox(checkbox_msg, key=k1)
@@ -291,3 +291,146 @@ def performance_comparison(info, tv_trp, tv_rank, online_trp, online_rank, colum
     comparison_function(online_trp, online_rank, shows, "Show TV Show - Online TRP & Rank Data",k3)
 
     st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
+
+def calculate_channel_count(df, k1):
+    occurences = df['Channel'].value_counts().rename('Count')
+
+    dic=dict(
+            showgrid=False,
+            ticks="outside",
+            tickwidth=2,
+            tickcolor='crimson',
+            ticklen=10,
+            showline=True, 
+            linewidth=2, 
+            linecolor='black',
+            mirror=True
+        )
+
+    fig = go.Figure()
+    fig.add_trace(
+        go.Bar(
+            x = occurences.index,
+            y = occurences,
+            marker_color= '#b20001',
+            text = occurences,
+            textposition='auto',
+            insidetextfont = dict(
+                size=20,
+                family='Arial'),
+            insidetextanchor='middle'
+        )
+    )
+    fig.update_layout(
+        autosize=False,
+        width=750,
+        height=400,
+        margin=dict(
+            l=0,
+            r=0,
+            b=4,
+            t=25,
+            pad=0
+        ),
+        xaxis = dict(
+            dic,
+            title='Channel'
+        ),
+        yaxis = dict(
+            dic,
+            showticklabels=False, 
+            ticklen=2
+        ),
+        title='Channel Count')
+    st.plotly_chart(fig)
+
+    if (st.sidebar.checkbox('Show Channel Count Data', key=k1)):
+        st.dataframe(occurences, width=800, height=450)
+
+def find_leaders(column, week, df, k1, k2=None):
+    if column == 'Time':
+        title = 'Timeslot'
+    else:
+        title = column
+
+    st.subheader(title + " Leaders")
+    
+    column_list = ['Channel',week+'_trp',week+'_rank']
+
+    if column!='Channel':
+        column_list.insert(0, column)
+
+    df2 = df[df.groupby(column)[week+'_trp'].transform(max) == df[week+'_trp']]
+    df2 = df2[column_list].rename_axis(index='Show').reset_index().sort_values([column]).rename(columns={week+'_trp':'TRP', week+'_rank':'Rank'},inplace=False)
+    
+    dic=dict(
+        showgrid=False,
+        ticks="outside",
+        tickwidth=2,
+        tickcolor='crimson',
+        ticklen=10,
+        showline=True, 
+        linewidth=2, 
+        linecolor='black',
+        mirror=True
+    )
+
+    fig = go.Figure()
+    fig.add_trace(
+        go.Bar(
+            x = df2[column],
+            y = df2['TRP'],
+            hoverinfo= 'text',
+            marker_color= '#b20001',
+            text = df2['Show'].astype('str') + ' (' + df2['TRP'].astype('str') + ')',
+            textposition='inside',
+            insidetextfont = dict(
+                size=18,
+                family='Arial'),
+            insidetextanchor='middle'
+        )
+    )
+    fig.update_layout(
+        autosize=False,
+        width=750,
+        height=400,
+        margin=dict(
+            l=0,
+            r=0,
+            b=4,
+            t=25,
+            pad=0
+        ),
+        uniformtext_minsize=12, 
+        uniformtext_mode='hide',
+        xaxis = dict(
+            dic,
+            title=title
+        ),
+        yaxis = dict(
+            dic,
+            ticklen=2,
+            title = 'TRP'
+        ),
+        title=week)
+    st.plotly_chart(fig)
+
+    if (st.sidebar.checkbox('Show Data', key=k1)):
+        st.dataframe(df2.set_index('Show').style.format({'TRP':"{:.2f}"}), width=800, height=450)
+
+    if column!='Channel':
+        calculate_channel_count(df2, k2)
+
+def find_top_shows(week, df):
+    num = int(st.sidebar.number_input('Choose Top _',min_value=2, max_value=len(df), value=5, key=36))
+
+    middle = 'Top '+ str(num)+' shows'
+    st.subheader(middle)
+    
+    column_list = ['Channel',week+'_trp',week+'_rank']
+    df2 = df[column_list].rename(columns={week+'_trp':'TRP', week+'_rank':'Rank'},inplace=False).sort_values(by='TRP',ascending=False)
+    df3 = df2.reset_index().head(num).set_index('Show')
+
+    ch = st.sidebar.checkbox('Show Data', key=37)
+    trp_function(df3, week, ch, False, middle, True)
+    calculate_channel_count(df3, 38)
