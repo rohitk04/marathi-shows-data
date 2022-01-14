@@ -1,16 +1,6 @@
 import json
 
 from output import store_into_json
-
-def get_value(dictionary, msg1, msg2):
-    print ()
-    print (msg1 + " Choices: ")
-
-    for key,choice in dictionary.items():
-        print (str(key)+". "+choice)
-
-    choice = int(input("Enter "+msg2+": "))
-    return dictionary.get(choice)
         
 def add_show(show):
     channel_choices = {1:'Star Pravah', 2:'Zee Marathi', 3:'Colors Marathi'}
@@ -24,20 +14,45 @@ def add_show(show):
     print ('-'.center(40,'-'))
     print (show.center(40,' '))
     
-    channel = get_value(channel_choices,'Channel','Channel')
-    type = get_value(type_choices, 'Type','Type')
-    platform = get_value(platform_choices, 'Platform','OTT Platform')
+    print ()    
+    print ("Channel Choices: ")
+    
+    for key,choice in channel_choices.items():
+        print (str(key)+". "+choice)
 
+    index = int(input("Enter choice: "))
+    
+    channel = channel_choices.get(index)
+    platform = platform_choices.get(index)
+    
+    print ()    
+    print ("Type Choices: ")
+    
+    for key,choice in type_choices.items():
+        print (str(key)+". "+choice)
+
+    index = int(input("Enter choice: "))
+
+    type = type_choices.get(index)
+    
+    time_list = []
+    
     if type != 'Event':
-        time_list = []
+        print ()    
+        print ("Time Choices: ")
+        
+        for key,choice in time_choices.items():
+            print (str(key)+". "+choice)
 
         rep = 'y'
         while (rep=='y'):
-            time_list.append(get_value(time_choices, 'Time', "Time (in 24 hrs format)"))
+            choice = int(input("Enter choice: "))
+            time_list.append(time_choices.get(choice))
 
             rep = input("\nIs the show duration longer than half hour?\nDo you want to repeat?\nEnter answer: ")
-    
+
     new_json = {"Platform":platform, "Time":list(set(time_list)), "Channel":channel, "Type":type}
+    
     show_json[show].update(new_json)
     
     print ('-'.center(40,'-'))
