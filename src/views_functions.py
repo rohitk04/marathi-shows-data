@@ -52,6 +52,9 @@ def display_data(info):
 
 def plot_figure(data, choices, ch, y_axis_title, reversed, style=False):
     modified_data = data.loc[data.index.isin(choices)].T
+    if (modified_data.empty):
+        st.markdown ("##### "+y_axis_title+" - Data not available")
+        return
 
     dic=dict(
             showgrid=False,
@@ -196,7 +199,10 @@ def rank_function(rank, week, ch, middle=''):
     if (middle != ''):
         middle = ' - ' + middle
 
-    df = rank[week].sort_values(ascending=True)
+    df = rank[[week]].sort_values(by=week, ascending=True)
+
+    m = max(df['Week 1'])
+    df['New Rank'] = m - df['Week 1'] + 10
 
     dic=dict(
             showgrid=False,
@@ -209,20 +215,32 @@ def rank_function(rank, week, ch, middle=''):
             linecolor='black',
             mirror=True
             )
-    
+
     fig = go.Figure()
     fig.add_trace(
         go.Bar(
             x=df.index, 
-            y=df,
-            text=df,
+            y=df['New Rank'],
+            text=df[week],
             textposition='inside',
             textangle = 0,
             marker_color= '#b20001',
             insidetextfont = dict(
                 size=20,
                 family='Arial'),
-            insidetextanchor='middle',))
+            insidetextanchor='middle',
+            hovertemplate='<b>Show: </b> %{x}<br><b>Rank: </b> %{text}',
+            hoverlabel = dict(
+                bgcolor = '#e0c46a',
+                align = 'auto',
+                font = dict(
+                    size=14,
+                    family='Arial'
+                )
+            ),
+            name = week
+            )
+    )
     fig.update_layout(
         autosize=False,
         width=750,
@@ -251,7 +269,7 @@ def rank_function(rank, week, ch, middle=''):
     st.plotly_chart(fig)
 
     if ch:
-        st.dataframe(df, width=800, height=450)
+        st.dataframe(df.drop(columns=['New Rank']), width=800, height=450)
 
 def week_function(trp, rank, k1, k2, grp=False):
     weeks = trp.columns.unique()
@@ -266,7 +284,7 @@ def week_function(trp, rank, k1, k2, grp=False):
     return week
 
 def channel_function(week, info, trp, rank):
-    channels = list(info['Channel'].unique())
+    channels = list(info['Channel'].sort_values().unique())
     channel = st.sidebar.selectbox('Choose channel', channels, key=15)
     ch = st.sidebar.checkbox('Show Data', key=16)
 
