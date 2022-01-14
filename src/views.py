@@ -76,6 +76,8 @@ elif (select == 'Leaders'):
         find_leaders('Type', week, merged, 45, 46)
 
 elif (select == 'Compare Shows'):
+    st.title("Shows Comparison")
+
     tv_trp = read_csv('data/csv/shows/tv/tv_trp_trp.csv', 'Show')
     tv_rank = read_csv('data/csv/shows/tv/tv_trp_rank.csv', 'Show')
     online_trp = read_csv('data/csv/shows/online/online_trp_trp.csv', 'Show')

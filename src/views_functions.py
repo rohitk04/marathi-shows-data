@@ -1,7 +1,15 @@
+from ast import literal_eval
 import streamlit as st
 import plotly.graph_objects as go
 
 from input import read_csv
+
+def info_explode(info):
+    df = info.reset_index()
+    df.index += 1
+    df['Time'] = df['Time'].apply(literal_eval)
+    df = df.explode('Time')
+    return df
 
 def display_data(info):
     st.title("BARC Data (Raw Data)")
@@ -13,7 +21,9 @@ def display_data(info):
 
     if ch1:
         st.subheader('Show Information')
-        st.dataframe(info, width=800, height=450)
+
+        df = info_explode(info)
+        st.dataframe(df, width=800, height=450)
         st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
 
     if ch2:
@@ -101,9 +111,9 @@ def plot_figure(data, choices, ch, y_axis_title, reversed, style=False):
 
     if ch:
         if style:
-            st.dataframe(modified_data.style.format("{:.2f}"), width=800, height=450)
+            st.dataframe(modified_data.T.style.format("{:.2f}"), width=800, height=450)
         else:
-            st.dataframe(modified_data, width=800, height=450)
+            st.dataframe(modified_data.T, width=800, height=450)
 
 def comparison_function(trp, rank, choices, checkbox_msg, k1, grp=False):
     ch = st.sidebar.checkbox(checkbox_msg, key=k1)
@@ -165,7 +175,8 @@ def trp_function(trp, week, ch, grp, middle = '', leader = False):
         ),
         xaxis=dict(
             dic,
-            title='Show'
+            title='Show',
+            tickangle=45
         ),
         yaxis=dict(
             dic,
@@ -205,7 +216,8 @@ def rank_function(rank, week, ch, middle=''):
             x=df.index, 
             y=df,
             text=df,
-            textposition='auto',
+            textposition='inside',
+            textangle = 0,
             marker_color= '#b20001',
             insidetextfont = dict(
                 size=20,
@@ -222,9 +234,12 @@ def rank_function(rank, week, ch, middle=''):
             t=25,
             pad=0
         ),
+        uniformtext_minsize=8, 
+        uniformtext_mode='hide',
         xaxis = dict(
             dic,
-            title='Show'
+            title='Show',
+            tickangle = 45
         ),
         yaxis = dict(
             dic,
@@ -264,27 +279,31 @@ def channel_function(week, info, trp, rank):
     rank_function(df, week, ch, channel)
 
 def timeslot_function(week, info, trp, rank):
-    timeslots = list(info['Time'].unique())
+    e_info = info_explode(info)
+
+    timeslots = list(e_info['Time'].dropna().sort_values().unique())
     timeslot = st.sidebar.selectbox('Choose timeslot', timeslots, key=18)
     ch = st.sidebar.checkbox('Show Data', key=19)
 
     st.markdown('### Timeslot: ' + timeslot)
 
-    df = trp[trp.index.isin(list(info[info['Time'] == timeslot].index))]
+    df = trp[trp.index.isin(list(e_info[e_info['Time'] == timeslot]['Show']))]
     trp_function(df, week, ch, False, timeslot)
 
-    df = rank[rank.index.isin(list(info[info['Time'] == timeslot].index))]
+    df = rank[rank.index.isin(list(e_info[e_info['Time'] == timeslot]['Show']))]
     rank_function(df, week, ch, timeslot)
 
 def performance_comparison(info, tv_trp, tv_rank, online_trp, online_rank, column, text, k1, k2, k3):
     st.markdown('### '+ text.capitalize() + 'wise Performance Comparison')
 
-    choices = list(info[column].unique())
+    e_info = info_explode(info)
+
+    choices = list(e_info[column].sort_values().unique())
     selection = st.sidebar.selectbox('Choose ' + text, choices, key=k1)
 
     st.markdown('### ' + selection)
 
-    shows = list(info.loc[info[column]==selection].index)
+    shows = list(e_info.loc[e_info[column]==selection]['Show'])
     
     st.markdown('### TV TRP')
     comparison_function(tv_trp, tv_rank, shows, "Show TV Show - TV TRP & Rank Data",k2)
@@ -351,21 +370,24 @@ def calculate_channel_count(df, k1):
         st.dataframe(occurences, width=800, height=450)
 
 def find_leaders(column, week, df, k1, k2=None):
+    e_info = info_explode(df)
+    
     if column == 'Time':
         title = 'Timeslot'
+        sort_column = column
     else:
         title = column
+        sort_column = 'Rank'
 
     st.subheader(title + " Leaders")
     
-    column_list = ['Channel',week+'_trp',week+'_rank']
-
+    column_list = ['Show', 'Channel',week+'_trp',week+'_rank']
     if column!='Channel':
-        column_list.insert(0, column)
+        column_list.insert(1, column)
 
-    df2 = df[df.groupby(column)[week+'_trp'].transform(max) == df[week+'_trp']]
-    df2 = df2[column_list].rename_axis(index='Show').reset_index().sort_values([column]).rename(columns={week+'_trp':'TRP', week+'_rank':'Rank'},inplace=False)
-    
+    df2 = e_info[e_info.groupby(column)[week+'_trp'].transform(max) == e_info[week+'_trp']]
+    df2 = df2[column_list].drop_duplicates(keep='first',inplace=False).rename(columns={week+'_trp':'TRP', week+'_rank':'Rank'},inplace=False).sort_values(by=sort_column)
+
     dic=dict(
         showgrid=False,
         ticks="outside",
@@ -387,6 +409,7 @@ def find_leaders(column, week, df, k1, k2=None):
             marker_color= '#b20001',
             text = df2['Show'].astype('str') + ' (' + df2['TRP'].astype('str') + ')',
             textposition='inside',
+            textangle = 0,
             insidetextfont = dict(
                 size=18,
                 family='Arial'),

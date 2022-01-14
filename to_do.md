@@ -1,0 +1,1 @@
+- Rank value should be max - current
