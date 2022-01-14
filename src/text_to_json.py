@@ -29,5 +29,15 @@ for index, row in df.iterrows():
         'Rank':row['Rank']
     }
 
-store_into_json('data/json/shows/online/online_trp.json',dictionary)
-print ('Stored successfully')    
+ch1 = input("Do you want to continue?(Y/N): ").lower()
+print ()
+
+if (ch1 =='y'):
+    print ('1. TV\t2. Online')
+    ch2 = int(input ("Enter choice: "))
+    if (ch2 == 1):
+        store_into_json('data/json/shows/tv/tv_trp.json',dictionary)
+    else:
+        store_into_json('data/json/shows/online/online_trp.json',dictionary)
+
+    print ('Stored successfully')    

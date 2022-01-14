@@ -13,10 +13,10 @@ def get_value(dictionary, msg1, msg2):
     return dictionary.get(choice)
         
 def add_show(show):
-    channel_choices = {1:'Star Pravah', 2:'Zee Marathi'}
-    type_choices = {1:'Fiction'}
-    time_choices={1:'18:30',2:'19:00',3:'19:30',4:'20:00',5:'20:30',6:'21:00',7:'21:30',8:'22:00',9:'22:30',10:'23:00'}
-    platform_choices = {1:'Hotstar', 2:'Zee5'}
+    channel_choices = {1:'Star Pravah', 2:'Zee Marathi', 3:'Colors Marathi'}
+    type_choices = {1:'Fiction', 2:'Non-Fiction', 3:'Event'}
+    time_choices={1:'18:00', 2:'18:30',3:'19:00',4:'19:30',5:'20:00',6:'20:30',7:'21:00',8:'21:30',9:'22:00',10:'22:30',11:'23:00'}
+    platform_choices = {1:'Hotstar', 2:'Zee5', 3:'Voot'}
 
     show_json = json.load(open('data/json/shows/dummy_show.json'))
     show_json[show] = show_json.pop("Show_Name")
@@ -28,13 +28,14 @@ def add_show(show):
     type = get_value(type_choices, 'Type','Type')
     platform = get_value(platform_choices, 'Platform','OTT Platform')
 
-    time_list = []
+    if type != 'Event':
+        time_list = []
 
-    rep = 'y'
-    while (rep=='y'):
-        time_list.append(get_value(time_choices, 'Time', "Time (in 24 hrs format)"))
+        rep = 'y'
+        while (rep=='y'):
+            time_list.append(get_value(time_choices, 'Time', "Time (in 24 hrs format)"))
 
-        rep = input("\nIs the show duration longer than half hour?\nDo you want to repeat?\nEnter answer: ")
+            rep = input("\nIs the show duration longer than half hour?\nDo you want to repeat?\nEnter answer: ")
     
     new_json = {"Platform":platform, "Time":list(set(time_list)), "Channel":channel, "Type":type}
     show_json[show].update(new_json)
