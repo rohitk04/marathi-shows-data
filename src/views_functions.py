@@ -201,8 +201,8 @@ def rank_function(rank, week, ch, middle=''):
 
     df = rank[[week]].sort_values(by=week, ascending=True)
 
-    m = max(df['Week 1'])
-    df['New Rank'] = m - df['Week 1'] + 10
+    m = max(df[week])
+    df['New Rank'] = m - df[week] + 10
 
     dic=dict(
             showgrid=False,
