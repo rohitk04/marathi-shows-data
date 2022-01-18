@@ -3,7 +3,7 @@ import json
 
 from output import store_into_json
 
-week = 'Week 1'
+week = 'Week 2'
 
 with open('data/trp.txt') as f:
     lines = f.readlines()
@@ -13,7 +13,11 @@ codes = json.load(open('data/json/shows/codes.json'))
 
 for line in lines:
     words = line.split(" ")
-    df = df.append({'Hashtag':words[1],'Show':codes.get(words[1]),'TRP':float(words[3])}, ignore_index=True)
+    df = df.append({
+        'Hashtag':words[1].strip(),
+        'Show':codes.get(words[1].strip()),
+        'TRP':float(words[3]
+        )}, ignore_index=True)
 
 df['Rank'] = df['TRP'].rank(0,ascending=False,method='dense',na_option='keep').astype(int)
 df = df.sort_values(by='Rank')
