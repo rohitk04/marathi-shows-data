@@ -3,11 +3,19 @@
         "Week 1": {
             "GRP": "1578.27",
             "Rank": "1"
+        },
+        "Week 2": {
+            "GRP": "1492.66",
+            "Rank": "1"
         }
     },
     "Zee Marathi": {
         "Week 1": {
             "GRP": "695.06",
+            "Rank": "2"
+        },
+        "Week 2": {
+            "GRP": "668.41",
             "Rank": "2"
         }
     },
@@ -15,17 +23,29 @@
         "Week 1": {
             "GRP": "488.02",
             "Rank": "3"
+        },
+        "Week 2": {
+            "GRP": "524.12",
+            "Rank": "3"
         }
     },
     "Colors Marathi": {
         "Week 1": {
             "GRP": "430.32",
             "Rank": "4"
+        },
+        "Week 2": {
+            "GRP": "468.57",
+            "Rank": "4"
         }
     },
     "Star Plus": {
         "Week 1": {
             "GRP": "351.31",
+            "Rank": "5"
+        },
+        "Week 2": {
+            "GRP": "354.88",
             "Rank": "5"
         }
     }
