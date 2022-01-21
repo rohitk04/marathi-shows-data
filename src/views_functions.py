@@ -1,6 +1,7 @@
 from ast import literal_eval
 import streamlit as st
 import plotly.graph_objects as go
+import pandas as pd
 
 from input import read_csv
 
@@ -50,7 +51,7 @@ def display_data(info):
         st.dataframe(read_csv('data/csv/shows/online/online_trp_rank.csv', 'Show'), width=800, height=450)
         st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
 
-def plot_figure(data, choices, ch, y_axis_title, reversed, style=False):
+def plot_figure(data, choices, ch, y_axis_title, reversed, style):
     modified_data = data.loc[data.index.isin(choices)].T
     if (modified_data.empty):
         st.markdown ("##### "+y_axis_title+" - Data not available")
@@ -113,10 +114,7 @@ def plot_figure(data, choices, ch, y_axis_title, reversed, style=False):
     st.plotly_chart(fig)
 
     if ch:
-        if style:
-            st.dataframe(modified_data.T.style.format("{:.2f}"), width=800, height=450)
-        else:
-            st.dataframe(modified_data.T, width=800, height=450)
+        st.dataframe(modified_data.T.style.format(style), width=800, height=450)
 
 def comparison_function(trp, rank, choices, checkbox_msg, k1, grp=False):
     ch = st.sidebar.checkbox(checkbox_msg, key=k1)
@@ -125,8 +123,8 @@ def comparison_function(trp, rank, choices, checkbox_msg, k1, grp=False):
     if grp:
         ttl = ttl.replace('T','G')
 
-    plot_figure(trp, choices, ch, ttl, True, True)
-    plot_figure(rank, choices, ch, 'Rank', 'reversed')
+    plot_figure(trp, choices, ch, ttl, True, "{:.2f}")
+    plot_figure(rank, choices, ch, 'Rank', 'reversed',"{:.0f}")
 
 def trp_function(trp, week, ch, grp, middle = '', leader = False):    
     if (middle != ''):
@@ -140,7 +138,7 @@ def trp_function(trp, week, ch, grp, middle = '', leader = False):
         df = trp
         y = trp['TRP']
     else:
-        df = trp[week].sort_values(ascending=False)
+        df = trp[week].sort_values(ascending=False).dropna()
         y = df
 
     dic=dict(
@@ -183,7 +181,7 @@ def trp_function(trp, week, ch, grp, middle = '', leader = False):
         ),
         yaxis=dict(
             dic,
-            title=ttl
+            title=ttl            
         ),
         title=week + middle + ' - ' + ttl
     )
@@ -191,7 +189,7 @@ def trp_function(trp, week, ch, grp, middle = '', leader = False):
 
     if ch:
         if leader:
-            st.dataframe(df.style.format({'TRP':"{:.2f}"}), width=800, height=450)
+            st.dataframe(df.style.format({'TRP':"{:.2f}",'Rank':'{:.0f}'}), width=800, height=450)
         else:
             st.dataframe(df.to_frame().style.format({week:"{:.2f}"}), width=800, height=450)
 
@@ -199,8 +197,7 @@ def rank_function(rank, week, ch, middle=''):
     if (middle != ''):
         middle = ' - ' + middle
 
-    df = rank[[week]].sort_values(by=week, ascending=True)
-
+    df = rank[[week]].sort_values(by=week, ascending=True).dropna()
     m = max(df[week])
     df['New Rank'] = m - df[week] + 10
 
@@ -269,7 +266,7 @@ def rank_function(rank, week, ch, middle=''):
     st.plotly_chart(fig)
 
     if ch:
-        st.dataframe(df.drop(columns=['New Rank']), width=800, height=450)
+        st.dataframe(df.drop(columns=['New Rank']).style.format({week:"{:.0f}"}), width=800, height=450)
 
 def week_function(trp, rank, k1, k2, grp=False):
     weeks = trp.columns.unique()
@@ -284,7 +281,9 @@ def week_function(trp, rank, k1, k2, grp=False):
     return week
 
 def channel_function(week, info, trp, rank):
-    channels = list(info['Channel'].sort_values().unique())
+    merged = pd.merge(pd.merge(info, trp[week], how="inner",left_index=True, right_index=True), rank[week], how="inner",left_index=True, right_index=True, suffixes=['_trp','_rank']).dropna()
+    
+    channels = list(merged['Channel'].sort_values().unique())
     channel = st.sidebar.selectbox('Choose channel', channels, key=15)
     ch = st.sidebar.checkbox('Show Data', key=16)
 
@@ -297,7 +296,9 @@ def channel_function(week, info, trp, rank):
     rank_function(df, week, ch, channel)
 
 def timeslot_function(week, info, trp, rank):
-    e_info = info_explode(info)
+    merged = pd.merge(pd.merge(info, trp[week], how="inner",left_index=True, right_index=True), rank[week], how="inner",left_index=True, right_index=True, suffixes=['_trp','_rank']).dropna()
+    e_info = info_explode(merged)
+
 
     timeslots = list(e_info['Time'].dropna().sort_values().unique())
     timeslot = st.sidebar.selectbox('Choose timeslot', timeslots, key=18)
@@ -408,10 +409,6 @@ def find_leaders(column, week, df, k1, k2=None):
 
     dic=dict(
         showgrid=False,
-        ticks="outside",
-        tickwidth=2,
-        tickcolor='crimson',
-        ticklen=10,
         showline=True, 
         linewidth=2, 
         linecolor='black',
@@ -434,7 +431,7 @@ def find_leaders(column, week, df, k1, k2=None):
             insidetextanchor='middle'
         )
     )
-    fig.update_layout(
+    fig.update_layout(        
         autosize=False,
         width=750,
         height=400,
@@ -449,18 +446,23 @@ def find_leaders(column, week, df, k1, k2=None):
         uniformtext_mode='hide',
         xaxis = dict(
             dic,
-            title=title
+            title=title,
+            ticks="outside",
+            tickwidth=2,
+            tickcolor='crimson',
+            ticklen=10,
         ),
         yaxis = dict(
             dic,
-            ticklen=2,
-            title = 'TRP'
+            title = 'TRP',
+            showticklabels=False, 
+            ticklen=2
         ),
         title=week)
     st.plotly_chart(fig)
 
     if (st.sidebar.checkbox('Show Data', key=k1)):
-        st.dataframe(df2.set_index('Show').style.format({'TRP':"{:.2f}"}), width=800, height=450)
+        st.dataframe(df2.set_index('Show').style.format({'TRP':"{:.2f}", 'Rank':"{:.0f}"}), width=800, height=450)
 
     if column!='Channel':
         calculate_channel_count(df2, k2)
