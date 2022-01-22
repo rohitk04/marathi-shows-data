@@ -6,7 +6,11 @@ from add_shows import add_shows
 def process(choice, old_path, new_path, msg):
     print ("\nProcessing begins...\n")
 
-    data,trp,week = load_data(choice)
+    if choice!="Mahaepisode":
+        data,trp,week = load_data(choice)
+    else:
+        show_data, data, trp, week = load_data(choice)
+    
     store_into_json(old_path, data)
 
     trp_keys = trp[week].keys()
@@ -24,20 +28,24 @@ def process(choice, old_path, new_path, msg):
         for index,ele in enumerate(not_present):
             print (str(index+1)+'. ' + ele)
         print ()
-        if (choice!='Channel'):
-            add_shows(not_present)
-        else:
+        if choice=='Channel':
             add_channels(not_present)
+        elif choice=='Mahaepisode':
+            add_shows(not_present, show_data)
+        else:
+            add_shows(not_present)
         raise RuntimeError(msg.capitalize() + " added in " + msg + ".json file. \nPlease try again.")
 
     for ele in data:
         trp_data = trp[week].get(ele)
 
         if trp_data is not None:
-            if choice!='Channel':
-                ele_data = data[ele][choice + ' TRP']
-            else:
+            if choice=='Channel':
                 ele_data = data[ele]
+            elif choice=='Mahaepisode':
+                ele_data = data[ele]['TRP']
+            else:
+                ele_data = data[ele][choice + ' TRP']
             ele_data[week] = trp_data
 
     store_into_json(new_path, data)

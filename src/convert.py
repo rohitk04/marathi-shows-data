@@ -20,8 +20,36 @@ def convert(choice):
 
         store_into_csv(dict1, 'Channel', 'data/csv/channels/channels_grp.csv')
         store_into_csv(dict2, 'Channel', 'data/csv/channels/channels_rank.csv')
+    elif (choice=='Mahaepisode'):
+        shows = load_shows('data/json/shows/mahaepisode/mahaepisodes.json')
+        
+        dict1 = {}
+        new_keys = ['Channel', 'Type', 'Platform']
+        for show in shows:
+            dict1[show] = {new_key:shows[show][new_key] for new_key in new_keys}
+        store_into_csv(dict1, 'Show', 'data/csv/shows/mahaepisode/info.csv')
+                
+        dict2 = {}
+        dict3 = {}
+        dict4 = {}
+
+        for show in shows:
+            dict2[show] = {}
+            dict3[show] = {}
+            dict4[show] = {}
+            
+            trp = shows[show]['TRP']
+            
+            for week in trp.keys():
+                dict2[show][week] = trp[week]['TRP']
+                dict3[show][week] = trp[week]['Rank']
+                dict4[show][week] = trp[week]['Time']
+
+        store_into_csv(dict2, 'Show', 'data/csv/shows/mahaepisode/trp.csv')
+        store_into_csv(dict3, 'Show', 'data/csv/shows/mahaepisode/rank.csv')
+        store_into_csv(dict4, 'Show', 'data/csv/shows/mahaepisode/time.csv')
     else:
-        shows = load_shows()
+        shows = load_shows('data/json/shows/shows.json')
 
         dict1 = {}
         new_keys = ['Channel', 'Type', 'Platform', 'Time']

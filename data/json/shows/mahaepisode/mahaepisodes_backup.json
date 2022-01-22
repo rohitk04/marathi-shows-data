@@ -1,0 +1,62 @@
+{
+    "Man Udu Udu Jhala": {
+        "Channel": "Zee Marathi",
+        "Type": "Fiction",
+        "Platform": "Zee5",
+        "TRP": {
+            "Week 2": {
+                "TRP": 3.1,
+                "Rank": 1,
+                "Time": "19:00"
+            }
+        }
+    },
+    "Sahakutumba Sahaparivar": {
+        "Channel": "Star Pravah",
+        "Type": "Fiction",
+        "Platform": "Hotstar",
+        "TRP": {
+            "Week 2": {
+                "TRP": 2.9,
+                "Rank": 2,
+                "Time": "20:00"
+            }
+        }
+    },
+    "Devmanus 2": {
+        "Channel": "Zee Marathi",
+        "Type": "Fiction",
+        "Platform": "Zee5",
+        "TRP": {
+            "Week 2": {
+                "TRP": 2.6,
+                "Rank": 3,
+                "Time": "22:00"
+            }
+        }
+    },
+    "Masta Majedar Kitchen Kallakar": {
+        "Channel": "Zee Marathi",
+        "Type": "Non-Fiction",
+        "Platform": "Zee5",
+        "TRP": {
+            "Week 2": {
+                "TRP": 2.2,
+                "Rank": 4,
+                "Time": "21:00"
+            }
+        }
+    },
+    "Tujhya Majhya Sansarala Ani Kai Hava": {
+        "Channel": "Zee Marathi",
+        "Type": "Fiction",
+        "Platform": "Zee5",
+        "TRP": {
+            "Week 2": {
+                "TRP": 1.1,
+                "Rank": 5,
+                "Time": "20:00"
+            }
+        }
+    }
+}
