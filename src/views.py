@@ -1,9 +1,10 @@
 from numpy import mod
 import streamlit as st
 import pandas as pd
+from tenacity import time
 from input import read_csv
 
-from views_functions import channel_function, comparison_function, display_data, find_leaders, find_top_shows, performance_comparison, rank_function, timeslot_function, trp_function, week_function
+from views_functions import channel_function, comparison_function, display_data, find_leaders, find_top_shows, merge, performance_comparison, rank_function, timeslot_function, trp_function, week_function
 
 info = read_csv('data/csv/shows/info.csv', 'Show')
 
@@ -81,6 +82,17 @@ elif (select == 'Mahaepisode'):
     
     if (st.sidebar.checkbox("Show Timeslotwise Performance",key=53)):
         timeslot_function(week, trp, rank, time_df, 54, 55)
+    
+    merged = merge(week, time_df, trp, rank, info)
+    
+    if (st.sidebar.checkbox('Show Channel Leaders', key=56)):
+        find_leaders('Channel',week, merged, 57, explode=False)
+
+    if (st.sidebar.checkbox('Show Timeslot Leaders', key=58)):
+        find_leaders('Time',week, merged, 59, 60, False)
+
+    if (st.sidebar.checkbox('Show Type Leaders', key=61)):
+        find_leaders('Type', week, merged, 62, 63, False)
 
 elif (select == 'Shows - Online TRP'):
     st.title('Shows - Online TRP')

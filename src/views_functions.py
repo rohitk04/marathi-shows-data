@@ -422,8 +422,11 @@ def calculate_channel_count(df, k1):
     if (st.sidebar.checkbox('Show Channel Count Data', key=k1)):
         st.dataframe(occurences, width=800, height=450)
 
-def find_leaders(column, week, df, k1, k2=None):
-    e_info = info_explode(df)
+def find_leaders(column, week, df, k1, k2=None, explode=True):
+    if explode:
+        e_info = info_explode(df)
+    else:
+        e_info = df
     
     if column == 'Time':
         title = 'Timeslot'
@@ -514,3 +517,11 @@ def find_top_shows(week, df):
     ch = st.sidebar.checkbox('Show Data', key=37)
     trp_function(df3, week, ch, False, middle, True)
     calculate_channel_count(df3, 38)
+
+def merge(week, time_df, trp, rank, info):
+    merged = pd.merge(time_df[week], trp[week], how="inner",left_index=True, right_index=True)
+    merged = pd.merge(merged, rank[week], how="inner",left_index=True, right_index=True, suffixes=['_trp','_rank'])
+    merged.columns = ['Time',week+'_trp',week+'_rank']
+    merged = pd.merge(merged, info[['Channel','Type','Platform']], how="inner",left_index=True, right_index=True, suffixes=['_trp','_rank'])
+    merged = merged.reset_index()
+    return merged
