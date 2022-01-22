@@ -27,7 +27,7 @@ def convert(choice):
         new_keys = ['Channel', 'Type', 'Platform']
         for show in shows:
             dict1[show] = {new_key:shows[show][new_key] for new_key in new_keys}
-        store_into_csv(dict1, 'Show', 'data/csv/shows/mahaepisode/info.csv')
+        store_into_csv(dict1, 'Show', 'data/csv/shows/mahaepisode/mahaepisode_info.csv')
                 
         dict2 = {}
         dict3 = {}
@@ -45,9 +45,9 @@ def convert(choice):
                 dict3[show][week] = trp[week]['Rank']
                 dict4[show][week] = trp[week]['Time']
 
-        store_into_csv(dict2, 'Show', 'data/csv/shows/mahaepisode/trp.csv')
-        store_into_csv(dict3, 'Show', 'data/csv/shows/mahaepisode/rank.csv')
-        store_into_csv(dict4, 'Show', 'data/csv/shows/mahaepisode/time.csv')
+        store_into_csv(dict2, 'Show', 'data/csv/shows/mahaepisode/mahaepisode_trp.csv')
+        store_into_csv(dict3, 'Show', 'data/csv/shows/mahaepisode/mahaepisode_rank.csv')
+        store_into_csv(dict4, 'Show', 'data/csv/shows/mahaepisode/mahaepisode_time.csv')
     else:
         shows = load_shows('data/json/shows/shows.json')
 

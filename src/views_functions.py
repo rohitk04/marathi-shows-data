@@ -45,9 +45,9 @@ def display_data(info):
         st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
 
     if ch4:
-        trp = read_csv('data/csv/shows/mahaepisode/trp.csv', 'Show')
-        rank = read_csv('data/csv/shows/mahaepisode/rank.csv', 'Show')
-        time_df = read_csv('data/csv/shows/mahaepisode/time.csv', 'Show')
+        trp = read_csv('data/csv/shows/mahaepisode/mahaepisode_trp.csv', 'Show')
+        rank = read_csv('data/csv/shows/mahaepisode/mahaepisode_rank.csv', 'Show')
+        time_df = read_csv('data/csv/shows/mahaepisode/mahaepisode_time.csv', 'Show')
         
         trp_merged = pd.merge(trp, time_df, how="inner", left_index=True, right_index=True, suffixes=['_trp','_time'])
         rank_merged = pd.merge(rank, time_df, how="inner", left_index=True, right_index=True, suffixes=['_rank','_time'])
