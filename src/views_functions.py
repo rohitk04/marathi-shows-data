@@ -313,22 +313,38 @@ def channel_function(week, info, trp, rank, k1, k2):
     df = rank[rank.index.isin(list(info[info['Channel'] == channel].index))]
     rank_function(df, week, ch, channel)
 
-def timeslot_function(week, info, trp, rank):
-    merged = pd.merge(pd.merge(info, trp[week], how="inner",left_index=True, right_index=True), rank[week], how="inner",left_index=True, right_index=True, suffixes=['_trp','_rank']).dropna()
-    e_info = info_explode(merged)
+def timeslot_function(week, trp, rank, info, k1, k2, explode=False):
+    if explode:
+        merged = pd.merge(pd.merge(info, trp[week], how="inner",left_index=True, right_index=True), rank[week], how="inner",left_index=True, right_index=True, suffixes=['_trp','_rank']).dropna()
+        e_info = info_explode(merged)
 
+        timeslots = list(e_info['Time'].dropna().sort_values().unique())
+        timeslot = st.sidebar.selectbox('Choose timeslot', timeslots, key=k1)
+        ch = st.sidebar.checkbox('Show Data', key=k2)
 
-    timeslots = list(e_info['Time'].dropna().sort_values().unique())
-    timeslot = st.sidebar.selectbox('Choose timeslot', timeslots, key=18)
-    ch = st.sidebar.checkbox('Show Data', key=19)
+        st.markdown('### Timeslot: ' + timeslot)
 
-    st.markdown('### Timeslot: ' + timeslot)
+        df = trp[trp.index.isin(list(e_info[e_info['Time'] == timeslot]['Show']))]
+        trp_function(df, week, ch, False, timeslot)
 
-    df = trp[trp.index.isin(list(e_info[e_info['Time'] == timeslot]['Show']))]
-    trp_function(df, week, ch, False, timeslot)
+        df = rank[rank.index.isin(list(e_info[e_info['Time'] == timeslot]['Show']))]
+        rank_function(df, week, ch, timeslot)
+    else:
+        #Info => time_df
+        trp_merged = pd.merge(trp[week], info[week], how="inner", left_index=True, right_index=True, suffixes=['_trp','_time']).rename(columns={week+'_trp':week, week+'_time':'Time'},inplace=False)
+        rank_merged = pd.merge(rank[week], info[week], how="inner", left_index=True, right_index=True, suffixes=['_rank','_time']).rename(columns={week+'_rank':week, week+'_time':'Time'},inplace=False)
+        
+        timeslots = list(trp_merged['Time'].dropna().sort_values().unique())
+        timeslot = st.sidebar.selectbox('Choose timeslot', timeslots, key=54)
+        ch = st.sidebar.checkbox('Show Data', key=55)
 
-    df = rank[rank.index.isin(list(e_info[e_info['Time'] == timeslot]['Show']))]
-    rank_function(df, week, ch, timeslot)
+        st.markdown('### Timeslot: ' + timeslot)
+
+        df = trp_merged[trp_merged['Time'] == timeslot]
+        trp_function(df, week, ch, False, timeslot)
+        
+        df = rank_merged[rank_merged['Time'] == timeslot]
+        rank_function(df, week, ch, timeslot)
 
 def performance_comparison(info, tv_trp, tv_rank, online_trp, online_rank, column, text, k1, k2, k3):
     st.markdown('### '+ text.capitalize() + 'wise Performance Comparison')
