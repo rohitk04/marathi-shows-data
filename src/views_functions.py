@@ -18,7 +18,8 @@ def display_data(info):
     ch1 = st.sidebar.checkbox("Display Show Information", value=True, key=2)
     ch2 = st.sidebar.checkbox("Display Channel - GRP & Rank Data", key=3)
     ch3 = st.sidebar.checkbox("Display TV Show - TV TRP & Rank Data", key=4)
-    ch4 = st.sidebar.checkbox("Display TV Show - Online TRP & Rank Data", key=5)
+    ch4 = st.sidebar.checkbox("Display Mahaepisode - Data", key=47)
+    ch5 = st.sidebar.checkbox("Display TV Show - Online TRP & Rank Data", key=5)
 
     if ch1:
         st.subheader('Show Information')
@@ -40,10 +41,27 @@ def display_data(info):
         st.markdown('#### TRP')
         st.dataframe(read_csv('data/csv/shows/tv/tv_trp_trp.csv', 'Show').style.format("{:.2f}"), width=800, height=450)
         st.markdown('#### Rank')
-        st.dataframe(read_csv('data/csv/shows/tv/tv_trp_rank.csv', 'Show'), width=800, height=450)
+        st.dataframe(read_csv('data/csv/shows/tv/tv_trp_rank.csv', 'Show').style.format("{:.0f}"), width=800, height=450)
         st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
 
     if ch4:
+        trp = read_csv('data/csv/shows/mahaepisode/trp.csv', 'Show')
+        rank = read_csv('data/csv/shows/mahaepisode/rank.csv', 'Show')
+        time_df = read_csv('data/csv/shows/mahaepisode/time.csv', 'Show')
+        
+        trp_merged = pd.merge(trp, time_df, how="inner", left_index=True, right_index=True, suffixes=['_trp','_time'])
+        rank_merged = pd.merge(rank, time_df, how="inner", left_index=True, right_index=True, suffixes=['_rank','_time'])
+        
+        style_dict = {col:"{:.2f}" for col in [col for col in list(trp_merged.columns) if col.endswith("_trp")]}
+        
+        st.subheader('Mahaepisode')
+        st.markdown('#### TRP')
+        st.dataframe(trp_merged.style.format(style_dict), width=800, height=450)
+        st.markdown('#### Rank')
+        st.dataframe(rank_merged, width=800, height=450)
+        st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
+
+    if ch5:
         st.subheader('TV Shows - Online TRP')
         st.markdown('#### TRP')
         st.dataframe(read_csv('data/csv/shows/online/online_trp_trp.csv','Show').style.format("{:.2f}"), width=800, height=450)    

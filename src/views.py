@@ -7,7 +7,7 @@ from views_functions import channel_function, comparison_function, display_data,
 
 info = read_csv('data/csv/shows/info.csv', 'Show')
 
-select = st.sidebar.selectbox('Choose', ['BARC Data (Raw Data)', 'Channel', 'Shows - TV TRP', 'Shows - Online TRP', 'Leaders', 'Compare Shows'], key=1)
+select = st.sidebar.selectbox('Choose', ['BARC Data (Raw Data)', 'Channel', 'Shows - TV TRP', 'Leaders', 'Mahaepisode', 'Shows - Online TRP', 'Compare Shows'], key=1)
 
 if (select == 'BARC Data (Raw Data)'):
     display_data(info)
@@ -44,14 +44,6 @@ elif (select == 'Shows - TV TRP'):
     if (st.sidebar.checkbox("Show Timeslotwise Performance",key=17)):
         timeslot_function(week, info, trp, rank) 
 
-elif (select == 'Shows - Online TRP'):
-    st.title('Shows - Online TRP')
-
-    trp = read_csv('data/csv/shows/online/online_trp_trp.csv', 'Show')
-    rank = read_csv('data/csv/shows/online/online_trp_rank.csv', 'Show')
-
-    week = week_function(trp,rank,20,21)
-
 elif (select == 'Leaders'):
     st.title('Leaders')
     
@@ -74,6 +66,14 @@ elif (select == 'Leaders'):
 
     if (st.sidebar.checkbox('Show Type Leaders', key=44)):
         find_leaders('Type', week, merged, 45, 46)
+
+elif (select == 'Shows - Online TRP'):
+    st.title('Shows - Online TRP')
+
+    trp = read_csv('data/csv/shows/online/online_trp_trp.csv', 'Show')
+    rank = read_csv('data/csv/shows/online/online_trp_rank.csv', 'Show')
+
+    week = week_function(trp,rank,20,21)
 
 elif (select == 'Compare Shows'):
     st.title("Shows Comparison")
