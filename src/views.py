@@ -40,7 +40,7 @@ elif (select == 'Shows - TV TRP'):
 
     week = week_function(trp,rank, 12, 13)
     if (st.sidebar.checkbox("Show Channelwise Performance",key=14)):      
-        channel_function(week, info, trp, rank)
+        channel_function(week, info, trp, rank, 15, 16)
     if (st.sidebar.checkbox("Show Timeslotwise Performance",key=17)):
         timeslot_function(week, info, trp, rank) 
 
@@ -66,6 +66,20 @@ elif (select == 'Leaders'):
 
     if (st.sidebar.checkbox('Show Type Leaders', key=44)):
         find_leaders('Type', week, merged, 45, 46)
+
+elif (select == 'Mahaepisode'):
+    st.title('Mahaepisode')
+
+    trp = read_csv('data/csv/shows/mahaepisode/mahaepisode_trp.csv', 'Show')
+    rank = read_csv('data/csv/shows/mahaepisode/mahaepisode_rank.csv', 'Show')
+
+    week = week_function(trp,rank, 48, 49)
+
+    if (st.sidebar.checkbox("Show Channelwise Performance",key=50)):      
+        channel_function(week, info, trp, rank, 51, 52)
+    # if (st.sidebar.checkbox("Show Timeslotwise Performance",key=51)):
+    #     timeslot_function(week, info, trp, rank) 
+
 
 elif (select == 'Shows - Online TRP'):
     st.title('Shows - Online TRP')

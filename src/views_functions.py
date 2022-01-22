@@ -298,12 +298,12 @@ def week_function(trp, rank, k1, k2, grp=False):
     
     return week
 
-def channel_function(week, info, trp, rank):
+def channel_function(week, info, trp, rank, k1, k2):
     merged = pd.merge(pd.merge(info, trp[week], how="inner",left_index=True, right_index=True), rank[week], how="inner",left_index=True, right_index=True, suffixes=['_trp','_rank']).dropna()
     
     channels = list(merged['Channel'].sort_values().unique())
-    channel = st.sidebar.selectbox('Choose channel', channels, key=15)
-    ch = st.sidebar.checkbox('Show Data', key=16)
+    channel = st.sidebar.selectbox('Choose channel', channels, key=k1)
+    ch = st.sidebar.checkbox('Show Data', key=k2)
 
     st.markdown('### Channel: ' + channel)
 
