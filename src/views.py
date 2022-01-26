@@ -4,7 +4,7 @@ import pandas as pd
 from tenacity import time
 from input import read_csv
 
-from views_functions import calculate_channel_count, channel_function, comparison_function, display_data, find_leaders, find_top_shows, merge, performance_comparison, rank_function, timeslot_function, trp_function, week_function
+from views_functions import calculate_channel_count, channel_function, comparison_function, display_data, find_leaders, find_mahaepisode_leaders, find_top_shows, merge, performance_comparison, rank_function, timeslot_function, trp_function, week_function
 
 info = read_csv('data/csv/shows/info.csv', 'Show')
 
@@ -48,25 +48,23 @@ elif (select == 'Shows - TV TRP'):
 elif (select == 'Leaders'):
     st.title('Leaders')
     
-    info = read_csv('data/csv/shows/info.csv', 'Show')
     trp = read_csv('data/csv/shows/tv/tv_trp_trp.csv', 'Show')
     rank = read_csv('data/csv/shows/tv/tv_trp_rank.csv', 'Show')
-    merged = pd.merge(pd.merge(info, trp, how="inner",left_index=True, right_index=True), rank, how="inner",left_index=True, right_index=True, suffixes=['_trp','_rank'])
-
+    
     weeks = list(trp.columns.unique())
     week = st.sidebar.selectbox('Choose week', weeks, index=len(weeks)-1, key=34)
 
     if (st.sidebar.checkbox('Show Top Shows', value=True, key=35)):
-        find_top_shows(week, merged)
+        find_top_shows(week, info, trp[week], rank[week])
 
     if (st.sidebar.checkbox('Show Channel Leaders', key=39)):
-        find_leaders('Channel',week, merged, 40)
+        find_leaders('Channel',week, info, trp[week], rank[week], 40)
 
     if (st.sidebar.checkbox('Show Timeslot Leaders', key=41)):
-        find_leaders('Time',week, merged, 42, 43)
+        find_leaders('Time',week, info, trp[week], rank[week], 42, 43)
 
     if (st.sidebar.checkbox('Show Type Leaders', key=44)):
-        find_leaders('Type', week, merged, 45, 46)
+        find_leaders('Type', week, info, trp[week], rank[week], 45, 46)
 
 elif (select == 'Mahaepisode'):
     st.title('Mahaepisode')
@@ -83,16 +81,14 @@ elif (select == 'Mahaepisode'):
     if (st.sidebar.checkbox("Show Timeslotwise Performance",key=53)):
         timeslot_function(week, trp, rank, time_df, 54, 55)
     
-    merged = merge(week, time_df, trp, rank, info)
-    
     if (st.sidebar.checkbox('Show Channel Leaders', key=56)):
-        find_leaders('Channel',week, merged, 57, explode=False)
+        find_mahaepisode_leaders('Channel',week, time_df[week], trp[week], rank[week], info, 57, explode=False)
 
     if (st.sidebar.checkbox('Show Timeslot Leaders', key=58)):
-        find_leaders('Time',week, merged, 59, 60, False)
+        find_mahaepisode_leaders('Time',week, time_df[week], trp[week], rank[week], info, 59, 60, False)
 
     if (st.sidebar.checkbox('Show Type Leaders', key=61)):
-        find_leaders('Type', week, merged, 62, 63, False)
+        find_mahaepisode_leaders('Type', week, time_df[week], trp[week], rank[week], info, 62, 63, False)
 
 elif (select == 'Shows - Online TRP'):
     st.title('Shows - Online TRP')
@@ -100,7 +96,10 @@ elif (select == 'Shows - Online TRP'):
     trp = read_csv('data/csv/shows/online/online_trp_trp.csv', 'Show')
     rank = read_csv('data/csv/shows/online/online_trp_rank.csv', 'Show')
 
-    week = week_function(trp,rank,20,21, k3=64, info=info, channel_count=True)
+    week = week_function(trp, rank,20,21)
+
+    merged = pd.merge(info['Platform'], trp[week], how="inner",left_index=True, right_index=True).dropna()
+    calculate_channel_count(merged, 64, 'Platform')
 
 elif (select == 'Compare Shows'):
     st.title("Shows Comparison")

@@ -286,7 +286,7 @@ def rank_function(rank, week, ch, middle=''):
     if ch:
         st.dataframe(df.drop(columns=['New Rank']).style.format({week:"{:.0f}"}), width=800, height=450)
 
-def week_function(trp, rank, k1, k2, k3=None, grp=False, channel_count=False, info=None):
+def week_function(trp, rank, k1, k2, grp=False):
     weeks = trp.columns.unique()
     week = st.sidebar.selectbox('Choose week', weeks, index=len(weeks)-1, key=k1)
     ch = st.sidebar.checkbox('Show Data', key=k2)
@@ -296,9 +296,8 @@ def week_function(trp, rank, k1, k2, k3=None, grp=False, channel_count=False, in
     trp_function(trp, week, ch, grp)
     rank_function(rank, week, ch)
 
-    if (k3!=None and channel_count):
-        merged = pd.merge(info['Platform'], trp[week], how="inner",left_index=True, right_index=True).dropna()
-        calculate_channel_count(merged, k3, 'Platform')
+    # if (k3!=None and channel_count):
+        
     return week
 
 def channel_function(week, info, trp, rank, k1, k2):
@@ -425,7 +424,9 @@ def calculate_channel_count(df, k1, column):
     if (st.sidebar.checkbox('Show ' + column + ' Count Data', key=k1)):
         st.dataframe(occurences, width=800, height=450)
 
-def find_leaders(column, week, df, k1, k2=None, explode=True):    
+def find_leaders(column, week, info, trp, rank, k1, k2=None, explode=True):
+    df = pd.merge(pd.merge(info, trp, how="inner",left_index=True, right_index=True), rank, how="inner",left_index=True, right_index=True, suffixes=['_trp','_rank']).dropna()
+
     if explode:
         e_info = info_explode(df)
     else:
@@ -507,7 +508,95 @@ def find_leaders(column, week, df, k1, k2=None, explode=True):
     if column!='Channel':
         calculate_channel_count(df2, k2, 'Channel')
 
-def find_top_shows(week, df):
+def find_mahaepisode_leaders(column, week, time_df, trp, rank, info, k1, k2=None, explode=True):
+    df = pd.merge(pd.merge(time_df, trp, how="inner",left_index=True, right_index=True), rank, how="inner",left_index=True, right_index=True, suffixes=['_trp','_rank'])
+    df.columns = ['Time',week+'_trp',week+'_rank']
+    df = pd.merge(df, info[['Channel','Type','Platform']], how="inner",left_index=True, right_index=True, suffixes=['_trp','_rank']).reset_index()
+
+    if explode:
+        e_info = info_explode(df)
+    else:
+        e_info = df
+    
+    if column == 'Time':
+        title = 'Timeslot'
+        sort_column = column
+    else:
+        title = column
+        sort_column = 'Rank'
+
+    st.subheader(title + " Leaders")
+    
+    column_list = ['Show', 'Channel',week+'_trp',week+'_rank']
+    if column!='Channel':
+        column_list.insert(1, column)
+    
+    df2 = e_info[e_info.groupby(column)[week+'_trp'].transform(max) == e_info[week+'_trp']]
+    df2 = df2[column_list].drop_duplicates(keep='first',inplace=False).rename(columns={week+'_trp':'TRP', week+'_rank':'Rank'},inplace=False).sort_values(by=sort_column)
+
+    dic=dict(
+        showgrid=False,
+        showline=True, 
+        linewidth=2, 
+        linecolor='black',
+        mirror=True
+    )
+
+    fig = go.Figure()
+    fig.add_trace(
+        go.Bar(
+            x = df2[column],
+            y = df2['TRP'],
+            hoverinfo= 'text',
+            marker_color= '#b20001',
+            text = df2['Show'].astype('str') + ' (' + df2['TRP'].astype('str') + ')',
+            textposition='inside',
+            textangle = 0,
+            insidetextfont = dict(
+                size=18,
+                family='Arial'),
+            insidetextanchor='middle'
+        )
+    )
+    fig.update_layout(        
+        autosize=False,
+        width=750,
+        height=400,
+        margin=dict(
+            l=0,
+            r=0,
+            b=4,
+            t=25,
+            pad=0
+        ),
+        uniformtext_minsize=12, 
+        uniformtext_mode='hide',
+        xaxis = dict(
+            dic,
+            title=title,
+            ticks="outside",
+            tickwidth=2,
+            tickcolor='crimson',
+            ticklen=10,
+        ),
+        yaxis = dict(
+            dic,
+            title = 'TRP',
+            showticklabels=False, 
+            ticklen=2
+        ),
+        title=week)
+    st.plotly_chart(fig)
+
+    if (st.sidebar.checkbox('Show Data', key=k1)):
+        st.dataframe(df2.set_index('Show').style.format({'TRP':"{:.2f}", 'Rank':"{:.0f}"}), width=800, height=450)
+
+    if column!='Channel':
+        calculate_channel_count(df2, k2, 'Channel')
+
+def find_top_shows(week, info, trp, rank):
+    df = pd.merge(pd.merge(info, trp, how="inner",left_index=True, right_index=True), rank, how="inner",left_index=True, right_index=True, suffixes=['_trp','_rank']).dropna()
+
     num = int(st.sidebar.number_input('Choose Top _',min_value=2, max_value=len(df), value=5, key=36))
 
     middle = 'Top '+ str(num)+' shows'
