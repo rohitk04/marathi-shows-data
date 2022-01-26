@@ -3,18 +3,16 @@ import json
 
 from output import store_into_json
 
-def convert_to_json(ch, week):
+def convert_to_json(choice, week):
     with open('data/trp.txt') as f:
         lines = f.readlines()
 
     codes = json.load(open('data/json/shows/codes.json'))
 
-    print ('1. TV\t2. Online\t3.Mahaepisode')
-    ch = int(input ("Enter choice: "))
-    if (ch == "TV"):
+    if (choice == "TV"):
         output_path = 'data/json/shows/tv/tv_trp.json'
         cols = ['Hashtag', 'Show','TRP']
-    elif (ch == "Online"):
+    elif (choice == "Online"):
         output_path = 'data/json/shows/online/online_trp.json'
         cols = ['Hashtag', 'Show','TRP']
     else:
@@ -23,7 +21,7 @@ def convert_to_json(ch, week):
 
     df = pd.DataFrame(columns=cols)
 
-    if (ch=="TV" or ch=="Online"):
+    if (choice=="TV" or "Online"):
         for line in lines:
             words = line.split(" ")
             df = df.append({
@@ -51,7 +49,7 @@ def convert_to_json(ch, week):
     dictionary = {}
     dictionary[week] = {}
 
-    if (ch=="TV" or ch=="Online"):
+    if (choice=="TV" or "Online"):
         for index, row in df.iterrows():
             dictionary[week][row['Show']]={
                 'TRP':row['TRP'],
