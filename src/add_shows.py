@@ -12,8 +12,8 @@ def add_show(show, show_data = None):
         show_json = json.load(open('data/json/shows/dummy_show.json'))
         show_json[show] = show_json.pop("Show_Name")
 
-        print ('-'.center(40,'-'))
-        print (show.center(40,' '))
+        print ('-'.center(73,'-'))
+        print (show.center(73,' '))
         
         print ()    
         print ("Channel Choices: ")
@@ -56,7 +56,7 @@ def add_show(show, show_data = None):
         
         show_json[show].update(new_json)
         
-        print ('-'.center(40,'-'))
+        print ('-'.center(73,'-'))
         print ()
     else:
         show_json = json.load(open('data/json/shows/mahaepisode/dummy_show.json'))

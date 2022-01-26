@@ -91,6 +91,6 @@ def convert_to_csv(choice):
         else:
             raise RuntimeError('Invalid Choice')
     
-    print ("\nStored successfully into csv\n")
-    print ("\nConversion ends...\n")
-    print ()
+    print ("Stored successfully into csv\n")
+    print ("Conversion ends...\n")
+    print ('-'.center(73,'-'))

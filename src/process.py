@@ -49,7 +49,6 @@ def process(choice, old_path, new_path, msg):
             ele_data[week] = trp_data
 
     store_into_json(new_path, data)
-    print ("\nStored successfully into json\n")
-    print ("\nProcessing ends...\n")
-    print ()
-    print ('-'.center(40,'-'))
+    print ("Stored successfully into json\n")
+    print ("Processing ends...\n")
+    print ('-'.center(73,'-'))

@@ -6,11 +6,11 @@ def add_channel(channel):
     channel_json = json.load(open('data/json/channels/dummy_channel.json'))
     channel_json[channel] = channel_json.pop("Channel_Name")
 
-    print ('-'.center(40,'-'))
+    print ('-'.center(73,'-'))
     
     print (channel_json)
 
-    print ('-'.center(40,'-'))
+    print ('-'.center(73,'-'))
     print ()
 
     return channel_json

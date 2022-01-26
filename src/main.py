@@ -12,8 +12,11 @@ print ()
 ch = int(input("Enter choice: "))
 
 week = 'Week 3'
-print ("Entering data for " + week + "...")
 print ()
+print ('-'.center(73,'-'))
+print ("\nEntering data for " + week + "...")
+print ()
+print ('-'.center(73,'-'))
 
 if (ch==1):
     convert_to_json("TV", week)

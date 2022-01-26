@@ -4,6 +4,8 @@ import json
 from output import store_into_json
 
 def convert_to_json(choice, week):
+    print ("\nConversion begins...\n")
+
     with open('data/trp.txt') as f:
         lines = f.readlines()
 
@@ -42,8 +44,8 @@ def convert_to_json(choice, week):
 
     df['Rank'] = df['TRP'].rank(0,ascending=False,method='dense',na_option='keep').astype(int)
     df = df.sort_values(by='Rank')
-        
-    print (df)
+    
+    print (df.to_markdown(tablefmt='grid', index=False))
     print ()
 
     dictionary = {}
@@ -65,7 +67,13 @@ def convert_to_json(choice, week):
     
     ch = input("Do you want to continue?(Y/N): ").lower()
     print ()
+    print ('-'.center(73,'-'))
+    print ()
 
     if (ch =='y'):
         store_into_json(output_path,dictionary)
-        print ('Stored successfully')
+        print ("Stored successfully into json\n")
+        print ("Conversion ends...\n")
+        print ('-'.center(73,'-'))
+    else:
+        exit()
