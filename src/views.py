@@ -4,7 +4,7 @@ import pandas as pd
 from tenacity import time
 from input import read_csv
 
-from views_functions import channel_function, comparison_function, display_data, find_leaders, find_top_shows, merge, performance_comparison, rank_function, timeslot_function, trp_function, week_function
+from views_functions import calculate_channel_count, channel_function, comparison_function, display_data, find_leaders, find_top_shows, merge, performance_comparison, rank_function, timeslot_function, trp_function, week_function
 
 info = read_csv('data/csv/shows/info.csv', 'Show')
 
@@ -100,7 +100,7 @@ elif (select == 'Shows - Online TRP'):
     trp = read_csv('data/csv/shows/online/online_trp_trp.csv', 'Show')
     rank = read_csv('data/csv/shows/online/online_trp_rank.csv', 'Show')
 
-    week = week_function(trp,rank,20,21)
+    week = week_function(trp,rank,20,21, k3=64, info=info, channel_count=True)
 
 elif (select == 'Compare Shows'):
     st.title("Shows Comparison")

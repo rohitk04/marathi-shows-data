@@ -66,7 +66,7 @@ def display_data(info):
         st.markdown('#### TRP')
         st.dataframe(read_csv('data/csv/shows/online/online_trp_trp.csv','Show').style.format("{:.2f}"), width=800, height=450)    
         st.markdown('#### Rank')
-        st.dataframe(read_csv('data/csv/shows/online/online_trp_rank.csv', 'Show'), width=800, height=450)
+        st.dataframe(read_csv('data/csv/shows/online/online_trp_rank.csv', 'Show').style.format("{:.0f}"), width=800, height=450)
         st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
 
 def plot_figure(data, choices, ch, y_axis_title, reversed, style):
@@ -286,7 +286,7 @@ def rank_function(rank, week, ch, middle=''):
     if ch:
         st.dataframe(df.drop(columns=['New Rank']).style.format({week:"{:.0f}"}), width=800, height=450)
 
-def week_function(trp, rank, k1, k2, grp=False):
+def week_function(trp, rank, k1, k2, k3=None, grp=False, channel_count=False, info=None):
     weeks = trp.columns.unique()
     week = st.sidebar.selectbox('Choose week', weeks, index=len(weeks)-1, key=k1)
     ch = st.sidebar.checkbox('Show Data', key=k2)
@@ -295,7 +295,10 @@ def week_function(trp, rank, k1, k2, grp=False):
 
     trp_function(trp, week, ch, grp)
     rank_function(rank, week, ch)
-    
+
+    if (k3!=None and channel_count):
+        merged = pd.merge(info['Platform'], trp[week], how="inner",left_index=True, right_index=True).dropna()
+        calculate_channel_count(merged, k3, 'Platform')
     return week
 
 def channel_function(week, info, trp, rank, k1, k2):
@@ -367,8 +370,8 @@ def performance_comparison(info, tv_trp, tv_rank, online_trp, online_rank, colum
 
     st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
 
-def calculate_channel_count(df, k1):
-    occurences = df['Channel'].value_counts().rename('Count')
+def calculate_channel_count(df, k1, column):
+    occurences = df[column].value_counts().rename('Count')
 
     dic=dict(
             showgrid=False,
@@ -409,20 +412,20 @@ def calculate_channel_count(df, k1):
         ),
         xaxis = dict(
             dic,
-            title='Channel'
+            title=column
         ),
         yaxis = dict(
             dic,
             showticklabels=False, 
             ticklen=2
         ),
-        title='Channel Count')
+        title=column + ' Count')
     st.plotly_chart(fig)
 
-    if (st.sidebar.checkbox('Show Channel Count Data', key=k1)):
+    if (st.sidebar.checkbox('Show ' + column + ' Count Data', key=k1)):
         st.dataframe(occurences, width=800, height=450)
 
-def find_leaders(column, week, df, k1, k2=None, explode=True):
+def find_leaders(column, week, df, k1, k2=None, explode=True):    
     if explode:
         e_info = info_explode(df)
     else:
@@ -440,7 +443,7 @@ def find_leaders(column, week, df, k1, k2=None, explode=True):
     column_list = ['Show', 'Channel',week+'_trp',week+'_rank']
     if column!='Channel':
         column_list.insert(1, column)
-
+    
     df2 = e_info[e_info.groupby(column)[week+'_trp'].transform(max) == e_info[week+'_trp']]
     df2 = df2[column_list].drop_duplicates(keep='first',inplace=False).rename(columns={week+'_trp':'TRP', week+'_rank':'Rank'},inplace=False).sort_values(by=sort_column)
 
@@ -502,7 +505,7 @@ def find_leaders(column, week, df, k1, k2=None, explode=True):
         st.dataframe(df2.set_index('Show').style.format({'TRP':"{:.2f}", 'Rank':"{:.0f}"}), width=800, height=450)
 
     if column!='Channel':
-        calculate_channel_count(df2, k2)
+        calculate_channel_count(df2, k2, 'Channel')
 
 def find_top_shows(week, df):
     num = int(st.sidebar.number_input('Choose Top _',min_value=2, max_value=len(df), value=5, key=36))
@@ -516,7 +519,7 @@ def find_top_shows(week, df):
 
     ch = st.sidebar.checkbox('Show Data', key=37)
     trp_function(df3, week, ch, False, middle, True)
-    calculate_channel_count(df3, 38)
+    calculate_channel_count(df3, 38, 'Channel')
 
 def merge(week, time_df, trp, rank, info):
     merged = pd.merge(time_df[week], trp[week], how="inner",left_index=True, right_index=True)
