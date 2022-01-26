@@ -24,10 +24,6 @@
             "Week 2": {
                 "TRP": 42.3,
                 "Rank": 1
-            },
-            "Week 3": {
-                "TRP": 39.6,
-                "Rank": 2
             }
         }
     },
@@ -55,10 +51,6 @@
             },
             "Week 2": {
                 "TRP": 38.4,
-                "Rank": 4
-            },
-            "Week 3": {
-                "TRP": 36.4,
                 "Rank": 4
             }
         }
@@ -88,10 +80,6 @@
             "Week 2": {
                 "TRP": 40.7,
                 "Rank": 2
-            },
-            "Week 3": {
-                "TRP": 41.2,
-                "Rank": 1
             }
         }
     },
@@ -119,10 +107,6 @@
             },
             "Week 2": {
                 "TRP": 38.6,
-                "Rank": 3
-            },
-            "Week 3": {
-                "TRP": 37.2,
                 "Rank": 3
             }
         }
@@ -152,10 +136,6 @@
             "Week 2": {
                 "TRP": 37.6,
                 "Rank": 5
-            },
-            "Week 3": {
-                "TRP": 35.9,
-                "Rank": 5
             }
         }
     },
@@ -183,10 +163,6 @@
             },
             "Week 2": {
                 "TRP": 33.2,
-                "Rank": 7
-            },
-            "Week 3": {
-                "TRP": 33.1,
                 "Rank": 7
             }
         }
@@ -216,10 +192,6 @@
             "Week 2": {
                 "TRP": 31.6,
                 "Rank": 8
-            },
-            "Week 3": {
-                "TRP": 28.6,
-                "Rank": 10
             }
         }
     },
@@ -248,10 +220,6 @@
             "Week 2": {
                 "TRP": 30.4,
                 "Rank": 9
-            },
-            "Week 3": {
-                "TRP": 34.2,
-                "Rank": 6
             }
         }
     },
@@ -280,10 +248,6 @@
             "Week 2": {
                 "TRP": 34.3,
                 "Rank": 6
-            },
-            "Week 3": {
-                "TRP": 30.6,
-                "Rank": 8
             }
         }
     },
@@ -345,12 +309,7 @@
                 "Rank": 4
             }
         },
-        "Online TRP": {
-            "Week 3": {
-                "TRP": 29.8,
-                "Rank": 9
-            }
-        }
+        "Online TRP": {}
     },
     "Sahakutumba Sahaparivar": {
         "Channel": "Star Pravah",
