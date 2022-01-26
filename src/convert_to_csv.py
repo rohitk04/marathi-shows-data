@@ -1,7 +1,7 @@
 from input import load_channels, load_shows
 from output import store_into_csv
 
-def convert(choice):
+def convert_to_csv(choice):
     print ("\nConversion begins...\n")
     if (choice=='Channel'):
         channels = load_channels()
