@@ -4,10 +4,10 @@ from output import store_into_json
         
 def add_show(show, show_data = None):
     if (show_data == None):
-        channel_choices = {1:'Star Pravah', 2:'Zee Marathi', 3:'Colors Marathi'}
+        channel_choices = {1:'Star Pravah', 2:'Zee Marathi', 3:'Colors Marathi', 4:'Sony Marathi'}
         type_choices = {1:'Fiction', 2:'Non-Fiction', 3:'Event'}
         time_choices={1:'18:00', 2:'18:30',3:'19:00',4:'19:30',5:'20:00',6:'20:30',7:'21:00',8:'21:30',9:'22:00',10:'22:30',11:'23:00'}
-        platform_choices = {1:'Hotstar', 2:'Zee5', 3:'Voot'}
+        platform_choices = {1:'Hotstar', 2:'Zee5', 3:'Voot', 4:'SonyLiv'}
 
         show_json = json.load(open('data/json/shows/dummy_show.json'))
         show_json[show] = show_json.pop("Show_Name")

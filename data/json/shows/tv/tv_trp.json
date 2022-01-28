@@ -1,100 +1,140 @@
 {
-    "Week 2": {
+    "Week 3": {
         "Rang Majha Vegla": {
-            "TRP": 7.1,
+            "TRP": 7.2,
             "Rank": 1
         },
         "Aai Kuthe Kay Karte": {
-            "TRP": 6.6,
+            "TRP": 6.7,
             "Rank": 2
         },
-        "Sukh Mhanje Nakki Kay Asta": {
+        "Mulgi Zali Ho": {
             "TRP": 6.4,
             "Rank": 3
         },
-        "Mulgi Zali Ho": {
-            "TRP": 5.8,
+        "Sukh Mhanje Nakki Kay Asta": {
+            "TRP": 6.1,
             "Rank": 4
         },
         "Phulala Sugandh Maticha": {
-            "TRP": 4.6,
+            "TRP": 5.6,
             "Rank": 5
         },
         "Majhi Tujhi Reshimgath": {
-            "TRP": 4.6,
-            "Rank": 5
+            "TRP": 5.4,
+            "Rank": 6
         },
         "Thipkyanchi Rangoli": {
-            "TRP": 4.2,
-            "Rank": 6
+            "TRP": 4.9,
+            "Rank": 7
         },
         "Swabhimaan": {
             "TRP": 4.0,
-            "Rank": 7
-        },
-        "Yeu Kashi Tashi Me Nandayla": {
-            "TRP": 3.6,
             "Rank": 8
         },
         "Sahakutumba Sahaparivar": {
-            "TRP": 3.4,
+            "TRP": 3.6,
             "Rank": 9
         },
-        "Devmanus 2": {
-            "TRP": 2.1,
+        "Star Pravah Dhoomdhadaka 2022": {
+            "TRP": 3.1,
             "Rank": 10
         },
         "Man Udu Udu Jhala": {
-            "TRP": 2.0,
+            "TRP": 2.9,
             "Rank": 11
         },
-        "Aboli": {
-            "TRP": 1.7,
+        "Yeu Kashi Tashi Me Nandayla": {
+            "TRP": 2.1,
             "Rank": 12
+        },
+        "Devmanus 2": {
+            "TRP": 1.8,
+            "Rank": 13
         },
         "Masta Majedar Kitchen Kallakar": {
             "TRP": 1.5,
-            "Rank": 13
-        },
-        "Man Jhala Bajind": {
-            "TRP": 1.4,
             "Rank": 14
         },
-        "Chala Hawa Yeu Dya": {
-            "TRP": 1.3,
+        "Maharashtracha Favorite Kon Suvarnadashak Sohala": {
+            "TRP": 1.4,
             "Rank": 15
+        },
+        "Aboli": {
+            "TRP": 1.4,
+            "Rank": 15
+        },
+        "Man Jhala Bajind": {
+            "TRP": 1.2,
+            "Rank": 16
+        },
+        "Chala Hawa Yeu Dya": {
+            "TRP": 1.2,
+            "Rank": 16
         },
         "Tujhya Majhya Sansarala Ani Kai Hava": {
             "TRP": 1.0,
-            "Rank": 16
+            "Rank": 17
+        },
+        "Jeev Majha Guntala": {
+            "TRP": 1.0,
+            "Rank": 17
+        },
+        "Sundara Manamadhye Bharali": {
+            "TRP": 0.9,
+            "Rank": 18
         },
         "Me Honar Superstar Chote Ustad": {
             "TRP": 0.8,
-            "Rank": 17
+            "Rank": 19
+        },
+        "Raja Ranichi Ga Jodi": {
+            "TRP": 0.7,
+            "Rank": 20
         },
         "Tujhya Ishkacha Naadkhula": {
-            "TRP": 0.7,
-            "Rank": 18
-        },
-        "Nave Lakshya": {
             "TRP": 0.6,
-            "Rank": 19
+            "Rank": 21
         },
         "Home Minister": {
             "TRP": 0.6,
-            "Rank": 19
+            "Rank": 21
+        },
+        "Aai Mayeche Kavach": {
+            "TRP": 0.6,
+            "Rank": 21
+        },
+        "Tujhya Rupacha Chandana": {
+            "TRP": 0.5,
+            "Rank": 22
+        },
+        "Balumamachya Navana Changbhala": {
+            "TRP": 0.5,
+            "Rank": 22
         },
         "He Tar Kahich Nay": {
-            "TRP": 0.6,
-            "Rank": 19
+            "TRP": 0.5,
+            "Rank": 22
+        },
+        "Nave Lakshya": {
+            "TRP": 0.4,
+            "Rank": 23
         },
         "Ratris Khel Chale 3": {
-            "TRP": 0.4,
-            "Rank": 20
+            "TRP": 0.3,
+            "Rank": 24
         },
         "Ghetala Vasa Taku Nako": {
-            "TRP": 0.4,
-            "Rank": 20
+            "TRP": 0.3,
+            "Rank": 24
+        },
+        "Sonyachi Pavala": {
+            "TRP": 0.2,
+            "Rank": 25
+        },
+        "Tumchi Mulgi Kay Karte": {
+            "TRP": 0.2,
+            "Rank": 25
         }
     }
 }
