@@ -295,9 +295,6 @@ def week_function(trp, rank, k1, k2, grp=False):
 
     trp_function(trp, week, ch, grp)
     rank_function(rank, week, ch)
-
-    # if (k3!=None and channel_count):
-        
     return week
 
 def channel_function(week, info, trp, rank, k1, k2):
@@ -347,6 +344,21 @@ def timeslot_function(week, trp, rank, info, k1, k2, explode=False):
         
         df = rank_merged[rank_merged['Time'] == timeslot]
         rank_function(df, week, ch, timeslot)
+
+def type_function(week, info, trp, rank, k1, k2):
+    merged = pd.merge(pd.merge(info, trp[week], how="inner",left_index=True, right_index=True), rank[week], how="inner",left_index=True, right_index=True, suffixes=['_trp','_rank']).dropna()
+    
+    types = list(merged['Type'].sort_values().unique())
+    var_type = st.sidebar.selectbox('Choose type', types, key=k1)
+    ch = st.sidebar.checkbox('Show Data', key=k2)
+
+    st.markdown('### Type: ' + var_type)
+
+    df = trp[trp.index.isin(list(info[info['Type'] == var_type].index))]
+    trp_function(df, week, ch, False, var_type)
+
+    df = rank[rank.index.isin(list(info[info['Type'] == var_type].index))]
+    rank_function(df, week, ch, var_type)
 
 def performance_comparison(info, tv_trp, tv_rank, online_trp, online_rank, column, text, k1, k2, k3):
     st.markdown('### '+ text.capitalize() + 'wise Performance Comparison')

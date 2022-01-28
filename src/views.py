@@ -4,7 +4,7 @@ import pandas as pd
 from tenacity import time
 from input import read_csv
 
-from views_functions import calculate_channel_count, channel_function, comparison_function, display_data, find_leaders, find_mahaepisode_leaders, find_top_shows, merge, performance_comparison, rank_function, timeslot_function, trp_function, week_function
+from views_functions import calculate_channel_count, channel_function, comparison_function, display_data, find_leaders, find_mahaepisode_leaders, find_top_shows, merge, performance_comparison, rank_function, timeslot_function, trp_function, type_function, week_function
 
 info = read_csv('data/csv/shows/info.csv', 'Show')
 
@@ -44,6 +44,8 @@ elif (select == 'Shows - TV TRP'):
         channel_function(week, info, trp, rank, 15, 16)
     if (st.sidebar.checkbox("Show Timeslotwise Performance",key=17)):
         timeslot_function(week, trp, rank, info, 18, 19, True) 
+    if (st.sidebar.checkbox("Show Typewise Performance",key=65)):
+        type_function(week, info, trp, rank, 66, 67) 
 
 elif (select == 'Leaders'):
     st.title('Leaders')
