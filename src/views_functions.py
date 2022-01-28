@@ -97,7 +97,8 @@ def plot_figure(data, choices, ch, y_axis_title, reversed, style):
                 x=modified_data.index, 
                 y=modified_data[col], 
                 mode='lines+markers',
-                name=col
+                name=col,
+                connectgaps=True
             )
         )
     fig.update_layout(
