@@ -95,9 +95,10 @@ def plot_figure(data, choices, ch, y_axis_title, reversed, style):
         fig.add_trace(
             go.Scatter(
                 x=modified_data.index, 
-                y=modified_data[col], 
+                y=modified_data[col],
+                text = col, 
                 mode='lines+markers',
-                name=col,
+                name = col,
                 connectgaps=True
             )
         )
@@ -196,7 +197,7 @@ def trp_function(trp, week, ch, grp, middle = '', leader = False):
         xaxis=dict(
             dic,
             title='Show',
-            tickangle=45
+            tickangle=55
         ),
         yaxis=dict(
             dic,
@@ -245,7 +246,7 @@ def rank_function(rank, week, ch, middle=''):
                 size=20,
                 family='Arial'),
             insidetextanchor='middle',
-            hovertemplate='<b>Show: </b> %{x}<br><b>Rank: </b> %{text}',
+            hovertemplate='<b>Show: </b> %{x}<br><b>Rank: </b> %{text}<extra></extra>',
             hoverlabel = dict(
                 bgcolor = '#e0c46a',
                 align = 'auto',
@@ -273,7 +274,7 @@ def rank_function(rank, week, ch, middle=''):
         xaxis = dict(
             dic,
             title='Show',
-            tickangle = 45
+            tickangle = 55
         ),
         yaxis = dict(
             dic,
@@ -366,7 +367,7 @@ def performance_comparison(info, tv_trp, tv_rank, online_trp, online_rank, colum
 
     e_info = info_explode(info)
 
-    choices = list(e_info[column].sort_values().unique())
+    choices = list(e_info[column].sort_values().dropna().unique())
     selection = st.sidebar.selectbox('Choose ' + text, choices, key=k1)
 
     st.markdown('### ' + selection)
@@ -404,11 +405,22 @@ def calculate_channel_count(df, k1, column):
             y = occurences,
             marker_color= '#b20001',
             text = occurences,
-            textposition='auto',
+            textposition='inside',
+            textangle = 0,
+            hovertemplate='<b>Channel: </b> %{x}<br><b>Count: </b> %{text}<extra></extra>',
             insidetextfont = dict(
                 size=20,
                 family='Arial'),
-            insidetextanchor='middle'
+            insidetextanchor='middle',
+            hoverlabel = dict(
+                bgcolor = '#e0c46a',
+                align = 'auto',
+                font = dict(
+                    size=14,
+                    family='Arial'
+                )
+            ),
+            name = 'Channel Count'
         )
     )
     fig.update_layout(
@@ -617,11 +629,11 @@ def find_top_shows(week, info, trp, rank):
     
     column_list = ['Channel',week+'_trp',week+'_rank']
     df2 = df[column_list].rename(columns={week+'_trp':'TRP', week+'_rank':'Rank'},inplace=False).sort_values(by='TRP',ascending=False)
-    df3 = df2.reset_index().head(num).set_index('Show')
-
+    df2 = df2[df2['Rank'] <= num].reset_index().set_index('Show')
+    
     ch = st.sidebar.checkbox('Show Data', key=37)
-    trp_function(df3, week, ch, False, middle, True)
-    calculate_channel_count(df3, 38, 'Channel')
+    trp_function(df2, week, ch, False, middle, True)
+    calculate_channel_count(df2, 38, 'Channel')
 
 def merge(week, time_df, trp, rank, info):
     merged = pd.merge(time_df[week], trp[week], how="inner",left_index=True, right_index=True)
