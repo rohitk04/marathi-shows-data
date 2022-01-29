@@ -664,6 +664,10 @@
             "Week 1": {
                 "TRP": 0.8,
                 "Rank": 22
+            },
+            "Week 3": {
+                "TRP": 0.4,
+                "Rank": 23
             }
         },
         "Online TRP": {}
@@ -889,6 +893,84 @@
             "Week 3": {
                 "TRP": 1.4,
                 "Rank": 15
+            }
+        },
+        "Online TRP": {}
+    },
+    "Maharashtrachi Hasyajatra": {
+        "Channel": "Sony Marathi",
+        "Time": [
+            "21:30",
+            "21:00"
+        ],
+        "Type": "Non-Fiction",
+        "Platform": "SonyLiv",
+        "TV TRP": {
+            "Week 3": {
+                "TRP": 0.8,
+                "Rank": 19
+            }
+        },
+        "Online TRP": {}
+    },
+    "Ajunahi Barsaat Ahe": {
+        "Channel": "Sony Marathi",
+        "Time": [
+            "20:00"
+        ],
+        "Type": "Fiction",
+        "Platform": "SonyLiv",
+        "TV TRP": {
+            "Week 3": {
+                "TRP": 0.7,
+                "Rank": 20
+            }
+        },
+        "Online TRP": {}
+    },
+    "Kkusum": {
+        "Channel": "Sony Marathi",
+        "Time": [
+            "20:30"
+        ],
+        "Type": "Fiction",
+        "Platform": "SonyLiv",
+        "TV TRP": {
+            "Week 3": {
+                "TRP": 0.7,
+                "Rank": 20
+            }
+        },
+        "Online TRP": {}
+    },
+    "Indian Idol Marathi": {
+        "Channel": "Sony Marathi",
+        "Time": [
+            "21:30",
+            "21:00"
+        ],
+        "Type": "Non-Fiction",
+        "Platform": "SonyLiv",
+        "TV TRP": {
+            "Week 3": {
+                "TRP": 0.6,
+                "Rank": 21
+            }
+        },
+        "Online TRP": {}
+    },
+    "Criminals Chahul Gunhegaranchi": {
+        "Channel": "Sony Marathi",
+        "Time": [
+            "22:00",
+            "22:30"
+        ],
+        "Type": "Fiction",
+        "Platform": "SonyLiv",
+        "TV TRP": {
+            "Week 3": {
+                "TRP": 0.1,
+                "Rank": 26
             }
         },
         "Online TRP": {}

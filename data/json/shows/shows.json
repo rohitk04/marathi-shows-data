@@ -959,21 +959,6 @@
         },
         "Online TRP": {}
     },
-    "Swarajya Saudamini Tararani": {
-        "Channel": "Sony Marathi",
-        "Time": [
-            "19:30"
-        ],
-        "Type": "Fiction",
-        "Platform": "SonyLiv",
-        "TV TRP": {
-            "Week 3": {
-                "TRP": 0.5,
-                "Rank": 22
-            }
-        },
-        "Online TRP": {}
-    },
     "Criminals Chahul Gunhegaranchi": {
         "Channel": "Sony Marathi",
         "Time": [
@@ -986,6 +971,21 @@
             "Week 3": {
                 "TRP": 0.1,
                 "Rank": 26
+            }
+        },
+        "Online TRP": {}
+    },
+    "Swarajya Saudamini Tararani": {
+        "Channel": "Sony Marathi",
+        "Time": [
+            "19:30"
+        ],
+        "Type": "Fiction",
+        "Platform": "SonyLiv",
+        "TV TRP": {
+            "Week 3": {
+                "TRP": 0.5,
+                "Rank": 22
             }
         },
         "Online TRP": {}
