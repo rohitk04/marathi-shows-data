@@ -72,17 +72,21 @@
             "TRP": 1.2,
             "Rank": 16
         },
-        "Tujhya Majhya Sansarala Ani Kai Hava": {
+        "Jeev Majha Guntala": {
             "TRP": 1.0,
             "Rank": 17
         },
-        "Jeev Majha Guntala": {
+        "Tujhya Majhya Sansarala Ani Kai Hava": {
             "TRP": 1.0,
             "Rank": 17
         },
         "Sundara Manamadhye Bharali": {
             "TRP": 0.9,
             "Rank": 18
+        },
+        "Maharashtrachi Hasyajatra": {
+            "TRP": 0.8,
+            "Rank": 19
         },
         "Me Honar Superstar Chote Ustad": {
             "TRP": 0.8,
@@ -92,9 +96,13 @@
             "TRP": 0.7,
             "Rank": 20
         },
-        "Tujhya Ishkacha Naadkhula": {
-            "TRP": 0.6,
-            "Rank": 21
+        "Ajunahi Barsaat Ahe": {
+            "TRP": 0.7,
+            "Rank": 20
+        },
+        "Kkusum": {
+            "TRP": 0.7,
+            "Rank": 20
         },
         "Home Minister": {
             "TRP": 0.6,
@@ -103,6 +111,18 @@
         "Aai Mayeche Kavach": {
             "TRP": 0.6,
             "Rank": 21
+        },
+        "Tujhya Ishkacha Naadkhula": {
+            "TRP": 0.6,
+            "Rank": 21
+        },
+        "Indian Idol Marathi": {
+            "TRP": 0.6,
+            "Rank": 21
+        },
+        "Swarajya Saudamini Tararani": {
+            "TRP": 0.5,
+            "Rank": 22
         },
         "Tujhya Rupacha Chandana": {
             "TRP": 0.5,
@@ -116,15 +136,19 @@
             "TRP": 0.5,
             "Rank": 22
         },
+        "Jai Jai Swami Samarth": {
+            "TRP": 0.4,
+            "Rank": 23
+        },
         "Nave Lakshya": {
             "TRP": 0.4,
             "Rank": 23
         },
-        "Ratris Khel Chale 3": {
+        "Ghetala Vasa Taku Nako": {
             "TRP": 0.3,
             "Rank": 24
         },
-        "Ghetala Vasa Taku Nako": {
+        "Ratris Khel Chale 3": {
             "TRP": 0.3,
             "Rank": 24
         },
@@ -135,6 +159,10 @@
         "Tumchi Mulgi Kay Karte": {
             "TRP": 0.2,
             "Rank": 25
+        },
+        "Criminals Chahul Gunhegaranchi": {
+            "TRP": 0.1,
+            "Rank": 26
         }
     }
 }
