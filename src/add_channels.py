@@ -24,3 +24,4 @@ def add_channels(not_present):
         channels_json[channel] = add_channel(channel)[channel]
     
     store_into_json('data/json/channels/channels.json', channels_json)
+    return channels_json

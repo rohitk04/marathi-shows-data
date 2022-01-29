@@ -91,3 +91,4 @@ def add_shows(not_present, show_data = None):
                 raise RuntimeError('Show not present in shows.json')
             
         store_into_json('data/json/shows/mahaepisode/mahaepisodes.json', shows_json)
+    return shows_json

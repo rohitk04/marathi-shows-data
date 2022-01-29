@@ -29,12 +29,14 @@ def process(choice, old_path, new_path, msg):
             print (str(index+1)+'. ' + ele)
         print ()
         if choice=='Channel':
-            add_channels(not_present)
+            data = add_channels(not_present)
         elif choice=='Mahaepisode':
-            add_shows(not_present, show_data)
+            data = add_shows(not_present, show_data)
         else:
-            add_shows(not_present)
-        raise RuntimeError(msg.capitalize() + " added in " + msg + ".json file. \nPlease try again.")
+            data = add_shows(not_present)
+        
+        print ('-'.center(73,'-'))
+        print ()
 
     for ele in data:
         trp_data = trp[week].get(ele)
