@@ -134,5 +134,9 @@ elif (select == 'Compare Shows'):
     
     if (st.sidebar.checkbox("Show Timeslotwise Performance Comparison", key=30)):
         performance_comparison(info, tv_trp, tv_rank, online_trp, online_rank, 'Time', 'timeslot', 31,32,33)
+    
+    if (st.sidebar.checkbox("Show Typewise Performance",key=69)):
+        performance_comparison(info, tv_trp, tv_rank, online_trp, online_rank, 'Type', 'type', 70,71,72)
+
 else:
     st.title('Others')

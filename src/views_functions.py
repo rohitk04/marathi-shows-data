@@ -96,16 +96,17 @@ def plot_figure(data, choices, ch, y_axis_title, reversed, style):
             go.Scatter(
                 x=modified_data.index, 
                 y=modified_data[col],
-                text = col, 
                 mode='lines+markers',
                 name = col,
-                connectgaps=True
+                connectgaps=True,
+                hovertemplate= None
             )
         )
     fig.update_layout(
         autosize=False,
-        width=750,
-        height=400,
+        showlegend = False,
+        width=800,
+        height=650,
         margin=dict(
             l=0,
             r=0,
@@ -123,13 +124,7 @@ def plot_figure(data, choices, ch, y_axis_title, reversed, style):
             autorange=reversed
         ),
         title = y_axis_title,
-        legend=dict(
-            orientation="h",
-            xanchor="center",
-            x=0.5,
-            y=-0.2
-        ),
-        legend_title_text='Channel'
+        hovermode='x unified'
     )   
     st.plotly_chart(fig)
 
