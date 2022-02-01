@@ -974,5 +974,20 @@
             }
         },
         "Online TRP": {}
+    },
+    "Swarajya Saudamini Tararani": {
+        "Channel": "Sony Marathi",
+        "Time": [
+            "19:30"
+        ],
+        "Type": "Fiction",
+        "Platform": "SonyLiv",
+        "TV TRP": {
+            "Week 3": {
+                "TRP": 0.5,
+                "Rank": 22
+            }
+        },
+        "Online TRP": {}
     }
 }
