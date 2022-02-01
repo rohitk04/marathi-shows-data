@@ -11,7 +11,9 @@ print ()
 
 ch = int(input("Enter choice: "))
 
-week = 'Week 3'
+num = int(input("Enter week no.: "))
+week = 'Week ' + str(num)
+
 print ()
 print ('-'.center(73,'-'))
 print ("\nEntering data for " + week + "...")
