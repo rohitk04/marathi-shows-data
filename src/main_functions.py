@@ -1,7 +1,32 @@
 import json
 
 from output import store_into_json
-        
+
+
+def add_channel(channel):
+    channel_json = json.load(open('data/json/channels/dummy_channel.json'))
+    channel_json[channel] = channel_json.pop("Channel_Name")
+
+    print ('-'.center(73,'-'))
+    
+    print (channel_json)
+
+    print ('-'.center(73,'-'))
+    print ()
+
+    return channel_json
+
+def add_channels(not_present):
+    channels_json = json.load(open('data/json/channels/channels.json'))
+    
+    print ('\nAdding channels...\n')
+    
+    for channel in not_present:
+        channels_json[channel] = add_channel(channel)[channel]
+    
+    store_into_json('data/json/channels/channels.json', channels_json)
+    return channels_json
+
 def add_show(show, show_data = None):
     if (show_data == None):
         channel_choices = {1:'Star Pravah', 2:'Zee Marathi', 3:'Colors Marathi', 4:'Sony Marathi'}
@@ -92,3 +117,15 @@ def add_shows(not_present, show_data = None):
             
         store_into_json('data/json/shows/mahaepisode/mahaepisodes.json', shows_json)
     return shows_json
+
+def get_week():
+    num = int(input("Enter week no.: "))
+    week = 'Week ' + str(num)
+
+    print ()
+    print ('-'.center(73,'-'))
+    print ("\nEntering data for " + week + "...")
+    print ()
+    print ('-'.center(73,'-'))
+
+    return week

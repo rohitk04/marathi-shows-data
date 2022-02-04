@@ -1,7 +1,6 @@
-from convert_to_csv import convert_to_csv
-from get_week import get_week
+from convert import convert_to_csv, convert_to_json
+from main_functions import get_week
 from process import process
-from convert_to_json import convert_to_json
 
 print ("Select: ")
 print ("1. TV Shows - TV TRP")
