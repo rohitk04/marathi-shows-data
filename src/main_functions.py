@@ -2,7 +2,6 @@ import json
 
 from output import store_into_json
 
-
 def add_channel(channel):
     channel_json = json.load(open('data/json/channels/dummy_channel.json'))
     channel_json[channel] = channel_json.pop("Channel_Name")
@@ -31,7 +30,7 @@ def add_show(show, show_data = None):
     if (show_data == None):
         channel_choices = {1:'Star Pravah', 2:'Zee Marathi', 3:'Colors Marathi', 4:'Sony Marathi'}
         type_choices = {1:'Fiction', 2:'Non-Fiction', 3:'Event'}
-        time_choices={1:'18:00', 2:'18:30',3:'19:00',4:'19:30',5:'20:00',6:'20:30',7:'21:00',8:'21:30',9:'22:00',10:'22:30',11:'23:00'}
+        time_choices={1:'13:00', 2:'13:30', 3:'18:00', 4:'18:30', 5:'19:00', 6:'19:30', 7:'20:00', 8:'20:30', 9:'21:00', 10:'21:30', 11:'22:00', 12:'22:30', 13:'23:00', 14: '23:30'}
         platform_choices = {1:'Hotstar', 2:'Zee5', 3:'Voot', 4:'SonyLiv'}
 
         show_json = json.load(open('data/json/shows/dummy_show.json'))

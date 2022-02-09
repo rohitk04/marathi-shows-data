@@ -872,7 +872,7 @@
         },
         "Online TRP": {}
     },
-    "Tujhya Ishkacha Naadkhula": {
+    "Tujhya Ishkacha Naadkhula - I": {
         "Channel": "Star Pravah",
         "Time": [
             "23:00"
@@ -1210,5 +1210,35 @@
             }
         },
         "Online TRP": {}
+    },
+    "Lagnachi Bedi": {
+        "Channel": "Star Pravah",
+        "Time": [
+            "13:00"
+        ],
+        "Type": "Fiction",
+        "Platform": "Hotstar",
+        "TV TRP": {},
+        "Online TRP": {
+            "Week 5": {
+                "TRP": 19.9,
+                "Rank": 11
+            }
+        }
+    },
+    "Pinkycha Vijay Aso": {
+        "Channel": "Star Pravah",
+        "Time": [
+            "23:00"
+        ],
+        "Type": "Fiction",
+        "Platform": "Hotstar",
+        "TV TRP": {},
+        "Online TRP": {
+            "Week 5": {
+                "TRP": 17.4,
+                "Rank": 12
+            }
+        }
     }
 }
