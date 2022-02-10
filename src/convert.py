@@ -118,7 +118,7 @@ def convert_to_json(choice, week):
 
     df = pd.DataFrame(columns=cols)
 
-    if (choice=="TV" or "Online"):
+    if (choice=="TV" or choice=="Online"):
         for line in lines:
             words = line.split(" ")
             df = df.append({
@@ -136,7 +136,6 @@ def convert_to_json(choice, week):
                 'Time':words[5].strip("\n")
                 }, ignore_index=True)
 
-
     df['Rank'] = df['TRP'].rank(0,ascending=False,method='dense',na_option='keep').astype(int)
     df = df.sort_values(by='Rank')
     
@@ -146,7 +145,7 @@ def convert_to_json(choice, week):
     dictionary = {}
     dictionary[week] = {}
 
-    if (choice=="TV" or "Online"):
+    if (choice=="TV" or choice == "Online"):
         for index, row in df.iterrows():
             dictionary[week][row['Show']]={
                 'TRP':row['TRP'],
