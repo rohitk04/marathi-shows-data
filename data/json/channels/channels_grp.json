@@ -1,23 +1,23 @@
 {
-    "Week 4":{
+    "Week 5":{
         "Star Pravah":{
-            "GRP":"1442.81",
+            "GRP":"1372.02",
             "Rank":"1"
         },
         "Zee Marathi":{
-            "GRP":"609.23",
+            "GRP":"742.99",
             "Rank": "2"
         },
-        "Sony SAB":{
-            "GRP":"505.78",
-            "Rank":"4"
-        },
         "Colors Marathi":{
-            "GRP":"512.4",
+            "GRP":"471.2",
             "Rank":"3"
         },
-        "Star Plus":{
-            "GRP":"326.16",
+        "Sony SAB":{
+            "GRP":"447.84",
+            "Rank":"4"
+        },
+        "Star Utsav":{
+            "GRP":"329.15",
             "Rank":"5"
         }
     }
