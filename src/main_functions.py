@@ -62,7 +62,7 @@ def add_show(show, show_data = None):
         
         time_list = []
         
-        if type != 'Event':
+        if type == 'Fiction' or type == 'Non-Fiction':
             print ()    
             print ("Time Choices: ")
             
