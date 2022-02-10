@@ -58,5 +58,17 @@
                 "Time": "20:00"
             }
         }
+    },
+    "Thipkyanchi Rangoli": {
+        "Channel": "Star Pravah",
+        "Type": "Fiction",
+        "Platform": "Hotstar",
+        "TRP": {
+            "Week 5": {
+                "TRP": 5.4,
+                "Rank": 1,
+                "Time": "20:00"
+            }
+        }
     }
 }
