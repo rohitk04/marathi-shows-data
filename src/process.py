@@ -34,7 +34,6 @@ def process(choice, old_path, new_path, msg):
         else:
             data = add_shows(not_present)
         
-        print ('-'.center(73,'-'))
         print ()
 
     for ele in data:
