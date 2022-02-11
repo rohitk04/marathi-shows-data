@@ -33,7 +33,7 @@ def display_data(info):
         st.markdown('#### GRP')
         st.dataframe(read_csv('data/csv/channels/channels_grp.csv', 'Channel').style.format("{:.2f}"), width=800, height=450)
         st.markdown('#### Rank')
-        st.dataframe(read_csv('data/csv/channels/channels_rank.csv', 'Channel'), width=800, height=450)
+        st.dataframe(read_csv('data/csv/channels/channels_rank.csv', 'Channel').style.format("{:.0f}"), width=800, height=450)
         st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)   
     
     if ch3:
@@ -47,18 +47,12 @@ def display_data(info):
     if ch4:
         trp = read_csv('data/csv/shows/mahaepisode/mahaepisode_trp.csv', 'Show')
         rank = read_csv('data/csv/shows/mahaepisode/mahaepisode_rank.csv', 'Show')
-        time_df = read_csv('data/csv/shows/mahaepisode/mahaepisode_time.csv', 'Show')
-        
-        trp_merged = pd.merge(trp, time_df, how="inner", left_index=True, right_index=True, suffixes=['_trp','_time'])
-        rank_merged = pd.merge(rank, time_df, how="inner", left_index=True, right_index=True, suffixes=['_rank','_time'])
-        
-        style_dict = {col:"{:.2f}" for col in [col for col in list(trp_merged.columns) if col.endswith("_trp")]}
         
         st.subheader('Mahaepisode')
         st.markdown('#### TRP')
-        st.dataframe(trp_merged.style.format(style_dict), width=800, height=450)
+        st.dataframe(trp.style.format("{:.2f}"), width=800, height=450)
         st.markdown('#### Rank')
-        st.dataframe(rank_merged, width=800, height=450)
+        st.dataframe(rank.style.format("{:.0f}"), width=800, height=450)
         st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
 
     if ch5:
@@ -546,6 +540,7 @@ def find_mahaepisode_leaders(column, week, time_df, trp, rank, info, k1, k2=None
         sort_column = 'Rank'
 
     st.subheader(title + " Leaders")
+    st.markdown(':point_right: *To view ranks, click on \'Show Data\'*')
     
     column_list = ['Show', 'Channel',week+'_trp',week+'_rank']
     if column!='Channel':

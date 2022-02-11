@@ -50,6 +50,7 @@ def main():
 
     elif (select == 'Leaders'):
         st.title('Leaders')
+        st.markdown(':point_right: *To view ranks, click on \'Show Data\'*')
         
         trp = read_csv('data/csv/shows/tv/tv_trp_trp.csv', 'Show')
         rank = read_csv('data/csv/shows/tv/tv_trp_rank.csv', 'Show')
