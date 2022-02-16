@@ -4,6 +4,21 @@ import pandas as pd
 from input import load_channels, load_shows
 from output import store_into_csv, store_into_json
 
+def get_new_row(choice, words, codes):
+    if (choice=="TV" or choice=="Online"):
+        return pd.DataFrame({
+            'Hashtag':[words[1].strip()],
+            'Show':[codes.get(words[1].strip())],
+            'TRP':[float(words[3])]
+            })
+    else:
+        return pd.DataFrame({
+            'Hashtag':[words[1].strip()],
+            'Show':[codes.get(words[1].strip())],
+            'TRP':[float(words[3])],
+            'Time':[words[5].strip("\n")]
+            })
+
 def convert_to_csv(choice):
     print ("\nConversion begins...\n")
     if (choice=='Channel'):
@@ -118,23 +133,10 @@ def convert_to_json(choice, week):
 
     df = pd.DataFrame(columns=cols)
 
-    if (choice=="TV" or choice=="Online"):
-        for line in lines:
-            words = line.split(" ")
-            df = df.append({
-                    'Hashtag':words[1].strip(),
-                    'Show':codes.get(words[1].strip()),
-                    'TRP':float(words[3]
-                    )}, ignore_index=True)
-    else:
-        for line in lines:
-            words = line.split(" ")
-            df = df.append({
-                'Hashtag':words[1].strip(),
-                'Show':codes.get(words[1].strip()),
-                'TRP':float(words[3]),
-                'Time':words[5].strip("\n")
-                }, ignore_index=True)
+    for line in lines:
+        words = line.split(" ")
+        new_row = get_new_row(choice, words, codes)
+        df = pd.concat([df, new_row])
 
     df['Rank'] = df['TRP'].rank(0,ascending=False,method='dense',na_option='keep').astype(int)
     df = df.sort_values(by='Rank')
