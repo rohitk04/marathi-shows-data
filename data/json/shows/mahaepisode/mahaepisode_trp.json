@@ -1,9 +1,24 @@
 {
-    "Week 5": {
-        "Thipkyanchi Rangoli": {
-            "TRP": 5.4,
+    "Week 6": {
+        "Phulala Sugandh Maticha": {
+            "TRP": 4.8,
             "Rank": 1,
             "Time": "20:00"
+        },
+        "Majhi Tujhi Reshimgath": {
+            "TRP": 4.4,
+            "Rank": 2,
+            "Time": "20:00"
+        },
+        "Mulgi Zali Ho": {
+            "TRP": 4.0,
+            "Rank": 3,
+            "Time": "19:00"
+        },
+        "Tujhya Majhya Sansarala Ani Kai Hava": {
+            "TRP": 1.1,
+            "Rank": 4,
+            "Time": "21:00"
         }
     }
 }
