@@ -100,22 +100,21 @@ def add_shows(not_present, show_data = None):
         for show in not_present:
             shows_json[show] = add_show(show)[show]
             print (show + '\n' + str(shows_json[show]))
-            
+
         store_into_json('data/json/shows/shows.json', shows_json)
     else:
         shows_json = json.load(open('data/json/shows/mahaepisode/mahaepisodes.json'))
     
-        print ('\nAdding shows...\n')
-        
+        print ('\nAdding shows...\n')        
         for show in not_present:
             if show in show_data:
                 shows_json[show] = add_show(show, show_data[show])[show]
-                print (show + '\n' + str(shows_json[show]))
             else:
-                raise RuntimeError('Show not present in shows.json')
-            
+                raise RuntimeError(show  + ' not present in shows.json')
+        print ('\nShows added successfully\n')
+
         store_into_json('data/json/shows/mahaepisode/mahaepisodes.json', shows_json)
-    
+
     print ('-'.center(73,'-'))
     return shows_json
 
