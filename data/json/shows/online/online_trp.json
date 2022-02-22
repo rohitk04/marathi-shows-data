@@ -1,44 +1,84 @@
 {
-    "Week 6": {
+    "Week 7": {
         "Aai Kuthe Kay Karte": {
-            "TRP": 41.9,
+            "TRP": 41.2,
             "Rank": 1
         },
-        "Thipkyanchi Rangoli": {
+        "Rang Majha Vegla": {
             "TRP": 39.6,
             "Rank": 2
         },
-        "Rang Majha Vegla": {
-            "TRP": 37.2,
+        "Thipkyanchi Rangoli": {
+            "TRP": 37.6,
             "Rank": 3
         },
         "Majhi Tujhi Reshimgath": {
-            "TRP": 36.8,
+            "TRP": 37.2,
             "Rank": 4
         },
         "Sukh Mhanje Nakki Kay Asta": {
-            "TRP": 35.8,
+            "TRP": 36.9,
             "Rank": 5
         },
         "Man Udu Udu Jhala": {
-            "TRP": 33.1,
+            "TRP": 34.0,
             "Rank": 6
         },
         "Swabhimaan": {
-            "TRP": 30.5,
+            "TRP": 32.1,
             "Rank": 7
         },
         "Phulala Sugandh Maticha": {
-            "TRP": 27.6,
+            "TRP": 29.8,
             "Rank": 8
         },
-        "Devmanus 2": {
-            "TRP": 25.4,
+        "Devmanus S2": {
+            "TRP": 27.6,
             "Rank": 9
         },
-        "Mulgi Zali Ho": {
-            "TRP": 24.9,
+        "Yeu Kashi Tashi Me Nandayla": {
+            "TRP": 25.4,
             "Rank": 10
+        },
+        "Mulgi Zali Ho": {
+            "TRP": 23.9,
+            "Rank": 11
+        },
+        "Muramba": {
+            "TRP": 22.1,
+            "Rank": 12
+        },
+        "Masta Majedar Kitchen Kallakar": {
+            "TRP": 22.0,
+            "Rank": 13
+        },
+        "Sahakutumba Sahaparivar": {
+            "TRP": 21.7,
+            "Rank": 14
+        },
+        "Aboli": {
+            "TRP": 20.8,
+            "Rank": 15
+        },
+        "Jeev Majha Guntala": {
+            "TRP": 19.8,
+            "Rank": 16
+        },
+        "Lagnachi Bedi": {
+            "TRP": 18.6,
+            "Rank": 17
+        },
+        "Chala Hawa Yeu Dya": {
+            "TRP": 17.9,
+            "Rank": 18
+        },
+        "Tujhya Majhya Sansarala Ani Kai Hava": {
+            "TRP": 16.2,
+            "Rank": 19
+        },
+        "Me Honar Superstar Chote Ustad": {
+            "TRP": 15.4,
+            "Rank": 20
         }
     }
 }
