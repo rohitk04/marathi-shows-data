@@ -113,8 +113,8 @@ def main():
         online_trp = read_csv('data/csv/shows/online/online_trp_trp.csv', 'Show')
         online_rank = read_csv('data/csv/shows/online/online_trp_rank.csv', 'Show')
 
-        if (st.sidebar.checkbox("Show Weekwise Performance Comparison",value=True, key=22)):
-            st.markdown('### Weekwise Performance Comparison')
+        if (st.sidebar.checkbox("Show show-wise Performance Comparison",value=True, key=22)):
+            st.markdown('### Show-wise Performance Comparison')
 
             shows = list(info.index.unique())
             choices = st.sidebar.multiselect('Compare shows',shows, default=shows[0], key=23)
