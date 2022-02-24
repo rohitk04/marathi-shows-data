@@ -116,20 +116,23 @@ def convert_to_csv(choice):
 def convert_to_json(choice, week):
     print ("\nConversion begins...\n")
 
-    with open('data/trp.txt') as f:
-        lines = f.readlines()
-
     codes = json.load(open('data/json/shows/codes.json'))
 
     if (choice == "TV"):
+        input_path = 'data/trp.txt'
         output_path = 'data/json/shows/tv/tv_trp.json'
         cols = ['Hashtag', 'Show','TRP']
     elif (choice == "Online"):
+        input_path = 'data/trp.txt'
         output_path = 'data/json/shows/online/online_trp.json'
         cols = ['Hashtag', 'Show','TRP']
     else:
+        input_path = 'data/mahaepisode_trp.txt'
         output_path = 'data/json/shows/mahaepisode/mahaepisode_trp.json'
         cols = ['Hashtag', 'Show','TRP', 'Time']
+
+    with open(input_path) as f:
+        lines = f.readlines()
 
     df = pd.DataFrame(columns=cols)
 
