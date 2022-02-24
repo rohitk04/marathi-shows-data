@@ -56,6 +56,11 @@
                 "TRP": 1.1,
                 "Rank": 5,
                 "Time": "20:00"
+            },
+            "Week 6": {
+                "TRP": 1.1,
+                "Rank": 4,
+                "Time": "21:00"
             }
         }
     },
@@ -68,6 +73,42 @@
                 "TRP": 5.4,
                 "Rank": 1,
                 "Time": "20:00"
+            }
+        }
+    },
+    "Phulala Sugandh Maticha": {
+        "Channel": "Star Pravah",
+        "Type": "Fiction",
+        "Platform": "Hotstar",
+        "TRP": {
+            "Week 6": {
+                "TRP": 4.8,
+                "Rank": 1,
+                "Time": "20:00"
+            }
+        }
+    },
+    "Majhi Tujhi Reshimgath": {
+        "Channel": "Zee Marathi",
+        "Type": "Fiction",
+        "Platform": "Zee5",
+        "TRP": {
+            "Week 6": {
+                "TRP": 4.4,
+                "Rank": 2,
+                "Time": "20:00"
+            }
+        }
+    },
+    "Mulgi Zali Ho": {
+        "Channel": "Star Pravah",
+        "Type": "Fiction",
+        "Platform": "Hotstar",
+        "TRP": {
+            "Week 6": {
+                "TRP": 4.0,
+                "Rank": 3,
+                "Time": "19:00"
             }
         }
     }

@@ -8,6 +8,11 @@
                 "TRP": 3.1,
                 "Rank": 1,
                 "Time": "19:00"
+            },
+            "Week 7": {
+                "TRP": 3.6,
+                "Rank": 3,
+                "Time": "20:00"
             }
         }
     },
@@ -61,6 +66,11 @@
                 "TRP": 1.1,
                 "Rank": 4,
                 "Time": "21:00"
+            },
+            "Week 7": {
+                "TRP": 1.0,
+                "Rank": 4,
+                "Time": "21:00"
             }
         }
     },
@@ -71,6 +81,11 @@
         "TRP": {
             "Week 5": {
                 "TRP": 5.4,
+                "Rank": 1,
+                "Time": "20:00"
+            },
+            "Week 7": {
+                "TRP": 5.1,
                 "Rank": 1,
                 "Time": "20:00"
             }
@@ -108,6 +123,18 @@
             "Week 6": {
                 "TRP": 4.0,
                 "Rank": 3,
+                "Time": "19:00"
+            }
+        }
+    },
+    "Swabhimaan": {
+        "Channel": "Star Pravah",
+        "Type": "Fiction",
+        "Platform": "Hotstar",
+        "TRP": {
+            "Week 7": {
+                "TRP": 4.2,
+                "Rank": 2,
                 "Time": "19:00"
             }
         }
