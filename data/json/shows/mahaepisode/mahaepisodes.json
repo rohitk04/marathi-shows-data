@@ -28,13 +28,18 @@
             }
         }
     },
-    "Devmanus 2": {
+    "Devmanus S2": {
         "Channel": "Zee Marathi",
         "Type": "Fiction",
         "Platform": "Zee5",
         "TRP": {
             "Week 2": {
                 "TRP": 2.6,
+                "Rank": 3,
+                "Time": "22:00"
+            },
+            "Week 8": {
+                "TRP": 3.0,
                 "Rank": 3,
                 "Time": "22:00"
             }
@@ -70,6 +75,11 @@
             "Week 7": {
                 "TRP": 1.0,
                 "Rank": 4,
+                "Time": "21:00"
+            },
+            "Week 8": {
+                "TRP": 0.9,
+                "Rank": 5,
                 "Time": "21:00"
             }
         }
@@ -136,6 +146,42 @@
                 "TRP": 4.2,
                 "Rank": 2,
                 "Time": "19:00"
+            }
+        }
+    },
+    "Rang Majha Vegla": {
+        "Channel": "Star Pravah",
+        "Type": "Fiction",
+        "Platform": "Hotstar",
+        "TRP": {
+            "Week 8": {
+                "TRP": 6.4,
+                "Rank": 1,
+                "Time": "20:00"
+            }
+        }
+    },
+    "Aboli": {
+        "Channel": "Star Pravah",
+        "Type": "Fiction",
+        "Platform": "Hotstar",
+        "TRP": {
+            "Week 8": {
+                "TRP": 3.4,
+                "Rank": 2,
+                "Time": "19:00"
+            }
+        }
+    },
+    "Man Jhala Bajind": {
+        "Channel": "Zee Marathi",
+        "Type": "Fiction",
+        "Platform": "Zee5",
+        "TRP": {
+            "Week 8": {
+                "TRP": 1.2,
+                "Rank": 4,
+                "Time": "20:00"
             }
         }
     }

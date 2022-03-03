@@ -1,23 +1,28 @@
 {
-    "Week 7": {
-        "Thipkyanchi Rangoli": {
-            "TRP": 5.1,
+    "Week 8": {
+        "Rang Majha Vegla": {
+            "TRP": 6.4,
             "Rank": 1,
             "Time": "20:00"
         },
-        "Swabhimaan": {
-            "TRP": 4.2,
+        "Aboli": {
+            "TRP": 3.4,
             "Rank": 2,
             "Time": "19:00"
         },
-        "Man Udu Udu Jhala": {
-            "TRP": 3.6,
+        "Devmanus S2": {
+            "TRP": 3.0,
             "Rank": 3,
+            "Time": "22:00"
+        },
+        "Man Jhala Bajind": {
+            "TRP": 1.2,
+            "Rank": 4,
             "Time": "20:00"
         },
         "Tujhya Majhya Sansarala Ani Kai Hava": {
-            "TRP": 1.0,
-            "Rank": 4,
+            "TRP": 0.9,
+            "Rank": 5,
             "Time": "21:00"
         }
     }
