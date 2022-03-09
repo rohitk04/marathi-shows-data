@@ -104,6 +104,10 @@
             "TRP": 0.7,
             "Rank": 22
         },
+        "Kkusum": {
+            "TRP": 0.6,
+            "Rank": 23
+        },
         "Lek Majhi Durga": {
             "TRP": 0.6,
             "Rank": 23
@@ -120,6 +124,10 @@
             "TRP": 0.5,
             "Rank": 24
         },
+        "Ajunahi Barsaat Ahe": {
+            "TRP": 0.5,
+            "Rank": 24
+        },
         "He Tar Kahich Nay": {
             "TRP": 0.5,
             "Rank": 24
@@ -132,15 +140,27 @@
             "TRP": 0.4,
             "Rank": 25
         },
-        "Balumamachya Navana Changbhala": {
-            "TRP": 0.3,
-            "Rank": 26
+        "Swarajya Saudamini Tararani": {
+            "TRP": 0.4,
+            "Rank": 25
+        },
+        "Indian Idol Marathi S1": {
+            "TRP": 0.4,
+            "Rank": 25
         },
         "Tujhya Ishkacha Naadkhula": {
             "TRP": 0.3,
             "Rank": 26
         },
+        "Balumamachya Navana Changbhala": {
+            "TRP": 0.3,
+            "Rank": 26
+        },
         "Sonyachi Pavala": {
+            "TRP": 0.2,
+            "Rank": 27
+        },
+        "Tumchi Mulgi Kay Karte": {
             "TRP": 0.2,
             "Rank": 27
         }
