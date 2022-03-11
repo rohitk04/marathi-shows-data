@@ -110,6 +110,11 @@
                 "TRP": 4.8,
                 "Rank": 1,
                 "Time": "20:00"
+            },
+            "Week 9": {
+                "TRP": 5.1,
+                "Rank": 2,
+                "Time": "19:00"
             }
         }
     },
@@ -181,6 +186,18 @@
             "Week 8": {
                 "TRP": 1.2,
                 "Rank": 4,
+                "Time": "20:00"
+            }
+        }
+    },
+    "Sukh Mhanje Nakki Kay Asta": {
+        "Channel": "Star Pravah",
+        "Type": "Fiction",
+        "Platform": "Hotstar",
+        "TRP": {
+            "Week 9": {
+                "TRP": 6.2,
+                "Rank": 1,
                 "Time": "20:00"
             }
         }
