@@ -1,15 +1,15 @@
 {
-    "Week 8": {
+    "Week 9": {
         "Rang Majha Vegla": {
-            "TRP": 7.1,
+            "TRP": 6.9,
             "Rank": 1
         },
         "Aai Kuthe Kay Karte": {
-            "TRP": 6.6,
+            "TRP": 6.5,
             "Rank": 2
         },
         "Sukh Mhanje Nakki Kay Asta": {
-            "TRP": 6.1,
+            "TRP": 6.0,
             "Rank": 3
         },
         "Phulala Sugandh Maticha": {
@@ -21,148 +21,112 @@
             "Rank": 5
         },
         "Thipkyanchi Rangoli": {
-            "TRP": 4.9,
+            "TRP": 4.8,
             "Rank": 6
         },
         "Majhi Tujhi Reshimgath": {
-            "TRP": 4.8,
+            "TRP": 4.6,
             "Rank": 7
         },
-        "Sahakutumba Sahaparivar": {
+        "Swabhimaan": {
             "TRP": 4.1,
             "Rank": 8
         },
-        "Swabhimaan": {
+        "Sahakutumba Sahaparivar": {
             "TRP": 3.9,
             "Rank": 9
         },
         "Man Udu Udu Jhala": {
-            "TRP": 3.7,
+            "TRP": 3.4,
             "Rank": 10
-        },
-        "Devmanus S2": {
-            "TRP": 3.2,
-            "Rank": 11
         },
         "Aboli": {
             "TRP": 3.1,
+            "Rank": 11
+        },
+        "Devmanus S2": {
+            "TRP": 3.0,
             "Rank": 12
         },
         "Yeu Kashi Tashi Me Nandayla": {
-            "TRP": 2.7,
+            "TRP": 2.8,
             "Rank": 13
         },
         "Masta Majedar Kitchen Kallakar": {
-            "TRP": 2.4,
+            "TRP": 2.3,
             "Rank": 14
         },
         "Chala Hawa Yeu Dya": {
-            "TRP": 2.1,
+            "TRP": 1.9,
             "Rank": 15
         },
-        "Man Jhala Bajind": {
+        "Chala Hawa Yeu Dya (Jhund Special)": {
             "TRP": 1.6,
             "Rank": 16
         },
         "Jeev Majha Guntala": {
-            "TRP": 1.3,
+            "TRP": 1.5,
             "Rank": 17
+        },
+        "Man Jhala Bajind": {
+            "TRP": 1.3,
+            "Rank": 18
+        },
+        "Pinkycha Vijay Aso": {
+            "TRP": 1.2,
+            "Rank": 19
+        },
+        "Boss Majhi Ladachi": {
+            "TRP": 1.1,
+            "Rank": 20
         },
         "Sundara Manamadhye Bharali": {
             "TRP": 1.1,
-            "Rank": 18
+            "Rank": 20
         },
         "Tujhya Majhya Sansarala Ani Kai Hava": {
             "TRP": 1.0,
-            "Rank": 19
-        },
-        "Lagnachi Bedi": {
-            "TRP": 1.0,
-            "Rank": 19
+            "Rank": 21
         },
         "Me Honar Superstar Chote Ustad": {
             "TRP": 1.0,
-            "Rank": 19
+            "Rank": 21
+        },
+        "Lagnachi Bedi": {
+            "TRP": 1.0,
+            "Rank": 21
         },
         "Muramba": {
-            "TRP": 0.9,
-            "Rank": 20
-        },
-        "Aai Mayeche Kavach": {
             "TRP": 0.8,
-            "Rank": 21
-        },
-        "Pinkycha Vijay Aso": {
-            "TRP": 0.8,
-            "Rank": 21
-        },
-        "Jai Jai Swami Samarth": {
-            "TRP": 0.7,
             "Rank": 22
         },
-        "Raja Ranichi Ga Jodi": {
-            "TRP": 0.7,
+        "Garjato Marathi": {
+            "TRP": 0.8,
             "Rank": 22
-        },
-        "Kkusum": {
-            "TRP": 0.6,
-            "Rank": 23
-        },
-        "Lek Majhi Durga": {
-            "TRP": 0.6,
-            "Rank": 23
         },
         "Nave Lakshya": {
-            "TRP": 0.6,
+            "TRP": 0.7,
             "Rank": 23
         },
         "Home Minister": {
             "TRP": 0.6,
-            "Rank": 23
-        },
-        "Tujhya Rupacha Chandana": {
-            "TRP": 0.5,
             "Rank": 24
         },
-        "Ajunahi Barsaat Ahe": {
+        "Ratris Khel Chale S3": {
             "TRP": 0.5,
-            "Rank": 24
+            "Rank": 25
         },
         "He Tar Kahich Nay": {
             "TRP": 0.5,
-            "Rank": 24
-        },
-        "Ghetala Vasa Taku Nako": {
-            "TRP": 0.4,
-            "Rank": 25
-        },
-        "Ratris Khel Chale S3": {
-            "TRP": 0.4,
-            "Rank": 25
-        },
-        "Swarajya Saudamini Tararani": {
-            "TRP": 0.4,
-            "Rank": 25
-        },
-        "Indian Idol Marathi S1": {
-            "TRP": 0.4,
             "Rank": 25
         },
         "Tujhya Ishkacha Naadkhula": {
             "TRP": 0.3,
             "Rank": 26
         },
-        "Balumamachya Navana Changbhala": {
+        "Ghetala Vasa Taku Nako": {
             "TRP": 0.3,
             "Rank": 26
-        },
-        "Sonyachi Pavala": {
-            "TRP": 0.2,
-            "Rank": 27
-        },
-        "Tumchi Mulgi Kay Karte": {
-            "TRP": 0.2,
-            "Rank": 27
         }
     }
 }

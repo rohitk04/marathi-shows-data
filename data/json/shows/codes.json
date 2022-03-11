@@ -16,6 +16,7 @@
     "#Aboli": "Aboli",
     "#TujhyaIshkachaNaadkhula": "Tujhya Ishkacha Naadkhula",
     "#TuzyaIshkachaNaadkhula": "Tujhya Ishkacha Naadkhula",
+    "#TujhyaIskachaNaadkhula": "Tujhya Ishkacha Naadkhula",
     "#PinkychaVijayAso": "Pinkycha Vijay Aso",
     "#PinkichaVijayAso": "Pinkycha Vijay Aso",
     "#MeHonarSuperstarChoteUstad": "Me Honar Superstar Chote Ustad",
@@ -44,7 +45,9 @@
     "#MastMajedarKitchenKallakar": "Masta Majedar Kitchen Kallakar",
     "#HeTarKahichNay": "He Tar Kahich Nay",
     "#Devmanus2": "Devmanus S2",
+    "#Devmanus": "Devmanus S2",
     "#RatrisKhelChale3": "Ratris Khel Chale S3",
+    "#RatrisKhelChale": "Ratris Khel Chale S3",
     
     "#SonyachiPavala": "Sonyachi Pavala",
     "#RajaRanichGaJodi": "Raja Ranichi Ga Jodi",
@@ -54,6 +57,7 @@
     "#JaiJaiSwamiSamartha": "Jai Jai Swami Samarth",
     "#JeevMajhaGuntala": "Jeev Majha Guntala",
     "#SundaraManamadhyeBharali": "Sundara Manamadhye Bharali",
+    "#SundaraManamadhyeBharli": "Sundara Manamadhye Bharali",
     "#TujhyaRupachaChandan": "Tujhya Rupacha Chandana",
     "#TujhyaRupachaChandana": "Tujhya Rupacha Chandana",
     "#Aai": "Aai Mayeche Kavach",
@@ -65,7 +69,8 @@
     "#Barsaat":"Ajunahi Barsaat Ahe",
     "#Barsat":"Ajunahi Barsaat Ahe",
     "#kksum":"Kkusum", 
-    "#Kusum":"Kkusum", 
+    "#Kusum":"Kkusum",
+    "#BossMajhiLadachi": "Boss Majhi Ladachi",
     "#HasyaJatra":"Maharashtrachi Hasyajatra",
     "#IndianIdolMarathi":"Indian Idol Marathi S1",
     "#TMKK": "Tumchi Mulgi Kay Karte",
@@ -76,6 +81,9 @@
     "#ZeeMarathiJallosh2022": "Zee Marathi Jallosh 2022",
     "#MFKSDS": "Maharashtracha Favorite Kon Suvarnadashak Sohala",
     "#PravahUtsav": "Pravah Utsav",
+    "#GarjtoMarathi": "Garjato Marathi",
 
-    "#Pandu": "Pandu"
+    "#Pandu": "Pandu",
+
+    "#ChalaHawaYeuDya(JhundSpecial)" : "Chala Hawa Yeu Dya (Jhund Special)"
 }
