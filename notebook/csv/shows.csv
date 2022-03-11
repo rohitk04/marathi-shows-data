@@ -1,0 +1,54 @@
+Show,Channel,Platform,Time,Week 1 TV TRP TRP,Week 1 TV TRP Rank,Week 1 Online TRP Rank,Week 1 Online TRP Rank,Week 2 TV TRP TRP,Week 2 TV TRP Rank,Week 2 Online TRP Rank,Week 2 Online TRP Rank,Week 3 TV TRP TRP,Week 3 TV TRP Rank,Week 3 Online TRP Rank,Week 3 Online TRP Rank,Week 4 TV TRP TRP,Week 4 TV TRP Rank,Week 4 Online TRP Rank,Week 4 Online TRP Rank,Week 5 TV TRP TRP,Week 5 TV TRP Rank,Week 5 Online TRP Rank,Week 5 Online TRP Rank,Week 6 TV TRP TRP,Week 6 TV TRP Rank,Week 6 Online TRP Rank,Week 6 Online TRP Rank,Week 7 TV TRP TRP,Week 7 TV TRP Rank,Week 7 Online TRP Rank,Week 7 Online TRP Rank,Week 8 TV TRP TRP,Week 8 TV TRP Rank,Week 8 Online TRP Rank,Week 8 Online TRP Rank,Week 9 TV TRP TRP,Week 9 TV TRP Rank,Week 9 Online TRP Rank,Week 9 Online TRP Rank,Type
+Aai Kuthe Kay Karte,Star Pravah,Hotstar,['19:30'],6.1,4.0,1.0,1.0,6.6,2.0,1.0,1.0,6.7,2.0,2.0,2.0,6.5,2.0,3.0,3.0,6.3,2.0,2.0,2.0,6.6,2.0,1.0,1.0,6.7,1.0,1.0,1.0,6.6,2.0,1.0,1.0,6.5,2.0,1.0,1.0,Fiction
+Aai Mayeche Kavach,Colors Marathi,Voot,['22:00'],1.1,20.0,,,,,,,0.6,21.0,,,0.6,22.0,,,0.9,20.0,,,0.7,23.0,,,0.8,19.0,,,0.8,21.0,,,,,,,Fiction
+Aboli,Star Pravah,Hotstar,['22:30'],2.8,13.0,,,1.7,12.0,,,1.4,15.0,,,2.0,14.0,,,2.2,13.0,,,2.4,13.0,,,2.1,12.0,15.0,15.0,3.1,12.0,,,3.1,11.0,16.0,16.0,Fiction
+Ajunahi Barsaat Ahe,Sony Marathi,SonyLiv,['20:00'],,,,,,,,,0.7,20.0,,,,,,,,,,,,,,,,,,,0.5,24.0,,,,,,,Fiction
+Balumamachya Navana Changbhala,Colors Marathi,Voot,['22:30'],,,,,,,,,,,,,,,,,,,,,,,,,0.3,24.0,,,0.3,26.0,,,,,,,Fiction
+Balumamachya Navana Changbhala - I,Colors Marathi,Voot,['19:30'],0.5,25.0,,,,,,,0.5,22.0,,,0.5,23.0,,,0.5,24.0,,,0.5,25.0,,,,,,,,,,,,,,,Fiction
+Boss Majhi Ladachi,Sony Marathi,SonyLiv,['20:30'],,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.1,20.0,,,Fiction
+Chala Hawa Yeu Dya,Zee Marathi,Zee5,"['22:00', '21:30']",1.6,16.0,,,1.3,15.0,,,1.2,16.0,,,1.7,15.0,,,1.6,15.0,,,1.9,15.0,,,1.3,15.0,18.0,18.0,2.1,15.0,,,1.9,15.0,17.0,17.0,Non-Fiction
+Chala Hawa Yeu Dya (Jhund Special),Zee Marathi,Zee5,['21:00'],,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.6,16.0,,,2 Hour Special Episode
+Criminals Chahul Gunhegaranchi,Sony Marathi,SonyLiv,"['22:30', '23:00']",,,,,,,,,0.1,26.0,,,,,,,,,,,,,,,,,,,,,,,,,,,Fiction
+Devmanus S2,Zee Marathi,Zee5,['22:30'],3.7,10.0,7.0,7.0,2.1,10.0,8.0,8.0,1.8,13.0,10.0,10.0,2.8,11.0,9.0,9.0,2.8,11.0,9.0,9.0,3.0,11.0,9.0,9.0,2.9,10.0,9.0,9.0,3.2,11.0,9.0,9.0,3.0,12.0,9.0,9.0,Fiction
+Garjato Marathi,Zee Marathi,Zee5,[],,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.8,22.0,,,Event
+Ghetala Vasa Taku Nako,Zee Marathi,Zee5,['18:30'],0.4,26.0,,,0.4,20.0,,,0.3,24.0,,,0.3,24.0,,,0.3,26.0,,,0.3,27.0,,,0.3,24.0,,,0.4,25.0,,,0.3,26.0,,,Fiction
+He Tar Kahich Nay,Zee Marathi,Zee5,"['22:00', '21:30']",0.7,23.0,,,0.6,19.0,,,0.5,22.0,,,0.6,22.0,,,0.5,24.0,,,0.5,25.0,,,0.5,22.0,,,0.5,24.0,,,0.5,25.0,,,Non-Fiction
+Home Minister,Zee Marathi,Zee5,['18:00'],0.5,25.0,,,0.6,19.0,,,0.6,21.0,,,0.6,22.0,,,0.6,23.0,,,0.6,24.0,,,0.5,22.0,,,0.6,23.0,,,0.6,24.0,,,Non-Fiction
+Indian Idol Marathi S1,Sony Marathi,SonyLiv,"['21:30', '21:00']",,,,,,,,,0.6,21.0,,,,,,,,,,,0.4,26.0,,,,,,,0.4,25.0,,,,,,,Non-Fiction
+Jai Jai Swami Samarth,Colors Marathi,Voot,['20:00'],0.8,22.0,,,,,,,0.4,23.0,,,0.6,22.0,,,0.8,21.0,,,0.8,22.0,,,0.7,20.0,,,0.7,22.0,,,,,,,Fiction
+Jeev Majha Guntala,Colors Marathi,Voot,['20:30'],1.3,18.0,,,,,,,1.0,17.0,,,1.2,18.0,,,1.4,16.0,,,1.5,16.0,,,1.5,14.0,16.0,16.0,1.3,17.0,,,1.5,17.0,18.0,18.0,Fiction
+Kkusum,Sony Marathi,SonyLiv,['20:30'],,,,,,,,,0.7,20.0,,,,,,,,,,,,,,,,,,,0.6,23.0,,,,,,,Fiction
+Lagnachi Bedi,Star Pravah,Hotstar,['13:00'],,,,,,,,,,,,,,,,,0.7,22.0,11.0,11.0,0.9,21.0,,,0.8,19.0,17.0,17.0,1.0,19.0,,,1.0,21.0,10.0,10.0,Fiction
+Lek Majhi Durga,Colors Marathi,Voot,['19:30'],,,,,,,,,,,,,,,,,,,,,,,,,0.6,21.0,,,0.6,23.0,,,,,,,Fiction
+Maharashtracha Favorite Kon Suvarnadashak Sohala,Zee Marathi,Zee5,[],,,,,,,,,1.4,15.0,,,,,,,,,,,,,,,,,,,,,,,,,,,Event
+Maharashtrachi Hasyajatra,Sony Marathi,SonyLiv,"['21:30', '21:00']",,,,,,,,,0.8,19.0,,,,,,,,,,,,,,,,,,,,,,,,,,,Non-Fiction
+Majhi Tujhi Reshimgath,Zee Marathi,Zee5,['20:30'],5.1,7.0,5.0,5.0,4.6,5.0,5.0,5.0,5.4,6.0,5.0,5.0,4.5,7.0,2.0,2.0,4.6,6.0,4.0,4.0,4.1,7.0,4.0,4.0,4.6,5.0,4.0,4.0,4.8,7.0,4.0,4.0,4.6,7.0,5.0,5.0,Fiction
+Man Jhala Bajind,Zee Marathi,Zee5,['19:00'],2.1,15.0,,,1.4,14.0,,,1.2,16.0,,,1.6,16.0,,,1.3,17.0,,,1.3,17.0,,,1.2,16.0,,,1.6,16.0,,,1.3,18.0,19.0,19.0,Fiction
+Man Udu Udu Jhala,Zee Marathi,Zee5,['19:30'],3.1,12.0,8.0,8.0,2.0,11.0,9.0,9.0,2.9,11.0,6.0,6.0,3.3,10.0,6.0,6.0,3.6,9.0,6.0,6.0,3.1,10.0,6.0,6.0,3.1,9.0,6.0,6.0,3.7,10.0,6.0,6.0,3.4,10.0,7.0,7.0,Fiction
+Masta Majedar Kitchen Kallakar,Zee Marathi,Zee5,"['22:00', '21:30']",2.5,14.0,,,1.5,13.0,,,1.5,14.0,,,2.0,14.0,,,1.9,14.0,,,2.1,14.0,,,1.7,13.0,13.0,13.0,2.4,14.0,,,2.3,14.0,15.0,15.0,Non-Fiction
+Me Honar Superstar Chote Ustad,Star Pravah,Hotstar,"['21:30', '21:00']",0.9,21.0,,,0.8,17.0,,,0.8,19.0,,,0.8,20.0,,,0.8,21.0,,,0.9,21.0,,,0.9,18.0,20.0,20.0,1.0,19.0,,,1.0,21.0,,,Non-Fiction
+Mulgi Zali Ho,Star Pravah,Hotstar,['21:00'],5.6,5.0,,,5.8,4.0,,,6.4,3.0,9.0,9.0,5.8,4.0,,,5.0,4.0,,,5.8,4.0,10.0,10.0,5.8,3.0,11.0,11.0,5.4,5.0,,,5.4,5.0,12.0,12.0,Fiction
+Muramba,Star Pravah,Hotstar,['13:30'],,,,,,,,,,,,,,,,,,,,,,,,,0.8,19.0,12.0,12.0,0.9,20.0,,,0.8,22.0,13.0,13.0,Fiction
+Nave Lakshya,Star Pravah,Hotstar,"['22:00', '22:30']",0.6,24.0,,,0.6,19.0,,,0.4,23.0,,,0.6,22.0,,,0.6,23.0,,,0.6,24.0,,,0.7,20.0,,,0.6,23.0,,,0.7,23.0,,,Fiction
+Pandu,Zee Marathi,Zee5,[],,,,,,,,,,,,,,,,,3.2,10.0,,,,,,,,,,,,,,,,,,,Movie
+Phulala Sugandh Maticha,Star Pravah,Hotstar,['20:30'],5.2,6.0,9.0,9.0,4.6,5.0,6.0,6.0,5.6,5.0,8.0,8.0,4.9,5.0,8.0,8.0,5.8,3.0,8.0,8.0,5.1,5.0,8.0,8.0,5.0,4.0,8.0,8.0,5.6,4.0,7.0,7.0,5.6,4.0,6.0,6.0,Fiction
+Pinkycha Vijay Aso,Star Pravah,Hotstar,['23:00'],,,,,,,,,,,,,,,,,1.0,19.0,12.0,12.0,1.0,20.0,,,0.9,18.0,,,0.8,21.0,,,1.2,19.0,,,Fiction
+Pravah Utsav,Star Pravah,Hotstar,[],,,,,,,,,,,,,2.2,13.0,,,,,,,,,,,,,,,,,,,,,,,Event
+Raja Ranichi Ga Jodi,Colors Marathi,Voot,['19:00'],0.8,22.0,,,,,,,0.7,20.0,,,0.6,22.0,,,0.9,20.0,,,0.9,21.0,,,0.7,20.0,,,0.7,22.0,,,,,,,Fiction
+Rang Majha Vegla,Star Pravah,Hotstar,['20:00'],6.9,1.0,4.0,4.0,7.1,1.0,3.0,3.0,7.2,1.0,3.0,3.0,7.1,1.0,4.0,4.0,6.9,1.0,3.0,3.0,6.8,1.0,3.0,3.0,6.7,1.0,2.0,2.0,7.1,1.0,2.0,2.0,6.9,1.0,2.0,2.0,Fiction
+Ratris Khel Chale S3,Zee Marathi,Zee5,['23:00'],0.6,24.0,,,0.4,20.0,,,0.3,24.0,,,0.3,24.0,,,0.3,26.0,,,0.4,26.0,,,0.4,23.0,,,0.4,25.0,,,0.5,25.0,,,Fiction
+Sahakutumba Sahaparivar,Star Pravah,Hotstar,['19:00'],3.2,11.0,,,3.4,9.0,,,3.6,9.0,,,3.7,9.0,,,4.2,7.0,,,3.7,8.0,,,4.0,7.0,14.0,14.0,4.1,8.0,,,3.9,9.0,14.0,14.0,Fiction
+Sonyachi Pavala,Colors Marathi,Voot,['18:30'],0.3,27.0,,,,,,,0.2,25.0,,,0.2,25.0,,,0.3,26.0,,,0.4,26.0,,,0.3,24.0,,,0.2,27.0,,,,,,,Fiction
+Star Pravah Dhoomdhadaka 2022,Star Pravah,Hotstar,[],6.7,2.0,,,,,,,3.1,10.0,,,,,,,,,,,,,,,,,,,,,,,,,,,Event
+Sukh Mhanje Nakki Kay Asta,Star Pravah,Hotstar,['21:30'],6.3,3.0,2.0,2.0,6.4,3.0,4.0,4.0,6.1,4.0,4.0,4.0,6.4,3.0,5.0,5.0,6.3,2.0,5.0,5.0,6.2,3.0,5.0,5.0,6.4,2.0,5.0,5.0,6.1,3.0,5.0,5.0,6.0,3.0,4.0,4.0,Fiction
+Sundara Manamadhye Bharali,Colors Marathi,Voot,['21:00'],1.2,19.0,,,,,,,0.9,18.0,,,0.9,19.0,,,1.0,19.0,,,1.1,19.0,,,1.1,17.0,,,1.1,18.0,,,1.1,20.0,,,Fiction
+Swabhimaan,Star Pravah,Hotstar,['18:30'],4.4,9.0,6.0,6.0,4.0,7.0,7.0,7.0,4.0,8.0,7.0,7.0,4.0,8.0,7.0,7.0,3.9,8.0,7.0,7.0,3.4,9.0,7.0,7.0,3.2,8.0,7.0,7.0,3.9,9.0,8.0,8.0,4.1,8.0,8.0,8.0,Fiction
+Swarajya Saudamini Tararani,Sony Marathi,SonyLiv,['19:30'],,,,,,,,,0.5,22.0,,,,,,,,,,,,,,,,,,,0.4,25.0,,,,,,,Fiction
+Thipkyanchi Rangoli,Star Pravah,Hotstar,['22:00'],4.6,8.0,3.0,3.0,4.2,6.0,2.0,2.0,4.9,7.0,1.0,1.0,4.8,6.0,1.0,1.0,4.7,5.0,1.0,1.0,4.7,6.0,2.0,2.0,4.5,6.0,3.0,3.0,4.9,6.0,3.0,3.0,4.8,6.0,3.0,3.0,Fiction
+Tujhya Ishkacha Naadkhula,Star Pravah,Hotstar,['23:30'],,,,,,,,,,,,,,,,,0.4,25.0,,,0.4,26.0,,,0.3,24.0,,,0.3,26.0,,,0.3,26.0,,,Fiction
+Tujhya Ishkacha Naadkhula - I,Star Pravah,Hotstar,['23:00'],0.7,23.0,,,0.7,18.0,,,0.6,21.0,,,0.7,21.0,,,,,,,,,,,,,,,,,,,,,,,Fiction
+Tujhya Majhya Sansarala Ani Kai Hava,Zee Marathi,Zee5,['21:00'],1.6,16.0,,,1.0,16.0,,,1.0,17.0,,,1.4,17.0,,,1.2,18.0,,,1.2,18.0,,,1.1,17.0,19.0,19.0,1.0,19.0,,,1.0,21.0,20.0,20.0,Fiction
+Tujhya Rupacha Chandana,Colors Marathi,Voot,['21:30'],0.7,23.0,,,,,,,0.5,22.0,,,0.5,23.0,,,0.4,25.0,,,0.6,24.0,,,0.6,21.0,,,0.5,24.0,,,,,,,Fiction
+Tumchi Mulgi Kay Karte,Sony Marathi,SonyLiv,['22:00'],,,,,,,,,0.2,25.0,,,,,,,,,,,,,,,,,,,0.2,27.0,,,,,,,Fiction
+Yeu Kashi Tashi Me Nandayla,Zee Marathi,Zee5,['20:00'],3.7,10.0,10.0,10.0,3.6,8.0,10.0,10.0,2.1,12.0,,,2.5,12.0,10.0,10.0,2.6,12.0,10.0,10.0,2.7,12.0,,,2.5,11.0,10.0,10.0,2.7,13.0,10.0,10.0,2.8,13.0,11.0,11.0,Fiction
+Zee Marathi Jallosh 2022,Zee Marathi,Zee5,[],1.4,17.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Event
