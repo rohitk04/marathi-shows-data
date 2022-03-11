@@ -62,7 +62,7 @@ def add_show(show, show_data = None):
         
         time_list = []
         
-        if type == 'Fiction' or type == 'Non-Fiction':
+        if type == 'Fiction' or type == 'Non-Fiction' or type == '2 Hour Special Episode':
             print ()    
             print ("Time Choices: ")
             
@@ -74,6 +74,9 @@ def add_show(show, show_data = None):
                 choice = int(input("Enter choice: "))
                 time_list.append(time_choices.get(choice))
 
+                if type == '2 Hour Special Episode':
+                    break
+                
                 rep = input("\nIs the show duration longer than half hour?\nDo you want to repeat?\nEnter answer: ")
 
         new_json = {"Platform":platform, "Time":list(set(time_list)), "Channel":channel, "Type":type}

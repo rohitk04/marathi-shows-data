@@ -3,5 +3,5 @@ type_choices = {
     2:'Non-Fiction', 
     3:'Event',
     4:'Movie',
-    5:'2 hr Special Episode'
+    5:'2 Hour Special Episode'
 }
