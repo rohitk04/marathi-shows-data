@@ -3,11 +3,11 @@ import streamlit as st
 from streamlit import cli
 import pandas as pd
 from input import read_csv
-
 from views_functions import calculate_channel_count, channel_function, comparison_function, display_data, find_leaders, find_special_episode_leaders, find_top_shows, merge, performance_comparison, rank_function, timeslot_function, trp_function, type_function, week_function
+from data.paths.paths import paths
 
 def main():
-    info = read_csv('data/csv/shows/info.csv', 'Show')
+    info = read_csv(paths['info_csv'], 'Show')
 
     select = st.sidebar.selectbox('Choose', ['BARC Data (Raw Data)', 'Shows - TV TRP', 'Mahaepisode', '2 Hours Special Episode', 'Shows - Online TRP', 'Channel', 'Leaders', 'Compare Shows'], key=1)
 
@@ -17,8 +17,8 @@ def main():
     elif (select == 'Shows - TV TRP'):
         st.title('Shows - TV TRP')
 
-        trp = read_csv('data/csv/shows/tv/tv_trp_trp.csv', 'Show')
-        rank = read_csv('data/csv/shows/tv/tv_trp_rank.csv', 'Show')
+        trp = read_csv(paths[1]["trp_csv"], 'Show')
+        rank = read_csv(paths[1]["rank_csv"], 'Show')
 
         week = week_function(trp,rank, 12, 13)
         if (st.sidebar.checkbox("Show Channelwise Performance",key=14)):      
@@ -31,9 +31,9 @@ def main():
     elif (select == 'Mahaepisode'):
         st.title('Mahaepisode')
 
-        trp = read_csv('data/csv/shows/mahaepisode/mahaepisode_trp.csv', 'Show')
-        rank = read_csv('data/csv/shows/mahaepisode/mahaepisode_rank.csv', 'Show')
-        time_df = read_csv('data/csv/shows/mahaepisode/mahaepisode_time.csv', 'Show')
+        trp = read_csv(paths[2]['trp_csv'], 'Show')
+        rank = read_csv(paths[2]['rank_csv'], 'Show')
+        time_df = read_csv(paths[2]['time_csv'], 'Show')
         
         week = week_function(trp,rank, 48, 49)
 
@@ -55,10 +55,10 @@ def main():
     elif (select == '2 Hours Special Episode'):
         st.title('2 Hours Special Episode')
 
-        info = read_csv('data/csv/shows/2_hours_special_episode/2_hours_special_episode_info.csv', 'Show')
-        trp = read_csv('data/csv/shows/2_hours_special_episode/2_hours_special_episode_trp.csv', 'Show')
-        rank = read_csv('data/csv/shows/2_hours_special_episode/2_hours_special_episode_rank.csv', 'Show')
-        time_df = read_csv('data/csv/shows/2_hours_special_episode/2_hours_special_episode_time.csv', 'Show')
+        info = read_csv(paths[3]['info_csv'], 'Show')
+        trp = read_csv(paths[3]['trp_csv'], 'Show')
+        rank = read_csv(paths[3]['rank_csv'], 'Show')
+        time_df = read_csv(paths[3]['time_csv'], 'Show')
 
         week = week_function(trp,rank, 74, 75)
 
@@ -80,8 +80,8 @@ def main():
     elif (select == 'Shows - Online TRP'):
         st.title('Shows - Online TRP')
 
-        trp = read_csv('data/csv/shows/online/online_trp_trp.csv', 'Show')
-        rank = read_csv('data/csv/shows/online/online_trp_rank.csv', 'Show')
+        trp = read_csv(paths[4]['trp_csv'], 'Show')
+        rank = read_csv(paths[4]['rank_csv'], 'Show')
 
         week = week_function(trp, rank,20,21)
 
@@ -91,8 +91,8 @@ def main():
     elif (select == 'Channel'):
         st.title('Channel')
 
-        trp = read_csv('data/csv/channels/channels_grp.csv', 'Channel')
-        rank = read_csv('data/csv/channels/channels_rank.csv', 'Channel')
+        trp = read_csv(paths[5]['grp_csv'], 'Channel')
+        rank = read_csv(paths[5]['rank_csv'], 'Channel')
 
         if (st.sidebar.checkbox("Show Weekwise Performance",value=True,key=6)):
             week = week_function(trp, rank, 7,8, True)
@@ -112,8 +112,8 @@ def main():
         st.title('Leaders')
         st.markdown(':point_right: *To view ranks, click on \'Show Data\'*')
         
-        trp = read_csv('data/csv/shows/tv/tv_trp_trp.csv', 'Show')
-        rank = read_csv('data/csv/shows/tv/tv_trp_rank.csv', 'Show')
+        trp = read_csv(paths[1]["trp_csv"], 'Show')
+        rank = read_csv(paths[1]["rank_csv"], 'Show')
         
         weeks = list(trp.columns.unique())
         week = st.sidebar.selectbox('Choose week', weeks, index=len(weeks)-1, key=34)
@@ -133,10 +133,10 @@ def main():
     elif (select == 'Compare Shows'):
         st.title("Shows Comparison")
 
-        tv_trp = read_csv('data/csv/shows/tv/tv_trp_trp.csv', 'Show')
-        tv_rank = read_csv('data/csv/shows/tv/tv_trp_rank.csv', 'Show')
-        online_trp = read_csv('data/csv/shows/online/online_trp_trp.csv', 'Show')
-        online_rank = read_csv('data/csv/shows/online/online_trp_rank.csv', 'Show')
+        tv_trp = read_csv(paths[1]["trp_csv"], 'Show')
+        tv_rank = read_csv(paths[1]["rank_csv"], 'Show')
+        online_trp = read_csv(paths[4]['trp_csv'], 'Show')
+        online_rank = read_csv(paths[4]['rank_csv'], 'Show')
 
         if (st.sidebar.checkbox("Show show-wise Performance Comparison",value=True, key=22)):
             st.markdown('### Show-wise Performance Comparison')

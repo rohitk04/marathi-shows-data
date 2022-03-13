@@ -1,6 +1,6 @@
 import json
-
 from output import store_into_json
+from data.paths.paths import paths
 
 def load_choices():
     import sys
@@ -14,26 +14,26 @@ def load_choices():
     return channel_choices, platform_choices, type_choices, time_choices
 
 def add_channel(channel):
-    channel_json = json.load(open('data/json/channels/dummy_channel.json'))
+    channel_json = json.load(open(paths[5]['dummy_json']))
     channel_json[channel] = channel_json.pop("Channel_Name")
     return channel_json
 
 def add_channels(not_present):
-    channels_json = json.load(open('data/json/channels/channels.json'))
+    channels_json = json.load(open(paths[5]['data_json']))
     
     for channel in not_present:
         channels_json[channel] = add_channel(channel)[channel]
 
     print ("Channels added successfully")
 
-    store_into_json('data/json/channels/channels.json', channels_json)
+    store_into_json(paths[5]['data_json'], channels_json)
     return channels_json
 
 def add_show(show, show_data = None, choice = None, full_name = None):
     if (show_data == None):
         channel_choices, platform_choices, type_choices, time_choices = load_choices()
 
-        show_json = json.load(open('data/json/shows/dummy_show.json'))
+        show_json = json.load(open(paths[choice]['dummy_json']))
         show_json[show] = show_json.pop("Show_Name")
 
         print ('-'.center(73,'-'))
@@ -83,28 +83,21 @@ def add_show(show, show_data = None, choice = None, full_name = None):
         print ('-'.center(73,'-'))
         print ()
     else:
-        if (choice == 2):
-            path = 'data/json/shows/mahaepisode/dummy_show.json'
+        path = paths[choice]['dummy_json']
+        show_json = json.load(open(path))
+        new_json = {"Platform":show_data['Platform'], "Channel":show_data['Channel'], "Type":show_data['Type']}
 
-            show_json = json.load(open(path))
-            show_json[show] = show_json.pop("Show_Name")
-            
-            new_json = {"Platform":show_data['Platform'], "Channel":show_data['Channel'], "Type":show_data['Type']}
-            show_json[show].update(new_json)
-        elif (choice == 3):
-            path = 'data/json/shows/2_hours_special_episode/dummy_show.json'
-
-            show_json = json.load(open(path))
-            show_json[full_name] = show_json.pop("Show_Name")
-            
-            new_json = {"Platform":show_data['Platform'], "Channel":show_data['Channel'], "Type":show_data['Type']}
-            show_json[full_name].update(new_json)
-
+        if (choice == 3):
+            show = full_name
+    
+        show_json[show] = show_json.pop("Show_Name")
+        show_json[show].update(new_json)
+        
     return show_json
 
 def add_shows(not_present, show_data = None, choice = None):
     if (show_data == None):
-        shows_json = json.load(open('data/json/shows/shows.json'))
+        shows_json = json.load(open(paths[choice]["data_json"]))
         
         print ('\nAdding shows...\n')
         
@@ -112,14 +105,9 @@ def add_shows(not_present, show_data = None, choice = None):
             shows_json[show] = add_show(show)[show]
             print (show + '\n' + str(shows_json[show]))
 
-        store_into_json('data/json/shows/shows.json', shows_json)
+        store_into_json(paths[1]["data_json"], shows_json)
     else:
-        if (choice == 2):
-            path = 'data/json/shows/mahaepisode/mahaepisodes.json'
-        elif (choice == 3):
-            path = 'data/json/shows/2_hours_special_episode/2_hours_special_episodes.json'
-
-        shows_json = json.load(open(path))
+        shows_json = json.load(open(paths[choice]['data_json']))
     
         print ('\nAdding shows...\n')        
         for show in not_present:
@@ -138,7 +126,7 @@ def add_shows(not_present, show_data = None, choice = None):
                     raise RuntimeError(show  + ' not present in shows.json')
         print ('\nShows added successfully\n')
 
-        store_into_json(path, shows_json)
+        store_into_json(paths[choice]['data_json'], shows_json)
 
     print ('-'.center(73,'-'))
     return shows_json

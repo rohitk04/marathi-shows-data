@@ -2,8 +2,8 @@ from ast import literal_eval
 import streamlit as st
 import plotly.graph_objects as go
 import pandas as pd
-
 from input import read_csv
+from data.paths.paths import paths
 
 def info_explode(info):
     df = info.reset_index()
@@ -32,22 +32,22 @@ def display_data(info):
     if ch2:
         st.subheader('Channels')
         st.markdown('#### GRP')
-        st.dataframe(read_csv('data/csv/channels/channels_grp.csv', 'Channel').style.format("{:.2f}"), width=800, height=450)
+        st.dataframe(read_csv(paths[5]['grp_csv'], 'Channel').style.format("{:.2f}"), width=800, height=450)
         st.markdown('#### Rank')
-        st.dataframe(read_csv('data/csv/channels/channels_rank.csv', 'Channel').style.format("{:.0f}"), width=800, height=450)
+        st.dataframe(read_csv(paths[5]['rank_csv'], 'Channel').style.format("{:.0f}"), width=800, height=450)
         st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)   
     
     if ch3:
         st.subheader('TV Shows - TV TRP')
         st.markdown('#### TRP')
-        st.dataframe(read_csv('data/csv/shows/tv/tv_trp_trp.csv', 'Show').style.format("{:.2f}"), width=800, height=450)
+        st.dataframe(read_csv(paths[1]["trp_csv"], 'Show').style.format("{:.2f}"), width=800, height=450)
         st.markdown('#### Rank')
-        st.dataframe(read_csv('data/csv/shows/tv/tv_trp_rank.csv', 'Show').style.format("{:.0f}"), width=800, height=450)
+        st.dataframe(read_csv(paths[1]["rank_csv"], 'Show').style.format("{:.0f}"), width=800, height=450)
         st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
 
     if ch4:
-        trp = read_csv('data/csv/shows/mahaepisode/mahaepisode_trp.csv', 'Show')
-        rank = read_csv('data/csv/shows/mahaepisode/mahaepisode_rank.csv', 'Show')
+        trp = read_csv(paths[2]['trp_csv'], 'Show')
+        rank = read_csv(paths[2]['rank_csv'], 'Show')
         
         st.subheader('Mahaepisode')
         st.markdown('#### TRP')
@@ -57,8 +57,8 @@ def display_data(info):
         st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
 
     if ch5:
-        trp = read_csv('data/csv/shows/2_hours_special_episode/2_hours_special_episode_trp.csv', 'Show')
-        rank = read_csv('data/csv/shows/2_hours_special_episode/2_hours_special_episode_rank.csv', 'Show')
+        trp = read_csv(paths[3]['trp_csv'], 'Show')
+        rank = read_csv(paths[3]['rank_csv'], 'Show')
         
         st.subheader('2 Hours Special Episode')
         st.markdown('#### TRP')
@@ -70,9 +70,9 @@ def display_data(info):
     if ch6:
         st.subheader('TV Shows - Online TRP')
         st.markdown('#### TRP')
-        st.dataframe(read_csv('data/csv/shows/online/online_trp_trp.csv','Show').style.format("{:.2f}"), width=800, height=450)    
+        st.dataframe(read_csv(paths[4]['trp_csv'],'Show').style.format("{:.2f}"), width=800, height=450)    
         st.markdown('#### Rank')
-        st.dataframe(read_csv('data/csv/shows/online/online_trp_rank.csv', 'Show').style.format("{:.0f}"), width=800, height=450)
+        st.dataframe(read_csv(paths[4]['rank_csv'], 'Show').style.format("{:.0f}"), width=800, height=450)
         st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
 
 def plot_figure(data, choices, ch, y_axis_title, reversed, style):
