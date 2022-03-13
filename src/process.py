@@ -5,7 +5,7 @@ from output import store_into_json
 def process(choice, old_path, new_path, msg):
     print ("\nProcessing begins...\n")
 
-    if choice=="TV" or choice=="Online" or choice=="Channel":
+    if choice==1 or choice==4 or choice==5:
         data,trp,week = load_data(choice)
     else:
         show_data, data, trp, week = load_data(choice)
@@ -27,9 +27,9 @@ def process(choice, old_path, new_path, msg):
         for index,ele in enumerate(not_present):
             print (str(index+1)+'. ' + ele)
         print ()
-        if choice=='Channel':
+        if choice==5:
             data = add_channels(not_present)
-        elif choice=='Mahaepisode' or choice=='2 Hour Special Episode':
+        elif choice==2 or choice==3:
             data = add_shows(not_present, show_data, choice)
         else:
             data = add_shows(not_present)
@@ -40,12 +40,15 @@ def process(choice, old_path, new_path, msg):
         trp_data = trp[week].get(ele)
 
         if trp_data is not None:
-            if choice=='Channel':
+            if choice==5:
                 ele_data = data[ele]
-            elif choice=='Mahaepisode' or choice == '2 Hour Special Episode':
+            elif choice==2 or choice == 3:
                 ele_data = data[ele]['TRP']
-            else:
-                ele_data = data[ele][choice + ' TRP']
+            elif choice==1:
+                ele_data = data[ele]['TV TRP']
+            elif choice==4:
+                ele_data = data[ele]['Online TRP']
+
             ele_data[week] = trp_data
 
     store_into_json(new_path, data)

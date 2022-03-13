@@ -5,13 +5,13 @@ from input import load_channels, load_shows
 from output import store_into_csv, store_into_json
 
 def get_new_row(choice, words, codes):
-    if (choice=="TV" or choice=="Online"):
+    if (choice==1 or choice==4):
         return pd.DataFrame({
             'Hashtag':[words[1].strip()],
             'Show':[codes.get(words[1].strip())],
             'TRP':[float(words[3])]
             })
-    elif (choice=='Mahaepisode'):
+    elif (choice==2):
         return pd.DataFrame({
             'Hashtag':[words[1].strip()],
             'Show':[codes.get(words[1].strip())],
@@ -31,7 +31,7 @@ def get_new_row(choice, words, codes):
 
 def convert_to_csv(choice):
     print ("\nConversion begins...\n")
-    if (choice=='Channel'):
+    if (choice==5):
         channels = load_channels()
 
         dict1 = {}
@@ -48,7 +48,7 @@ def convert_to_csv(choice):
 
         store_into_csv(dict1, 'Channel', 'data/csv/channels/channels_grp.csv')
         store_into_csv(dict2, 'Channel', 'data/csv/channels/channels_rank.csv')
-    elif (choice=='Mahaepisode'):
+    elif (choice==2):
         shows = load_shows('data/json/shows/mahaepisode/mahaepisodes.json')
         
         dict1 = {}
@@ -76,7 +76,7 @@ def convert_to_csv(choice):
         store_into_csv(dict2, 'Show', 'data/csv/shows/mahaepisode/mahaepisode_trp.csv')
         store_into_csv(dict3, 'Show', 'data/csv/shows/mahaepisode/mahaepisode_rank.csv')
         store_into_csv(dict4, 'Show', 'data/csv/shows/mahaepisode/mahaepisode_time.csv')
-    elif (choice=="2 Hour Special Episode"):
+    elif (choice==3):
         shows = load_shows('data/json/shows/2_hours_special_episode/2_hours_special_episodes.json')
         
         dict1 = {}
@@ -113,7 +113,7 @@ def convert_to_csv(choice):
             dict1[show] = {new_key:shows[show][new_key] for new_key in new_keys}
         store_into_csv(dict1, 'Show', 'data/csv/shows/info.csv')
              
-        if (choice == 'TV'):
+        if (choice == 1):
             dict2 = {}
             dict3 = {}
         
@@ -129,7 +129,7 @@ def convert_to_csv(choice):
             
             store_into_csv(dict2, 'Show', 'data/csv/shows/tv/tv_trp_trp.csv')
             store_into_csv(dict3, 'Show', 'data/csv/shows/tv/tv_trp_rank.csv')
-        elif (choice == 'Online'):
+        elif (choice == 4):
             dict4 = {}
             dict5 = {}
 
@@ -156,15 +156,15 @@ def convert_to_json(choice, week):
 
     codes = json.load(open('data/json/shows/codes.json'))
 
-    if (choice == "TV"):
+    if (choice == 1):
         input_path = 'data/trp.txt'
         output_path = 'data/json/shows/tv/tv_trp.json'
         cols = ['Hashtag', 'Show','TRP']
-    elif (choice == "Online"):
+    elif (choice == 4):
         input_path = 'data/trp.txt'
         output_path = 'data/json/shows/online/online_trp.json'
         cols = ['Hashtag', 'Show','TRP']
-    elif (choice == "Mahaepisode"):
+    elif (choice == 2):
         input_path = 'data/mahaepisode_trp.txt'
         output_path = 'data/json/shows/mahaepisode/mahaepisode_trp.json'
         cols = ['Hashtag', 'Show','TRP', 'Time']
@@ -179,7 +179,7 @@ def convert_to_json(choice, week):
     df = pd.DataFrame(columns=cols)
     
     for line in lines:
-        if (choice == "2 Hour Special Episode"):
+        if (choice == 3):
             words = line.split("-")
         else:
             words = line.split(" ")
@@ -196,13 +196,13 @@ def convert_to_json(choice, week):
     dictionary = {}
     dictionary[week] = {}
 
-    if (choice=="TV" or choice == "Online"):
+    if (choice == 1 or choice == 4):
         for index, row in df.iterrows():
             dictionary[week][row['Show']]={
                 'TRP':row['TRP'],
                 'Rank':row['Rank']
             }
-    elif (choice == "Mahaepisode"):
+    elif (choice == 2):
         for index, row in df.iterrows():
             dictionary[week][row['Show']]={
                 'TRP':row['TRP'],

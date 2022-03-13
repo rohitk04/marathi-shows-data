@@ -2,28 +2,28 @@ import json
 import pandas as pd
 
 def load_data(choice):
-    if choice == "TV":
+    if choice == 1:
         data = json.load(open('data/json/shows/shows.json'))
         trp = json.load(open('data/json/shows/tv/tv_trp.json'))
         week = list(trp.keys())[0]
         return data, trp, week
-    elif choice == "Online":
+    elif choice == 4:
         data = json.load(open('data/json/shows/shows.json'))
         trp = json.load(open('data/json/shows/online/online_trp.json'))
         week = list(trp.keys())[0]
         return data, trp, week
-    elif choice == 'Channel':
+    elif choice == 5:
         data = json.load(open('data/json/channels/channels.json'))
         trp = json.load(open('data/json/channels/channels_grp.json'))
         week = list(trp.keys())[0]
         return data, trp, week
-    elif choice == "Mahaepisode":
+    elif choice == 2:
         show_data = json.load(open('data/json/shows/shows.json'))
         data = json.load(open('data/json/shows/mahaepisode/mahaepisodes.json'))
         trp = json.load(open('data/json/shows/mahaepisode/mahaepisode_trp.json'))
         week = list(trp.keys())[0]
         return show_data, data, trp, week
-    elif choice == "2 Hour Special Episode":
+    elif choice == 3:
         show_data = json.load(open('data/json/shows/shows.json'))
         data = json.load(open('data/json/shows/2_hours_special_episode/2_hours_special_episodes.json'))
         trp = json.load(open('data/json/shows/2_hours_special_episode/2_hours_special_episode_trp.json'))

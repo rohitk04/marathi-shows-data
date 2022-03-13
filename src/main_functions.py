@@ -83,7 +83,7 @@ def add_show(show, show_data = None, choice = None, full_name = None):
         print ('-'.center(73,'-'))
         print ()
     else:
-        if (choice == "Mahaepisode"):
+        if (choice == 2):
             path = 'data/json/shows/mahaepisode/dummy_show.json'
 
             show_json = json.load(open(path))
@@ -114,7 +114,7 @@ def add_shows(not_present, show_data = None, choice = None):
 
         store_into_json('data/json/shows/shows.json', shows_json)
     else:
-        if (choice == "Mahaepisode"):
+        if (choice == 2):
             path = 'data/json/shows/mahaepisode/mahaepisodes.json'
         else:
             path = 'data/json/shows/2_hours_special_episode/2_hours_special_episodes.json'
@@ -123,7 +123,7 @@ def add_shows(not_present, show_data = None, choice = None):
     
         print ('\nAdding shows...\n')        
         for show in not_present:
-            if (choice == "2 Hour Special Episode"):
+            if (choice == 3):
                 full_name = show
                 show = show.split('-')[0].strip()
                 
