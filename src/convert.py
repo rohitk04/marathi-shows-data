@@ -172,9 +172,17 @@ def convert_to_json(choice, week):
                 'TRP':row['TRP'],
                 'Rank':row['Rank']
             }
+    elif (choice == "Mahaepisode"):
+        for index, row in df.iterrows():
+            dictionary[week][row['Show']]={
+                'TRP':row['TRP'],
+                'Rank':row['Rank'],
+                'Time':row['Time']
+            }
     else:
         for index, row in df.iterrows():
             dictionary[week][row['Show']]={
+                'Episode Name':row['Episode Name'],
                 'TRP':row['TRP'],
                 'Rank':row['Rank'],
                 'Time':row['Time']
