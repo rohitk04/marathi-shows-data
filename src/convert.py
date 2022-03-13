@@ -139,7 +139,7 @@ def convert_to_json(choice, week):
         output_path = 'data/json/shows/mahaepisode/mahaepisode_trp.json'
         cols = ['Hashtag', 'Show','TRP', 'Time']
     else:
-        input_path = 'data/2_hour_special_episode_trp.txt'
+        input_path = 'data/2_hours_special_episode_trp.txt'
         output_path = 'data/json/shows/2_hours_special_episode/2_hours_special_episode_trp.json'
         cols = ['Hashtag', 'Show','Episode Name', 'TRP', 'Time']
 
@@ -177,15 +177,15 @@ def convert_to_json(choice, week):
             dictionary[week][row['Show']]={
                 'TRP':row['TRP'],
                 'Rank':row['Rank'],
-                'Time':row['Time']
+                'Time':row['Time'].strip()
             }
     else:
         for index, row in df.iterrows():
             dictionary[week][row['Show']]={
-                'Episode Name':row['Episode Name'],
+                'Episode Name':row['Episode Name'].strip(),
                 'TRP':row['TRP'],
                 'Rank':row['Rank'],
-                'Time':row['Time']
+                'Time':row['Time'].strip()
             }
     
     ch = input("Do you want to continue?(Y/N): ").lower()
