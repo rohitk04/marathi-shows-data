@@ -88,26 +88,22 @@ def convert_to_csv(choice):
         dict2 = {}
         dict3 = {}
         dict4 = {}
-        dict5 = {}
-
+        
         for show in shows:
             dict2[show] = {}
             dict3[show] = {}
             dict4[show] = {}
-            dict5[show] = {}
             
             trp = shows[show]['TRP']
             
             for week in trp.keys():
-                dict2[show][week] = trp[week]['Episode Name']
-                dict3[show][week] = trp[week]['TRP']
-                dict4[show][week] = trp[week]['Rank']
-                dict5[show][week] = trp[week]['Time']
+                dict2[show][week] = trp[week]['TRP']
+                dict3[show][week] = trp[week]['Rank']
+                dict4[show][week] = trp[week]['Time']
 
-        store_into_csv(dict2, 'Show', 'data/csv/shows/2_hours_special_episode/2_hours_special_episode_episode_name.csv')
-        store_into_csv(dict3, 'Show', 'data/csv/shows/2_hours_special_episode/2_hours_special_episode_trp.csv')
-        store_into_csv(dict4, 'Show', 'data/csv/shows/2_hours_special_episode/2_hours_special_episode_rank.csv')
-        store_into_csv(dict5, 'Show', 'data/csv/shows/2_hours_special_episode/2_hours_special_episode_time.csv')
+        store_into_csv(dict2, 'Show', 'data/csv/shows/2_hours_special_episode/2_hours_special_episode_trp.csv')
+        store_into_csv(dict3, 'Show', 'data/csv/shows/2_hours_special_episode/2_hours_special_episode_rank.csv')
+        store_into_csv(dict4, 'Show', 'data/csv/shows/2_hours_special_episode/2_hours_special_episode_time.csv')
     else:
         shows = load_shows('data/json/shows/shows.json')
 
