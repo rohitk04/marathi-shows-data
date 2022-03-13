@@ -157,21 +157,21 @@ def convert_to_json(choice, week):
     codes = json.load(open('data/json/shows/codes.json'))
 
     if (choice == 1):
-        input_path = 'data/trp.txt'
+        input_path = 'data/txt/tv_trp.txt'
         output_path = 'data/json/shows/tv/tv_trp.json'
         cols = ['Hashtag', 'Show','TRP']
-    elif (choice == 4):
-        input_path = 'data/trp.txt'
-        output_path = 'data/json/shows/online/online_trp.json'
-        cols = ['Hashtag', 'Show','TRP']
     elif (choice == 2):
-        input_path = 'data/mahaepisode_trp.txt'
+        input_path = 'data/txt/mahaepisode_trp.txt'
         output_path = 'data/json/shows/mahaepisode/mahaepisode_trp.json'
         cols = ['Hashtag', 'Show','TRP', 'Time']
     elif (choice == 3):
-        input_path = 'data/2_hours_special_episode_trp.txt'
+        input_path = 'data/txt/2_hours_special_episode_trp.txt'
         output_path = 'data/json/shows/2_hours_special_episode/2_hours_special_episode_trp.json'
         cols = ['Hashtag', 'Show', 'TRP', 'Time']
+    elif (choice == 4):
+        input_path = 'data/txt/online_trp.txt'
+        output_path = 'data/json/shows/online/online_trp.json'
+        cols = ['Hashtag', 'Show','TRP']
 
     with open(input_path) as f:
         lines = f.readlines()

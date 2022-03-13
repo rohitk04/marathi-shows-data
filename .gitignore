@@ -2,4 +2,4 @@ __pycache__/
 *.py[cod]
 *.DOC
 venv
-data/*.txt
+data/txt
