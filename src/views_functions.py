@@ -302,10 +302,7 @@ def week_function(trp, rank, k1, k2, grp=False):
 
 def channel_function(week, info, trp, rank, k1, k2):
     merged = pd.merge(pd.merge(info, trp[week], how="inner",left_index=True, right_index=True), rank[week], how="inner",left_index=True, right_index=True, suffixes=['_trp','_rank']).dropna()
-    st.dataframe(info)
-    st.dataframe(trp)
-    st.dataframe(rank)
-    st.dataframe(merged)
+    
     channels = list(merged['Channel'].sort_values().unique())
     channel = st.sidebar.selectbox('Choose channel', channels, key=k1)
     ch = st.sidebar.checkbox('Show Data', key=k2)
@@ -453,13 +450,10 @@ def calculate_channel_count(df, k1, column):
     if (st.sidebar.checkbox('Show ' + column + ' Count Data', key=k1)):
         st.dataframe(occurences, width=800, height=450)
 
-def find_leaders(column, week, info, trp, rank, k1, k2=None, explode=True):
+def find_leaders(column, week, info, trp, rank, k1, k2=None):
     df = pd.merge(pd.merge(info, trp, how="inner",left_index=True, right_index=True), rank, how="inner",left_index=True, right_index=True, suffixes=['_trp','_rank']).dropna()
 
-    if explode:
-        e_info = info_explode(df)
-    else:
-        e_info = df
+    e_info = info_explode(df)
     
     if column == 'Time':
         title = 'Timeslot'
@@ -537,16 +531,11 @@ def find_leaders(column, week, info, trp, rank, k1, k2=None, explode=True):
     if column!='Channel':
         calculate_channel_count(df2, k2, 'Channel')
 
-def find_mahaepisode_leaders(column, week, time_df, trp, rank, info, k1, k2=None, explode=True):
+def find_special_episode_leaders(column, week, time_df, trp, rank, info, k1, k2=None):
     df = pd.merge(pd.merge(time_df, trp, how="inner",left_index=True, right_index=True), rank, how="inner",left_index=True, right_index=True, suffixes=['_trp','_rank'])
     df.columns = ['Time',week+'_trp',week+'_rank']
     df = pd.merge(df, info[['Channel','Type','Platform']], how="inner",left_index=True, right_index=True, suffixes=['_trp','_rank']).reset_index()
 
-    if explode:
-        e_info = info_explode(df)
-    else:
-        e_info = df
-    
     if column == 'Time':
         title = 'Timeslot'
         sort_column = column
@@ -561,7 +550,7 @@ def find_mahaepisode_leaders(column, week, time_df, trp, rank, info, k1, k2=None
     if column!='Channel':
         column_list.insert(1, column)
     
-    df2 = e_info[e_info.groupby(column)[week+'_trp'].transform(max) == e_info[week+'_trp']]
+    df2 = df[df.groupby(column)[week+'_trp'].transform(max) == df[week+'_trp']]
     df2 = df2[column_list].drop_duplicates(keep='first',inplace=False).rename(columns={week+'_trp':'TRP', week+'_rank':'Rank'},inplace=False).sort_values(by=sort_column)
 
     dic=dict(

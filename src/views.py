@@ -4,7 +4,7 @@ from streamlit import cli
 import pandas as pd
 from input import read_csv
 
-from views_functions import calculate_channel_count, channel_function, comparison_function, display_data, find_leaders, find_mahaepisode_leaders, find_top_shows, merge, performance_comparison, rank_function, timeslot_function, trp_function, type_function, week_function
+from views_functions import calculate_channel_count, channel_function, comparison_function, display_data, find_leaders, find_special_episode_leaders, find_top_shows, merge, performance_comparison, rank_function, timeslot_function, trp_function, type_function, week_function
 
 def main():
     info = read_csv('data/csv/shows/info.csv', 'Show')
@@ -75,13 +75,13 @@ def main():
             timeslot_function(week, trp, rank, time_df, 54, 55)
         
         if (st.sidebar.checkbox('Show Channel Leaders', key=56)):
-            find_mahaepisode_leaders('Channel',week, time_df[week], trp[week], rank[week], info, 57, explode=False)
+            find_special_episode_leaders('Channel',week, time_df[week], trp[week], rank[week], info, 57)
 
         if (st.sidebar.checkbox('Show Timeslot Leaders', key=58)):
-            find_mahaepisode_leaders('Time',week, time_df[week], trp[week], rank[week], info, 59, 60, False)
+            find_special_episode_leaders('Time',week, time_df[week], trp[week], rank[week], info, 59, 60)
 
         if (st.sidebar.checkbox('Show Type Leaders', key=61)):
-            find_mahaepisode_leaders('Type', week, time_df[week], trp[week], rank[week], info, 62, 63, False)
+            find_special_episode_leaders('Type', week, time_df[week], trp[week], rank[week], info, 62, 63)
 
     elif (select == 'Leaders'):
         st.title('Leaders')
@@ -120,6 +120,15 @@ def main():
         
         if (st.sidebar.checkbox("Show Timeslotwise Performance",key=79)):
             timeslot_function(week, trp, rank, time_df, 80, 81)
+        
+        if (st.sidebar.checkbox('Show Channel Leaders', key=82)):
+            find_special_episode_leaders('Channel',week, time_df[week], trp[week], rank[week], info, 83)
+
+        if (st.sidebar.checkbox('Show Timeslot Leaders', key=84)):
+            find_special_episode_leaders('Time',week, time_df[week], trp[week], rank[week], info, 85, 86)
+
+        if (st.sidebar.checkbox('Show Type Leaders', key=87)):
+            find_special_episode_leaders('Type', week, time_df[week], trp[week], rank[week], info, 88, 89)
         
     elif (select == 'Compare Shows'):
         st.title("Shows Comparison")
