@@ -57,15 +57,8 @@ def display_data(info):
         st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
 
     if ch5:
-        episode_name = read_csv('data/csv/shows/2_hours_special_episode/2_hours_special_episode_episode_name.csv', 'Show')
         trp = read_csv('data/csv/shows/2_hours_special_episode/2_hours_special_episode_trp.csv', 'Show')
         rank = read_csv('data/csv/shows/2_hours_special_episode/2_hours_special_episode_rank.csv', 'Show')
-        
-        trp["Full Name"] = episode_name.index + " - " + episode_name
-        trp = trp.set_index('Full Name')
-        
-        rank["Full Name"] = episode_name.index + " - " + episode_name
-        rank = rank.set_index('Full Name')
         
         st.subheader('2 Hours Special Episode')
         st.markdown('#### TRP')
@@ -309,7 +302,10 @@ def week_function(trp, rank, k1, k2, grp=False):
 
 def channel_function(week, info, trp, rank, k1, k2):
     merged = pd.merge(pd.merge(info, trp[week], how="inner",left_index=True, right_index=True), rank[week], how="inner",left_index=True, right_index=True, suffixes=['_trp','_rank']).dropna()
-    
+    st.dataframe(info)
+    st.dataframe(trp)
+    st.dataframe(rank)
+    st.dataframe(merged)
     channels = list(merged['Channel'].sort_values().unique())
     channel = st.sidebar.selectbox('Choose channel', channels, key=k1)
     ch = st.sidebar.checkbox('Show Data', key=k2)

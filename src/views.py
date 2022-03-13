@@ -108,6 +108,7 @@ def main():
     elif (select == '2 Hours Special Episode'):
         st.title('2 Hours Special Episode')
 
+        info = read_csv('data/csv/shows/2_hours_special_episode/2_hours_special_episode_info.csv', 'Show')
         trp = read_csv('data/csv/shows/2_hours_special_episode/2_hours_special_episode_trp.csv', 'Show')
         rank = read_csv('data/csv/shows/2_hours_special_episode/2_hours_special_episode_rank.csv', 'Show')
         time_df = read_csv('data/csv/shows/2_hours_special_episode/2_hours_special_episode_time.csv', 'Show')
