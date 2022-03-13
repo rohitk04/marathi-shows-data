@@ -91,7 +91,7 @@ def add_show(show, show_data = None, choice = None, full_name = None):
             
             new_json = {"Platform":show_data['Platform'], "Channel":show_data['Channel'], "Type":show_data['Type']}
             show_json[show].update(new_json)
-        else:
+        elif (choice == 3):
             path = 'data/json/shows/2_hours_special_episode/dummy_show.json'
 
             show_json = json.load(open(path))
@@ -116,7 +116,7 @@ def add_shows(not_present, show_data = None, choice = None):
     else:
         if (choice == 2):
             path = 'data/json/shows/mahaepisode/mahaepisodes.json'
-        else:
+        elif (choice == 3):
             path = 'data/json/shows/2_hours_special_episode/2_hours_special_episodes.json'
 
         shows_json = json.load(open(path))
@@ -131,7 +131,7 @@ def add_shows(not_present, show_data = None, choice = None):
                     shows_json[full_name] = add_show(show, show_data[show], choice, full_name)[full_name]
                 else:
                     raise RuntimeError(show  + ' not present in shows.json')
-            else:
+            elif (choice == 2):
                 if show in show_data:
                     shows_json[show] = add_show(show, show_data[show], choice)[show]
                 else:

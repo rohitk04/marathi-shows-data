@@ -9,31 +9,11 @@ from views_functions import calculate_channel_count, channel_function, compariso
 def main():
     info = read_csv('data/csv/shows/info.csv', 'Show')
 
-    select = st.sidebar.selectbox('Choose', ['BARC Data (Raw Data)', 'Channel', 'Shows - TV TRP', 'Shows - Online TRP', 'Mahaepisode', '2 Hours Special Episode', 'Leaders', 'Compare Shows'], key=1)
+    select = st.sidebar.selectbox('Choose', ['BARC Data (Raw Data)', 'Shows - TV TRP', 'Mahaepisode', '2 Hours Special Episode', 'Shows - Online TRP', 'Channel', 'Leaders', 'Compare Shows'], key=1)
 
     if (select == 'BARC Data (Raw Data)'):
         display_data(info)
         
-    elif (select == 'Channel'):
-        st.title('Channel')
-
-        trp = read_csv('data/csv/channels/channels_grp.csv', 'Channel')
-        rank = read_csv('data/csv/channels/channels_rank.csv', 'Channel')
-
-        if (st.sidebar.checkbox("Show Weekwise Performance",value=True,key=6)):
-            week = week_function(trp, rank, 7,8, True)
-        
-        if (st.sidebar.checkbox("Show comparison of channels",key=9)):
-            st.markdown('### Comparison')
-
-            channels = list(trp.index.unique())
-            choices = st.sidebar.multiselect('Compare channels',channels, default=channels[0], key=10)
-
-            if (len(choices)!=0):
-                comparison_function(trp, rank, choices, 'Show Data', 11, True)
-            else:
-                st.markdown("##### Please select channels")
-
     elif (select == 'Shows - TV TRP'):
         st.title('Shows - TV TRP')
 
@@ -47,17 +27,6 @@ def main():
             timeslot_function(week, trp, rank, info, 18, 19, True) 
         if (st.sidebar.checkbox("Show Typewise Performance",key=65)):
             type_function(week, info, trp, rank, 66, 67) 
-
-    elif (select == 'Shows - Online TRP'):
-        st.title('Shows - Online TRP')
-
-        trp = read_csv('data/csv/shows/online/online_trp_trp.csv', 'Show')
-        rank = read_csv('data/csv/shows/online/online_trp_rank.csv', 'Show')
-
-        week = week_function(trp, rank,20,21)
-
-        merged = pd.merge(info['Platform'], trp[week], how="inner",left_index=True, right_index=True).dropna()
-        calculate_channel_count(merged, 64, 'Platform')
 
     elif (select == 'Mahaepisode'):
         st.title('Mahaepisode')
@@ -82,28 +51,6 @@ def main():
 
         if (st.sidebar.checkbox('Show Type Leaders', key=61)):
             find_special_episode_leaders('Type', week, time_df[week], trp[week], rank[week], info, 62, 63)
-
-    elif (select == 'Leaders'):
-        st.title('Leaders')
-        st.markdown(':point_right: *To view ranks, click on \'Show Data\'*')
-        
-        trp = read_csv('data/csv/shows/tv/tv_trp_trp.csv', 'Show')
-        rank = read_csv('data/csv/shows/tv/tv_trp_rank.csv', 'Show')
-        
-        weeks = list(trp.columns.unique())
-        week = st.sidebar.selectbox('Choose week', weeks, index=len(weeks)-1, key=34)
-
-        if (st.sidebar.checkbox('Show Top Shows', value=True, key=35)):
-            find_top_shows(week, info, trp[week], rank[week])
-
-        if (st.sidebar.checkbox('Show Channel Leaders', key=39)):
-            find_leaders('Channel',week, info, trp[week], rank[week], 40)
-
-        if (st.sidebar.checkbox('Show Timeslot Leaders', key=41)):
-            find_leaders('Time',week, info, trp[week], rank[week], 42, 43)
-
-        if (st.sidebar.checkbox('Show Type Leaders', key=44)):
-            find_leaders('Type', week, info, trp[week], rank[week], 45, 46)
 
     elif (select == '2 Hours Special Episode'):
         st.title('2 Hours Special Episode')
@@ -130,6 +77,59 @@ def main():
         if (st.sidebar.checkbox('Show Type Leaders', key=87)):
             find_special_episode_leaders('Type', week, time_df[week], trp[week], rank[week], info, 88, 89)
         
+    elif (select == 'Shows - Online TRP'):
+        st.title('Shows - Online TRP')
+
+        trp = read_csv('data/csv/shows/online/online_trp_trp.csv', 'Show')
+        rank = read_csv('data/csv/shows/online/online_trp_rank.csv', 'Show')
+
+        week = week_function(trp, rank,20,21)
+
+        merged = pd.merge(info['Platform'], trp[week], how="inner",left_index=True, right_index=True).dropna()
+        calculate_channel_count(merged, 64, 'Platform')
+
+    elif (select == 'Channel'):
+        st.title('Channel')
+
+        trp = read_csv('data/csv/channels/channels_grp.csv', 'Channel')
+        rank = read_csv('data/csv/channels/channels_rank.csv', 'Channel')
+
+        if (st.sidebar.checkbox("Show Weekwise Performance",value=True,key=6)):
+            week = week_function(trp, rank, 7,8, True)
+        
+        if (st.sidebar.checkbox("Show comparison of channels",key=9)):
+            st.markdown('### Comparison')
+
+            channels = list(trp.index.unique())
+            choices = st.sidebar.multiselect('Compare channels',channels, default=channels[0], key=10)
+
+            if (len(choices)!=0):
+                comparison_function(trp, rank, choices, 'Show Data', 11, True)
+            else:
+                st.markdown("##### Please select channels")
+
+    elif (select == 'Leaders'):
+        st.title('Leaders')
+        st.markdown(':point_right: *To view ranks, click on \'Show Data\'*')
+        
+        trp = read_csv('data/csv/shows/tv/tv_trp_trp.csv', 'Show')
+        rank = read_csv('data/csv/shows/tv/tv_trp_rank.csv', 'Show')
+        
+        weeks = list(trp.columns.unique())
+        week = st.sidebar.selectbox('Choose week', weeks, index=len(weeks)-1, key=34)
+
+        if (st.sidebar.checkbox('Show Top Shows', value=True, key=35)):
+            find_top_shows(week, info, trp[week], rank[week])
+
+        if (st.sidebar.checkbox('Show Channel Leaders', key=39)):
+            find_leaders('Channel',week, info, trp[week], rank[week], 40)
+
+        if (st.sidebar.checkbox('Show Timeslot Leaders', key=41)):
+            find_leaders('Time',week, info, trp[week], rank[week], 42, 43)
+
+        if (st.sidebar.checkbox('Show Type Leaders', key=44)):
+            find_leaders('Type', week, info, trp[week], rank[week], 45, 46)
+
     elif (select == 'Compare Shows'):
         st.title("Shows Comparison")
 

@@ -18,7 +18,7 @@ def get_new_row(choice, words, codes):
             'TRP':[float(words[3])],
             'Time':[words[5].strip("\n")]
             })
-    else:
+    elif (choice==3):
         show = codes.get(words[0].strip())
         episode_name = words[1].strip()
 
@@ -104,7 +104,7 @@ def convert_to_csv(choice):
         store_into_csv(dict2, 'Show', 'data/csv/shows/2_hours_special_episode/2_hours_special_episode_trp.csv')
         store_into_csv(dict3, 'Show', 'data/csv/shows/2_hours_special_episode/2_hours_special_episode_rank.csv')
         store_into_csv(dict4, 'Show', 'data/csv/shows/2_hours_special_episode/2_hours_special_episode_time.csv')
-    else:
+    elif (choice==1 or choice==4):
         shows = load_shows('data/json/shows/shows.json')
 
         dict1 = {}
@@ -144,8 +144,8 @@ def convert_to_csv(choice):
             
             store_into_csv(dict4, 'Show', 'data/csv/shows/online/online_trp_trp.csv')
             store_into_csv(dict5, 'Show', 'data/csv/shows/online/online_trp_rank.csv')
-        else:
-            raise RuntimeError('Invalid Choice')
+    else:
+        raise RuntimeError('Invalid Choice')
     
     print ("Stored successfully into csv\n")
     print ("Conversion ends...\n")
@@ -168,7 +168,7 @@ def convert_to_json(choice, week):
         input_path = 'data/mahaepisode_trp.txt'
         output_path = 'data/json/shows/mahaepisode/mahaepisode_trp.json'
         cols = ['Hashtag', 'Show','TRP', 'Time']
-    else:
+    elif (choice == 3):
         input_path = 'data/2_hours_special_episode_trp.txt'
         output_path = 'data/json/shows/2_hours_special_episode/2_hours_special_episode_trp.json'
         cols = ['Hashtag', 'Show', 'TRP', 'Time']
@@ -181,7 +181,7 @@ def convert_to_json(choice, week):
     for line in lines:
         if (choice == 3):
             words = line.split("-")
-        else:
+        elif (choice == 1 or choice == 2 or choice == 4):
             words = line.split(" ")
             
         new_row = get_new_row(choice, words, codes)
@@ -202,14 +202,7 @@ def convert_to_json(choice, week):
                 'TRP':row['TRP'],
                 'Rank':row['Rank']
             }
-    elif (choice == 2):
-        for index, row in df.iterrows():
-            dictionary[week][row['Show']]={
-                'TRP':row['TRP'],
-                'Rank':row['Rank'],
-                'Time':row['Time'].strip()
-            }
-    else:
+    elif (choice == 2 or choice == 3):
         for index, row in df.iterrows():
             dictionary[week][row['Show']]={
                 'TRP':row['TRP'],

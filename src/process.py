@@ -7,7 +7,7 @@ def process(choice, old_path, new_path, msg):
 
     if choice==1 or choice==4 or choice==5:
         data,trp,week = load_data(choice)
-    else:
+    elif choice==2 or choice==3:
         show_data, data, trp, week = load_data(choice)
     
     store_into_json(old_path, data)
@@ -31,7 +31,7 @@ def process(choice, old_path, new_path, msg):
             data = add_channels(not_present)
         elif choice==2 or choice==3:
             data = add_shows(not_present, show_data, choice)
-        else:
+        elif choice==1 or choice==4:
             data = add_shows(not_present)
         
         print ()
