@@ -19,7 +19,8 @@ def display_data(info):
     ch2 = st.sidebar.checkbox("Display Channel - GRP & Rank Data", key=3)
     ch3 = st.sidebar.checkbox("Display TV Show - TV TRP & Rank Data", key=4)
     ch4 = st.sidebar.checkbox("Display Mahaepisode - Data", key=47)
-    ch5 = st.sidebar.checkbox("Display TV Show - Online TRP & Rank Data", key=5)
+    ch5 = st.sidebar.checkbox("Display 2 Hour Special Episode - Data", key=73)
+    ch6 = st.sidebar.checkbox("Display TV Show - Online TRP & Rank Data", key=5)
 
     if ch1:
         st.subheader('Show Information')
@@ -56,6 +57,24 @@ def display_data(info):
         st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
 
     if ch5:
+        episode_name = read_csv('data/csv/shows/2_hours_special_episode/2_hours_special_episode_episode_name.csv', 'Show')
+        trp = read_csv('data/csv/shows/2_hours_special_episode/2_hours_special_episode_trp.csv', 'Show')
+        rank = read_csv('data/csv/shows/2_hours_special_episode/2_hours_special_episode_rank.csv', 'Show')
+        
+        trp["Full Name"] = episode_name.index + " - " + episode_name
+        trp = trp.set_index('Full Name')
+        
+        rank["Full Name"] = episode_name.index + " - " + episode_name
+        rank = rank.set_index('Full Name')
+        
+        st.subheader('2 Hours Special Episode')
+        st.markdown('#### TRP')
+        st.dataframe(trp.style.format("{:.2f}"), width=800, height=450)
+        st.markdown('#### Rank')
+        st.dataframe(rank.style.format("{:.0f}"), width=800, height=450)
+        st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
+
+    if ch6:
         st.subheader('TV Shows - Online TRP')
         st.markdown('#### TRP')
         st.dataframe(read_csv('data/csv/shows/online/online_trp_trp.csv','Show').style.format("{:.2f}"), width=800, height=450)    
