@@ -16,7 +16,7 @@ def process(choice, old_path, new_path, msg):
 
     exit = False
     not_present = []
-
+    
     for trp_key in trp_keys:
         if trp_key not in data.keys():
             not_present.append(trp_key)
@@ -29,9 +29,7 @@ def process(choice, old_path, new_path, msg):
         print ()
         if choice=='Channel':
             data = add_channels(not_present)
-        elif choice=='Mahaepisode':
-            data = add_shows(not_present, show_data, choice)
-        elif choice=='2 Hour Special Episode':
+        elif choice=='Mahaepisode' or choice=='2 Hour Special Episode':
             data = add_shows(not_present, show_data, choice)
         else:
             data = add_shows(not_present)

@@ -25,7 +25,7 @@ elif (ch==2):
 elif (ch==3):
     week = get_week()
     convert_to_json("2 Hour Special Episode", week)
-    # process("2 Hour Special Episode", 'data/json/shows/2_hours_special_episode/2_hours_special_episode_backup.json', 'data/json/shows/2_hours_special_episode/2_hours_special_episodes.json', 'shows')
+    process("2 Hour Special Episode", 'data/json/shows/2_hours_special_episode/2_hours_special_episode_backup.json', 'data/json/shows/2_hours_special_episode/2_hours_special_episodes.json', 'shows')
     # convert_to_csv("2 Hour Special Episode")
 elif (ch==4):
     week = get_week()

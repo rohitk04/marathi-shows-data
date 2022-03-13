@@ -29,7 +29,7 @@ def add_channels(not_present):
     store_into_json('data/json/channels/channels.json', channels_json)
     return channels_json
 
-def add_show(show, show_data = None, choice = None):
+def add_show(show, show_data = None, choice = None, full_name = None):
     if (show_data == None):
         channel_choices, platform_choices, type_choices, time_choices = load_choices()
 
@@ -85,14 +85,20 @@ def add_show(show, show_data = None, choice = None):
     else:
         if (choice == "Mahaepisode"):
             path = 'data/json/shows/mahaepisode/dummy_show.json'
+
+            show_json = json.load(open(path))
+            show_json[show] = show_json.pop("Show_Name")
+            
+            new_json = {"Platform":show_data['Platform'], "Channel":show_data['Channel'], "Type":show_data['Type']}
+            show_json[show].update(new_json)
         else:
             path = 'data/json/shows/2_hours_special_episode/dummy_show.json'
 
-        show_json = json.load(open(path))
-        show_json[show] = show_json.pop("Show_Name")
-        
-        new_json = {"Platform":show_data['Platform'], "Channel":show_data['Channel'], "Type":show_data['Type']}
-        show_json[show].update(new_json)
+            show_json = json.load(open(path))
+            show_json[full_name] = show_json.pop("Show_Name")
+            
+            new_json = {"Platform":show_data['Platform'], "Channel":show_data['Channel'], "Type":show_data['Type']}
+            show_json[full_name].update(new_json)
 
     return show_json
 
@@ -117,10 +123,19 @@ def add_shows(not_present, show_data = None, choice = None):
     
         print ('\nAdding shows...\n')        
         for show in not_present:
-            if show in show_data:
-                shows_json[show] = add_show(show, show_data[show], choice)[show]
+            if (choice == "2 Hour Special Episode"):
+                full_name = show
+                show = show.split('-')[0].strip()
+                
+                if show in show_data:
+                    shows_json[full_name] = add_show(show, show_data[show], choice, full_name)[full_name]
+                else:
+                    raise RuntimeError(show  + ' not present in shows.json')
             else:
-                raise RuntimeError(show  + ' not present in shows.json')
+                if show in show_data:
+                    shows_json[show] = add_show(show, show_data[show], choice)[show]
+                else:
+                    raise RuntimeError(show  + ' not present in shows.json')
         print ('\nShows added successfully\n')
 
         store_into_json(path, shows_json)
