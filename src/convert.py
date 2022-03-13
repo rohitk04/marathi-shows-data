@@ -19,10 +19,12 @@ def get_new_row(choice, words, codes):
             'Time':[words[5].strip("\n")]
             })
     else:
+        show = codes.get(words[0].strip())
+        episode_name = words[1].strip()
+
         return pd.DataFrame({
             'Hashtag':[words[0].strip()],
-            'Show':[codes.get(words[0].strip())],
-            'Episode Name':[words[1].strip()],
+            'Show':[show + " - " + episode_name],
             'TRP':[float(words[2])],
             'Time':[words[3].strip("\n")]
             })
@@ -173,7 +175,7 @@ def convert_to_json(choice, week):
     else:
         input_path = 'data/2_hours_special_episode_trp.txt'
         output_path = 'data/json/shows/2_hours_special_episode/2_hours_special_episode_trp.json'
-        cols = ['Hashtag', 'Show','Episode Name', 'TRP', 'Time']
+        cols = ['Hashtag', 'Show', 'TRP', 'Time']
 
     with open(input_path) as f:
         lines = f.readlines()
@@ -214,7 +216,6 @@ def convert_to_json(choice, week):
     else:
         for index, row in df.iterrows():
             dictionary[week][row['Show']]={
-                'Episode Name':row['Episode Name'].strip(),
                 'TRP':row['TRP'],
                 'Rank':row['Rank'],
                 'Time':row['Time'].strip()
