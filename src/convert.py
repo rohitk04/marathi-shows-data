@@ -11,12 +11,20 @@ def get_new_row(choice, words, codes):
             'Show':[codes.get(words[1].strip())],
             'TRP':[float(words[3])]
             })
-    else:
+    elif (choice=='Mahaepisode'):
         return pd.DataFrame({
             'Hashtag':[words[1].strip()],
             'Show':[codes.get(words[1].strip())],
             'TRP':[float(words[3])],
             'Time':[words[5].strip("\n")]
+            })
+    else:
+        return pd.DataFrame({
+            'Hashtag':[words[0].strip()],
+            'Show':[codes.get(words[0].strip())],
+            'Episode Name':[words[1].strip()],
+            'TRP':[float(words[2])],
+            'Time':[words[3].strip("\n")]
             })
 
 def convert_to_csv(choice):
@@ -126,18 +134,26 @@ def convert_to_json(choice, week):
         input_path = 'data/trp.txt'
         output_path = 'data/json/shows/online/online_trp.json'
         cols = ['Hashtag', 'Show','TRP']
-    else:
+    elif (choice == "Mahaepisode"):
         input_path = 'data/mahaepisode_trp.txt'
         output_path = 'data/json/shows/mahaepisode/mahaepisode_trp.json'
         cols = ['Hashtag', 'Show','TRP', 'Time']
+    else:
+        input_path = 'data/2_hour_special_episode_trp.txt'
+        output_path = 'data/json/shows/2_hours_special_episode/2_hours_special_episode_trp.json'
+        cols = ['Hashtag', 'Show','Episode Name', 'TRP', 'Time']
 
     with open(input_path) as f:
         lines = f.readlines()
 
     df = pd.DataFrame(columns=cols)
-
+    
     for line in lines:
-        words = line.split(" ")
+        if (choice == "2 Hour Special Episode"):
+            words = line.split("-")
+        else:
+            words = line.split(" ")
+            
         new_row = get_new_row(choice, words, codes)
         df = pd.concat([df, new_row])
 
