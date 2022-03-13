@@ -7,16 +7,16 @@ from output import store_into_csv, store_into_json
 def get_new_row(choice, words, codes):
     if (choice==1 or choice==4):
         return pd.DataFrame({
-            'Hashtag':[words[1].strip()],
-            'Show':[codes.get(words[1].strip())],
-            'TRP':[float(words[3])]
+            'Hashtag':[words[0].strip()],
+            'Show':[codes.get(words[0].strip())],
+            'TRP':[float(words[1])]
             })
     elif (choice==2):
         return pd.DataFrame({
-            'Hashtag':[words[1].strip()],
-            'Show':[codes.get(words[1].strip())],
-            'TRP':[float(words[3])],
-            'Time':[words[5].strip("\n")]
+            'Hashtag':[words[0].strip()],
+            'Show':[codes.get(words[0].strip())],
+            'TRP':[float(words[1])],
+            'Time':[words[2].strip("\n")]
             })
     elif (choice==3):
         show = codes.get(words[0].strip())
@@ -179,11 +179,7 @@ def convert_to_json(choice, week):
     df = pd.DataFrame(columns=cols)
     
     for line in lines:
-        if (choice == 3):
-            words = line.split("-")
-        elif (choice == 1 or choice == 2 or choice == 4):
-            words = line.split(" ")
-            
+        words = line.split("-")
         new_row = get_new_row(choice, words, codes)
         df = pd.concat([df, new_row])
 
