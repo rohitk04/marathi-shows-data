@@ -60,73 +60,69 @@
             "TRP": 1.9,
             "Rank": 15
         },
-        "Chala Hawa Yeu Dya (Jhund Special)": {
-            "TRP": 1.6,
-            "Rank": 16
-        },
         "Jeev Majha Guntala": {
             "TRP": 1.5,
-            "Rank": 17
+            "Rank": 16
         },
         "Man Jhala Bajind": {
             "TRP": 1.3,
-            "Rank": 18
+            "Rank": 17
         },
         "Pinkycha Vijay Aso": {
             "TRP": 1.2,
-            "Rank": 19
+            "Rank": 18
         },
         "Boss Majhi Ladachi": {
             "TRP": 1.1,
-            "Rank": 20
+            "Rank": 19
         },
         "Sundara Manamadhye Bharali": {
             "TRP": 1.1,
+            "Rank": 19
+        },
+        "Me Honar Superstar Chote Ustad": {
+            "TRP": 1.0,
+            "Rank": 20
+        },
+        "Lagnachi Bedi": {
+            "TRP": 1.0,
             "Rank": 20
         },
         "Tujhya Majhya Sansarala Ani Kai Hava": {
             "TRP": 1.0,
-            "Rank": 21
+            "Rank": 20
         },
-        "Me Honar Superstar Chote Ustad": {
-            "TRP": 1.0,
-            "Rank": 21
-        },
-        "Lagnachi Bedi": {
-            "TRP": 1.0,
+        "Garjato Marathi": {
+            "TRP": 0.8,
             "Rank": 21
         },
         "Muramba": {
             "TRP": 0.8,
-            "Rank": 22
-        },
-        "Garjato Marathi": {
-            "TRP": 0.8,
-            "Rank": 22
+            "Rank": 21
         },
         "Nave Lakshya": {
             "TRP": 0.7,
-            "Rank": 23
+            "Rank": 22
         },
         "Home Minister": {
             "TRP": 0.6,
+            "Rank": 23
+        },
+        "He Tar Kahich Nay": {
+            "TRP": 0.5,
             "Rank": 24
         },
         "Ratris Khel Chale S3": {
             "TRP": 0.5,
-            "Rank": 25
-        },
-        "He Tar Kahich Nay": {
-            "TRP": 0.5,
-            "Rank": 25
+            "Rank": 24
         },
         "Tujhya Ishkacha Naadkhula": {
             "TRP": 0.3,
-            "Rank": 26
+            "Rank": 25
         },
         "Ghetala Vasa Taku Nako": {
             "TRP": 0.3,
-            "Rank": 26
+            "Rank": 25
         }
     }
 }
