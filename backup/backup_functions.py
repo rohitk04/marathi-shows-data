@@ -110,13 +110,9 @@ def combine():
 
 def convert():
     print ("\nConversion begins...\n")
-    line = "backup\sqlite3"
-
-    list = ['channels','mahaepisodes', 'shows', 'special_episodes']
-    for ele in list:
-        line += " -csv -cmd \".import 'backup/" + ele + ".csv' '" + ele + "'\" -cmd \".output 'backup/" + ele + ".sql'\" -cmd \".dump '" + ele + "'\""
     
-    os.system(line)
+    os.system("backup\sqlite3 backup/mydatabase.db < backup/commands.txt")
+    os.remove("backup/mydatabase.db")
 
     print ("Conversion ends...\n")
     print ('-'.center(73,'-'))

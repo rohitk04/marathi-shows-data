@@ -1,0 +1,19 @@
+.mode csv
+.import 'backup/channels.csv' 'channels'
+.output 'backup/channels.sql'
+.dump 'channels'
+
+.mode csv
+.import 'backup/mahaepisodes.csv' 'mahaepisodes'
+.output 'backup/mahaepisodes.sql'
+.dump 'mahaepisodes'
+
+.mode csv
+.import 'backup/shows.csv' 'shows'
+.output 'backup/shows.sql'
+.dump 'shows'
+
+.mode csv
+.import 'backup/special_episodes.csv' 'special_episodes'
+.output 'backup/special_episodes.sql'
+.dump 'special_episodes'
