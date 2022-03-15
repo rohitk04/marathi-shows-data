@@ -3,9 +3,6 @@ from output import store_into_json
 from data.paths.paths import paths
 
 def load_choices():
-    import sys
-    sys.path.append('../barc')
-
     from data.choices.time_choices import time_choices
     from data.choices.type_choices import type_choices
     from data.choices.channel_choices import channel_choices
