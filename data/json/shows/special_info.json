@@ -6,23 +6,27 @@
         "Colors Marathi Awards (Event)": "19:00"
     },
     "20 March":{
-        "Tu Tevha Tashi (Launch Epi)": "20:00"
+        "Majhi Tujhi Reshimgath (Mahaepisode)": "19:00",
+        "Tu Tevha Tashi (Mahaepisode)": "20:00",
+        "Jai Jai Swami Samarth (Mahaepisode)" : "19:00",
+        "Lek Majhi Durga (Mahaepisode)" : "20:00",
+        "Sundara Manamadhye Bharli (Mahaepisode)": "21:00"
     },
     "13 March":{
         "Pandu":"18:00",
         "Garjato Marathi":"21:00",
-        "Nave Lakshya-Shodh Bepatta Mahilancha (2 hr special epi)": "19:00",
-        "Balumamachya Navana Changbhala - Divya Chamatkar - Mahaepisode": "19:00",
+        "Nave Lakshya (2 hr special epi)": "19:00",
+        "Balumamachya Navana Changbhala (Mahaepisode)": "19:00",
         "Ajay Atul Concert":"20:00"
     },
     "8 March":{
-        "Balumamachya Navana Changbhala": "18:00, 22:30"
+        "Balumamachya Navana Changbhala": "18:00"
     },
     "6 March":{
-        "Pinkycha Vijay Aso":"19:00",
-        "Sahakutumb Sahaparivar":"20:00",
-        "Man Jhala Bajind":"20:00",
-        "Tujhya Majhya Sansarala Ani Kay Hava": "21:00",
-        "Devmanus 2":"22:00"
+        "Pinkycha Vijay Aso (Mahaepisode)":"19:00",
+        "Sahakutumb Sahaparivar (Mahaepisode)":"20:00",
+        "Man Jhala Bajind (Mahaepisode)":"20:00",
+        "Tujhya Majhya Sansarala Ani Kay Hava (Mahaepisode)": "21:00",
+        "Devmanus 2 (Mahaepisode)":"22:00"
     }
 }
