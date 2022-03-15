@@ -182,6 +182,8 @@ def update():
 def dump():
     print ("\nDatabase Backup begins...\n")
 
+    os.remove('backup/backup.sql')
+    
     line = 'pg_dump -U "postgres" "barc_database" >> "backup/backup.sql"'
     os.system(line)
 
