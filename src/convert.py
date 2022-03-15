@@ -11,100 +11,17 @@ def get_new_row(choice, words, codes):
             'Show':[codes.get(words[0].strip())],
             'TRP':[float(words[1])]
             })
-    elif (choice==2):
+    elif (choice==2 or choice ==3):
         return pd.DataFrame({
             'Hashtag':[words[0].strip()],
             'Show':[codes.get(words[0].strip())],
             'TRP':[float(words[1])],
             'Time':[words[2].strip("\n")]
             })
-    elif (choice==3):
-        show = codes.get(words[0].strip())
-        episode_name = words[1].strip()
-
-        return pd.DataFrame({
-            'Hashtag':[words[0].strip()],
-            'Show':[show + " - " + episode_name],
-            'TRP':[float(words[2])],
-            'Time':[words[3].strip("\n")]
-            })
 
 def convert_to_csv(choice):
     print ("\nConversion begins...\n")
-    if (choice==5):
-        channels = load_channels()
-
-        dict1 = {}
-        dict2 = {}
-
-        for channel in channels:
-            dict1[channel] = {}
-            dict2[channel] = {}
-            
-            grp = channels[channel]
-            for week in grp.keys():
-                dict1[channel][week] = grp[week]['GRP']
-                dict2[channel][week] = grp[week]['Rank']
-
-        store_into_csv(dict1, 'Channel', paths[choice]['grp_csv'])
-        store_into_csv(dict2, 'Channel', paths[choice]['rank_csv'])
-    elif (choice==2):
-        shows = load_shows(paths[choice]['data_json'])
-        
-        dict1 = {}
-        new_keys = ['Channel', 'Type', 'Platform']
-        for show in shows:
-            dict1[show] = {new_key:shows[show][new_key] for new_key in new_keys}
-        store_into_csv(dict1, 'Show', paths[choice]['info_csv'])
-                
-        dict2 = {}
-        dict3 = {}
-        dict4 = {}
-
-        for show in shows:
-            dict2[show] = {}
-            dict3[show] = {}
-            dict4[show] = {}
-            
-            trp = shows[show]['TRP']
-            
-            for week in trp.keys():
-                dict2[show][week] = trp[week]['TRP']
-                dict3[show][week] = trp[week]['Rank']
-                dict4[show][week] = trp[week]['Time']
-
-        store_into_csv(dict2, 'Show', paths[choice]['trp_csv'])
-        store_into_csv(dict3, 'Show', paths[choice]['rank_csv'])
-        store_into_csv(dict4, 'Show', paths[choice]['time_csv'])
-    elif (choice==3):
-        shows = load_shows(paths[choice]['data_json'])
-        
-        dict1 = {}
-        new_keys = ['Channel', 'Type', 'Platform']
-        for show in shows:
-            dict1[show] = {new_key:shows[show][new_key] for new_key in new_keys}
-        store_into_csv(dict1, 'Show', paths[choice]['info_csv'])
-
-        dict2 = {}
-        dict3 = {}
-        dict4 = {}
-        
-        for show in shows:
-            dict2[show] = {}
-            dict3[show] = {}
-            dict4[show] = {}
-            
-            trp = shows[show]['TRP']
-            
-            for week in trp.keys():
-                dict2[show][week] = trp[week]['TRP']
-                dict3[show][week] = trp[week]['Rank']
-                dict4[show][week] = trp[week]['Time']
-
-        store_into_csv(dict2, 'Show', paths[choice]['trp_csv'])
-        store_into_csv(dict3, 'Show', paths[choice]['rank_csv'])
-        store_into_csv(dict4, 'Show', paths[choice]['time_csv'])
-    elif (choice==1 or choice==4):
+    if (choice==1 or choice==4):
         shows = load_shows(paths[choice]["data_json"])
 
         dict1 = {}
@@ -144,6 +61,51 @@ def convert_to_csv(choice):
             
             store_into_csv(dict4, 'Show', paths[choice]['trp_csv'])
             store_into_csv(dict5, 'Show', paths[choice]['rank_csv'])
+    elif (choice==2 or choice==3):
+        shows = load_shows(paths[choice]['data_json'])
+        
+        dict1 = {}
+        new_keys = ['Channel', 'Type', 'Platform']
+        for show in shows:
+            dict1[show] = {new_key:shows[show][new_key] for new_key in new_keys}
+        store_into_csv(dict1, 'Show', paths[choice]['info_csv'])
+                
+        dict2 = {}
+        dict3 = {}
+        dict4 = {}
+
+        for show in shows:
+            dict2[show] = {}
+            dict3[show] = {}
+            dict4[show] = {}
+            
+            trp = shows[show]['TRP']
+            
+            for week in trp.keys():
+                dict2[show][week] = trp[week]['TRP']
+                dict3[show][week] = trp[week]['Rank']
+                dict4[show][week] = trp[week]['Time']
+
+        store_into_csv(dict2, 'Show', paths[choice]['trp_csv'])
+        store_into_csv(dict3, 'Show', paths[choice]['rank_csv'])
+        store_into_csv(dict4, 'Show', paths[choice]['time_csv'])
+    elif (choice==5):
+        channels = load_channels()
+
+        dict1 = {}
+        dict2 = {}
+
+        for channel in channels:
+            dict1[channel] = {}
+            dict2[channel] = {}
+            
+            grp = channels[channel]
+            for week in grp.keys():
+                dict1[channel][week] = grp[week]['GRP']
+                dict2[channel][week] = grp[week]['Rank']
+
+        store_into_csv(dict1, 'Channel', paths[choice]['grp_csv'])
+        store_into_csv(dict2, 'Channel', paths[choice]['rank_csv'])
     else:
         raise RuntimeError('Invalid Choice')
     

@@ -40,15 +40,15 @@ def process(choice, old_path, new_path, msg):
         trp_data = trp[week].get(ele)
 
         if trp_data is not None:
-            if choice==5:
-                ele_data = data[ele]
+            if choice==1:
+                ele_data = data[ele]['TV TRP']
             elif choice==2 or choice == 3:
                 ele_data = data[ele]['TRP']
-            elif choice==1:
-                ele_data = data[ele]['TV TRP']
             elif choice==4:
                 ele_data = data[ele]['Online TRP']
-
+            elif choice==5:
+                ele_data = data[ele]
+            
             ele_data[week] = trp_data
 
     store_into_json(new_path, data)

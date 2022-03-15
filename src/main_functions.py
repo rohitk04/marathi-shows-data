@@ -29,7 +29,7 @@ def add_channels(not_present):
     store_into_json(paths[5]['data_json'], channels_json)
     return channels_json
 
-def add_show(show, show_data = None, choice = None, full_name = None):
+def add_show(show, show_data = None, choice = None):
     if (show_data == None):
         channel_choices, platform_choices, type_choices, time_choices = load_choices()
 
@@ -87,9 +87,6 @@ def add_show(show, show_data = None, choice = None, full_name = None):
         show_json = json.load(open(path))
         new_json = {"Platform":show_data['Platform'], "Channel":show_data['Channel'], "Type":show_data['Type']}
 
-        if (choice == 3):
-            show = full_name
-    
         show_json[show] = show_json.pop("Show_Name")
         show_json[show].update(new_json)
         
@@ -111,19 +108,11 @@ def add_shows(not_present, show_data = None, choice = None):
     
         print ('\nAdding shows...\n')        
         for show in not_present:
-            if (choice == 3):
-                full_name = show
-                show = show.split('-')[0].strip()
-                
-                if show in show_data:
-                    shows_json[full_name] = add_show(show, show_data[show], choice, full_name)[full_name]
-                else:
-                    raise RuntimeError(show  + ' not present in shows.json')
-            elif (choice == 2):
-                if show in show_data:
-                    shows_json[show] = add_show(show, show_data[show], choice)[show]
-                else:
-                    raise RuntimeError(show  + ' not present in shows.json')
+            if show in show_data:
+                shows_json[show] = add_show(show, show_data[show], choice)[show]
+            else:
+                raise RuntimeError(show  + ' not present in shows.json')
+        
         print ('\nShows added successfully\n')
 
         store_into_json(paths[choice]['data_json'], shows_json)
