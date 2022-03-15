@@ -110,7 +110,7 @@ def combine():
 
 def convert():
     print ("\nConversion begins...\n")
-    line = "backup\sqlite3.exe"
+    line = "backup\sqlite3"
 
     list = ['channels','mahaepisodes', 'shows', 'special_episodes']
     for ele in list:
@@ -176,7 +176,7 @@ def delete():
 def update():
     print ("\nData Updation begins...\n")
 
-    line = 'psql -U "postgres" -h "localhost" -d "barc_database" -f "backup/output.sql"'
+    line = 'psql -U "postgres" -d "barc_database" -w -f "backup/output.sql" -q'
     os.system(line)
     os.remove('backup/output.sql')
 
@@ -186,7 +186,7 @@ def update():
 def dump():
     print ("\nDatabase Backup begins...\n")
 
-    line = 'pg_dump -U "postgres" -h "localhost" "barc_database" >> "backup/backup.sql"'
+    line = 'pg_dump -U "postgres" "barc_database" >> "backup/backup.sql"'
     os.system(line)
 
     print ("Database Backup ends...\n")
