@@ -1,5 +1,6 @@
-__pycache__/
 *.py[cod]
 *.DOC
-venv
+*.exe
 data/txt
+__pycache__/
+venv/
