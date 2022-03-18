@@ -80,6 +80,10 @@
             "Week 9": {
                 "TRP": 43.9,
                 "Rank": 1
+            },
+            "Week 10": {
+                "TRP": 42.1,
+                "Rank": 1
             }
         }
     },
@@ -164,6 +168,10 @@
             "Week 9": {
                 "TRP": 36.1,
                 "Rank": 4
+            },
+            "Week 10": {
+                "TRP": 38.3,
+                "Rank": 3
             }
         }
     },
@@ -248,6 +256,10 @@
             "Week 9": {
                 "TRP": 37.5,
                 "Rank": 3
+            },
+            "Week 10": {
+                "TRP": 40.3,
+                "Rank": 2
             }
         }
     },
@@ -332,6 +344,10 @@
             "Week 9": {
                 "TRP": 39.6,
                 "Rank": 2
+            },
+            "Week 10": {
+                "TRP": 37.6,
+                "Rank": 4
             }
         }
     },
@@ -415,6 +431,10 @@
             },
             "Week 9": {
                 "TRP": 34.7,
+                "Rank": 5
+            },
+            "Week 10": {
+                "TRP": 35.9,
                 "Rank": 5
             }
         }
@@ -500,6 +520,10 @@
             "Week 9": {
                 "TRP": 29.6,
                 "Rank": 8
+            },
+            "Week 10": {
+                "TRP": 30.3,
+                "Rank": 8
             }
         }
     },
@@ -583,6 +607,10 @@
             },
             "Week 9": {
                 "TRP": 27.4,
+                "Rank": 9
+            },
+            "Week 10": {
+                "TRP": 27.6,
                 "Rank": 9
             }
         }
@@ -668,6 +696,10 @@
             "Week 9": {
                 "TRP": 30.8,
                 "Rank": 7
+            },
+            "Week 10": {
+                "TRP": 32.6,
+                "Rank": 7
             }
         }
     },
@@ -752,6 +784,10 @@
             "Week 9": {
                 "TRP": 31.2,
                 "Rank": 6
+            },
+            "Week 10": {
+                "TRP": 34.1,
+                "Rank": 6
             }
         }
     },
@@ -828,6 +864,10 @@
             "Week 9": {
                 "TRP": 24.3,
                 "Rank": 11
+            },
+            "Week 10": {
+                "TRP": 25.4,
+                "Rank": 10
             }
         }
     },
@@ -2230,7 +2270,7 @@
         },
         "Online TRP": {}
     },
-    "Balumamachya Navana Changbhala": {
+    "Balumamachya Navana Changbhala - II": {
         "Channel": "Colors Marathi",
         "Time": [
             "22:30"
