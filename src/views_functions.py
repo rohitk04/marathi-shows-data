@@ -290,7 +290,10 @@ def rank_function(rank, week, ch, middle=''):
         st.dataframe(df.drop(columns=['New Rank']).style.format({week:"{:.0f}"}), width=800, height=450)
 
 def week_function(trp, rank, k1, k2, grp=False):
-    weeks = trp.columns.unique()
+    weeks = list(trp.columns.unique())
+    weeks_int = [int(s) for x in weeks for s in x.split() if s.isdigit()]
+    weeks = [x for _,x in sorted(zip(weeks_int, weeks))]
+
     week = st.sidebar.selectbox('Choose week', weeks, index=len(weeks)-1, key=k1)
     ch = st.sidebar.checkbox('Show Data', key=k2)
     
