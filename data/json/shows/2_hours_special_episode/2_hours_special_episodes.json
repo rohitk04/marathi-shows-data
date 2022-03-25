@@ -10,5 +10,17 @@
                 "Time": "21:00"
             }
         }
+    },
+    "Nave Lakshya": {
+        "Channel": "Star Pravah",
+        "Type": "Fiction",
+        "Platform": "Hotstar",
+        "TRP": {
+            "Week 11": {
+                "TRP": 2.6,
+                "Rank": 1,
+                "Time": "19:00"
+            }
+        }
     }
 }
