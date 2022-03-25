@@ -30,9 +30,9 @@ def process(choice, old_path, new_path, msg):
         if choice==5:
             data = add_channels(not_present)
         elif choice==2 or choice==3:
-            data = add_shows(not_present, show_data, choice)
+            data = add_shows(not_present, choice, show_data)
         elif choice==1 or choice==4:
-            data = add_shows(not_present)
+            data = add_shows(not_present, choice)
         
         print ()
 
