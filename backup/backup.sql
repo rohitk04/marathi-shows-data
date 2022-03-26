@@ -336,39 +336,39 @@ COPY public.shows ("Show Id", "Show", "Channel", "Platform", "Time", "Week 1 TV 
 4	Ajunahi Barsaat Ahe	Sony Marathi	SonyLiv	['20:00']	\N	\N	\N	\N	\N	\N	\N	\N	0.7	20	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.5	24	\N	\N	\N	\N	\N	\N	0.6	23	\N	\N	\N	\N	\N	\N	Fiction
 5	Balumamachya Navana Changbhala - I	Colors Marathi	Voot	['19:30']	0.5	25	\N	\N	\N	\N	\N	\N	0.5	22	\N	\N	0.5	23	\N	\N	0.5	24	\N	\N	0.5	25	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
 6	Balumamachya Navana Changbhala - II	Colors Marathi	Voot	['22:30']	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.3	24	\N	\N	0.3	26	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
-7	Band Baja Varat	Zee Marathi	Zee5	['22:00', '21:30']	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.7	21	\N	\N	Non-Fiction
+7	Band Baja Varat	Zee Marathi	Zee5	['22:00', '21:30']	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.7	22	\N	\N	Non-Fiction
 8	Boss Majhi Ladachi	Sony Marathi	SonyLiv	['20:30']	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	1.1	19	\N	\N	0.7	22	\N	\N	\N	\N	\N	\N	Fiction
 9	Chala Hawa Yeu Dya	Zee Marathi	Zee5	['22:00', '21:30']	1.6	16	\N	\N	1.3	15	\N	\N	1.2	16	\N	\N	1.7	15	\N	\N	1.6	15	\N	\N	1.9	15	\N	\N	1.3	15	17.9	18	2.1	15	\N	\N	1.9	15	16.2	17	1.6	15	\N	\N	1.6	15	\N	\N	Non-Fiction
 10	Criminals Chahul Gunhegaranchi	Sony Marathi	SonyLiv	['22:30', '23:00']	\N	\N	\N	\N	\N	\N	\N	\N	0.1	26	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
 11	Devmanus S2	Zee Marathi	Zee5	['22:30']	3.7	10	32.5	7	2.1	10	31.6	8	1.8	13	28.6	10	2.8	11	29.5	9	2.8	11	27.3	9	3	11	25.4	9	2.9	10	27.6	9	3.2	11	26.4	9	3	12	27.4	9	2.6	12	27.6	9	1.8	14	25.1	10	Fiction
 12	Garjato Marathi	Zee Marathi	Zee5	[]	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.8	21	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Event
-13	Ghetala Vasa Taku Nako	Zee Marathi	Zee5	['18:30']	0.4	26	\N	\N	0.4	20	\N	\N	0.3	24	\N	\N	0.3	24	\N	\N	0.3	26	\N	\N	0.3	27	\N	\N	0.3	24	\N	\N	0.4	25	\N	\N	0.3	25	\N	\N	\N	\N	\N	\N	0.4	24	\N	\N	Fiction
+13	Ghetala Vasa Taku Nako	Zee Marathi	Zee5	['18:30']	0.4	26	\N	\N	0.4	20	\N	\N	0.3	24	\N	\N	0.3	24	\N	\N	0.3	26	\N	\N	0.3	27	\N	\N	0.3	24	\N	\N	0.4	25	\N	\N	0.3	25	\N	\N	\N	\N	\N	\N	0.4	25	\N	\N	Fiction
 14	He Tar Kahich Nay	Zee Marathi	Zee5	['22:00', '21:30']	0.7	23	\N	\N	0.6	19	\N	\N	0.5	22	\N	\N	0.6	22	\N	\N	0.5	24	\N	\N	0.5	25	\N	\N	0.5	22	\N	\N	0.5	24	\N	\N	0.5	24	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Non-Fiction
-15	Home Minister	Zee Marathi	Zee5	['18:00']	0.5	25	\N	\N	0.6	19	\N	\N	0.6	21	\N	\N	0.6	22	\N	\N	0.6	23	\N	\N	0.6	24	\N	\N	0.5	22	\N	\N	0.6	23	\N	\N	0.6	23	\N	\N	\N	\N	\N	\N	0.6	22	\N	\N	Non-Fiction
+15	Home Minister	Zee Marathi	Zee5	['18:00']	0.5	25	\N	\N	0.6	19	\N	\N	0.6	21	\N	\N	0.6	22	\N	\N	0.6	23	\N	\N	0.6	24	\N	\N	0.5	22	\N	\N	0.6	23	\N	\N	0.6	23	\N	\N	\N	\N	\N	\N	0.6	23	\N	\N	Non-Fiction
 16	Indian Idol Marathi S1	Sony Marathi	SonyLiv	['21:30', '21:00']	\N	\N	\N	\N	\N	\N	\N	\N	0.6	21	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.4	26	\N	\N	\N	\N	\N	\N	0.4	25	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Non-Fiction
 17	Jai Jai Swami Samarth	Colors Marathi	Voot	['20:00']	0.8	22	\N	\N	\N	\N	\N	\N	0.4	23	\N	\N	0.6	22	\N	\N	0.8	21	\N	\N	0.8	22	\N	\N	0.7	20	\N	\N	0.7	22	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
-18	Jeev Majha Guntala	Colors Marathi	Voot	['20:30']	1.3	18	\N	\N	\N	\N	\N	\N	1	17	\N	\N	1.2	18	\N	\N	1.4	16	\N	\N	1.5	16	\N	\N	1.5	14	19.8	16	1.3	17	\N	\N	1.5	16	15.1	18	1.4	16	\N	\N	\N	\N	\N	\N	Fiction
+18	Jeev Majha Guntala	Colors Marathi	Voot	['20:30']	1.3	18	\N	\N	\N	\N	\N	\N	1	17	\N	\N	1.2	18	\N	\N	1.4	16	\N	\N	1.5	16	\N	\N	1.5	14	19.8	16	1.3	17	\N	\N	1.5	16	15.1	18	1.4	16	\N	\N	1.3	16	\N	\N	Fiction
 19	Kkusum	Sony Marathi	SonyLiv	['20:30']	\N	\N	\N	\N	\N	\N	\N	\N	0.7	20	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.6	23	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
-20	Lagnachi Bedi	Star Pravah	Hotstar	['13:00']	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.7	22	19.9	11	0.9	21	\N	\N	0.8	19	18.6	17	1	19	\N	\N	1	20	25.2	10	0.9	20	\N	\N	1.2	16	\N	\N	Fiction
+20	Lagnachi Bedi	Star Pravah	Hotstar	['13:00']	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.7	22	19.9	11	0.9	21	\N	\N	0.8	19	18.6	17	1	19	\N	\N	1	20	25.2	10	0.9	20	\N	\N	1.2	17	\N	\N	Fiction
 21	Lek Majhi Durga	Colors Marathi	Voot	['19:30']	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.6	21	\N	\N	0.6	23	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
 22	Maharashtracha Favorite Kon Suvarnadashak Sohala	Zee Marathi	Zee5	[]	\N	\N	\N	\N	\N	\N	\N	\N	1.4	15	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Event
 23	Maharashtrachi Hasyajatra	Sony Marathi	SonyLiv	['21:30', '21:00']	\N	\N	\N	\N	\N	\N	\N	\N	0.8	19	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.8	21	\N	\N	\N	\N	\N	\N	Non-Fiction
 24	Majhi Tujhi Reshimgath	Zee Marathi	Zee5	['20:30']	5.1	7	35.9	5	4.6	5	37.6	5	5.4	6	35.9	5	4.5	7	40.3	2	4.6	6	35.4	4	4.1	7	36.8	4	4.6	5	37.2	4	4.8	7	35.4	4	4.6	7	34.7	5	4.2	7	35.9	5	4.4	7	35.4	5	Fiction
-25	Man Jhala Bajind	Zee Marathi	Zee5	['19:00']	2.1	15	\N	\N	1.4	14	\N	\N	1.2	16	\N	\N	1.6	16	\N	\N	1.3	17	\N	\N	1.3	17	\N	\N	1.2	16	\N	\N	1.6	16	\N	\N	1.3	17	14.3	19	1.3	17	\N	\N	1.1	17	\N	\N	Fiction
+25	Man Jhala Bajind	Zee Marathi	Zee5	['19:00']	2.1	15	\N	\N	1.4	14	\N	\N	1.2	16	\N	\N	1.6	16	\N	\N	1.3	17	\N	\N	1.3	17	\N	\N	1.2	16	\N	\N	1.6	16	\N	\N	1.3	17	14.3	19	1.3	17	\N	\N	1.1	18	\N	\N	Fiction
 26	Man Udu Udu Jhala	Zee Marathi	Zee5	['19:30']	3.1	12	31.6	8	2	11	30.4	9	2.9	11	34.2	6	3.3	10	35.2	6	3.6	9	32.9	6	3.1	10	33.1	6	3.1	9	34	6	3.7	10	30.1	6	3.4	10	30.8	7	3.1	10	32.6	7	3.1	10	28.3	8	Fiction
 27	Masaledar Kitchen Kallakar	Zee Marathi	Zee5	['22:00', '21:30']	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2.1	13	\N	\N	Non-Fiction
 28	Masta Majedar Kitchen Kallakar	Zee Marathi	Zee5	['22:00', '21:30']	2.5	14	\N	\N	1.5	13	\N	\N	1.5	14	\N	\N	2	14	\N	\N	1.9	14	\N	\N	2.1	14	\N	\N	1.7	13	22	13	2.4	14	\N	\N	2.3	14	19.1	15	2.4	14	\N	\N	\N	\N	\N	\N	Non-Fiction
-29	Me Honar Superstar Chote Ustad	Star Pravah	Hotstar	['21:30', '21:00']	0.9	21	\N	\N	0.8	17	\N	\N	0.8	19	\N	\N	0.8	20	\N	\N	0.8	21	\N	\N	0.9	21	\N	\N	0.9	18	15.4	20	1	19	\N	\N	1	20	\N	\N	1	19	\N	\N	1.1	17	\N	\N	Non-Fiction
+29	Me Honar Superstar Chote Ustad	Star Pravah	Hotstar	['21:30', '21:00']	0.9	21	\N	\N	0.8	17	\N	\N	0.8	19	\N	\N	0.8	20	\N	\N	0.8	21	\N	\N	0.9	21	\N	\N	0.9	18	15.4	20	1	19	\N	\N	1	20	\N	\N	1	19	\N	\N	1.1	18	\N	\N	Non-Fiction
 30	Mulgi Zali Ho	Star Pravah	Hotstar	['21:00']	5.6	5	\N	\N	5.8	4	\N	\N	6.4	3	29.8	9	5.8	4	\N	\N	5	4	\N	\N	5.8	4	24.9	10	5.8	3	23.9	11	5.4	5	\N	\N	5.4	5	22.8	12	4.7	6	\N	\N	4.6	6	\N	\N	Fiction
-31	Muramba	Star Pravah	Hotstar	['13:30']	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.8	19	22.1	12	0.9	20	\N	\N	0.8	21	20.6	13	0.8	21	\N	\N	0.8	20	\N	\N	Fiction
+31	Muramba	Star Pravah	Hotstar	['13:30']	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.8	19	22.1	12	0.9	20	\N	\N	0.8	21	20.6	13	0.8	21	\N	\N	0.8	21	\N	\N	Fiction
 32	Nave Lakshya	Star Pravah	Hotstar	['22:00', '22:30']	0.6	24	\N	\N	0.6	19	\N	\N	0.4	23	\N	\N	0.6	22	\N	\N	0.6	23	\N	\N	0.6	24	\N	\N	0.7	20	\N	\N	0.6	23	\N	\N	0.7	22	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
 33	Pandu	Zee Marathi	Zee5	[]	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	3.2	10	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Movie
 34	Phulala Sugandh Maticha	Star Pravah	Hotstar	['20:30']	5.2	6	30	9	4.6	5	34.3	6	5.6	5	30.6	8	4.9	5	30.8	8	5.8	3	29.6	8	5.1	5	27.6	8	5	4	29.8	8	5.6	4	29.6	7	5.6	4	31.2	6	5.7	4	34.1	6	5.9	4	30.8	7	Fiction
-35	Pinkycha Vijay Aso	Star Pravah	Hotstar	['23:00']	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	1	19	17.4	12	1	20	\N	\N	0.9	18	\N	\N	0.8	21	\N	\N	1.2	18	\N	\N	\N	\N	\N	\N	0.9	19	\N	\N	Fiction
+35	Pinkycha Vijay Aso	Star Pravah	Hotstar	['23:00']	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	1	19	17.4	12	1	20	\N	\N	0.9	18	\N	\N	0.8	21	\N	\N	1.2	18	\N	\N	\N	\N	\N	\N	0.9	20	\N	\N	Fiction
 36	Pravah Utsav	Star Pravah	Hotstar	[]	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2.2	13	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Event
 37	Raja Ranichi Ga Jodi	Colors Marathi	Voot	['19:00']	0.8	22	\N	\N	\N	\N	\N	\N	0.7	20	\N	\N	0.6	22	\N	\N	0.9	20	\N	\N	0.9	21	\N	\N	0.7	20	\N	\N	0.7	22	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
 38	Rang Majha Vegla	Star Pravah	Hotstar	['20:00']	6.9	1	36.8	4	7.1	1	38.6	3	7.2	1	37.2	3	7.1	1	37.2	4	6.9	1	39.6	3	6.8	1	37.2	3	6.7	1	39.6	2	7.1	1	39.6	2	6.9	1	39.6	2	7	1	37.6	4	6.8	1	38.4	3	Fiction
-39	Ratris Khel Chale S3	Zee Marathi	Zee5	['23:00']	0.6	24	\N	\N	0.4	20	\N	\N	0.3	24	\N	\N	0.3	24	\N	\N	0.3	26	\N	\N	0.4	26	\N	\N	0.4	23	\N	\N	0.4	25	\N	\N	0.5	24	\N	\N	\N	\N	\N	\N	0.5	23	\N	\N	Fiction
+39	Ratris Khel Chale S3	Zee Marathi	Zee5	['23:00']	0.6	24	\N	\N	0.4	20	\N	\N	0.3	24	\N	\N	0.3	24	\N	\N	0.3	26	\N	\N	0.4	26	\N	\N	0.4	23	\N	\N	0.4	25	\N	\N	0.5	24	\N	\N	\N	\N	\N	\N	0.5	24	\N	\N	Fiction
 40	Sahakutumba Sahaparivar	Star Pravah	Hotstar	['19:00']	3.2	11	\N	\N	3.4	9	\N	\N	3.6	9	\N	\N	3.7	9	\N	\N	4.2	7	\N	\N	3.7	8	\N	\N	4	7	21.7	14	4.1	8	\N	\N	3.9	9	19.8	14	3.9	8	\N	\N	3.8	9	\N	\N	Fiction
 41	Sonyachi Pavala	Colors Marathi	Voot	['18:30']	0.3	27	\N	\N	\N	\N	\N	\N	0.2	25	\N	\N	0.2	25	\N	\N	0.3	26	\N	\N	0.4	26	\N	\N	0.3	24	\N	\N	0.2	27	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
 42	Star Pravah Dhoomdhadaka 2022	Star Pravah	Hotstar	[]	6.7	2	\N	\N	\N	\N	\N	\N	3.1	10	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Event
@@ -379,7 +379,7 @@ COPY public.shows ("Show Id", "Show", "Channel", "Platform", "Time", "Week 1 TV 
 47	Thipkyanchi Rangoli	Star Pravah	Hotstar	['22:00']	4.6	8	38.4	3	4.2	6	40.7	2	4.9	7	41.2	1	4.8	6	42.3	1	4.7	5	42.4	1	4.7	6	39.6	2	4.5	6	37.6	3	4.9	6	37.2	3	4.8	6	37.5	3	4.8	5	40.3	2	4.8	5	37	4	Fiction
 48	Tujhya Ishkacha Naadkhula	Star Pravah	Hotstar	['23:30']	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.4	25	\N	\N	0.4	26	\N	\N	0.3	24	\N	\N	0.3	26	\N	\N	0.3	25	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
 49	Tujhya Ishkacha Naadkhula - I	Star Pravah	Hotstar	['23:00']	0.7	23	\N	\N	0.7	18	\N	\N	0.6	21	\N	\N	0.7	21	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
-50	Tujhya Majhya Sansarala Ani Kai Hava	Zee Marathi	Zee5	['21:00']	1.6	16	\N	\N	1	16	\N	\N	1	17	\N	\N	1.4	17	\N	\N	1.2	18	\N	\N	1.2	18	\N	\N	1.1	17	16.2	19	1	19	\N	\N	1	20	14.1	20	1.2	18	\N	\N	1	18	\N	\N	Fiction
+50	Tujhya Majhya Sansarala Ani Kai Hava	Zee Marathi	Zee5	['21:00']	1.6	16	\N	\N	1	16	\N	\N	1	17	\N	\N	1.4	17	\N	\N	1.2	18	\N	\N	1.2	18	\N	\N	1.1	17	16.2	19	1	19	\N	\N	1	20	14.1	20	1.2	18	\N	\N	1	19	\N	\N	Fiction
 51	Tujhya Rupacha Chandana	Colors Marathi	Voot	['21:30']	0.7	23	\N	\N	\N	\N	\N	\N	0.5	22	\N	\N	0.5	23	\N	\N	0.4	25	\N	\N	0.6	24	\N	\N	0.6	21	\N	\N	0.5	24	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
 52	Tumchi Mulgi Kay Karte	Sony Marathi	SonyLiv	['22:00']	\N	\N	\N	\N	\N	\N	\N	\N	0.2	25	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.2	27	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
 53	Yeu Kashi Tashi Me Nandayla	Zee Marathi	Zee5	['20:00']	3.7	10	29.2	10	3.6	8	29.6	10	2.1	12	\N	\N	2.5	12	27.2	10	2.6	12	25.7	10	2.7	12	\N	\N	2.5	11	25.4	10	2.7	13	24.1	10	2.8	13	24.3	11	2.5	13	25.4	10	2.3	12	26.2	9	Fiction
