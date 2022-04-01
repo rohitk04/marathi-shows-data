@@ -1,4 +1,7 @@
 {
+    "24 April":{
+        "Sur Sapata (Movie)": "19:00"
+    },
     "11 April":{
         "Mahaminister": "18:00 - 19:00"
     },
@@ -8,7 +11,10 @@
     },
     "3 April":{
         "Star Pravah Parivar Awards (Event)": "19:00",
-        "Filmfare Awards Marathi 2021 (Event)": "19:00"
+        "Filmfare Awards Marathi 2021 (Event)": "19:00",
+        "Lek Majhi Durga (Mahaepisode)": "19:00",
+        "Jai Jai Swami Samarth (Mahaepisode)": "20:00",
+        "Sundara Manamadhye Bharli": "21:00"
     },
     "28 March":{
         "Balumamachya Navana Changbahala": "19:30",
@@ -28,8 +34,5 @@
         "Sundara Manamadhye Bharli (Mahaepisode)": "21:00",
         "Aai Kuthe Kay Karte (Mahaepisode)": "20:00",
         "Thipkyanchi Rangoli (Mahaepisode)": "19:00"
-    },
-    "8 March":{
-        "Balumamachya Navana Changbhala": "18:00"
     }
 }
