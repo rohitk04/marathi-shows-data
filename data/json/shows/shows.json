@@ -50,6 +50,10 @@
             "Week 11": {
                 "TRP": 6.5,
                 "Rank": 2
+            },
+            "Week 12": {
+                "TRP": 6.6,
+                "Rank": 2
             }
         },
         "Online TRP": {
@@ -153,6 +157,10 @@
             },
             "Week 11": {
                 "TRP": 6.4,
+                "Rank": 3
+            },
+            "Week 12": {
+                "TRP": 6.2,
                 "Rank": 3
             }
         },
@@ -258,6 +266,10 @@
             "Week 11": {
                 "TRP": 4.8,
                 "Rank": 5
+            },
+            "Week 12": {
+                "TRP": 4.7,
+                "Rank": 5
             }
         },
         "Online TRP": {
@@ -361,6 +373,10 @@
             },
             "Week 11": {
                 "TRP": 6.8,
+                "Rank": 1
+            },
+            "Week 12": {
+                "TRP": 6.7,
                 "Rank": 1
             }
         },
@@ -466,6 +482,10 @@
             "Week 11": {
                 "TRP": 4.4,
                 "Rank": 7
+            },
+            "Week 12": {
+                "TRP": 3.6,
+                "Rank": 7
             }
         },
         "Online TRP": {
@@ -570,6 +590,10 @@
             "Week 11": {
                 "TRP": 4.1,
                 "Rank": 8
+            },
+            "Week 12": {
+                "TRP": 2.8,
+                "Rank": 9
             }
         },
         "Online TRP": {
@@ -674,6 +698,10 @@
             "Week 11": {
                 "TRP": 1.8,
                 "Rank": 14
+            },
+            "Week 12": {
+                "TRP": 2.3,
+                "Rank": 12
             }
         },
         "Online TRP": {
@@ -778,6 +806,10 @@
             "Week 11": {
                 "TRP": 3.1,
                 "Rank": 10
+            },
+            "Week 12": {
+                "TRP": 2.5,
+                "Rank": 11
             }
         },
         "Online TRP": {
@@ -882,6 +914,10 @@
             "Week 11": {
                 "TRP": 5.9,
                 "Rank": 4
+            },
+            "Week 12": {
+                "TRP": 5.7,
+                "Rank": 4
             }
         },
         "Online TRP": {
@@ -984,6 +1020,10 @@
                 "Rank": 13
             },
             "Week 11": {
+                "TRP": 2.3,
+                "Rank": 12
+            },
+            "Week 12": {
                 "TRP": 2.3,
                 "Rank": 12
             }
@@ -1095,6 +1135,10 @@
             "Week 11": {
                 "TRP": 4.6,
                 "Rank": 6
+            },
+            "Week 12": {
+                "TRP": 4.5,
+                "Rank": 6
             }
         },
         "Online TRP": {
@@ -1167,6 +1211,10 @@
             "Week 11": {
                 "TRP": 3.8,
                 "Rank": 9
+            },
+            "Week 12": {
+                "TRP": 2.6,
+                "Rank": 10
             }
         },
         "Online TRP": {
@@ -1231,6 +1279,10 @@
             "Week 11": {
                 "TRP": 3.0,
                 "Rank": 11
+            },
+            "Week 12": {
+                "TRP": 2.6,
+                "Rank": 10
             }
         },
         "Online TRP": {
@@ -1481,6 +1533,10 @@
             "Week 11": {
                 "TRP": 1.6,
                 "Rank": 15
+            },
+            "Week 12": {
+                "TRP": 1.7,
+                "Rank": 14
             }
         },
         "Online TRP": {
@@ -1705,6 +1761,10 @@
             "Week 11": {
                 "TRP": 1.1,
                 "Rank": 18
+            },
+            "Week 12": {
+                "TRP": 1.0,
+                "Rank": 15
             }
         },
         "Online TRP": {
@@ -2601,6 +2661,10 @@
             "Week 11": {
                 "TRP": 2.1,
                 "Rank": 13
+            },
+            "Week 12": {
+                "TRP": 2.1,
+                "Rank": 13
             }
         },
         "Online TRP": {}
@@ -2628,7 +2692,12 @@
         ],
         "Type": "Fiction",
         "Platform": "Zee5",
-        "TV TRP": {},
+        "TV TRP": {
+            "Week 12": {
+                "TRP": 3.0,
+                "Rank": 8
+            }
+        },
         "Online TRP": {
             "Week 12": {
                 "TRP": 29.3,
