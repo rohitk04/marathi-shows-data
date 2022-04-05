@@ -3,7 +3,11 @@
         "Sur Sapata (Movie)": "19:00"
     },
     "11 April":{
-        "Mahaminister": "18:00 - 19:00"
+        "Mahaminister (New Show)": "18:00 - 19:00"
+    },
+    "10 April":{
+        "Man Jhala Bajind (Mahaepisode)":"19:00",
+        "Tu Tevha Tashi (Mahepisode)":"20:00"
     },
     "4 April":{
         "Tujhya Rupacha Chandana": "18:30",
@@ -25,14 +29,5 @@
         "Zee MahaGaurav (Event)": "19:00",
         "Lagnachi Bedi (Mahaepisode)" : "19:00",
         "Aboli (Mahaepisode)": "20:00"
-    },
-    "20 March":{
-        "Majhi Tujhi Reshimgath (Mahaepisode)": "19:00",
-        "Tu Tevha Tashi (Mahaepisode)": "20:00",
-        "Jai Jai Swami Samarth (Mahaepisode)" : "19:00",
-        "Lek Majhi Durga (Mahaepisode)" : "20:00",
-        "Sundara Manamadhye Bharli (Mahaepisode)": "21:00",
-        "Aai Kuthe Kay Karte (Mahaepisode)": "20:00",
-        "Thipkyanchi Rangoli (Mahaepisode)": "19:00"
     }
 }
