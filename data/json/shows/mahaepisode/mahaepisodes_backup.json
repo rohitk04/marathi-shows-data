@@ -113,6 +113,11 @@
                 "TRP": 5.1,
                 "Rank": 1,
                 "Time": "20:00"
+            },
+            "Week 12": {
+                "TRP": 4.1,
+                "Rank": 2,
+                "Time": "19:00"
             }
         }
     },
@@ -142,6 +147,11 @@
                 "TRP": 4.4,
                 "Rank": 2,
                 "Time": "20:00"
+            },
+            "Week 12": {
+                "TRP": 3.2,
+                "Rank": 3,
+                "Time": "19:00"
             }
         }
     },
@@ -231,6 +241,66 @@
                 "TRP": 1.7,
                 "Rank": 3,
                 "Time": "19:00"
+            }
+        }
+    },
+    "Aai Kuthe Kay Karte": {
+        "Channel": "Star Pravah",
+        "Type": "Fiction",
+        "Platform": "Hotstar",
+        "TRP": {
+            "Week 12": {
+                "TRP": 5.0,
+                "Rank": 1,
+                "Time": "20:00"
+            }
+        }
+    },
+    "Tu Tevha Tashi": {
+        "Channel": "Zee Marathi",
+        "Type": "Fiction",
+        "Platform": "Zee5",
+        "TRP": {
+            "Week 12": {
+                "TRP": 2.8,
+                "Rank": 4,
+                "Time": "20:00"
+            }
+        }
+    },
+    "Sundara Manamadhye Bharali": {
+        "Channel": "Colors Marathi",
+        "Type": "Fiction",
+        "Platform": "Voot",
+        "TRP": {
+            "Week 12": {
+                "TRP": 0.8,
+                "Rank": 5,
+                "Time": "21:00"
+            }
+        }
+    },
+    "Jai Jai Swami Samarth": {
+        "Channel": "Colors Marathi",
+        "Type": "Fiction",
+        "Platform": "Voot",
+        "TRP": {
+            "Week 12": {
+                "TRP": 0.6,
+                "Rank": 6,
+                "Time": "19:00"
+            }
+        }
+    },
+    "Lek Majhi Durga": {
+        "Channel": "Colors Marathi",
+        "Type": "Fiction",
+        "Platform": "Voot",
+        "TRP": {
+            "Week 12": {
+                "TRP": 0.4,
+                "Rank": 7,
+                "Time": "20:00"
             }
         }
     }

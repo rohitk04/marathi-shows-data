@@ -200,6 +200,11 @@
                 "TRP": 3.4,
                 "Rank": 2,
                 "Time": "19:00"
+            },
+            "Week 13": {
+                "TRP": 3.0,
+                "Rank": 1,
+                "Time": "20:00"
             }
         }
     },
@@ -301,6 +306,18 @@
                 "TRP": 0.4,
                 "Rank": 7,
                 "Time": "20:00"
+            }
+        }
+    },
+    "Lagnachi Bedi": {
+        "Channel": "Star Pravah",
+        "Type": "Fiction",
+        "Platform": "Hotstar",
+        "TRP": {
+            "Week 13": {
+                "TRP": 2.0,
+                "Rank": 2,
+                "Time": "19:00"
             }
         }
     }
