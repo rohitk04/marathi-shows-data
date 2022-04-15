@@ -65,11 +65,21 @@ paths = {
         "backup_json":"data/json/channels/channels_backup.json",
         "dummy_json":"data/json/channels/dummy_channel.json",
     },
-    "info_csv":"data/csv/shows/info.csv",
-    "codes": "data/json/shows/codes.json",
     "convert_tvr_to_trp":{
         #Convert TVR to TRP
         "trp": "convert_TVR_to_TRP/TRP.csv",
         "result_trp": "convert_TVR_to_TRP/Result_TRP.csv"
-    }
+    },
+    "backup":{
+        #Backup
+        "output":"backup/output.sql",
+        "backup":"backup/backup.sql",
+        
+        "channels_csv":"backup/channels.csv",
+        "shows_csv":"backup/shows.csv",
+        "mahaepisodes_csv":"backup/mahaepisodes.csv",
+        "special_episodes_csv":"backup/special_episodes.csv"
+    },
+    "info_csv":"data/csv/shows/info.csv",
+    "codes": "data/json/shows/codes.json"
 }

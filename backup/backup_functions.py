@@ -2,6 +2,12 @@ import pandas as pd
 import re
 import os
 
+import sys
+sys.path.append('../barc')
+from data.paths.paths import paths
+
+sys.path.append('/backup')
+
 def read_csv(path, col_name):
     return pd.read_csv(path).set_index(col_name).sort_index()
 
@@ -9,26 +15,26 @@ def combine():
     print ('-'.center(73,'-'))
     print ("\nCombining begins...\n")
     
-    channels_grp = read_csv('data/csv/channels/channels_grp.csv', 'Channel')
-    channels_rank = read_csv('data/csv/channels/channels_rank.csv', 'Channel')
+    channels_grp = read_csv(paths[5]["grp_csv"], 'Channel')
+    channels_rank = read_csv(paths[5]["rank_csv"], 'Channel')
 
-    shows_info = read_csv('data/csv/shows/info.csv', 'Show')
+    shows_info = read_csv(paths['info_csv'], 'Show')
 
-    tv_trp_trp = read_csv('data/csv/shows/tv/tv_trp_trp.csv', 'Show')
-    tv_trp_rank = read_csv('data/csv/shows/tv/tv_trp_rank.csv', 'Show')
+    tv_trp_trp = read_csv(paths[1]['trp_csv'], 'Show')
+    tv_trp_rank = read_csv(paths[1]['rank_csv'], 'Show')
 
-    mahaepisodes_info = read_csv('data/csv/shows/mahaepisode/mahaepisode_info.csv', 'Show')
-    mahaepisodes_trp = read_csv('data/csv/shows/mahaepisode/mahaepisode_trp.csv', 'Show')
-    mahaepisodes_rank = read_csv('data/csv/shows/mahaepisode/mahaepisode_rank.csv', 'Show')
-    mahaepisodes_time = read_csv('data/csv/shows/mahaepisode/mahaepisode_time.csv', 'Show')
+    mahaepisodes_info = read_csv(paths[2]['info_csv'], 'Show')
+    mahaepisodes_trp = read_csv(paths[2]['trp_csv'], 'Show')
+    mahaepisodes_rank = read_csv(paths[2]['rank_csv'], 'Show')
+    mahaepisodes_time = read_csv(paths[2]['time_csv'], 'Show')
 
-    online_trp_trp = read_csv('data/csv/shows/online/online_trp_trp.csv','Show')
-    online_trp_rank = read_csv('data/csv/shows/online/online_trp_rank.csv', 'Show')
+    online_trp_trp = read_csv(paths[4]['trp_csv'],'Show')
+    online_trp_rank = read_csv(paths[4]['rank_csv'], 'Show')
 
-    special_episode_info = read_csv('data/csv/shows/2_hours_special_episode/2_hours_special_episode_info.csv', 'Show')
-    special_episode_trp = read_csv('data/csv/shows/2_hours_special_episode/2_hours_special_episode_trp.csv', 'Show')
-    special_episode_rank = read_csv('data/csv/shows/2_hours_special_episode/2_hours_special_episode_rank.csv', 'Show')
-    special_episode_time = read_csv('data/csv/shows/2_hours_special_episode/2_hours_special_episode_time.csv', 'Show')
+    special_episode_info = read_csv(paths[3]['info_csv'], 'Show')
+    special_episode_trp = read_csv(paths[3]['trp_csv'], 'Show')
+    special_episode_rank = read_csv(paths[3]['rank_csv'], 'Show')
+    special_episode_time = read_csv(paths[3]['time_csv'], 'Show')
 
     channels = pd.merge(channels_grp, channels_rank, left_index=True, right_index=True, how='outer',suffixes=(' GRP',' Rank'))
     channels = channels.sort_index(axis=1)
@@ -100,10 +106,10 @@ def combine():
 
     special_episodes = special_episodes[sorted_cols]
 
-    channels.to_csv('backup/channels.csv')
-    shows.to_csv('backup/shows.csv')
-    mahaepisodes.to_csv('backup/mahaepisodes.csv')
-    special_episodes.to_csv('backup/special_episodes.csv')
+    channels.to_csv(paths['backup']['channels_csv'])
+    shows.to_csv(paths['backup']['shows_csv'])
+    mahaepisodes.to_csv(paths['backup']['mahaepisodes_csv'])
+    special_episodes.to_csv(paths['backup']['special_episodes_csv'])
 
     print ("Combining ends...\n")
     print ('-'.center(73,'-'))
@@ -151,7 +157,7 @@ def prepare():
 
         sql_file.close()
         
-    with open("backup/output.sql","w") as sql_file:
+    with open(paths["backup"]["output"],"w") as sql_file:
         sql_file.write('\n\n'.join(result))
     
     print ("Data preparation ends...\n")
@@ -172,9 +178,9 @@ def delete():
 def update():
     print ("\nData Updation begins...\n")
 
-    line = 'psql -U "postgres" -d "barc_database" -w -f "backup/output.sql" -q'
+    line = 'psql -U "postgres" -d "barc_database" -w -f ' + paths['backup']['output'] + ' -q'
     os.system(line)
-    os.remove('backup/output.sql')
+    os.remove(paths['backup']['output'])
 
     print ("Database Updation ends...\n")
     print ('-'.center(73,'-'))
@@ -182,9 +188,9 @@ def update():
 def dump():
     print ("\nDatabase Backup begins...\n")
 
-    os.remove('backup/backup.sql')
+    os.remove(paths['backup']['backup'])
     
-    line = 'pg_dump -U "postgres" "barc_database" >> "backup/backup.sql"'
+    line = 'pg_dump -U "postgres" "barc_database" >> ' + paths['backup']['backup']
     os.system(line)
 
     print ("Database Backup ends...\n")
