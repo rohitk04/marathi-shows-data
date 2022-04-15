@@ -1,120 +1,164 @@
 {
-    "Week 13": {
-        "Rang Majha Vegla": {
-            "TRP": 6.9,
+    "Week 14": {
+        "Star Pravah Parivar Puraskar 2022": {
+            "TRP": 7.4,
             "Rank": 1
         },
-        "Aai Kuthe Kay Karte": {
-            "TRP": 6.8,
+        "Rang Majha Vegla": {
+            "TRP": 6.9,
             "Rank": 2
         },
-        "Phulala Sugandh Maticha": {
-            "TRP": 6.5,
+        "Aai Kuthe Kay Karte": {
+            "TRP": 6.7,
             "Rank": 3
         },
         "Sukh Mhanje Nakki Kay Asta": {
-            "TRP": 6.2,
+            "TRP": 6.4,
             "Rank": 4
         },
-        "Mulgi Zali Ho": {
-            "TRP": 5.4,
+        "Phulala Sugandh Maticha": {
+            "TRP": 6.1,
             "Rank": 5
         },
         "Thipkyanchi Rangoli": {
-            "TRP": 5.1,
+            "TRP": 5.8,
             "Rank": 6
         },
-        "Majhi Tujhi Reshimgath": {
-            "TRP": 4.6,
+        "Mulgi Zali Ho": {
+            "TRP": 5.4,
             "Rank": 7
         },
-        "Sahakutumba Sahaparivar": {
-            "TRP": 4.0,
+        "Majhi Tujhi Reshimgath": {
+            "TRP": 4.9,
             "Rank": 8
         },
-        "Tu Tevha Tashi": {
-            "TRP": 3.6,
-            "Rank": 9
-        },
         "Swabhimaan": {
-            "TRP": 3.6,
+            "TRP": 4.4,
             "Rank": 9
         },
-        "Aboli": {
-            "TRP": 2.6,
+        "Sahakutumba Sahaparivar": {
+            "TRP": 4.2,
             "Rank": 10
         },
-        "Zee Maha Gaurav 2022": {
-            "TRP": 2.2,
+        "Aboli": {
+            "TRP": 3.8,
             "Rank": 11
         },
-        "Man Udu Udu Jhala": {
-            "TRP": 2.1,
+        "Me Honar Superstar Chote Ustad": {
+            "TRP": 3.4,
             "Rank": 12
         },
-        "Colors Marathi Awards 2021-22": {
-            "TRP": 1.7,
+        "Tu Tevha Tashi": {
+            "TRP": 3.3,
             "Rank": 13
         },
-        "Devmanus S2": {
-            "TRP": 1.5,
+        "Man Udu Udu Jhala": {
+            "TRP": 2.9,
             "Rank": 14
         },
-        "Masaledar Kitchen Kallakar": {
-            "TRP": 1.5,
-            "Rank": 14
-        },
-        "Chala Hawa Yeu Dya": {
-            "TRP": 1.4,
+        "Nave Lakshya": {
+            "TRP": 2.3,
             "Rank": 15
         },
-        "Lagnachi Bedi": {
-            "TRP": 1.3,
+        "Masaledar Kitchen Kallakar": {
+            "TRP": 2.1,
             "Rank": 16
         },
-        "Jeev Majha Guntala": {
-            "TRP": 1.3,
-            "Rank": 16
-        },
-        "Sundara Manamadhye Bharali": {
-            "TRP": 1.1,
+        "Devmanus S2": {
+            "TRP": 1.8,
             "Rank": 17
         },
-        "Pinkycha Vijay Aso": {
-            "TRP": 1.0,
+        "Jai Jai Swami Samarth": {
+            "TRP": 1.7,
             "Rank": 18
         },
-        "Man Jhala Bajind": {
-            "TRP": 1.0,
-            "Rank": 18
-        },
-        "Tujhya Majhya Sansarala Ani Kai Hava": {
-            "TRP": 0.9,
+        "Chala Hawa Yeu Dya": {
+            "TRP": 1.6,
             "Rank": 19
         },
-        "Maharashtrachi Hasyajatra": {
-            "TRP": 0.8,
+        "Muramba": {
+            "TRP": 1.6,
+            "Rank": 19
+        },
+        "Lagnachi Bedi": {
+            "TRP": 1.4,
             "Rank": 20
         },
-        "Muramba": {
-            "TRP": 0.7,
+        "Jeev Majha Guntala": {
+            "TRP": 1.4,
+            "Rank": 20
+        },
+        "Tujhya Majhya Sansarala Ani Kai Hava": {
+            "TRP": 1.4,
+            "Rank": 20
+        },
+        "Man Jhala Bajind": {
+            "TRP": 1.4,
+            "Rank": 20
+        },
+        "Sundara Manamadhye Bharali": {
+            "TRP": 1.3,
             "Rank": 21
         },
-        "Raja Ranichi Ga Jodi": {
-            "TRP": 0.7,
-            "Rank": 21
+        "Band Baja Varat": {
+            "TRP": 1.1,
+            "Rank": 22
+        },
+        "Pinkycha Vijay Aso": {
+            "TRP": 1.1,
+            "Rank": 22
+        },
+        "Bhagya Dile Tu Mala": {
+            "TRP": 1.0,
+            "Rank": 23
+        },
+        "Filmfare Awards Marathi 2021": {
+            "TRP": 0.9,
+            "Rank": 24
         },
         "Boss Majhi Ladachi": {
-            "TRP": 0.6,
-            "Rank": 22
+            "TRP": 0.7,
+            "Rank": 25
         },
-        "Sundar Majha Ghar": {
-            "TRP": 0.6,
-            "Rank": 22
+        "Maharashtrachi Hasyajatra": {
+            "TRP": 0.7,
+            "Rank": 25
         },
-        "Tumchi Mulgi Kay Karte": {
-            "TRP": 0.3,
-            "Rank": 23
+        "Raja Ranichi Ga Jodi": {
+            "TRP": 0.6,
+            "Rank": 26
+        },
+        "Aai Mayeche Kavach": {
+            "TRP": 0.5,
+            "Rank": 27
+        },
+        "Sundar Amcha Ghar": {
+            "TRP": 0.5,
+            "Rank": 27
+        },
+        "Balumamachya Navana Changbhala": {
+            "TRP": 0.4,
+            "Rank": 28
+        },
+        "Ratris Khel Chale S3": {
+            "TRP": 0.2,
+            "Rank": 29
+        },
+        "Home Minister": {
+            "TRP": 0.1,
+            "Rank": 30
+        },
+        "Ghetala Vasa Taku Nako": {
+            "TRP": 0.1,
+            "Rank": 30
+        },
+        "Tujhya Rupacha Chandana": {
+            "TRP": 0.1,
+            "Rank": 30
+        },
+        "Lek Majhi Durga": {
+            "TRP": 0.1,
+            "Rank": 30
         }
     }
 }
