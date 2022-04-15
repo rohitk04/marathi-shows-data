@@ -2,13 +2,12 @@ from convert import convert_to_csv, convert_to_json
 from main_functions import get_week
 from process import process
 from data.paths.paths import paths
+from data.choices.choices import choices
 
 print ("Select: ")
-print ("1. TV Shows - TV TRP")
-print ("2. Mahaepisodes")
-print ("3. 2 Hour Special Episode")
-print ("4. TV Shows - Online TRP")
-print ("5. Channels")
+
+for key, value in choices.items():
+    print (str(key) + ". " + value)
 print ()
 
 ch = int(input("Enter choice: "))
