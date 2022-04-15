@@ -1,30 +1,32 @@
 {
-    "24 April":{
-        "Sur Sapata (Movie)": "19:00"
+    "10 April":{
+        "Man Jhala Bajind - Mahaepisode":"7:00 PM",
+        "Tu Tevha Tashi - Mahaepisode":"8:00 PM",
+        "Balumamachya Navana Changbhala - Mahaepisode":"7:00 PM",
+        "Tujhyat Jeev Guntala - Mahaepisode":"8:00 PM",
+        "Tujhya Rupacha Chandana - Mahaepisode":"9:00 PM"
     },
     "11 April":{
-        "Mahaminister (New Show)": "18:00 - 19:00"
+        "Mahaminister - New Show": "18:00 - 7:00 PM"
     },
-    "10 April":{
-        "Man Jhala Bajind (Mahaepisode)":"19:00",
-        "Tu Tevha Tashi (Mahepisode)":"20:00",
-        "Balumamachya Navana Changbhala (Mahaepisode)":"19:00",
-        "Tujhyat Jeev Guntala (Mahaepisode)":"20:00",
-        "Tujhya Rupacha Chandana":"21:00"
+    "19 April":{
+        "MahaMinister - Mahaepisode" : "6:00 PM",
+        "Man Udu Udu Jhala - Mahaepisode" : "7:00 PM",
+        "Tu Tevha Tashi - Mahaepisode" : "8:00 PM",
+        "Tujhya Majhya Sansarala Ani Kay Hava - Mahaepisode" : "9:00 PM",
+        "Devmanus 2 - Mahaepisode" : "10:00 PM",
+        "Aai Mayecha Kavach - Mahaepisode" : "7:00 PM",
+        "Raja Ranichi Ga Jodi - Mahaepisode" : "8:00 PM",
+        "Sundara Manamadhye Bharli - Mahaepisode" : "9:00 PM"
     },
-    "4 April":{
-        "Tujhya Rupacha Chandana (Time Change)": "18:30",
-        "Bhagya Dile Tu Mala (New Show)": "21:30"
+    "24 April":{
+        "Sur Sapata - Movie": "7:00 PM"
     },
-    "3 April":{
-        "Star Pravah Parivar Awards (Event)": "19:00",
-        "Filmfare Awards Marathi 2021 (Event)": "19:00",
-        "Lek Majhi Durga (Mahaepisode)": "19:00",
-        "Jai Jai Swami Samarth (Mahaepisode)": "20:00",
-        "Sundara Manamadhye Bharli": "21:00"
+    "1 May":{
+        "Sakal Sanman - Event" : "6:00 PM"
     },
-    "28 March":{
-        "Balumamachya Navana Changbahala": "19:30",
-        "Lek Majhi Durga": "22:30"
+    "2 May":{
+        "Tujhech Mi Geet Gaat Ahe - New Serial" : "9:00 PM",
+        "Mulgi Zali Ho - Time Shift" : "2:00 PM"
     }
 }
