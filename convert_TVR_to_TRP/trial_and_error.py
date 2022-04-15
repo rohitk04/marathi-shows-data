@@ -1,11 +1,16 @@
 import pandas as pd
 import scipy.stats as stats
-import numpy as np
+
+import sys
+sys.path.append('../barc')
+from data.paths.paths import paths
+
+sys.path.append('/convert_TVR_to_TRP')
 
 def trial_and_error(reading_slice):
     print ("\nTrial and Error begins...\n")
 
-    df = pd.read_csv('convert_TVR_to_TRP/TRP.csv').set_index('Show')
+    df = pd.read_csv(paths["convert_tvr_to_trp"]["trp"]).set_index('Show')
 
     na_df = df.dropna()
     tvr_set = sorted(set(na_df['TVR']))

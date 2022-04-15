@@ -1,11 +1,17 @@
 import pandas as pd
 import scipy.stats as stats
 
+import sys
+sys.path.append('../barc')
+from data.paths.paths import paths
+
+sys.path.append('/convert_TVR_to_TRP')
+
 def basic_convert():
     print ('-'.center(110,'-'))      
     print ("\nBasic Conversion begins...\n")
 
-    df = pd.read_csv('convert_TVR_to_TRP/TRP.csv').set_index('Show')
+    df = pd.read_csv(paths["convert_tvr_to_trp"]["trp"]).set_index('Show')
 
     na_df = df.dropna()
 
@@ -21,7 +27,7 @@ def basic_convert():
     new_df = pd.DataFrame(zip(show,test_x, test_y), columns=['Show','TVR', 'TRP']).set_index('Show')
 
     df.update(new_df)
-    df.to_csv('convert_TVR_to_TRP/Result_TRP.csv')
+    df.to_csv(paths["convert_tvr_to_trp"]["result_trp"])
 
     print ("Stored successfully into csv\n")
     print ("Basic Conversion ends...\n")

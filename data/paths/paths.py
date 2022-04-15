@@ -66,5 +66,10 @@ paths = {
         "dummy_json":"data/json/channels/dummy_channel.json",
     },
     "info_csv":"data/csv/shows/info.csv",
-    "codes": "data/json/shows/codes.json"
+    "codes": "data/json/shows/codes.json",
+    "convert_tvr_to_trp":{
+        #Convert TVR to TRP
+        "trp": "convert_TVR_to_TRP/TRP.csv",
+        "result_trp": "convert_TVR_to_TRP/Result_TRP.csv"
+    }
 }
