@@ -40,10 +40,14 @@
     "#MastaMajedarKitchenKallakar": "Masta Majedar Kitchen Kallakar",
     "#MastMajedarKitchenKallakar": "Masta Majedar Kitchen Kallakar",
     "#HeTarKahichNay": "He Tar Kahich Nay",
-    
     "#HomeMinister": "Home Minister",
     "#GhetalaVasaTakuNako": "Ghetala Vasa Taku Nako",
     "#GhetlaVasaTakuNako": "Ghetala Vasa Taku Nako",
+    "#RatrisKhelChale3": "Ratris Khel Chale S3",
+    "#RatrisKhelChale": "Ratris Khel Chale S3",
+    "#RaatrisKhelChale3": "Ratris Khel Chale S3",
+    
+    "#MahaMinister": "Mahaminister",
     "#ManJhalaBajind": "Man Jhala Bajind",
     "#ManJhalaBajinda": "Man Jhala Bajind",
     "#ManZhalaBazind": "Man Jhala Bajind",
@@ -62,9 +66,6 @@
     "#BandBajaVarat":"Band Baja Varat",
     "#Devmanus2": "Devmanus S2",
     "#Devmanus": "Devmanus S2",
-    "#RatrisKhelChale3": "Ratris Khel Chale S3",
-    "#RatrisKhelChale": "Ratris Khel Chale S3",
-    "#RaatrisKhelChale3": "Ratris Khel Chale S3",
     
     "#SonyachiPavala": "Sonyachi Pavala",
 
@@ -117,6 +118,7 @@
     "#ColorsMarathiAwards2021_22":"Colors Marathi Awards 2021-22",
     "#StarPravahParivarPuraskar2022": "Star Pravah Parivar Puraskar 2022",
     "#FilmfareAwardsMarathi2021": "Filmfare Awards Marathi 2021",
+    "#BolaJaiBhim": "Bola Jai Bhim",
 
     "#Pandu": "Pandu"
 }
