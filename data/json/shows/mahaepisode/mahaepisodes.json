@@ -222,6 +222,11 @@
                 "TRP": 1.3,
                 "Rank": 4,
                 "Time": "20:00"
+            },
+            "Week 15": {
+                "TRP": 1.6,
+                "Rank": 2,
+                "Time": "19:00"
             }
         }
     },
@@ -269,6 +274,11 @@
             "Week 12": {
                 "TRP": 2.8,
                 "Rank": 4,
+                "Time": "20:00"
+            },
+            "Week 15": {
+                "TRP": 2.8,
+                "Rank": 1,
                 "Time": "20:00"
             }
         }
@@ -333,6 +343,42 @@
                 "TRP": 2.0,
                 "Rank": 2,
                 "Time": "19:00"
+            }
+        }
+    },
+    "Jeev Majha Guntala": {
+        "Channel": "Colors Marathi",
+        "Type": "Fiction",
+        "Platform": "Voot",
+        "TRP": {
+            "Week 15": {
+                "TRP": 1.6,
+                "Rank": 2,
+                "Time": "20:00"
+            }
+        }
+    },
+    "Balumamachya Navana Changbhala": {
+        "Channel": "Colors Marathi",
+        "Type": "Fiction",
+        "Platform": "Voot",
+        "TRP": {
+            "Week 15": {
+                "TRP": 1.3,
+                "Rank": 3,
+                "Time": "19:00"
+            }
+        }
+    },
+    "Tujhya Rupacha Chandana": {
+        "Channel": "Colors Marathi",
+        "Type": "Fiction",
+        "Platform": "Voot",
+        "TRP": {
+            "Week 15": {
+                "TRP": 1.1,
+                "Rank": 4,
+                "Time": "21:00"
             }
         }
     }
