@@ -2,7 +2,7 @@ from input import load_data
 from main_functions import add_channels, add_shows
 from output import store_into_json
 
-def process(choice, old_path, new_path, msg):
+def process(choice, old_path, new_path):
     print ("\nProcessing begins...\n")
 
     if choice==1 or choice==4 or choice==5:
@@ -23,10 +23,15 @@ def process(choice, old_path, new_path, msg):
             exit = True
 
     if exit:
-        print ('Following ' + msg + ' are not present in ' + msg + '.json file: ')
+        if choice in [1,2,3,4]:
+            print ('Following shows are not present in shows.json file: ')
+        elif choice == 5:
+            print ('Following channels are not present in channels.json file: ')
+        
         for index,ele in enumerate(not_present):
             print (str(index+1)+'. ' + ele)
         print ()
+
         if choice==5:
             data = add_channels(not_present)
         elif choice==2 or choice==3:

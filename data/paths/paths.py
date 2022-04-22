@@ -9,6 +9,8 @@ paths = {
         "trp_json":"data/json/shows/tv/tv_trp.json",
         "backup_json":"data/json/shows/shows_backup.json",
         "dummy_json":"data/json/shows/dummy_show.json",
+
+        "codes": "data/json/shows/codes.json",
         
         "txt":"data/txt/tv_trp.txt"
     },
@@ -25,6 +27,8 @@ paths = {
         "backup_json":"data/json/shows/mahaepisode/mahaepisodes_backup.json",
         "dummy_json":"data/json/shows/mahaepisode/dummy_show.json",
 
+        "codes": "data/json/shows/codes.json",
+
         "txt":"data/txt/mahaepisode_trp.txt"
     },
     3:{
@@ -40,6 +44,8 @@ paths = {
         "backup_json":"data/json/shows/2_hours_special_episode/2_hours_special_episode_backup.json",
         "dummy_json":"data/json/shows/2_hours_special_episode/dummy_show.json",
 
+        "codes": "data/json/shows/codes.json",
+
         "txt":"data/txt/2_hours_special_episode_trp.txt"
     },
     4:{
@@ -53,6 +59,8 @@ paths = {
         "backup_json":"data/json/shows/shows_backup.json",
         "dummy_json":"data/json/shows/dummy_show.json",
 
+        "codes": "data/json/shows/codes.json",
+
         "txt":"data/txt/online_trp.txt"
     },
     5:{
@@ -64,11 +72,10 @@ paths = {
         "grp_json":"data/json/channels/channels_grp.json",
         "backup_json":"data/json/channels/channels_backup.json",
         "dummy_json":"data/json/channels/dummy_channel.json",
-    },
-    "convert_tvr_to_trp":{
-        #Convert TVR to TRP
-        "trp": "convert_TVR_to_TRP/TRP.csv",
-        "result_trp": "convert_TVR_to_TRP/Result_TRP.csv"
+
+        "codes": "data/json/channels/codes.json",
+
+        "txt":"data/txt/channels.txt"
     },
     "backup":{
         #Backup
@@ -81,5 +88,4 @@ paths = {
         "special_episodes_csv":"backup/special_episodes.csv"
     },
     "info_csv":"data/csv/shows/info.csv",
-    "codes": "data/json/shows/codes.json"
 }

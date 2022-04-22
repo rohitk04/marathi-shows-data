@@ -18,6 +18,12 @@ def get_new_row(choice, words, codes):
             'TRP':[float(words[1])],
             'Time':[words[2].strip("\n")]
             })
+    elif (choice==5):
+        return pd.DataFrame({
+            'Hashtag': [words[0].strip()],
+            'Channel': [codes.get(words[0].strip())],
+            'GRP': [float(words[1].strip("\n"))]
+        })
 
 def convert_to_csv(choice):
     print ("\nConversion begins...\n")
@@ -116,14 +122,21 @@ def convert_to_csv(choice):
 def convert_to_json(choice, week):
     print ("\nConversion begins...\n")
 
-    codes = json.load(open(paths['codes']))
+    codes = json.load(open(paths[choice]['codes']))
     input_path = paths[choice]['txt']
-    output_path = paths[choice]['trp_json']
 
     if (choice == 1) or (choice == 4):
         cols = ['Hashtag', 'Show','TRP']
+        output_path = paths[choice]['trp_json']
+        rank_column = 'TRP'
     elif (choice == 2) or (choice == 3):
         cols = ['Hashtag', 'Show','TRP', 'Time']
+        output_path = paths[choice]['trp_json']
+        rank_column = 'TRP'
+    elif (choice == 5):
+        cols = ['Hashtag', 'Channel', 'GRP']
+        output_path = paths[choice]['grp_json']
+        rank_column = 'GRP'
 
     with open(input_path) as f:
         lines = f.readlines()
@@ -135,7 +148,7 @@ def convert_to_json(choice, week):
         new_row = get_new_row(choice, words, codes)
         df = pd.concat([df, new_row])
 
-    df['Rank'] = df['TRP'].rank(0,ascending=False,method='dense',na_option='keep').astype(int)
+    df['Rank'] = df[rank_column].rank(0,ascending=False,method='dense',na_option='keep').astype(int)
     df = df.sort_values(by='Rank')
     
     print (df.to_markdown(tablefmt='grid', index=False))
@@ -156,6 +169,12 @@ def convert_to_json(choice, week):
                 'TRP':row['TRP'],
                 'Rank':row['Rank'],
                 'Time':row['Time'].strip()
+            }
+    elif (choice == 5):
+        for index, row in df.iterrows():
+            dictionary[week][row['Channel']]={
+                'GRP':row['GRP'],
+                'Rank':int(row['Rank'])
             }
     
     ch = input("Do you want to continue?(Y/N): ").lower()

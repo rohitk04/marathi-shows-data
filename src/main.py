@@ -12,14 +12,10 @@ print ()
 
 ch = int(input("Enter choice: "))
 
-if ch in [1,2,3,4]:
+if ch in [1,2,3,4,5]:
     week = get_week()
     convert_to_json(ch, week)
-    process(ch, paths[ch]["backup_json"], paths[ch]["data_json"], 'shows')
-    convert_to_csv(ch)
-elif (ch==5):
-    print ('-'.center(73,'-'))
-    process(ch, paths[ch]['backup_json'], paths[ch]['data_json'], 'channels')
+    process(ch, paths[ch]["backup_json"], paths[ch]["data_json"])
     convert_to_csv(ch)
 else:
     print ('Invalid Choice')
