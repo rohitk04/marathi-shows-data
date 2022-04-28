@@ -23,5 +23,5 @@ for ch in ch_list:
 
     decision = convert_to_json(ch, week)
     if (decision == 'Y'):
-        process(ch, paths[ch]["backup_json"], paths[ch]["data_json"])
+        process(ch, paths[ch]["data_json"])
         convert_to_csv(ch)

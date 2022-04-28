@@ -2,7 +2,7 @@ from input import load_data
 from main_functions import add_channels, add_shows
 from output import store_into_json
 
-def process(choice, old_path, new_path):
+def process(choice, new_path):
     print ("\nProcessing begins...\n")
 
     if choice==1 or choice==4 or choice==5:
@@ -10,8 +10,6 @@ def process(choice, old_path, new_path):
     elif choice==2 or choice==3:
         show_data, data, trp, week = load_data(choice)
     
-    store_into_json(old_path, data)
-
     trp_keys = trp[week].keys()
 
     exit = False
