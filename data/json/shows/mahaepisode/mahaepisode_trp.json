@@ -1,29 +1,29 @@
 {
     "Week 15": {
         "Tu Tevha Tashi": {
-            "TRP": 2.8,
+            "TRP": 2.5,
             "Rank": 1,
             "Time": "20:00"
         },
-        "Man Jhala Bajind": {
-            "TRP": 1.6,
-            "Rank": 2,
-            "Time": "19:00"
-        },
         "Jeev Majha Guntala": {
-            "TRP": 1.6,
+            "TRP": 1.0,
             "Rank": 2,
             "Time": "20:00"
         },
-        "Balumamachya Navana Changbhala": {
-            "TRP": 1.3,
+        "Man Jhala Bajind": {
+            "TRP": 0.9,
             "Rank": 3,
             "Time": "19:00"
         },
         "Tujhya Rupacha Chandana": {
-            "TRP": 1.1,
+            "TRP": 0.5,
             "Rank": 4,
             "Time": "21:00"
+        },
+        "Balumamachya Navana Changbhala": {
+            "TRP": 0.4,
+            "Rank": 5,
+            "Time": "19:00"
         }
     }
 }
