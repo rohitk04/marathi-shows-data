@@ -1,6 +1,6 @@
-from backup_functions import combine, convert, dump, prepare, delete, update
+from backup.backup_functions import combine, convert, dump, prepare, delete, update
 
-if __name__ == "__main__":
+def backup():
     print ("\nBackup Process begins...\n")
     
     combine()
@@ -12,3 +12,7 @@ if __name__ == "__main__":
     
     print ("Backup Process ends...\n")
     print ('-'.center(100,'-'))
+
+
+if __name__ == "__main__":
+    backup()
