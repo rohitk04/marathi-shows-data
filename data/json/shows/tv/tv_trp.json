@@ -1,42 +1,46 @@
 {
-    "Week 15": {
+    "Week 16": {
         "Rang Majha Vegla": {
-            "TRP": 6.6,
+            "TRP": 6.8,
             "Rank": 1
         },
-        "Sukh Mhanje Nakki Kay Asta": {
-            "TRP": 6.2,
+        "Aai Kuthe Kay Karte": {
+            "TRP": 6.4,
             "Rank": 2
         },
         "Phulala Sugandh Maticha": {
-            "TRP": 6.1,
+            "TRP": 6.2,
             "Rank": 3
         },
-        "Aai Kuthe Kay Karte": {
-            "TRP": 6.0,
-            "Rank": 4
+        "Sukh Mhanje Nakki Kay Asta": {
+            "TRP": 6.2,
+            "Rank": 3
         },
         "Thipkyanchi Rangoli": {
-            "TRP": 5.0,
-            "Rank": 5
+            "TRP": 5.1,
+            "Rank": 4
         },
         "Majhi Tujhi Reshimgath": {
-            "TRP": 4.4,
-            "Rank": 6
+            "TRP": 4.3,
+            "Rank": 5
         },
         "Swabhimaan": {
-            "TRP": 4.1,
+            "TRP": 4.2,
+            "Rank": 6
+        },
+        "Mulgi Zali Ho": {
+            "TRP": 3.8,
             "Rank": 7
         },
         "Sahakutumba Sahaparivar": {
             "TRP": 3.6,
             "Rank": 8
         },
-        "Mulgi Zali Ho": {
+        "Me Honar Superstar Chote Ustad": {
             "TRP": 3.6,
             "Rank": 8
         },
-        "Me Honar Superstar Chote Ustad": {
+        "Aboli": {
             "TRP": 3.4,
             "Rank": 9
         },
@@ -44,97 +48,89 @@
             "TRP": 3.4,
             "Rank": 9
         },
-        "Aboli": {
-            "TRP": 3.4,
-            "Rank": 9
-        },
         "Tu Tevha Tashi": {
-            "TRP": 3.1,
+            "TRP": 3.2,
             "Rank": 10
-        },
-        "Chala Hawa Yeu Dya": {
-            "TRP": 2.8,
-            "Rank": 11
         },
         "Lagnachi Bedi": {
             "TRP": 2.8,
             "Rank": 11
         },
-        "Devmanus S2": {
-            "TRP": 2.5,
+        "Nave Lakshya": {
+            "TRP": 2.8,
+            "Rank": 11
+        },
+        "Chala Hawa Yeu Dya": {
+            "TRP": 2.7,
             "Rank": 12
         },
-        "Nave Lakshya": {
-            "TRP": 2.4,
+        "Devmanus S2": {
+            "TRP": 2.6,
             "Rank": 13
         },
         "Masaledar Kitchen Kallakar": {
             "TRP": 2.4,
-            "Rank": 13
-        },
-        "Jeev Majha Guntala": {
-            "TRP": 2.2,
             "Rank": 14
         },
-        "Muramba": {
-            "TRP": 2.1,
-            "Rank": 15
-        },
         "Pinkycha Vijay Aso": {
-            "TRP": 2.1,
+            "TRP": 2.2,
             "Rank": 15
         },
         "Sundara Manamadhye Bharali": {
             "TRP": 2.0,
             "Rank": 16
         },
-        "Jai Jai Swami Samarth": {
-            "TRP": 1.8,
-            "Rank": 17
+        "Jeev Majha Guntala": {
+            "TRP": 2.0,
+            "Rank": 16
+        },
+        "Muramba": {
+            "TRP": 2.0,
+            "Rank": 16
         },
         "Tujhya Majhya Sansarala Ani Kai Hava": {
             "TRP": 1.8,
             "Rank": 17
+        },
+        "Jai Jai Swami Samarth": {
+            "TRP": 1.7,
+            "Rank": 18
         },
         "Man Jhala Bajind": {
             "TRP": 1.7,
             "Rank": 18
         },
         "Band Baja Varat": {
-            "TRP": 1.6,
+            "TRP": 1.5,
             "Rank": 19
         },
         "Bhagya Dile Tu Mala": {
             "TRP": 1.5,
-            "Rank": 20
+            "Rank": 19
         },
         "Raja Ranichi Ga Jodi": {
             "TRP": 1.4,
-            "Rank": 21
+            "Rank": 20
         },
         "Aai Mayeche Kavach": {
             "TRP": 1.4,
-            "Rank": 21
+            "Rank": 20
         },
         "Mahaminister": {
             "TRP": 1.2,
-            "Rank": 22
+            "Rank": 21
         },
         "Balumamachya Navana Changbhala": {
             "TRP": 1.1,
-            "Rank": 23
+            "Rank": 22
         },
         "Lek Majhi Durga": {
             "TRP": 0.7,
-            "Rank": 24
-        },
-        "Bola Jai Bhim": {
-            "TRP": 0.7,
-            "Rank": 24
+            "Rank": 23
         },
         "Tujhya Rupacha Chandana": {
             "TRP": 0.5,
-            "Rank": 25
+            "Rank": 24
         }
     }
 }
