@@ -33,8 +33,8 @@ def add_show(show, choice, show_data = None):
         show_json = json.load(open(paths[choice]['dummy_json']))
         show_json[show] = show_json.pop("Show_Name")
 
-        print ('-'.center(73,'-'))
-        print (show.center(73,' '))
+        print ('-'.center(100,'-'))
+        print (show.center(100,' '))
         
         print ()    
         print ("Channel Choices: ")
@@ -77,7 +77,7 @@ def add_show(show, choice, show_data = None):
         
         show_json[show].update(new_json)
         
-        print ('-'.center(73,'-'))
+        print ('-'.center(100,'-'))
         print ()
     else:
         path = paths[choice]['dummy_json']
@@ -114,7 +114,7 @@ def add_shows(not_present, choice, show_data = None):
 
         store_into_json(paths[choice]['data_json'], shows_json)
 
-    print ('-'.center(73,'-'))
+    print ('-'.center(100,'-'))
     return shows_json
 
 def get_week():
@@ -122,9 +122,9 @@ def get_week():
     week = 'Week ' + str(num)
 
     print ()
-    print ('-'.center(73,'-'))
+    print ('-'.center(100,'-'))
     print ("\nEntering data for " + week + "...")
     print ()
-    print ('-'.center(73,'-'))
+    print ('-'.center(100,'-'))
 
     return week

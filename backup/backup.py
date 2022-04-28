@@ -11,4 +11,4 @@ if __name__ == "__main__":
     dump()
     
     print ("Backup Process ends...\n")
-    print ('-'.center(73,'-'))
+    print ('-'.center(100,'-'))

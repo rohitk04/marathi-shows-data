@@ -4,12 +4,21 @@ from process import process
 from data.paths.paths import paths
 from data.choices.choices import choices
 
+print ("Select: ")
+
+for key, value in choices.items():
+    print (str(key) + ". " + value)
+print ()
+
+ch_list = map(int, input("Enter choices list (seperated by space): ").split(" "))
+
 week = get_week()
 
-for ch in [4,5,1]:
+for ch in ch_list:
     print ()
-    print (choices.get(ch).center(73,' '))
-    print ('-'.center(73,'-'))
+    print (('>>>>> ' + choices.get(ch) + ' <<<<<').center(100,' '))
+    print ()
+    print ('-'.center(100,'-'))
     print ()
 
     decision = convert_to_json(ch, week)

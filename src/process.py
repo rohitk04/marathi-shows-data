@@ -59,4 +59,4 @@ def process(choice, old_path, new_path):
     store_into_json(new_path, data)
     print ("Stored successfully into json\n")
     print ("Processing ends...\n")
-    print ('-'.center(73,'-'))
+    print ('-'.center(100,'-'))

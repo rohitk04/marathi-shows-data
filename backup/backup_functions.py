@@ -12,7 +12,7 @@ def read_csv(path, col_name):
     return pd.read_csv(path).set_index(col_name).sort_index()
 
 def combine():
-    print ('-'.center(73,'-'))
+    print ('-'.center(100,'-'))
     print ("\nCombining begins...\n")
     
     channels_grp = read_csv(paths[5]["grp_csv"], 'Channel')
@@ -112,7 +112,7 @@ def combine():
     special_episodes.to_csv(paths['backup']['special_episodes_csv'])
 
     print ("Combining ends...\n")
-    print ('-'.center(73,'-'))
+    print ('-'.center(100,'-'))
 
 def convert():
     print ("\nConversion begins...\n")
@@ -121,7 +121,7 @@ def convert():
     os.remove("backup/mydatabase.db")
 
     print ("Conversion ends...\n")
-    print ('-'.center(73,'-'))
+    print ('-'.center(100,'-'))
 
 def prepare():
     print ("\nData preparation begins...\n")
@@ -161,7 +161,7 @@ def prepare():
         sql_file.write('\n\n'.join(result))
     
     print ("Data preparation ends...\n")
-    print ('-'.center(73,'-'))
+    print ('-'.center(100,'-'))
 
 def delete():
     print ("\nDeletion begins...\n")
@@ -173,7 +173,7 @@ def delete():
         os.remove('backup/' + ele + '.sql')
     
     print ("Deletion ends...\n")
-    print ('-'.center(73,'-'))
+    print ('-'.center(100,'-'))
 
 def update():
     print ("\nData Updation begins...\n")
@@ -183,7 +183,7 @@ def update():
     os.remove(paths['backup']['output'])
 
     print ("Database Updation ends...\n")
-    print ('-'.center(73,'-'))
+    print ('-'.center(100,'-'))
 
 def dump():
     print ("\nDatabase Backup begins...\n")
@@ -194,4 +194,4 @@ def dump():
     os.system(line)
 
     print ("Database Backup ends...\n")
-    print ('-'.center(73,'-'))
+    print ('-'.center(100,'-'))

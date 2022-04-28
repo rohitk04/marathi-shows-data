@@ -117,7 +117,7 @@ def convert_to_csv(choice):
     
     print ("Stored successfully into csv\n")
     print ("Conversion ends...\n")
-    print ('-'.center(73,'-'))
+    print ('-'.center(100,'-'))
 
 def convert_to_json(choice, week):
     print ("\nConversion begins...\n")
@@ -179,12 +179,12 @@ def convert_to_json(choice, week):
     
     ch = input("Do you want to continue? (Press y or Y if yes): ").upper()
     print ()
-    print ('-'.center(73,'-'))
+    print ('-'.center(100,'-'))
     print ()
 
     if (ch =='Y'):
         store_into_json(output_path,dictionary)
         print ("Stored successfully into json\n")
         print ("Conversion ends...\n")
-        print ('-'.center(73,'-'))
+        print ('-'.center(100,'-'))
     return ch
