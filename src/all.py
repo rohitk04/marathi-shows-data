@@ -4,19 +4,15 @@ from process import process
 from data.paths.paths import paths
 from data.choices.choices import choices
 
-print ("Select: ")
+week = get_week()
 
-for key, value in choices.items():
-    print (str(key) + ". " + value)
-print ()
+for ch in [4,5,1]:
+    print ()
+    print (choices.get(ch).center(73,' '))
+    print ('-'.center(73,'-'))
+    print ()
 
-ch = int(input("Enter choice: "))
-
-if ch in [1,2,3,4,5]:
-    week = get_week()
     decision = convert_to_json(ch, week)
     if (decision == 'Y'):
         process(ch, paths[ch]["backup_json"], paths[ch]["data_json"])
         convert_to_csv(ch)
-else:
-    print ('Invalid Choice')

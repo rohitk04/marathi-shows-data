@@ -177,15 +177,14 @@ def convert_to_json(choice, week):
                 'Rank':int(row['Rank'])
             }
     
-    ch = input("Do you want to continue?(Y/N): ").lower()
+    ch = input("Do you want to continue? (Press y or Y if yes): ").upper()
     print ()
     print ('-'.center(73,'-'))
     print ()
 
-    if (ch =='y'):
+    if (ch =='Y'):
         store_into_json(output_path,dictionary)
         print ("Stored successfully into json\n")
         print ("Conversion ends...\n")
         print ('-'.center(73,'-'))
-    else:
-        exit()
+    return ch
