@@ -1,5 +1,5 @@
 import json
-from output import store_into_json
+from src.output import store_into_json
 from data.paths.paths import paths
 
 def load_choices():

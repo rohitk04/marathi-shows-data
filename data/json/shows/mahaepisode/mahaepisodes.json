@@ -13,6 +13,11 @@
                 "TRP": 3.6,
                 "Rank": 3,
                 "Time": "20:00"
+            },
+            "Week 16": {
+                "TRP": 2.7,
+                "Rank": 1,
+                "Time": "19:00"
             }
         }
     },
@@ -51,6 +56,11 @@
             "Week 10": {
                 "TRP": 1.8,
                 "Rank": 2,
+                "Time": "22:00"
+            },
+            "Week 16": {
+                "TRP": 1.1,
+                "Rank": 3,
                 "Time": "22:00"
             }
         }
@@ -95,6 +105,11 @@
             "Week 10": {
                 "TRP": 1.1,
                 "Rank": 5,
+                "Time": "21:00"
+            },
+            "Week 16": {
+                "TRP": 1.0,
+                "Rank": 4,
                 "Time": "21:00"
             }
         }
@@ -280,6 +295,11 @@
                 "TRP": 2.5,
                 "Rank": 1,
                 "Time": "20:00"
+            },
+            "Week 16": {
+                "TRP": 2.1,
+                "Rank": 2,
+                "Time": "20:00"
             }
         }
     },
@@ -296,6 +316,11 @@
             "Week 14": {
                 "TRP": 0.5,
                 "Rank": 1,
+                "Time": "21:00"
+            },
+            "Week 16": {
+                "TRP": 1.0,
+                "Rank": 4,
                 "Time": "21:00"
             }
         }
@@ -379,6 +404,66 @@
                 "TRP": 0.5,
                 "Rank": 4,
                 "Time": "21:00"
+            }
+        }
+    },
+    "Raja Ranichi Ga Jodi": {
+        "Channel": "Colors Marathi",
+        "Type": "Fiction",
+        "Platform": "Voot",
+        "TRP": {
+            "Week 16": {
+                "TRP": 0.8,
+                "Rank": 5,
+                "Time": "20:00"
+            }
+        }
+    },
+    "Aai Mayeche Kavach": {
+        "Channel": "Colors Marathi",
+        "Type": "Fiction",
+        "Platform": "Voot",
+        "TRP": {
+            "Week 16": {
+                "TRP": 0.7,
+                "Rank": 6,
+                "Time": "19:00"
+            }
+        }
+    },
+    "Mahaminister": {
+        "Channel": "Zee Marathi",
+        "Type": "Non-Fiction",
+        "Platform": "Zee5",
+        "TRP": {
+            "Week 16": {
+                "TRP": 0.6,
+                "Rank": 7,
+                "Time": "18:00"
+            }
+        }
+    },
+    "Swarajya Saudamini Tararani": {
+        "Channel": "Sony Marathi",
+        "Type": "Fiction",
+        "Platform": "SonyLiv",
+        "TRP": {
+            "Week 16": {
+                "TRP": 0.4,
+                "Rank": 8,
+                "Time": "20:00"
+            }
+        }
+    },
+    "Gatha Navanathanchi": {
+        "Channel": "Sony Marathi",
+        "Type": "Fiction",
+        "Platform": "SonyLiv",
+        "TRP": {
+            "Week 16": {
+                "TRP": 0.2,
+                "Rank": 9,
+                "Time": "19:00"
             }
         }
     }
