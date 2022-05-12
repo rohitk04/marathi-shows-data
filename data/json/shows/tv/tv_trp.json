@@ -1,84 +1,124 @@
 {
-    "Week 17": {
+    "Week 18": {
         "Rang Majha Vegla": {
-            "TRP": 6.8,
+            "TRP": 7.0,
             "Rank": 1
         },
         "Aai Kuthe Kay Karte": {
-            "TRP": 6.5,
+            "TRP": 6.7,
             "Rank": 2
         },
         "Phulala Sugandh Maticha": {
-            "TRP": 6.4,
+            "TRP": 6.5,
             "Rank": 3
         },
         "Sukh Mhanje Nakki Kay Asta": {
             "TRP": 6.4,
-            "Rank": 3
-        },
-        "Thipkyanchi Rangoli": {
-            "TRP": 5.8,
             "Rank": 4
         },
-        "Mulgi Zali Ho": {
-            "TRP": 5.2,
+        "Tujhech Mi Geet Gaat Ahe": {
+            "TRP": 5.8,
             "Rank": 5
         },
-        "Majhi Tujhi Reshimgath": {
-            "TRP": 4.9,
+        "Thipkyanchi Rangoli": {
+            "TRP": 5.4,
             "Rank": 6
         },
-        "Swabhimaan": {
-            "TRP": 4.5,
+        "Majhi Tujhi Reshimgath": {
+            "TRP": 5.1,
             "Rank": 7
+        },
+        "Swabhimaan": {
+            "TRP": 4.6,
+            "Rank": 8
         },
         "Sahakutumba Sahaparivar": {
             "TRP": 4.1,
-            "Rank": 8
-        },
-        "Aboli": {
-            "TRP": 3.9,
             "Rank": 9
         },
-        "Man Udu Udu Jhala": {
-            "TRP": 3.5,
+        "Sakal Sanman 2022": {
+            "TRP": 3.8,
             "Rank": 10
         },
-        "Tu Tevha Tashi": {
-            "TRP": 3.1,
+        "Man Udu Udu Jhala": {
+            "TRP": 3.6,
             "Rank": 11
         },
-        "Masaledar Kitchen Kallakar": {
-            "TRP": 2.4,
+        "Aboli": {
+            "TRP": 3.5,
             "Rank": 12
         },
-        "Chala Hawa Yeu Dya": {
-            "TRP": 2.1,
+        "Tu Tevha Tashi": {
+            "TRP": 3.0,
             "Rank": 13
         },
-        "Devmanus S2": {
-            "TRP": 1.8,
+        "Chala Hawa Yeu Dya": {
+            "TRP": 2.6,
             "Rank": 14
         },
-        "Lagnachi Bedi": {
-            "TRP": 1.7,
+        "Devmanus S2": {
+            "TRP": 2.4,
             "Rank": 15
         },
-        "Jeev Majha Guntala": {
-            "TRP": 1.5,
+        "Lagnachi Bedi": {
+            "TRP": 2.0,
             "Rank": 16
         },
-        "Pinkycha Vijay Aso": {
-            "TRP": 1.2,
+        "Masaledar Kitchen Kallakar": {
+            "TRP": 1.9,
             "Rank": 17
         },
+        "Jeev Majha Guntala": {
+            "TRP": 1.6,
+            "Rank": 18
+        },
+        "Pinkycha Vijay Aso": {
+            "TRP": 1.3,
+            "Rank": 19
+        },
         "Sundara Manamadhye Bharali": {
-            "TRP": 1.2,
-            "Rank": 17
+            "TRP": 1.3,
+            "Rank": 19
+        },
+        "Me Honar Superstar Chote Ustad": {
+            "TRP": 1.1,
+            "Rank": 20
         },
         "Tujhya Majhya Sansarala Ani Kai Hava": {
             "TRP": 1.0,
-            "Rank": 18
+            "Rank": 21
+        },
+        "Man Jhala Bajind": {
+            "TRP": 1.0,
+            "Rank": 21
+        },
+        "Bhagya Dile Tu Mala": {
+            "TRP": 0.9,
+            "Rank": 22
+        },
+        "Boss Majhi Ladachi": {
+            "TRP": 0.8,
+            "Rank": 23
+        },
+        "Muramba": {
+            "TRP": 0.8,
+            "Rank": 23
+        },
+        "Raja Ranichi Ga Jodi": {
+            "TRP": 0.7,
+            "Rank": 24
+        },
+        "Jai Jai Swami Samarth": {
+            "TRP": 0.7,
+            "Rank": 24
+        },
+        "Mulgi Zali Ho": {
+            "TRP": 0.6,
+            "Rank": 25
+        },
+        "Aai Mayeche Kavach": {
+            "TRP": 0.5,
+            "Rank": 26
         }
     }
 }
