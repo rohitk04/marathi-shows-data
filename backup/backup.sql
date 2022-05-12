@@ -45,6 +45,8 @@ CREATE TABLE public.channels (
     "Week 16 Rank" integer,
     "Week 17 GRP" real,
     "Week 17 Rank" integer,
+    "Week 18 GRP" real,
+    "Week 18 Rank" integer,
     "Week 2 GRP" real,
     "Week 2 Rank" integer,
     "Week 3 GRP" real,
@@ -342,16 +344,16 @@ ALTER TABLE ONLY public.special_episodes ALTER COLUMN "Special Episode Id" SET D
 -- Data for Name: channels; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.channels ("Channel Id", "Channel", "Week 1 GRP", "Week 1 Rank", "Week 10 GRP", "Week 10 Rank", "Week 11 GRP", "Week 11 Rank", "Week 12 GRP", "Week 12 Rank", "Week 13 GRP", "Week 13 Rank", "Week 14 GRP", "Week 14 Rank", "Week 15 GRP", "Week 15 Rank", "Week 16 GRP", "Week 16 Rank", "Week 17 GRP", "Week 17 Rank", "Week 2 GRP", "Week 2 Rank", "Week 3 GRP", "Week 3 Rank", "Week 4 GRP", "Week 4 Rank", "Week 5 GRP", "Week 5 Rank", "Week 6 GRP", "Week 6 Rank", "Week 7 GRP", "Week 7 Rank", "Week 8 GRP", "Week 8 Rank", "Week 9 GRP", "Week 9 Rank") FROM stdin;
-1	Colors Marathi	430.32	4	369.16	4	384.35	4	405.62	5	430.03	4	395.48	5	379.31	5	353.63	5	323.03	5	468.57	4	484.15	4	512.4	3	471.2	3	468.64	3	423.05	3	414.58	3	392.41	4
-2	Dhinchaak	\N	\N	\N	\N	\N	\N	458.39	3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-3	Sony SAB	488.02	3	419.16	3	442.3	3	442.04	4	419.38	5	444.1	3	424.86	4	433.61	4	407.13	4	524.12	3	533.76	3	505.78	4	447.84	4	425.13	4	409.36	4	414.5	4	412.4	3
-4	Star Plus	351.31	5	340.29	5	341.63	5	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	354.88	5	339.87	5	326.16	5	\N	\N	\N	\N	\N	\N	361.45	5	360.87	5
-5	Star Pravah	1578.27	1	1447.35	1	1434.9	1	1445.64	1	1396.25	1	1465.01	1	1319.68	1	1383.18	1	1377.46	1	1492.66	1	1474.24	1	1442.81	1	1372.02	1	1321.8	1	1326.7	1	1415.89	1	1451.78	1
-6	Star Sports 1 Hindi	\N	\N	\N	\N	\N	\N	\N	\N	616.75	2	620.28	2	657.54	2	662.71	2	525.2	2	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-7	Star Utsav	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	329.15	5	332.07	5	\N	\N	\N	\N	\N	\N
-8	Zee Marathi	695.06	2	572.46	2	562.99	2	546.65	2	550.42	3	441.22	4	472.63	3	488.56	3	470.05	3	668.41	2	636.87	2	609.23	2	742.99	2	609.9	2	609.41	2	605.05	2	596.76	2
-9	Zee TV	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	337.73	5	\N	\N	\N	\N
+COPY public.channels ("Channel Id", "Channel", "Week 1 GRP", "Week 1 Rank", "Week 10 GRP", "Week 10 Rank", "Week 11 GRP", "Week 11 Rank", "Week 12 GRP", "Week 12 Rank", "Week 13 GRP", "Week 13 Rank", "Week 14 GRP", "Week 14 Rank", "Week 15 GRP", "Week 15 Rank", "Week 16 GRP", "Week 16 Rank", "Week 17 GRP", "Week 17 Rank", "Week 18 GRP", "Week 18 Rank", "Week 2 GRP", "Week 2 Rank", "Week 3 GRP", "Week 3 Rank", "Week 4 GRP", "Week 4 Rank", "Week 5 GRP", "Week 5 Rank", "Week 6 GRP", "Week 6 Rank", "Week 7 GRP", "Week 7 Rank", "Week 8 GRP", "Week 8 Rank", "Week 9 GRP", "Week 9 Rank") FROM stdin;
+1	Colors Marathi	430.32	4	369.16	4	384.35	4	405.62	5	430.03	4	395.48	5	379.31	5	353.63	5	323.03	5	331.81	5	468.57	4	484.15	4	512.4	3	471.2	3	468.64	3	423.05	3	414.58	3	392.41	4
+2	Dhinchaak	\N	\N	\N	\N	\N	\N	458.39	3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+3	Sony SAB	488.02	3	419.16	3	442.3	3	442.04	4	419.38	5	444.1	3	424.86	4	433.61	4	407.13	4	432.37	4	524.12	3	533.76	3	505.78	4	447.84	4	425.13	4	409.36	4	414.5	4	412.4	3
+4	Star Plus	351.31	5	340.29	5	341.63	5	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	354.88	5	339.87	5	326.16	5	\N	\N	\N	\N	\N	\N	361.45	5	360.87	5
+5	Star Pravah	1578.27	1	1447.35	1	1434.9	1	1445.64	1	1396.25	1	1465.01	1	1319.68	1	1383.18	1	1377.46	1	1297.35	1	1492.66	1	1474.24	1	1442.81	1	1372.02	1	1321.8	1	1326.7	1	1415.89	1	1451.78	1
+6	Star Sports 1 Hindi	\N	\N	\N	\N	\N	\N	\N	\N	616.75	2	620.28	2	657.54	2	662.71	2	525.2	2	598.47	2	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+7	Star Utsav	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	329.15	5	332.07	5	\N	\N	\N	\N	\N	\N
+8	Zee Marathi	695.06	2	572.46	2	562.99	2	546.65	2	550.42	3	441.22	4	472.63	3	488.56	3	470.05	3	497.97	3	668.41	2	636.87	2	609.23	2	742.99	2	609.9	2	609.41	2	605.05	2	596.76	2
+9	Zee TV	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	337.73	5	\N	\N	\N	\N
 \.
 
 

@@ -5,6 +5,9 @@
     
     "#LagnachiBedi": "Lagnachi Bedi",
     "#Muramba": "Muramba",
+    "#MulgiZaliHo": "Mulgi Zali Ho",
+    "#MulgiJhaliHo": "Mulgi Zali Ho",
+    "#MulgiZhaliHo": "Mulgi Zali Ho",
     "#Swabhimaan": "Swabhimaan",
     "#SahkutumbSahkutumb": "Sahakutumba Sahaparivar",
     "#SahkutumbSahaparivar": "Sahakutumba Sahaparivar",
@@ -18,9 +21,7 @@
     "#RangMazhaVegla": "Rang Majha Vegla",
     "#PhulalaSugandhMaticha": "Phulala Sugandh Maticha",
     "#PSM": "Phulala Sugandh Maticha",
-    "#MulgiZaliHo": "Mulgi Zali Ho",
-    "#MulgiJhaliHo": "Mulgi Zali Ho",
-    "#MulgiZhaliHo": "Mulgi Zali Ho",
+    "#TujhechMiGeetGaatAhe": "Tujhech Mi Geet Gaat Ahe",
     "#SukhMhanjeNakkiKayAsta": "Sukh Mhanje Nakki Kay Asta",
     "#SukhMhanjeNakkiKaayAsta": "Sukh Mhanje Nakki Kay Asta",
     "#ThipkyanchiRangoli": "Thipkyanchi Rangoli",
@@ -51,6 +52,7 @@
     "#ManJhalaBajind": "Man Jhala Bajind",
     "#ManJhalaBajinda": "Man Jhala Bajind",
     "#ManZhalaBazind": "Man Jhala Bajind",
+    "#ManZalaBajind": "Man Jhala Bajind",
     "#ManUduUduJhala": "Man Udu Udu Jhala",
     "#ManUduUduZhala": "Man Udu Udu Jhala",
     "#TuTevhaTashi": "Tu Tevha Tashi",
@@ -121,6 +123,7 @@
     "#StarPravahParivarPuraskar2022": "Star Pravah Parivar Puraskar 2022",
     "#FilmfareAwardsMarathi2021": "Filmfare Awards Marathi 2021",
     "#BolaJaiBhim": "Bola Jai Bhim",
+    "#SakalSanman2022": "Sakal Sanman 2022",
 
     "#Pandu": "Pandu"
 }

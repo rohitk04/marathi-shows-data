@@ -144,6 +144,10 @@
             "Week 17": {
                 "TRP": 42.1,
                 "Rank": 1
+            },
+            "Week 18": {
+                "TRP": 43.4,
+                "Rank": 1
             }
         }
     },
@@ -291,6 +295,10 @@
             },
             "Week 17": {
                 "TRP": 36.2,
+                "Rank": 5
+            },
+            "Week 18": {
+                "TRP": 35.4,
                 "Rank": 5
             }
         }
@@ -440,6 +448,10 @@
             "Week 17": {
                 "TRP": 39.8,
                 "Rank": 3
+            },
+            "Week 18": {
+                "TRP": 39.6,
+                "Rank": 3
             }
         }
     },
@@ -587,6 +599,10 @@
             },
             "Week 17": {
                 "TRP": 40.6,
+                "Rank": 2
+            },
+            "Week 18": {
+                "TRP": 40.2,
                 "Rank": 2
             }
         }
@@ -736,6 +752,10 @@
             "Week 17": {
                 "TRP": 36.5,
                 "Rank": 4
+            },
+            "Week 18": {
+                "TRP": 37.6,
+                "Rank": 4
             }
         }
     },
@@ -883,6 +903,10 @@
             },
             "Week 17": {
                 "TRP": 34.7,
+                "Rank": 6
+            },
+            "Week 18": {
+                "TRP": 34.1,
                 "Rank": 6
             }
         }
@@ -1160,6 +1184,10 @@
             "Week 17": {
                 "TRP": 29.6,
                 "Rank": 8
+            },
+            "Week 18": {
+                "TRP": 32.1,
+                "Rank": 7
             }
         }
     },
@@ -1308,6 +1336,10 @@
             "Week 17": {
                 "TRP": 32.0,
                 "Rank": 7
+            },
+            "Week 18": {
+                "TRP": 31.0,
+                "Rank": 8
             }
         }
     },
@@ -1424,7 +1456,7 @@
         },
         "Online TRP": {}
     },
-    "Mulgi Zali Ho": {
+    "Mulgi Zali Ho - I": {
         "Channel": "Star Pravah",
         "Time": [
             "21:00"
@@ -3088,6 +3120,10 @@
             "Week 17": {
                 "TRP": 28.3,
                 "Rank": 10
+            },
+            "Week 18": {
+                "TRP": 27.6,
+                "Rank": 10
             }
         }
     },
@@ -3639,5 +3675,20 @@
         "Platform": "SonyLiv",
         "TV TRP": {},
         "Online TRP": {}
+    },
+    "Tujhech Mi Geet Gaat Ahe": {
+        "Channel": "Star Pravah",
+        "Time": [
+            "21:00"
+        ],
+        "Type": "Fiction",
+        "Platform": "Hotstar",
+        "TV TRP": {},
+        "Online TRP": {
+            "Week 18": {
+                "TRP": 28.6,
+                "Rank": 9
+            }
+        }
     }
 }
