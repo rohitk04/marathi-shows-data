@@ -22,6 +22,7 @@
     "#PhulalaSugandhMaticha": "Phulala Sugandh Maticha",
     "#PSM": "Phulala Sugandh Maticha",
     "#TujhechMiGeetGaatAhe": "Tujhech Mi Geet Gaat Ahe",
+    "#TujhechMiGeetGaatAahe": "Tujhech Mi Geet Gaat Ahe",
     "#SukhMhanjeNakkiKayAsta": "Sukh Mhanje Nakki Kay Asta",
     "#SukhMhanjeNakkiKaayAsta": "Sukh Mhanje Nakki Kay Asta",
     "#ThipkyanchiRangoli": "Thipkyanchi Rangoli",
@@ -31,6 +32,7 @@
     "#MeHonarSuperstarChoteUstad": "Me Honar Superstar Chote Ustad",
     "#MiHonarSuperstarChoteUstad": "Me Honar Superstar Chote Ustad",
     "#MeHonarSuperstarChhoteUstad": "Me Honar Superstar Chote Ustad",
+    "#MeHonarSuperstarChoteUstaad": "Me Honar Superstar Chote Ustad",
     "#MHSCU": "Me Honar Superstar Chote Ustad", 
     "#NaveLakshya": "Nave Lakshya",
     
@@ -65,7 +67,9 @@
     "#ChalaHawaYeuDya": "Chala Hawa Yeu Dya",
     "#KitchenKallakar": "Masaledar Kitchen Kallakar",
     "#MasaledaarKitchenKalakar": "Masaledar Kitchen Kallakar",
+    "#MasaledarKitchenKallakar": "Masaledar Kitchen Kallakar",
     "#BandBajaVarat":"Band Baja Varat",
+    "#BandBaajaVarat":"Band Baja Varat",
     "#Devmanus2": "Devmanus S2",
     "#Devmanus": "Devmanus S2",
     
