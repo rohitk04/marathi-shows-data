@@ -47,6 +47,8 @@ CREATE TABLE public.channels (
     "Week 17 Rank" integer,
     "Week 18 GRP" real,
     "Week 18 Rank" integer,
+    "Week 19 GRP" real,
+    "Week 19 Rank" integer,
     "Week 2 GRP" real,
     "Week 2 Rank" integer,
     "Week 3 GRP" real,
@@ -135,6 +137,9 @@ CREATE TABLE public.mahaepisodes (
     "Week 16 TRP" text,
     "Week 16 Rank" integer,
     "Week 16 Time" text,
+    "Week 19 TRP" text,
+    "Week 19 Rank" integer,
+    "Week 19 Time" text,
     "Type" text
 );
 
@@ -348,16 +353,16 @@ ALTER TABLE ONLY public.special_episodes ALTER COLUMN "Special Episode Id" SET D
 -- Data for Name: channels; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.channels ("Channel Id", "Channel", "Week 1 GRP", "Week 1 Rank", "Week 10 GRP", "Week 10 Rank", "Week 11 GRP", "Week 11 Rank", "Week 12 GRP", "Week 12 Rank", "Week 13 GRP", "Week 13 Rank", "Week 14 GRP", "Week 14 Rank", "Week 15 GRP", "Week 15 Rank", "Week 16 GRP", "Week 16 Rank", "Week 17 GRP", "Week 17 Rank", "Week 18 GRP", "Week 18 Rank", "Week 2 GRP", "Week 2 Rank", "Week 3 GRP", "Week 3 Rank", "Week 4 GRP", "Week 4 Rank", "Week 5 GRP", "Week 5 Rank", "Week 6 GRP", "Week 6 Rank", "Week 7 GRP", "Week 7 Rank", "Week 8 GRP", "Week 8 Rank", "Week 9 GRP", "Week 9 Rank") FROM stdin;
-1	Colors Marathi	430.32	4	369.16	4	384.35	4	405.62	5	430.03	4	395.48	5	379.31	5	353.63	5	323.03	5	331.81	5	468.57	4	484.15	4	512.4	3	471.2	3	468.64	3	423.05	3	414.58	3	392.41	4
-2	Dhinchaak	\N	\N	\N	\N	\N	\N	458.39	3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-3	Sony SAB	488.02	3	419.16	3	442.3	3	442.04	4	419.38	5	444.1	3	424.86	4	433.61	4	407.13	4	432.37	4	524.12	3	533.76	3	505.78	4	447.84	4	425.13	4	409.36	4	414.5	4	412.4	3
-4	Star Plus	351.31	5	340.29	5	341.63	5	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	354.88	5	339.87	5	326.16	5	\N	\N	\N	\N	\N	\N	361.45	5	360.87	5
-5	Star Pravah	1578.27	1	1447.35	1	1434.9	1	1445.64	1	1396.25	1	1465.01	1	1319.68	1	1383.18	1	1377.46	1	1297.35	1	1492.66	1	1474.24	1	1442.81	1	1372.02	1	1321.8	1	1326.7	1	1415.89	1	1451.78	1
-6	Star Sports 1 Hindi	\N	\N	\N	\N	\N	\N	\N	\N	616.75	2	620.28	2	657.54	2	662.71	2	525.2	2	598.47	2	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-7	Star Utsav	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	329.15	5	332.07	5	\N	\N	\N	\N	\N	\N
-8	Zee Marathi	695.06	2	572.46	2	562.99	2	546.65	2	550.42	3	441.22	4	472.63	3	488.56	3	470.05	3	497.97	3	668.41	2	636.87	2	609.23	2	742.99	2	609.9	2	609.41	2	605.05	2	596.76	2
-9	Zee TV	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	337.73	5	\N	\N	\N	\N
+COPY public.channels ("Channel Id", "Channel", "Week 1 GRP", "Week 1 Rank", "Week 10 GRP", "Week 10 Rank", "Week 11 GRP", "Week 11 Rank", "Week 12 GRP", "Week 12 Rank", "Week 13 GRP", "Week 13 Rank", "Week 14 GRP", "Week 14 Rank", "Week 15 GRP", "Week 15 Rank", "Week 16 GRP", "Week 16 Rank", "Week 17 GRP", "Week 17 Rank", "Week 18 GRP", "Week 18 Rank", "Week 19 GRP", "Week 19 Rank", "Week 2 GRP", "Week 2 Rank", "Week 3 GRP", "Week 3 Rank", "Week 4 GRP", "Week 4 Rank", "Week 5 GRP", "Week 5 Rank", "Week 6 GRP", "Week 6 Rank", "Week 7 GRP", "Week 7 Rank", "Week 8 GRP", "Week 8 Rank", "Week 9 GRP", "Week 9 Rank") FROM stdin;
+1	Colors Marathi	430.32	4	369.16	4	384.35	4	405.62	5	430.03	4	395.48	5	379.31	5	353.63	5	323.03	5	331.81	5	341.48	5	468.57	4	484.15	4	512.4	3	471.2	3	468.64	3	423.05	3	414.58	3	392.41	4
+2	Dhinchaak	\N	\N	\N	\N	\N	\N	458.39	3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+3	Sony SAB	488.02	3	419.16	3	442.3	3	442.04	4	419.38	5	444.1	3	424.86	4	433.61	4	407.13	4	432.37	4	467.49	4	524.12	3	533.76	3	505.78	4	447.84	4	425.13	4	409.36	4	414.5	4	412.4	3
+4	Star Plus	351.31	5	340.29	5	341.63	5	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	354.88	5	339.87	5	326.16	5	\N	\N	\N	\N	\N	\N	361.45	5	360.87	5
+5	Star Pravah	1578.27	1	1447.35	1	1434.9	1	1445.64	1	1396.25	1	1465.01	1	1319.68	1	1383.18	1	1377.46	1	1297.35	1	1307.16	1	1492.66	1	1474.24	1	1442.81	1	1372.02	1	1321.8	1	1326.7	1	1415.89	1	1451.78	1
+6	Star Sports 1 Hindi	\N	\N	\N	\N	\N	\N	\N	\N	616.75	2	620.28	2	657.54	2	662.71	2	525.2	2	598.47	2	552.39	2	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+7	Star Utsav	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	329.15	5	332.07	5	\N	\N	\N	\N	\N	\N
+8	Zee Marathi	695.06	2	572.46	2	562.99	2	546.65	2	550.42	3	441.22	4	472.63	3	488.56	3	470.05	3	497.97	3	511.6	3	668.41	2	636.87	2	609.23	2	742.99	2	609.9	2	609.41	2	605.05	2	596.76	2
+9	Zee TV	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	337.73	5	\N	\N	\N	\N
 \.
 
 
@@ -365,36 +370,36 @@ COPY public.channels ("Channel Id", "Channel", "Week 1 GRP", "Week 1 Rank", "Wee
 -- Data for Name: mahaepisodes; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.mahaepisodes ("Mahaepisode Id", "Show", "Channel", "Platform", "Week 2 TRP", "Week 2 Rank", "Week 2 Time", "Week 5 TRP", "Week 5 Rank", "Week 5 Time", "Week 6 TRP", "Week 6 Rank", "Week 6 Time", "Week 7 TRP", "Week 7 Rank", "Week 7 Time", "Week 8 TRP", "Week 8 Rank", "Week 8 Time", "Week 9 TRP", "Week 9 Rank", "Week 9 Time", "Week 10 TRP", "Week 10 Rank", "Week 10 Time", "Week 12 TRP", "Week 12 Rank", "Week 12 Time", "Week 13 TRP", "Week 13 Rank", "Week 13 Time", "Week 14 TRP", "Week 14 Rank", "Week 14 Time", "Week 15 TRP", "Week 15 Rank", "Week 15 Time", "Week 16 TRP", "Week 16 Rank", "Week 16 Time", "Type") FROM stdin;
-1	Aai Kuthe Kay Karte	Star Pravah	Hotstar	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	5	1	20:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
-2	Aai Mayeche Kavach	Colors Marathi	Voot	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.7	6	19:00	Fiction
-3	Aboli	Star Pravah	Hotstar	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	3.4	2	19:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	3	1	20:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
-4	Balumamachya Navana Changbhala	Colors Marathi	Voot	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.4	5	19:00	\N	\N	\N	Fiction
-5	Devmanus S2	Zee Marathi	Zee5	2.6	3	22:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	3	3	22:00	\N	\N	\N	1.8	2	22:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	1.1	3	22:00	Fiction
-6	Gatha Navanathanchi	Sony Marathi	SonyLiv	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.2	9	19:00	Fiction
-7	Jai Jai Swami Samarth	Colors Marathi	Voot	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.6	6	19:00	\N	\N	\N	0.3	2	20:00	\N	\N	\N	\N	\N	\N	Fiction
-8	Jeev Majha Guntala	Colors Marathi	Voot	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	1	2	20:00	\N	\N	\N	Fiction
-9	Lagnachi Bedi	Star Pravah	Hotstar	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2	2	19:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
-10	Lek Majhi Durga	Colors Marathi	Voot	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.4	7	20:00	\N	\N	\N	0.1	3	19:00	\N	\N	\N	\N	\N	\N	Fiction
-11	Mahaminister	Zee Marathi	Zee5	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.6	7	18:00	Non-Fiction
-12	Majhi Tujhi Reshimgath	Zee Marathi	Zee5	\N	\N	\N	\N	\N	\N	4.4	2	20:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	3.2	3	19:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
-13	Man Jhala Bajind	Zee Marathi	Zee5	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	1.2	4	20:00	\N	\N	\N	1.3	4	20:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.9	3	19:00	\N	\N	\N	Fiction
-14	Man Udu Udu Jhala	Zee Marathi	Zee5	3.1	1	19:00	\N	\N	\N	\N	\N	\N	3.6	3	20:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2.7	1	19:00	Fiction
-15	Masta Majedar Kitchen Kallakar	Zee Marathi	Zee5	2.2	4	21:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Non-Fiction
-16	Mulgi Zali Ho	Star Pravah	Hotstar	\N	\N	\N	\N	\N	\N	4	3	19:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
-17	Phulala Sugandh Maticha	Star Pravah	Hotstar	\N	\N	\N	\N	\N	\N	4.8	1	20:00	\N	\N	\N	\N	\N	\N	5.1	2	19:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
-18	Pinkycha Vijay Aso	Star Pravah	Hotstar	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	1.7	3	19:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
-19	Raja Ranichi Ga Jodi	Colors Marathi	Voot	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.8	5	20:00	Fiction
-20	Rang Majha Vegla	Star Pravah	Hotstar	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	6.4	1	20:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
-21	Sahakutumba Sahaparivar	Star Pravah	Hotstar	2.9	2	20:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	4.4	1	20:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
-22	Sukh Mhanje Nakki Kay Asta	Star Pravah	Hotstar	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	6.2	1	20:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
-23	Sundara Manamadhye Bharali	Colors Marathi	Voot	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.8	5	21:00	\N	\N	\N	0.5	1	21:00	\N	\N	\N	1	4	21:00	Fiction
-24	Swabhimaan	Star Pravah	Hotstar	\N	\N	\N	\N	\N	\N	\N	\N	\N	4.2	2	19:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
-25	Swarajya Saudamini Tararani	Sony Marathi	SonyLiv	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.4	8	20:00	Fiction
-26	Thipkyanchi Rangoli	Star Pravah	Hotstar	\N	\N	\N	5.4	1	20:00	\N	\N	\N	5.1	1	20:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	4.1	2	19:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
-27	Tu Tevha Tashi	Zee Marathi	Zee5	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2.8	4	20:00	\N	\N	\N	\N	\N	\N	2.5	1	20:00	2.1	2	20:00	Fiction
-28	Tujhya Majhya Sansarala Ani Kai Hava	Zee Marathi	Zee5	1.1	5	20:00	\N	\N	\N	1.1	4	21:00	1	4	21:00	0.9	5	21:00	\N	\N	\N	1.1	5	21:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	1	4	21:00	Fiction
-29	Tujhya Rupacha Chandana	Colors Marathi	Voot	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.5	4	21:00	\N	\N	\N	Fiction
+COPY public.mahaepisodes ("Mahaepisode Id", "Show", "Channel", "Platform", "Week 2 TRP", "Week 2 Rank", "Week 2 Time", "Week 5 TRP", "Week 5 Rank", "Week 5 Time", "Week 6 TRP", "Week 6 Rank", "Week 6 Time", "Week 7 TRP", "Week 7 Rank", "Week 7 Time", "Week 8 TRP", "Week 8 Rank", "Week 8 Time", "Week 9 TRP", "Week 9 Rank", "Week 9 Time", "Week 10 TRP", "Week 10 Rank", "Week 10 Time", "Week 12 TRP", "Week 12 Rank", "Week 12 Time", "Week 13 TRP", "Week 13 Rank", "Week 13 Time", "Week 14 TRP", "Week 14 Rank", "Week 14 Time", "Week 15 TRP", "Week 15 Rank", "Week 15 Time", "Week 16 TRP", "Week 16 Rank", "Week 16 Time", "Week 19 TRP", "Week 19 Rank", "Week 19 Time", "Type") FROM stdin;
+1	Aai Kuthe Kay Karte	Star Pravah	Hotstar	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	5	1	20:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
+2	Aai Mayeche Kavach	Colors Marathi	Voot	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.7	6	19:00	\N	\N	\N	Fiction
+3	Aboli	Star Pravah	Hotstar	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	3.4	2	19:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	3	1	20:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
+4	Balumamachya Navana Changbhala	Colors Marathi	Voot	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.4	5	19:00	\N	\N	\N	1.2	3	20:00	Fiction
+5	Devmanus S2	Zee Marathi	Zee5	2.6	3	22:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	3	3	22:00	\N	\N	\N	1.8	2	22:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	1.1	3	22:00	\N	\N	\N	Fiction
+6	Gatha Navanathanchi	Sony Marathi	SonyLiv	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.2	9	19:00	\N	\N	\N	Fiction
+7	Jai Jai Swami Samarth	Colors Marathi	Voot	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.6	6	19:00	\N	\N	\N	0.3	2	20:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
+8	Jeev Majha Guntala	Colors Marathi	Voot	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	1	2	20:00	\N	\N	\N	\N	\N	\N	Fiction
+9	Lagnachi Bedi	Star Pravah	Hotstar	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2	2	19:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
+10	Lek Majhi Durga	Colors Marathi	Voot	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.4	7	20:00	\N	\N	\N	0.1	3	19:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
+11	Mahaminister	Zee Marathi	Zee5	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.6	7	18:00	\N	\N	\N	Non-Fiction
+12	Majhi Tujhi Reshimgath	Zee Marathi	Zee5	\N	\N	\N	\N	\N	\N	4.4	2	20:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	3.2	3	19:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
+13	Man Jhala Bajind	Zee Marathi	Zee5	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	1.2	4	20:00	\N	\N	\N	1.3	4	20:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.9	3	19:00	\N	\N	\N	\N	\N	\N	Fiction
+14	Man Udu Udu Jhala	Zee Marathi	Zee5	3.1	1	19:00	\N	\N	\N	\N	\N	\N	3.6	3	20:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2.7	1	19:00	\N	\N	\N	Fiction
+15	Masta Majedar Kitchen Kallakar	Zee Marathi	Zee5	2.2	4	21:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Non-Fiction
+16	Mulgi Zali Ho	Star Pravah	Hotstar	\N	\N	\N	\N	\N	\N	4	3	19:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
+17	Phulala Sugandh Maticha	Star Pravah	Hotstar	\N	\N	\N	\N	\N	\N	4.8	1	20:00	\N	\N	\N	\N	\N	\N	5.1	2	19:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
+18	Pinkycha Vijay Aso	Star Pravah	Hotstar	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	1.7	3	19:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
+19	Raja Ranichi Ga Jodi	Colors Marathi	Voot	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.8	5	20:00	1.3	2	19:00	Fiction
+20	Rang Majha Vegla	Star Pravah	Hotstar	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	6.4	1	20:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
+21	Sahakutumba Sahaparivar	Star Pravah	Hotstar	2.9	2	20:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	4.4	1	20:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
+22	Sukh Mhanje Nakki Kay Asta	Star Pravah	Hotstar	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	6.2	1	20:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
+23	Sundara Manamadhye Bharali	Colors Marathi	Voot	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.8	5	21:00	\N	\N	\N	0.5	1	21:00	\N	\N	\N	1	4	21:00	1.6	1	21:00	Fiction
+24	Swabhimaan	Star Pravah	Hotstar	\N	\N	\N	\N	\N	\N	\N	\N	\N	4.2	2	19:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
+25	Swarajya Saudamini Tararani	Sony Marathi	SonyLiv	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.4	8	20:00	\N	\N	\N	Fiction
+26	Thipkyanchi Rangoli	Star Pravah	Hotstar	\N	\N	\N	5.4	1	20:00	\N	\N	\N	5.1	1	20:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	4.1	2	19:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Fiction
+27	Tu Tevha Tashi	Zee Marathi	Zee5	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2.8	4	20:00	\N	\N	\N	\N	\N	\N	2.5	1	20:00	2.1	2	20:00	\N	\N	\N	Fiction
+28	Tujhya Majhya Sansarala Ani Kai Hava	Zee Marathi	Zee5	1.1	5	20:00	\N	\N	\N	1.1	4	21:00	1	4	21:00	0.9	5	21:00	\N	\N	\N	1.1	5	21:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	1	4	21:00	\N	\N	\N	Fiction
+29	Tujhya Rupacha Chandana	Colors Marathi	Voot	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.5	4	21:00	\N	\N	\N	\N	\N	\N	Fiction
 \.
 
 
