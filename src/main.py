@@ -3,6 +3,7 @@ from main_functions import get_week
 from process import process
 from data.paths.paths import paths
 from data.choices.choices import choices
+from backup.backup import backup
 
 if __name__ == "__main__":
     print ("Select: ")
@@ -19,5 +20,8 @@ if __name__ == "__main__":
         if (decision == 'Y'):
             process(ch, paths[ch]["data_json"])
             convert_to_csv(ch)
+    
+        backup()
+
     else:
         print ('Invalid Choice')
