@@ -1,19 +1,4 @@
 {
-    "24 April":{
-        "Sur Sapata - Movie": "19:00",
-        "Dnyaneshwar Mauli - 2 hr special epsisode": "19:00"
-    },
-    "1 May":{
-        "Sakal Sanman - Event" : "18:00",
-        "Tujhya Rupacha Chandana - Mahaepisode": "19:00",
-        "Jai Jai Swami Samarth - Mahaepisode": "20:00",
-        "Jeev Majha Guntala - Mahaepisode": "21:00"
-
-    },
-    "2 May":{
-        "Tujhech Mi Geet Gaat Ahe - New Serial" : "21:00",
-        "Mulgi Zali Ho - Time Shift" : "2:00 PM"
-    },
     "8 May":{
         "Mi Honar Superstar - Chote Ustad - Grand Finale - Event": "19:00",
         "Sundar Majhe Ghar - Mahaepisode": "19:00",
@@ -30,6 +15,18 @@
         "Jai Jai Swami Samarth - Mahaepisode": "20:00",
         "Aai Mayecha Kavach - Mahaepisode": "21:00",
         "Lek Majhi Durga - Mahaepisode": "22:00"
+    },
+    "22 May":{
+        "Tujhya Rupacha Chandana - Mahaepisode":"19:00",
+        "Jeev Majha Guntala - Mahaepisode":"20:00",
+        "Bhagya Dile Tu Mala - Mahaepisode":"21:00"
+    },
+    "30 May":{
+        "Yogyogeshwar Jai Shankar - New Serial":"19:00",
+        "Raja Ranichi Ga Jodi - Time shift":"18:30"
+    },
+    "6 June":{
+        "Kon Honar Karodpati - New Non-Fiction Show":"21:00, 21:30"
     },
     "12 June":{
         "Satyavaan Savitri - New Serial": "19:00"
