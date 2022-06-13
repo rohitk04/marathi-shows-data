@@ -4700,5 +4700,110 @@
             }
         },
         "Online TRP": {}
+    },
+    "Sant Gajanana Shegaviche": {
+        "Channel": "Sun Marathi",
+        "Time": [
+            "21:00"
+        ],
+        "Type": "Fiction",
+        "Platform": "SunNXT",
+        "TV TRP": {
+            "Week 21": {
+                "TRP": 0.47,
+                "Rank": 28
+            }
+        },
+        "Online TRP": {}
+    },
+    "Kanyadaan": {
+        "Channel": "Sun Marathi",
+        "Time": [
+            "20:30"
+        ],
+        "Type": "Fiction",
+        "Platform": "SunNXT",
+        "TV TRP": {
+            "Week 21": {
+                "TRP": 0.31,
+                "Rank": 29
+            }
+        },
+        "Online TRP": {}
+    },
+    "Jau Nako Dur Baba": {
+        "Channel": "Sun Marathi",
+        "Time": [
+            "19:30"
+        ],
+        "Type": "Fiction",
+        "Platform": "SunNXT",
+        "TV TRP": {
+            "Week 21": {
+                "TRP": 0.24,
+                "Rank": 30
+            }
+        },
+        "Online TRP": {}
+    },
+    "Abhalachi Maya": {
+        "Channel": "Sun Marathi",
+        "Time": [
+            "20:00"
+        ],
+        "Type": "Fiction",
+        "Platform": "SunNXT",
+        "TV TRP": {
+            "Week 21": {
+                "TRP": 0.23,
+                "Rank": 31
+            }
+        },
+        "Online TRP": {}
+    },
+    "Sundari": {
+        "Channel": "Sun Marathi",
+        "Time": [
+            "19:00"
+        ],
+        "Type": "Fiction",
+        "Platform": "SunNXT",
+        "TV TRP": {
+            "Week 21": {
+                "TRP": 0.2,
+                "Rank": 32
+            }
+        },
+        "Online TRP": {}
+    },
+    "Nandini": {
+        "Channel": "Sun Marathi",
+        "Time": [
+            "18:30"
+        ],
+        "Type": "Fiction",
+        "Platform": "SunNXT",
+        "TV TRP": {
+            "Week 21": {
+                "TRP": 0.09,
+                "Rank": 33
+            }
+        },
+        "Online TRP": {}
+    },
+    "Jai Hanuman": {
+        "Channel": "Sun Marathi",
+        "Time": [
+            "18:00"
+        ],
+        "Type": "Fiction",
+        "Platform": "SunNXT",
+        "TV TRP": {
+            "Week 21": {
+                "TRP": 0.05,
+                "Rank": 34
+            }
+        },
+        "Online TRP": {}
     }
 }
