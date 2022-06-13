@@ -3431,7 +3431,7 @@
             },
             "Week 22": {
                 "TRP": 0.4,
-                "Rank": 30
+                "Rank": 34
             }
         },
         "Online TRP": {}
@@ -3589,7 +3589,7 @@
             },
             "Week 22": {
                 "TRP": 0.3,
-                "Rank": 31
+                "Rank": 37
             }
         },
         "Online TRP": {}
@@ -4424,7 +4424,7 @@
             },
             "Week 22": {
                 "TRP": 0.5,
-                "Rank": 29
+                "Rank": 31
             }
         },
         "Online TRP": {}
@@ -4492,7 +4492,7 @@
         "TV TRP": {
             "Week 22": {
                 "TRP": 0.2,
-                "Rank": 32
+                "Rank": 38
             }
         },
         "Online TRP": {}
@@ -4696,7 +4696,7 @@
         "TV TRP": {
             "Week 22": {
                 "TRP": 0.3,
-                "Rank": 31
+                "Rank": 37
             }
         },
         "Online TRP": {}
@@ -4712,6 +4712,10 @@
             "Week 21": {
                 "TRP": 0.47,
                 "Rank": 28
+            },
+            "Week 22": {
+                "TRP": 0.52,
+                "Rank": 30
             }
         },
         "Online TRP": {}
@@ -4727,6 +4731,10 @@
             "Week 21": {
                 "TRP": 0.31,
                 "Rank": 29
+            },
+            "Week 22": {
+                "TRP": 0.36,
+                "Rank": 35
             }
         },
         "Online TRP": {}
@@ -4742,11 +4750,15 @@
             "Week 21": {
                 "TRP": 0.24,
                 "Rank": 30
+            },
+            "Week 22": {
+                "TRP": 0.35,
+                "Rank": 36
             }
         },
         "Online TRP": {}
     },
-    "Abhalachi Maya": {
+    "Abhalachi Maya - I": {
         "Channel": "Sun Marathi",
         "Time": [
             "20:00"
@@ -4761,7 +4773,7 @@
         },
         "Online TRP": {}
     },
-    "Sundari": {
+    "Sundari - I": {
         "Channel": "Sun Marathi",
         "Time": [
             "19:00"
@@ -4776,7 +4788,7 @@
         },
         "Online TRP": {}
     },
-    "Nandini": {
+    "Nandini - I": {
         "Channel": "Sun Marathi",
         "Time": [
             "18:30"
@@ -4802,6 +4814,70 @@
             "Week 21": {
                 "TRP": 0.05,
                 "Rank": 34
+            },
+            "Week 22": {
+                "TRP": 0.06,
+                "Rank": 40
+            }
+        },
+        "Online TRP": {}
+    },
+    "Sundari": {
+        "Channel": "Sun Marathi",
+        "Time": [
+            "22:00"
+        ],
+        "Type": "Fiction",
+        "Platform": "SunNXT",
+        "TV TRP": {
+            "Week 22": {
+                "TRP": 0.53,
+                "Rank": 29
+            }
+        },
+        "Online TRP": {}
+    },
+    "Nandini": {
+        "Channel": "Sun Marathi",
+        "Time": [
+            "21:30"
+        ],
+        "Type": "Fiction",
+        "Platform": "SunNXT",
+        "TV TRP": {
+            "Week 22": {
+                "TRP": 0.46,
+                "Rank": 32
+            }
+        },
+        "Online TRP": {}
+    },
+    "Majhi Manasa": {
+        "Channel": "Sun Marathi",
+        "Time": [
+            "20:00"
+        ],
+        "Type": "Fiction",
+        "Platform": "SunNXT",
+        "TV TRP": {
+            "Week 22": {
+                "TRP": 0.44,
+                "Rank": 33
+            }
+        },
+        "Online TRP": {}
+    },
+    "Abhalachi Maya": {
+        "Channel": "Sun Marathi",
+        "Time": [
+            "19:00"
+        ],
+        "Type": "Fiction",
+        "Platform": "SunNXT",
+        "TV TRP": {
+            "Week 22": {
+                "TRP": 0.14,
+                "Rank": 39
             }
         },
         "Online TRP": {}
