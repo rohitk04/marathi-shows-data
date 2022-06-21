@@ -12,16 +12,23 @@ if __name__ == "__main__":
         print (str(key) + ". " + value)
     print ()
 
-    ch = int(input("Enter choice: "))
+    ch_list = map(int, input("Enter choices list (seperated by space): ").split(" "))
 
-    if ch in [1,2,3,4,5]:
-        week = get_week()
-        decision = convert_to_json(ch, week)
-        if (decision == 'Y'):
-            process(ch, paths[ch]["data_json"])
-            convert_to_csv(ch)
-    
-        backup()
+    week = get_week()
 
-    else:
-        print ('Invalid Choice')
+    for ch in ch_list:
+        if ch in [1,2,3,4,5]:
+            print ()
+            print (('>>>>> ' + choices.get(ch) + ' <<<<<').center(100,' '))
+            print ()
+            print ('-'.center(100,'-'))
+            print ()
+
+            decision = convert_to_json(ch, week)
+            if (decision == 'Y'):
+                process(ch, paths[ch]["data_json"])
+                convert_to_csv(ch)
+        else:
+            print ('Invalid Choice: ' + ch)
+        
+    backup()
