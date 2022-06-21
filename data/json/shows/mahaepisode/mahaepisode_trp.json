@@ -1,19 +1,19 @@
 {
-    "Week 21": {
-        "Jeev Majha Guntala": {
-            "TRP": 1.7,
+    "Week 23": {
+        "Man Udu Udu Jhala": {
+            "TRP": 2.5,
             "Rank": 1,
+            "Time": "19:00"
+        },
+        "Devmanus S2": {
+            "TRP": 1.4,
+            "Rank": 2,
             "Time": "20:00"
         },
-        "Bhagya Dile Tu Mala": {
-            "TRP": 1.5,
-            "Rank": 2,
-            "Time": "21:00"
-        },
-        "Tujhya Rupacha Chandana": {
-            "TRP": 0.9,
+        "Mahaminister": {
+            "TRP": 0.5,
             "Rank": 3,
-            "Time": "19:00"
+            "Time": "18:00"
         }
     }
 }
