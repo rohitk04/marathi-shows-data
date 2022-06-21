@@ -1,13 +1,9 @@
 {
-    "5 June":{
-        "Mahaminister": "18:00",
-        "Man Udu Udu Jhala": "19:00",
-        "Devmanus 2": "20:00"
-    },
     "6 June":{
         "Kon Honar Karodpati - New Non-Fiction Show": "21:00, 21:30"
     },
     "12 June":{
+        "Mahaminister - Mahaepisode": "18:00",
         "Satyavaan Savitri - New Serial": "19:00",
         "Sukh Mhanje Nakki Kay Asta - Mahaepisode": "20:00",
         "Sahakutumb Sahaparivar - Mahaepisode": "19:00",
@@ -17,7 +13,21 @@
         "Band Baaja Varat - Celibritincha Lagna Jorat - New Non-Fiction Show" : "21:30"
     },
     "19 June":{
+        "Mahaminister - Mahaepisode": "18:00",
         "Man Udu Udu Jhala - Mahaepisode": "19:00",
-        "Tu Tevha Tashi - Mahaepisode": "20:00"
+        "Tu Tevha Tashi - Mahaepisode": "20:00",
+        "Rang Majha Vegla - Mahaepisode": "20:00",
+        "Phulala Sugandh Maticha - Mahaepisode": "19:00"
+    },
+    "26 June":{
+        "Mahaminister - Grand Finale - Event": "19:00"
+    },
+    "27 June":{
+        "Padmavati - New Show": "12:00",
+        "Geeta - New Show": "12:30",
+        "Lajjat Maharashtrachi - New Non-FIction Show": "14:30"
+    },
+    "3 July":{
+        "Bahurupi Ashok Saraf - Event": "19:00"
     }
 }
