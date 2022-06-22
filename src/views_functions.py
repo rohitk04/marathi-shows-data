@@ -81,6 +81,10 @@ def plot_figure(data, choices, ch, y_axis_title, reversed, style):
         st.markdown ("##### "+y_axis_title+" - Data not available")
         return
 
+    first_idx = modified_data.first_valid_index()
+    last_idx = modified_data.last_valid_index()
+    modified_data = modified_data.loc[first_idx:last_idx]
+    
     dic=dict(
             showgrid=False,
             ticks="outside",
