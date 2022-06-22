@@ -4,6 +4,7 @@ import plotly.graph_objects as go
 import pandas as pd
 from input import read_csv
 from data.paths.paths import paths
+from data.current.current import current_shows
 
 def info_explode(info):
     df = info.reset_index()
@@ -373,14 +374,14 @@ def type_function(week, info, trp, rank, k1, k2):
 def performance_comparison(info, tv_trp, tv_rank, online_trp, online_rank, column, text, k1, k2, k3):
     st.markdown('### '+ text.capitalize() + 'wise Performance Comparison')
 
-    e_info = info_explode(info)
+    info = info_explode(info.loc[current_shows].sort_index())
 
-    choices = list(e_info[column].sort_values().dropna().unique())
+    choices = list(info[column].sort_values().dropna().unique())
     selection = st.sidebar.selectbox('Choose ' + text, choices, key=k1)
 
     st.markdown('### ' + selection)
 
-    shows = list(e_info.loc[e_info[column]==selection]['Show'])
+    shows = list(info.loc[info[column]==selection]['Show'])
     
     st.markdown('### TV TRP')
     comparison_function(tv_trp, tv_rank, shows, "Show TV Show - TV TRP & Rank Data",k2)
