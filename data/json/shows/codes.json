@@ -50,12 +50,13 @@
     "#RatrisKhelChale3": "Ratris Khel Chale S3",
     "#RatrisKhelChale": "Ratris Khel Chale S3",
     "#RaatrisKhelChale3": "Ratris Khel Chale S3",
-    
-    "#MahaMinister": "Mahaminister",
     "#ManJhalaBajind": "Man Jhala Bajind",
     "#ManJhalaBajinda": "Man Jhala Bajind",
     "#ManZhalaBazind": "Man Jhala Bajind",
     "#ManZalaBajind": "Man Jhala Bajind",
+
+    "#MahaMinister": "Mahaminister",
+    "#SatyavanSavitri": "Satyavan Savitri",
     "#ManUduUduJhala": "Man Udu Udu Jhala",
     "#ManUduUduZhala": "Man Udu Udu Jhala",
     "#TuTevhaTashi": "Tu Tevha Tashi",
@@ -147,5 +148,6 @@
     "#MataSanman2022": "Mata Sanman 2022",
     "#ArdhavatraoNotOut": "Ardhavatrao Not Out",
 
-    "#Pandu": "Pandu"
+    "#Pandu": "Pandu",
+    "#Zombivli": "Zombivali"
 }
