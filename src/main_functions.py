@@ -90,20 +90,17 @@ def add_show(show, choice, show_data = None):
     return show_json
 
 def add_shows(not_present, choice, show_data = None):
+    shows_json = json.load(open(paths[choice]["data_json"]))
+        
+    print ('\nAdding shows...\n')    
+
     if (show_data == None):
-        shows_json = json.load(open(paths[choice]["data_json"]))
-        
-        print ('\nAdding shows...\n')
-        
         for show in not_present:
             shows_json[show] = add_show(show, choice)[show]
             print (show + '\n' + str(shows_json[show]))
 
         store_into_json(paths[1]["data_json"], shows_json)
     else:
-        shows_json = json.load(open(paths[choice]['data_json']))
-    
-        print ('\nAdding shows...\n')        
         for show in not_present:
             if show in show_data:
                 shows_json[show] = add_show(show, choice, show_data[show])[show]
