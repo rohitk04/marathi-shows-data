@@ -40,6 +40,11 @@
                 "TRP": 4.4,
                 "Rank": 1,
                 "Time": "20:00"
+            },
+            "Week 24": {
+                "TRP": 3.6,
+                "Rank": 2,
+                "Time": "19:00"
             }
         }
     },
@@ -262,6 +267,11 @@
         "TRP": {
             "Week 9": {
                 "TRP": 6.2,
+                "Rank": 1,
+                "Time": "20:00"
+            },
+            "Week 24": {
+                "TRP": 4.8,
                 "Rank": 1,
                 "Time": "20:00"
             }
@@ -531,6 +541,18 @@
                 "TRP": 1.5,
                 "Rank": 2,
                 "Time": "21:00"
+            }
+        }
+    },
+    "Satyavan Savitri": {
+        "Channel": "Zee Marathi",
+        "Type": "Fiction",
+        "Platform": "Zee5",
+        "TRP": {
+            "Week 24": {
+                "TRP": 1.3,
+                "Rank": 3,
+                "Time": "19:00"
             }
         }
     }
