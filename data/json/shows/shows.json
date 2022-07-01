@@ -4188,7 +4188,7 @@
         "Channel": "Zee Marathi",
         "Time": [],
         "Type": "Movie",
-        "Platform": "Zee5",
+        "Platform": "",
         "TV TRP": {
             "Week 5": {
                 "TRP": 3.2,
@@ -5432,7 +5432,7 @@
         "Channel": "Zee Yuva",
         "Time": [],
         "Type": "Movie",
-        "Platform": "Zee5",
+        "Platform": "",
         "TV TRP": {
             "Week 24": {
                 "TRP": 0.9,
@@ -5453,6 +5453,19 @@
             "Week 25": {
                 "TRP": 0.6,
                 "Rank": 23
+            }
+        },
+        "Online TRP": {}
+    },
+    "Pawankhind": {
+        "Channel": "Pravah Picture",
+        "Time": [],
+        "Type": "Movie",
+        "Platform": "",
+        "TV TRP": {
+            "Week 25": {
+                "TRP": 3.6,
+                "Rank": 10
             }
         },
         "Online TRP": {}
