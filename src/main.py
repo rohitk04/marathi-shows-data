@@ -28,7 +28,7 @@ if __name__ == "__main__":
             if (decision == 'Y'):
                 process(ch, paths[ch]["data_json"])
                 convert_to_csv(ch)
-            else:
-                print ('Invalid Choice: ' + ch)
+        else:
+            print ('Invalid Choice: ' + ch)
         
     backup()
