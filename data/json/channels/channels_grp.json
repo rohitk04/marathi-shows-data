@@ -1,24 +1,44 @@
 {
-    "Week 24": {
+    "Week 25": {
         "Star Pravah": {
-            "GRP": 1450.45,
+            "GRP": 1362.04,
             "Rank": 1
         },
         "Zee Marathi": {
-            "GRP": 589.26,
+            "GRP": 493.6,
             "Rank": 2
         },
         "Sony SAB": {
-            "GRP": 474.13,
+            "GRP": 410.32,
             "Rank": 3
         },
         "Colors Marathi": {
-            "GRP": 359.23,
+            "GRP": 369.7,
             "Rank": 4
         },
         "Star Plus": {
-            "GRP": 326.7,
+            "GRP": 314.03,
             "Rank": 5
+        },
+        "Zee Talkies": {
+            "GRP": 74.0,
+            "Rank": 6
+        },
+        "Pravah Picture": {
+            "GRP": 70.0,
+            "Rank": 7
+        },
+        "Shemaroo Marathibana": {
+            "GRP": 20.0,
+            "Rank": 8
+        },
+        "Fakt Marathi": {
+            "GRP": 17.0,
+            "Rank": 9
+        },
+        "Zee Chitramandir": {
+            "GRP": 10.0,
+            "Rank": 10
         }
     }
 }
