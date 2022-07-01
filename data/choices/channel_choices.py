@@ -4,5 +4,6 @@ channel_choices = {
     3: 'Colors Marathi', 
     4: 'Sony Marathi',
     5: 'Sun Marathi',
-    6: 'Zee Yuva'
+    6: 'Zee Yuva',
+    7: 'Pravah Picture'
 }
