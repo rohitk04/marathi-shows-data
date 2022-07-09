@@ -42,9 +42,9 @@ def add_show(show, choice, show_data = None):
         for key,choice in channel_choices.items():
             print (str(key)+". "+choice)
 
-        index = int(input("Enter choice: "))
+        channel_index = int(input("Enter choice: "))
         
-        channel = channel_choices.get(index)
+        channel = channel_choices.get(channel_index)
         
         print ()    
         print ("Type Choices: ")
@@ -52,15 +52,15 @@ def add_show(show, choice, show_data = None):
         for key,choice in type_choices.items():
             print (str(key)+". "+choice)
 
-        index = int(input("Enter choice: "))
+        type_index = int(input("Enter choice: "))
 
-        type = type_choices.get(index)
+        type = type_choices.get(type_index)
         
         time_list = []
         platform = ''
 
         if type != 'Movie':
-            platform = platform_choices.get(index)
+            platform = platform_choices.get(channel_index)
 
         if type == 'Fiction' or type == 'Non-Fiction':
             print ()    
@@ -71,8 +71,8 @@ def add_show(show, choice, show_data = None):
 
             rep = 'y'
             while (rep=='y'):
-                choice = int(input("Enter choice: "))
-                time_list.append(time_choices.get(choice))
+                time_index = int(input("Enter choice: "))
+                time_list.append(time_choices.get(time_index))
 
                 rep = input("\nIs the show duration longer than half hour?\nDo you want to repeat?\nEnter answer: ")
 
