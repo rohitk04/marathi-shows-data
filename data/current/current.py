@@ -15,8 +15,7 @@ current_shows = [
     "Me Honar Superstar Aawaj Konacha Maharashtracha",
     "Nave Lakshya",
 
-    "Mahaminister",
-    "Man Jhala Bajind",
+    "Satyavan Savitri",
     "Man Udu Udu Jhala",
     "Tu Tevha Tashi",
     "Majhi Tujhi Reshimgath",
@@ -26,6 +25,9 @@ current_shows = [
     "Band Baja Varat - Zee Marathicha Aher Tumchya Gharat",
     "Devmanus S2",
 
+    "Padmavati",
+    "Geeta",
+    "Lajjat Maharashtrachi",
     "Raja Ranichi Ga Jodi",
     "Yogyogeshwar Jai Shankar",
     "Balumamachya Navana Changbhala",
