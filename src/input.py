@@ -3,7 +3,7 @@ import pandas as pd
 
 import sys
 sys.path.append('../barc')
-from data.paths.paths import paths
+from info.paths import paths
 
 def load_data(choice):
     data = json.load(open(paths[choice]["data_json"]))

@@ -54,4 +54,4 @@ current_shows = [
     "Sant Gajanana Shegaviche",
     "Nandini",
     "Sundari"
-    ]
+]

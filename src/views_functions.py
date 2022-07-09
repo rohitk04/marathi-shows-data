@@ -3,8 +3,8 @@ import streamlit as st
 import plotly.graph_objects as go
 import pandas as pd
 from input import read_csv
-from data.paths.paths import paths
-from data.current.current import current_shows
+from info.paths import paths
+from info.current_shows import current_shows
 
 def info_explode(info):
     df = info.reset_index()

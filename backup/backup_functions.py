@@ -4,7 +4,7 @@ import os
 
 import sys
 sys.path.append('../barc')
-from data.paths.paths import paths
+from info.paths import paths
 
 sys.path.append('/backup')
 

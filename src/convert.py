@@ -2,7 +2,7 @@ import json
 import pandas as pd
 from input import load_channels, load_shows
 from output import store_into_csv, store_into_json
-from data.paths.paths import paths
+from info.paths import paths
 
 def get_new_row(choice, words, codes):
     if (choice==1 or choice==4):

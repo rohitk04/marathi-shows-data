@@ -1,8 +1,8 @@
 from convert import convert_to_csv, convert_to_json
 from main_functions import get_week
 from process import process
-from data.paths.paths import paths
-from data.choices.choices import choices
+from info.paths import paths
+from info.choices import choices
 from backup.backup import backup
 
 if __name__ == "__main__":
