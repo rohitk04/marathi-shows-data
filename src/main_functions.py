@@ -39,6 +39,16 @@ def add_show(show, choice, show_data = None):
         channel = channel_choices.get(channel_index)
         
         print ()    
+        print ("Platform Choices: ")
+        
+        for key,choice in platform_choices.items():
+            print (str(key)+". "+choice)
+
+        platform_index = int(input("Enter choice: "))
+        
+        platform = platform_choices.get(platform_index)
+        
+        print ()    
         print ("Type Choices: ")
         
         for key,choice in type_choices.items():
@@ -49,10 +59,6 @@ def add_show(show, choice, show_data = None):
         type = type_choices.get(type_index)
         
         time_list = []
-        platform = ''
-
-        if type != 'Movie':
-            platform = platform_choices.get(channel_index)
 
         if type == 'Fiction' or type == 'Non-Fiction':
             print ()    
