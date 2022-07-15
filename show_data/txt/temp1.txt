@@ -14,7 +14,7 @@
 #MulgiZaliHo - 0.9
 #MeHonarSuperstarAawajKonachaMaharashtracha - 2.3
 #NaveLakshya - 1.9
-#ManJhalaBajind - 1.5
+#SatyavanSavitri - 1.2
 #ManUduUduJhala - 3.4
 #TuTevhaTashi - 3.2
 #MajhiTujhiReshimgath - 4.5
@@ -33,6 +33,7 @@
 #BhagyaDileTuMala - 1.7
 #AaiMayechaKavach - 1.0
 #LekMajhiDurga - 0.5
+#SurNavaDhyasNava - 1.0
 #GathaNavnathanchi - 0.2
 #DnyaneshwarMauli - 0.3
 #SwarajyaSaudaminiTararani - 0.3
@@ -48,4 +49,3 @@
 #SantGajananaShegaviche - 0.52
 #Nandini - 0.46
 #Sundari - 0.53
-#ArdhavatraoNotOut - 1.2
