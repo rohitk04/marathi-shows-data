@@ -590,5 +590,29 @@
                 "Time": "19:00"
             }
         }
+    },
+    "Tujhech Mi Geet Gaat Ahe": {
+        "Channel": "Star Pravah",
+        "Type": "Fiction",
+        "Platform": "Hotstar",
+        "TRP": {
+            "Week 28": {
+                "TRP": 4.9,
+                "Rank": 1,
+                "Time": "20:00"
+            }
+        }
+    },
+    "Muramba": {
+        "Channel": "Star Pravah",
+        "Type": "Fiction",
+        "Platform": "Hotstar",
+        "TRP": {
+            "Week 28": {
+                "TRP": 3.0,
+                "Rank": 2,
+                "Time": "19:00"
+            }
+        }
     }
 }
