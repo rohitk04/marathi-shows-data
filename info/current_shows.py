@@ -15,6 +15,7 @@ current_shows = [
     "Me Honar Superstar Aawaj Konacha Maharashtracha",
     "Nave Lakshya",
 
+    "Home Minister - Khel Sakhyancha Char Choughinchi",
     "Satyavan Savitri",
     "Man Udu Udu Jhala",
     "Tu Tevha Tashi",
