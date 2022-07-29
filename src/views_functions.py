@@ -2,8 +2,6 @@ from ast import literal_eval
 import streamlit as st
 import plotly.graph_objects as go
 import pandas as pd
-from input import read_csv
-from info.paths import paths
 from info.current_shows import current_shows
 
 def info_explode(info):
