@@ -280,8 +280,8 @@ def timeslot_function(week, trp, rank, info, k1, k2, explode=False):
         rank_merged = pd.merge(rank[week], info[week], how="inner", left_index=True, right_index=True, suffixes=['_rank','_time']).rename(columns={week+'_rank':week, week+'_time':'Time'},inplace=False)
         
         timeslots = list(trp_merged['Time'].dropna().sort_values().unique())
-        timeslot = st.sidebar.selectbox('Choose timeslot', timeslots, key=54)
-        ch = st.sidebar.checkbox('Show Data', key=55)
+        timeslot = st.sidebar.selectbox('Choose timeslot', timeslots, key=82)
+        ch = st.sidebar.checkbox('Show Data', key=83)
 
         st.markdown('### Timeslot: ' + timeslot)
 
@@ -561,7 +561,7 @@ def find_special_episode_leaders(column, week, time_df, trp, rank, info, k1, k2=
 def find_top_shows(week, info, trp, rank):
     df = pd.merge(pd.merge(info, trp, how="inner",left_index=True, right_index=True), rank, how="inner",left_index=True, right_index=True, suffixes=['_trp','_rank']).dropna()
 
-    num = int(st.sidebar.number_input('Choose Top _',min_value=2, max_value=len(df), value=5, key=36))
+    num = int(st.sidebar.number_input('Choose Top _',min_value=2, max_value=len(df), value=5, key=84))
 
     middle = 'Top '+ str(num)+' shows'
     st.subheader(middle)
@@ -570,7 +570,7 @@ def find_top_shows(week, info, trp, rank):
     df2 = df[column_list].rename(columns={week+'_trp':'TRP', week+'_rank':'Rank'},inplace=False).sort_values(by='TRP',ascending=False)
     df2 = df2[df2['Rank'] <= num].reset_index().set_index('Show')
     
-    ch = st.sidebar.checkbox('Show Data', key=37)
+    ch = st.sidebar.checkbox('Show Data', key=85)
     trp_function(df2, week, ch, False, middle, True)
     calculate_channel_count(df2, 38, 'Channel')
 

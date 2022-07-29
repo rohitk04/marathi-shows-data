@@ -17,13 +17,13 @@ def main():
         trp = read_csv(paths[1]["trp_csv"], 'Show')
         rank = read_csv(paths[1]["rank_csv"], 'Show')
 
-        week = week_function(trp,rank, 12, 13)
-        if (st.sidebar.checkbox("Show Channelwise Performance",key=14)):      
-            channel_function(week, info, trp, rank, 15, 16)
-        if (st.sidebar.checkbox("Show Timeslotwise Performance",key=17)):
-            timeslot_function(week, trp, rank, info, 18, 19, True) 
-        if (st.sidebar.checkbox("Show Typewise Performance",key=65)):
-            type_function(week, info, trp, rank, 66, 67) 
+        week = week_function(trp,rank, 2, 3)
+        if (st.sidebar.checkbox("Show Channelwise Performance",key=4)):      
+            channel_function(week, info, trp, rank, 5, 6)
+        if (st.sidebar.checkbox("Show Timeslotwise Performance",key=7)):
+            timeslot_function(week, trp, rank, info, 8, 9, True) 
+        if (st.sidebar.checkbox("Show Typewise Performance",key=10)):
+            type_function(week, info, trp, rank, 11, 12) 
 
     elif (select == 'Mahaepisode'):
         st.title('Mahaepisode')
@@ -32,22 +32,22 @@ def main():
         rank = read_csv(paths[2]['rank_csv'], 'Show')
         time_df = read_csv(paths[2]['time_csv'], 'Show')
         
-        week = week_function(trp,rank, 48, 49)
+        week = week_function(trp,rank, 13, 14)
 
-        if (st.sidebar.checkbox("Show Channelwise Performance",key=50)):      
-            channel_function(week, info, trp, rank, 51, 52)
+        if (st.sidebar.checkbox("Show Channelwise Performance",key=15)):      
+            channel_function(week, info, trp, rank, 16, 17)
         
-        if (st.sidebar.checkbox("Show Timeslotwise Performance",key=53)):
-            timeslot_function(week, trp, rank, time_df, 54, 55)
+        if (st.sidebar.checkbox("Show Timeslotwise Performance",key=18)):
+            timeslot_function(week, trp, rank, time_df, 19, 20)
         
-        if (st.sidebar.checkbox('Show Channel Leaders', key=56)):
-            find_special_episode_leaders('Channel',week, time_df[week], trp[week], rank[week], info, 57)
+        if (st.sidebar.checkbox('Show Channel Leaders', key=21)):
+            find_special_episode_leaders('Channel',week, time_df[week], trp[week], rank[week], info, 22)
 
-        if (st.sidebar.checkbox('Show Timeslot Leaders', key=58)):
-            find_special_episode_leaders('Time',week, time_df[week], trp[week], rank[week], info, 59, 60)
+        if (st.sidebar.checkbox('Show Timeslot Leaders', key=23)):
+            find_special_episode_leaders('Time',week, time_df[week], trp[week], rank[week], info, 24, 25)
 
-        if (st.sidebar.checkbox('Show Type Leaders', key=61)):
-            find_special_episode_leaders('Type', week, time_df[week], trp[week], rank[week], info, 62, 63)
+        if (st.sidebar.checkbox('Show Type Leaders', key=26)):
+            find_special_episode_leaders('Type', week, time_df[week], trp[week], rank[week], info, 27, 28)
 
     elif (select == '2 Hours Special Episode'):
         st.title('2 Hours Special Episode')
@@ -57,22 +57,22 @@ def main():
         rank = read_csv(paths[3]['rank_csv'], 'Show')
         time_df = read_csv(paths[3]['time_csv'], 'Show')
 
-        week = week_function(trp,rank, 74, 75)
+        week = week_function(trp,rank, 29, 30)
 
-        if (st.sidebar.checkbox("Show Channelwise Performance",key=76)):      
-            channel_function(week, info, trp, rank, 77, 78)
+        if (st.sidebar.checkbox("Show Channelwise Performance",key=31)):      
+            channel_function(week, info, trp, rank, 32, 33)
         
-        if (st.sidebar.checkbox("Show Timeslotwise Performance",key=79)):
-            timeslot_function(week, trp, rank, time_df, 80, 81)
+        if (st.sidebar.checkbox("Show Timeslotwise Performance",key=34)):
+            timeslot_function(week, trp, rank, time_df, 35, 36)
         
-        if (st.sidebar.checkbox('Show Channel Leaders', key=82)):
-            find_special_episode_leaders('Channel',week, time_df[week], trp[week], rank[week], info, 83)
+        if (st.sidebar.checkbox('Show Channel Leaders', key=37)):
+            find_special_episode_leaders('Channel',week, time_df[week], trp[week], rank[week], info, 38)
 
-        if (st.sidebar.checkbox('Show Timeslot Leaders', key=84)):
-            find_special_episode_leaders('Time',week, time_df[week], trp[week], rank[week], info, 85, 86)
+        if (st.sidebar.checkbox('Show Timeslot Leaders', key=39)):
+            find_special_episode_leaders('Time',week, time_df[week], trp[week], rank[week], info, 40, 41)
 
-        if (st.sidebar.checkbox('Show Type Leaders', key=87)):
-            find_special_episode_leaders('Type', week, time_df[week], trp[week], rank[week], info, 88, 89)
+        if (st.sidebar.checkbox('Show Type Leaders', key=42)):
+            find_special_episode_leaders('Type', week, time_df[week], trp[week], rank[week], info, 43, 44)
         
     elif (select == 'Shows - Online TRP'):
         st.title('Shows - Online TRP')
@@ -80,10 +80,10 @@ def main():
         trp = read_csv(paths[4]['trp_csv'], 'Show')
         rank = read_csv(paths[4]['rank_csv'], 'Show')
 
-        week = week_function(trp, rank,20,21)
+        week = week_function(trp, rank,45,46)
 
         merged = pd.merge(info['Platform'], trp[week], how="inner",left_index=True, right_index=True).dropna()
-        calculate_channel_count(merged, 64, 'Platform')
+        calculate_channel_count(merged, 47, 'Platform')
 
     elif (select == 'Channel'):
         st.title('Channel')
@@ -91,17 +91,17 @@ def main():
         trp = read_csv(paths[5]['grp_csv'], 'Channel')
         rank = read_csv(paths[5]['rank_csv'], 'Channel')
 
-        if (st.sidebar.checkbox("Show Weekwise Performance",value=True,key=6)):
-            week = week_function(trp, rank, 7,8, True)
+        if (st.sidebar.checkbox("Show Weekwise Performance",value=True,key=48)):
+            week = week_function(trp, rank, 49, 50, True)
         
-        if (st.sidebar.checkbox("Show comparison of channels",key=9)):
+        if (st.sidebar.checkbox("Show comparison of channels",key=51)):
             st.markdown('### Comparison')
 
             channels = list(trp.index.unique())
-            choices = st.sidebar.multiselect('Compare channels',channels, default=channels[0], key=10)
+            choices = st.sidebar.multiselect('Compare channels',channels, default=channels[0], key=52)
 
             if (len(choices)!=0):
-                comparison_function(trp, rank, choices, 'Show Data', 11, True)
+                comparison_function(trp, rank, choices, 'Show Data', 53, True)
             else:
                 st.markdown("##### Please select channels")
 
@@ -116,22 +116,22 @@ def main():
         online_rank = read_csv(paths[4]["rank_csv"], 'Show')
         
         weeks = list(tv_trp.columns.unique())
-        week = st.sidebar.selectbox('Choose week', weeks, index=len(weeks)-1, key=34)
+        week = st.sidebar.selectbox('Choose week', weeks, index=len(weeks)-1, key=54)
 
-        if (st.sidebar.checkbox('Show Top Shows', value=True, key=35)):
+        if (st.sidebar.checkbox('Show Top Shows', value=True, key=55)):
             find_top_shows(week, info, tv_trp[week], tv_rank[week])
 
-        if (st.sidebar.checkbox('Show Channel Leaders', key=39)):
-            find_leaders('Channel',week, info, tv_trp[week], tv_rank[week], 40)
+        if (st.sidebar.checkbox('Show Channel Leaders', key=56)):
+            find_leaders('Channel',week, info, tv_trp[week], tv_rank[week], 57)
 
-        if (st.sidebar.checkbox('Show Timeslot Leaders', key=41)):
-            find_leaders('Time',week, info, tv_trp[week], tv_rank[week], 42, 43)
+        if (st.sidebar.checkbox('Show Timeslot Leaders', key=58)):
+            find_leaders('Time',week, info, tv_trp[week], tv_rank[week], 59, 60)
 
-        if (st.sidebar.checkbox('Show Type Leaders', key=44)):
-            find_leaders('Type', week, info, tv_trp[week], tv_rank[week], 45, 46)
+        if (st.sidebar.checkbox('Show Type Leaders', key=61)):
+            find_leaders('Type', week, info, tv_trp[week], tv_rank[week], 62, 63)
 
-        if (st.sidebar.checkbox('Show Platform Leaders', key=90)):
-            find_leaders('Platform', week, info, online_trp[week], online_rank[week], 91)
+        if (st.sidebar.checkbox('Show Platform Leaders', key=64)):
+            find_leaders('Platform', week, info, online_trp[week], online_rank[week], 65)
 
     elif (select == 'Compare Shows'):
         st.title("Shows Comparison")
@@ -141,32 +141,32 @@ def main():
         online_trp = read_csv(paths[4]['trp_csv'], 'Show')
         online_rank = read_csv(paths[4]['rank_csv'], 'Show')
 
-        if (st.sidebar.checkbox("Show show-wise Performance Comparison",value=True, key=22)):
+        if (st.sidebar.checkbox("Show show-wise Performance Comparison",value=True, key=66)):
             st.markdown('### Show-wise Performance Comparison')
 
             shows = list(info.index.unique())
-            choices = st.sidebar.multiselect('Compare shows',shows, default=shows[0], key=23)
+            choices = st.sidebar.multiselect('Compare shows',shows, default=shows[0], key=67)
 
             if (len(choices)!=0):
                 st.markdown('### TV TRP')
-                comparison_function(tv_trp, tv_rank, choices, "Show TV Show - TV TRP & Rank Data",24)
+                comparison_function(tv_trp, tv_rank, choices, "Show TV Show - TV TRP & Rank Data",68)
                 st.markdown("""<hr style="border:dashed 2px #333" /> """, unsafe_allow_html=True)
 
                 st.markdown('### Online TRP')
-                comparison_function(online_trp, online_rank, choices, "Show TV Show - Online TRP & Rank Data",25)
+                comparison_function(online_trp, online_rank, choices, "Show TV Show - Online TRP & Rank Data",69)
             else:
                 st.markdown("##### Please select shows")
             
             st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
 
-        if (st.sidebar.checkbox("Show Channelwise Performance Comparison", key=26)):
-            performance_comparison(info, tv_trp, tv_rank, online_trp, online_rank, 'Channel', 'channel', 27,28,29)
+        if (st.sidebar.checkbox("Show Channelwise Performance Comparison", key=70)):
+            performance_comparison(info, tv_trp, tv_rank, online_trp, online_rank, 'Channel', 'channel', 71,72,73)
         
-        if (st.sidebar.checkbox("Show Timeslotwise Performance Comparison", key=30)):
-            performance_comparison(info, tv_trp, tv_rank, online_trp, online_rank, 'Time', 'timeslot', 31,32,33)
+        if (st.sidebar.checkbox("Show Timeslotwise Performance Comparison", key=74)):
+            performance_comparison(info, tv_trp, tv_rank, online_trp, online_rank, 'Time', 'timeslot', 75,76,77)
         
-        if (st.sidebar.checkbox("Show Typewise Performance",key=69)):
-            performance_comparison(info, tv_trp, tv_rank, online_trp, online_rank, 'Type', 'type', 70,71,72)
+        if (st.sidebar.checkbox("Show Typewise Performance",key=78)):
+            performance_comparison(info, tv_trp, tv_rank, online_trp, online_rank, 'Type', 'type', 79,80,81)
 
     else:
         st.title('Others')
