@@ -410,10 +410,12 @@ def find_leaders(column, week, info, trp, rank, k1, k2=None):
     column_list = ['Show', 'Channel',week+'_trp',week+'_rank']
     if column!='Channel':
         column_list.insert(1, column)
-    
+    if column =='Platform':
+        column_list.remove('Channel')
+
     df2 = e_info[e_info.groupby(column)[week+'_trp'].transform(max) == e_info[week+'_trp']]
     df2 = df2[column_list].drop_duplicates(keep='first',inplace=False).rename(columns={week+'_trp':'TRP', week+'_rank':'Rank'},inplace=False).sort_values(by=sort_column)
-
+    
     dic=dict(
         showgrid=False,
         showline=True, 
@@ -471,7 +473,7 @@ def find_leaders(column, week, info, trp, rank, k1, k2=None):
     if (st.sidebar.checkbox('Show Data', key=k1)):
         st.dataframe(df2.set_index('Show').style.format({'TRP':"{:.2f}", 'Rank':"{:.0f}"}), width=800, height=450)
 
-    if column!='Channel':
+    if column!='Channel' and column!='Platform':
         calculate_channel_count(df2, k2, 'Channel')
 
 def find_special_episode_leaders(column, week, time_df, trp, rank, info, k1, k2=None):

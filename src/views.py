@@ -109,23 +109,29 @@ def main():
         st.title('Leaders')
         st.markdown(':point_right: *To view ranks, click on \'Show Data\'*')
         
-        trp = read_csv(paths[1]["trp_csv"], 'Show')
-        rank = read_csv(paths[1]["rank_csv"], 'Show')
+        tv_trp = read_csv(paths[1]["trp_csv"], 'Show')
+        tv_rank = read_csv(paths[1]["rank_csv"], 'Show')
         
-        weeks = list(trp.columns.unique())
+        online_trp = read_csv(paths[4]["trp_csv"], 'Show')
+        online_rank = read_csv(paths[4]["rank_csv"], 'Show')
+        
+        weeks = list(tv_trp.columns.unique())
         week = st.sidebar.selectbox('Choose week', weeks, index=len(weeks)-1, key=34)
 
         if (st.sidebar.checkbox('Show Top Shows', value=True, key=35)):
-            find_top_shows(week, info, trp[week], rank[week])
+            find_top_shows(week, info, tv_trp[week], tv_rank[week])
 
         if (st.sidebar.checkbox('Show Channel Leaders', key=39)):
-            find_leaders('Channel',week, info, trp[week], rank[week], 40)
+            find_leaders('Channel',week, info, tv_trp[week], tv_rank[week], 40)
 
         if (st.sidebar.checkbox('Show Timeslot Leaders', key=41)):
-            find_leaders('Time',week, info, trp[week], rank[week], 42, 43)
+            find_leaders('Time',week, info, tv_trp[week], tv_rank[week], 42, 43)
 
         if (st.sidebar.checkbox('Show Type Leaders', key=44)):
-            find_leaders('Type', week, info, trp[week], rank[week], 45, 46)
+            find_leaders('Type', week, info, tv_trp[week], tv_rank[week], 45, 46)
+
+        if (st.sidebar.checkbox('Show Platform Leaders', key=90)):
+            find_leaders('Platform', week, info, online_trp[week], online_rank[week], 91)
 
     elif (select == 'Compare Shows'):
         st.title("Shows Comparison")
