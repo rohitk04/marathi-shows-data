@@ -1,9 +1,11 @@
 import json
+import sys
+
 import pandas as pd
 
-import sys
 sys.path.append('../barc')
 from info.paths import paths
+
 
 def load_data(choice):
     data = json.load(open(paths[choice]["data_json"]))

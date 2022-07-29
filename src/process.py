@@ -2,6 +2,7 @@ from input import load_data
 from main_functions import add_channels, add_shows
 from output import store_into_json
 
+
 def process(choice, new_path):
     print ("\nProcessing begins...\n")
 

@@ -1,6 +1,9 @@
 import json
-from src.output import store_into_json
+
 from info.paths import paths
+
+from src.output import store_into_json
+
 
 def add_channel(channel):
     channel_json = json.load(open(paths[5]['dummy_json']))
@@ -20,7 +23,8 @@ def add_channels(not_present):
 
 def add_show(show, choice, show_data = None):
     if (show_data == None):
-        from info.choices import channel_choices, platform_choices, type_choices, time_choices
+        from info.choices import (channel_choices, platform_choices,
+                                  time_choices, type_choices)
 
         show_json = json.load(open(paths[choice]['dummy_json']))
         show_json[show] = show_json.pop("Show_Name")

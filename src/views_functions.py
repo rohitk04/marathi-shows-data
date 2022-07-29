@@ -1,10 +1,13 @@
 from ast import literal_eval
-import streamlit as st
-import plotly.graph_objects as go
+
 import pandas as pd
-from input import read_csv
-from info.paths import paths
+import plotly.graph_objects as go
+import streamlit as st
 from info.current_shows import current_shows
+from info.paths import paths
+
+from input import read_csv
+
 
 def info_explode(info):
     df = info.reset_index()
@@ -573,11 +576,3 @@ def find_top_shows(week, info, trp, rank):
     ch = st.sidebar.checkbox('Show Data', key=37)
     trp_function(df2, week, ch, False, middle, True)
     calculate_channel_count(df2, 38, 'Channel')
-
-def merge(week, time_df, trp, rank, info):
-    merged = pd.merge(time_df[week], trp[week], how="inner",left_index=True, right_index=True)
-    merged = pd.merge(merged, rank[week], how="inner",left_index=True, right_index=True, suffixes=['_trp','_rank'])
-    merged.columns = ['Time',week+'_trp',week+'_rank']
-    merged = pd.merge(merged, info[['Channel','Type','Platform']], how="inner",left_index=True, right_index=True, suffixes=['_trp','_rank'])
-    merged = merged.reset_index()
-    return merged

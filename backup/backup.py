@@ -1,4 +1,5 @@
-from backup.backup_functions import combine, convert, dump, prepare, delete, update
+from backup.backup_functions import *
+
 
 def backup():
     print ("\nBackup Process begins...\n")

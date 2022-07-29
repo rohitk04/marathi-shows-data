@@ -1,10 +1,13 @@
 import sys
-import streamlit as st
-from streamlit import cli
+
 import pandas as pd
-from input import read_csv
-from views_functions import calculate_channel_count, channel_function, comparison_function,  find_leaders, find_special_episode_leaders, find_top_shows, merge, performance_comparison, rank_function, timeslot_function, trp_function, type_function, week_function
+import streamlit as st
 from info.paths import paths
+from streamlit import cli
+
+from input import read_csv
+from views_functions import *
+
 
 def main():
     info = read_csv(paths['info_csv'], 'Show')
