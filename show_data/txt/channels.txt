@@ -1,5 +1,5 @@
-#StarPravah - 1491.22
-#ZeeMarathi - 501.36
-#ColorsMarathi - 436.67
-#SonySab - 435.67
-#ZeeTalkies - 356.36
+#StarPravah - 1462.34
+#ZeeMarathi - 527.46
+#ColorsMarathi - 439.2
+#SonySab - 415.66
+#Goldmines - 318.81

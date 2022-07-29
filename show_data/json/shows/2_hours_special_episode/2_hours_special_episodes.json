@@ -34,5 +34,17 @@
                 "Time": "20:00"
             }
         }
+    },
+    "Devmanus S2": {
+        "Channel": "Zee Marathi",
+        "Type": "Fiction",
+        "Platform": "Zee5",
+        "TRP": {
+            "Week 29": {
+                "TRP": 1.0,
+                "Rank": 1,
+                "Time": "19:00"
+            }
+        }
     }
 }

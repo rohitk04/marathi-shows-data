@@ -1,4 +1,6 @@
-#YogyogeshwarJaiShankar - 1.1
+#LagnachiBedi - 3.1
+#Muramba - 2.0
+#MulgiZaliHo - 0.9
 #Swabhimaan - 4.9
 #SahkutumbSahparivar - 4.4
 #AaiKutheKayKarte - 6.5
@@ -9,21 +11,23 @@
 #ThipkyanchiRangoli - 5.6
 #Aboli - 3.3
 #PinkichaVijayAso - 2.5
-#LagnachiBedi - 3.1
-#Muramba - 2.0
-#MulgiZaliHo - 0.9
 #MeHonarSuperstarAawajKonachaMaharashtracha - 2.3
 #NaveLakshya - 1.9
+
+#HomeMinister - 1.0
 #SatyavanSavitri - 1.2
 #ManUduUduJhala - 3.4
 #TuTevhaTashi - 3.2
 #MajhiTujhiReshimgath - 4.5
 #TujhyaMajhyaSansaralaAniKayHava - 1.5
-#Devmanus2 - 2.6
-#MahaMinister - 1.3
 #ChalaHawaYeuDya - 2.7
 #MasaledarKitchenKallakar - 2.4
 #BandBaajaVarat - 1.2
+#Devmanus2 - 2.6
+
+#Padmavati - 0.09
+#Geeta - 0.2
+#LajjatMaharashtrachi - 0.2
 #RajaRanichiGaJodi - 1.0
 #YogyogeshwarJaiShankar - 1.1
 #BalumamachyaNavanChangbhala - 1.0
@@ -34,13 +38,15 @@
 #AaiMayechaKavach - 1.0
 #LekMajhiDurga - 0.5
 #SurNavaDhyasNava - 1.0
+
 #GathaNavnathanchi - 0.2
 #DnyaneshwarMauli - 0.3
-#SwarajyaSaudaminiTararani - 0.3
+#JeevachiHotiyaKahili - 0.7
 #SundarAmcheGhar - 0.6
 #BossMajhiLadachi - 1.3
-#MaharashtrachiHasyajatra - 1.2
+#KonHonarKarodpati - 1.0
 #TumchiMulgiKayKarte - 0.4
+
 #JaiHanuman - 0.06
 #AbhalachiMaya - 0.14
 #JauNakoDurBaba - 0.35
