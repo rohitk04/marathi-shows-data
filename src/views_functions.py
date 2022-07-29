@@ -13,69 +13,6 @@ def info_explode(info):
     df = df.explode('Time')
     return df
 
-def display_data(info):
-    st.title("BARC Data (Raw Data)")
-
-    ch1 = st.sidebar.checkbox("Display Show Information", value=True, key=2)
-    ch2 = st.sidebar.checkbox("Display Channel - GRP & Rank Data", key=3)
-    ch3 = st.sidebar.checkbox("Display TV Show - TV TRP & Rank Data", key=4)
-    ch4 = st.sidebar.checkbox("Display Mahaepisode - Data", key=47)
-    ch5 = st.sidebar.checkbox("Display 2 Hour Special Episode - Data", key=73)
-    ch6 = st.sidebar.checkbox("Display TV Show - Online TRP & Rank Data", key=5)
-
-    if ch1:
-        st.subheader('Show Information')
-
-        df = info_explode(info)
-        st.dataframe(df, width=800, height=450)
-        st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
-
-    if ch2:
-        st.subheader('Channels')
-        st.markdown('#### GRP')
-        st.dataframe(read_csv(paths[5]['grp_csv'], 'Channel').style.format("{:.2f}"), width=800, height=450)
-        st.markdown('#### Rank')
-        st.dataframe(read_csv(paths[5]['rank_csv'], 'Channel').style.format("{:.0f}"), width=800, height=450)
-        st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)   
-    
-    if ch3:
-        st.subheader('TV Shows - TV TRP')
-        st.markdown('#### TRP')
-        st.dataframe(read_csv(paths[1]["trp_csv"], 'Show').style.format("{:.2f}"), width=800, height=450)
-        st.markdown('#### Rank')
-        st.dataframe(read_csv(paths[1]["rank_csv"], 'Show').style.format("{:.0f}"), width=800, height=450)
-        st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
-
-    if ch4:
-        trp = read_csv(paths[2]['trp_csv'], 'Show')
-        rank = read_csv(paths[2]['rank_csv'], 'Show')
-        
-        st.subheader('Mahaepisode')
-        st.markdown('#### TRP')
-        st.dataframe(trp.style.format("{:.2f}"), width=800, height=450)
-        st.markdown('#### Rank')
-        st.dataframe(rank.style.format("{:.0f}"), width=800, height=450)
-        st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
-
-    if ch5:
-        trp = read_csv(paths[3]['trp_csv'], 'Show')
-        rank = read_csv(paths[3]['rank_csv'], 'Show')
-        
-        st.subheader('2 Hours Special Episode')
-        st.markdown('#### TRP')
-        st.dataframe(trp.style.format("{:.2f}"), width=800, height=450)
-        st.markdown('#### Rank')
-        st.dataframe(rank.style.format("{:.0f}"), width=800, height=450)
-        st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
-
-    if ch6:
-        st.subheader('TV Shows - Online TRP')
-        st.markdown('#### TRP')
-        st.dataframe(read_csv(paths[4]['trp_csv'],'Show').style.format("{:.2f}"), width=800, height=450)    
-        st.markdown('#### Rank')
-        st.dataframe(read_csv(paths[4]['rank_csv'], 'Show').style.format("{:.0f}"), width=800, height=450)
-        st.markdown("""<hr style="height:2px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
-
 def plot_figure(data, choices, ch, y_axis_title, reversed, style):
     modified_data = data.loc[data.index.isin(choices)].T
     if (modified_data.empty):
@@ -373,9 +310,9 @@ def type_function(week, info, trp, rank, k1, k2):
 
 def performance_comparison(info, tv_trp, tv_rank, online_trp, online_rank, column, text, k1, k2, k3):
     st.markdown('### '+ text.capitalize() + 'wise Performance Comparison')
-
+    
     info = info_explode(info.loc[current_shows].sort_index())
-
+    
     choices = list(info[column].sort_values().dropna().unique())
     selection = st.sidebar.selectbox('Choose ' + text, choices, key=k1)
 
