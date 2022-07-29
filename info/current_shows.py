@@ -38,10 +38,11 @@ current_shows = [
     "Bhagya Dile Tu Mala",
     "Aai Mayeche Kavach",
     "Lek Majhi Durga",
+    "Sur Nava Dhyas Nava",
 
     "Dnyaneshwar Mauli",
     "Gatha Navanathanchi",
-    "Swarajya Saudamini Tararani",
+    "Jeevachi Hotiya Kahili",
     "Sundar Amcha Ghar",
     "Boss Majhi Ladachi",
     "Kon Honar Karodpati",
