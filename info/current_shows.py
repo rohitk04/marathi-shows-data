@@ -15,7 +15,7 @@ current_shows = [
     "Me Honar Superstar Aawaj Konacha Maharashtracha",
     "Nave Lakshya",
 
-    "Home Minister - Khel Sakhyancha Char Choughinchi",
+    #"Home Minister - Khel Sakhyancha Char Choughinchi",
     "Satyavan Savitri",
     "Man Udu Udu Jhala",
     "Tu Tevha Tashi",
@@ -38,7 +38,7 @@ current_shows = [
     "Bhagya Dile Tu Mala",
     "Aai Mayeche Kavach",
     "Lek Majhi Durga",
-    "Sur Nava Dhyas Nava",
+    "Sur Nava Dhyas Nava - Parva Ganyache Marathi Banyache",
 
     "Dnyaneshwar Mauli",
     "Gatha Navanathanchi",
