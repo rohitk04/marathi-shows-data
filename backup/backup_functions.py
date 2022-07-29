@@ -1,9 +1,8 @@
-import os
-import re
-import sys
-
 import pandas as pd
+import re
+import os
 
+import sys
 sys.path.append('../barc')
 from info.paths import paths
 

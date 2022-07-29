@@ -1,13 +1,10 @@
 import sys
-
-import pandas as pd
 import streamlit as st
-from info.paths import paths
 from streamlit import cli
-
+import pandas as pd
 from input import read_csv
 from views_functions import *
-
+from info.paths import paths
 
 def main():
     info = read_csv(paths['info_csv'], 'Show')

@@ -1,7 +1,5 @@
 import json
-
 import pandas as pd
-
 
 def print_data(shows):
     for show in shows:
